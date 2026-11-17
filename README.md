@@ -81,6 +81,21 @@ El primer lote de interventoría con observaciones está en
 `muestras/lote-observaciones-1.txt`; se procesa con `rag-gdb convertir --seleccion
 muestras/lote-observaciones-1.txt`.
 
+## Extracción de observaciones
+
+El agente lee cada documento relevante y escribe sus observaciones en
+`datos/03_extraido/`, siguiendo `prompts/extraer-observaciones.md` y
+`src/rag_gdb/observaciones.schema.json`.
+
+```bash
+.venv/bin/rag-gdb paginas "IDU/<archivo>.pdf"   # texto con marcas de página
+.venv/bin/rag-gdb validar                       # esquema, hash, página y cita
+```
+
+`validar` exige que cada cita aparezca literalmente en la página declarada,
+salvo las marcadas con `requiere_cotejo_visual`. Si la cita está en otra
+página, el error indica cuál.
+
 ## Revisión piloto
 
 Elegir PDF escaneados, con tablas, guías largas y comunicados con observaciones.

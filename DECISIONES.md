@@ -7,6 +7,7 @@
 | 2026-11-17 | Copiar y verificar el ZIP en meraxes-f, sin borrar el origen | Evita pérdida antes de la revisión |
 | 2026-11-17 | Mantener 18 PDF del inventario como ausentes con motivo pendiente | 508 descargados en ODS frente a 490 PDF en ZIP |
 | 2026-11-17 | Usar Lucía para gestión del repo, no como dependencia de ejecución | Acuerdo con Aramis |
+| 2026-11-17 | Esquema RF6: una entrada por observación, con página y cita literal verificable | Piloto sobre C.1443 de junio de 2024 |
 
 ## Primer inventario en meraxes-f
 
@@ -35,3 +36,12 @@
 - MV2-025-21 y MV2-026-21 son remisiones de observaciones IDU según su primera
   página. Se clasifican como traslados; su frecuencia corresponde al radicado
   IDU citado, no a una observación nueva de MV2.
+
+## Piloto de extracción (RF6)
+
+- La extracción de `2024-06-24_..._GEODATABASE_V3.pdf` dio 7 observaciones IDU,
+  todas con página y cita validadas contra el PDF. El oficio habla de
+  «observaciones IDU (DITINI)» sin radicado, por eso `radicado_origen` es nulo.
+- **Abierta:** dentro de cada seguimiento la interventoría añade hallazgos
+  propios (p. ej. carpetas marcadas OK que no se entregaron). El piloto no los
+  registra aparte; la unidad exacta de observación se fija con más muestras.

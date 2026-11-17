@@ -11,10 +11,14 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ### Changed
 
+- `jsonschema` pasa a dependencia del paquete (ya lo instalaba Docling).
 - La revisión piloto distingue contenido textual conservado de información visual que requiere consultar el PDF.
 
 ### Added
 
+- Extracción de observaciones (RF6): esquema JSON, `rag-gdb validar` (esquema,
+  hash, página y cita literal contra el PDF), `rag-gdb paginas` y prompt de
+  extracción. Piloto con el oficio C.1443 de junio de 2024 (7 observaciones IDU).
 - Clasificación preliminar conservadora por código inicial, tipo y señales GDB,
   con cola explícita de documentos por revisar.
 - Registro de decisiones manuales de clasificación por SHA-256 y primer lote
