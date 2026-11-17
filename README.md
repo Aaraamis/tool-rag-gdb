@@ -41,13 +41,15 @@ nombres con tildes en la prueba inicial de meraxes-f.
 
 El manifiesto está en `datos/01_inventario/manifiesto.json`. `perfiles.json`
 registra páginas con menos de 40 caracteres como candidatas a OCR; esta regla
-es una señal para revisión, no un diagnóstico definitivo. Para convertir una
-muestra, crear un TXT con rutas relativas tal como aparecen en el manifiesto:
+es una señal para revisión, no un diagnóstico definitivo.
 
 Se puede pasar `--reglas reglas.json` a `inventariar` con, por ejemplo,
 `{"remitentes": ["ejemplo@dominio"], "asuntos": ["accidentalidad"]}`.
 El manifiesto conserva los archivos excluidos y su motivo. Las reglas deben
 revisarse antes de cualquier uso de IA.
+
+Para convertir una muestra, crear un TXT con rutas relativas tal como aparecen
+en el manifiesto:
 
 ```bash
 .venv/bin/rag-gdb convertir --seleccion muestras/piloto.txt
@@ -58,9 +60,30 @@ ejecución posterior omite archivos completados con el mismo hash y salidas
 existentes. Los errores se registran por PDF y se reintentan al repetir el
 comando. `pytest -q` ejecuta las pruebas del primer hito.
 
+## Clasificación preliminar
+
+```bash
+.venv/bin/rag-gdb clasificar --leer-texto
+```
+
+Genera `datos/01_inventario/clasificacion.csv` con emisor, tipo, relevancia GDB
+y motivo por archivo. Usa el código al inicio del nombre del PDF; un código
+mencionado en una respuesta no determina su emisor. `por_revisar` significa
+que el nombre o el asunto no aportan evidencia suficiente. La clasificación
+automática no descarta esos archivos ni declara que no tratan de GDB.
+Con `--leer-texto`, las menciones en el PDF se registran como `probable`
+(GDB/BDG/geodatabase) o `posible` (SIG/CAD); ambas requieren revisión antes
+de confirmar relevancia. Sin ese flag, la clasificación solo usa metadatos.
+Las decisiones comprobadas se conservan por SHA-256 en
+`config/clasificacion-manual.csv`, con justificación y página; el comando las
+aplica al final, sin editar el manifiesto ni perderlas al repetir las reglas.
+El primer lote de interventoría con observaciones está en
+`muestras/lote-observaciones-1.txt`; se procesa con `rag-gdb convertir --seleccion
+muestras/lote-observaciones-1.txt`.
+
 ## Revisión piloto
 
 Elegir PDF escaneados, con tablas, guías largas y comunicados con observaciones.
 Comparar cada original con su Markdown y anotar pérdidas con página en
-`datos/04_entregables/revision-piloto.md`. La revisión define ajustes antes de
+`docs/revision-piloto.md`. La revisión define ajustes antes de
 ampliar el corpus. No se publica un checklist normativo en este hito.

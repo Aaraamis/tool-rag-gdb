@@ -55,6 +55,9 @@ En `datos/04_entregables/`:
 - **RF3. Perfil técnico**: número de páginas, texto por página y si necesita OCR.
 - **RF4. Conversión**: cada PDF se convierte a JSON de Docling + Markdown y se omite en reanudaciones si su hash y ambas salidas siguen vigentes. Los originales no se tocan nunca.
 - **RF5. Clasificación**: tipo de documento y si trata o no de la GDB. Primero reglas; los casos ambiguos los decide el agente.
+  En la primera pasada, una señal positiva en el nombre confirma relevancia;
+  una mención en el PDF produce `probable` o `posible` y se revisa. La ausencia
+  de términos no equivale a `no`, especialmente en documentos escaneados.
 - **RF6. Extracción**: de cada documento relevante, sacar las observaciones a JSON validado contra un esquema, con la página de origen.
   Si una observación depende de mapas, capturas o marcas por color, se coteja
   la página del PDF; el Markdown por sí solo no basta como evidencia.
