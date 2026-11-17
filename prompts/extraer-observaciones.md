@@ -12,12 +12,17 @@ archivos, ejecute comandos y escriba JSON.
    con el mismo `sha256`, omitirlo.
 2. Leer el texto con marcas de página: `rag-gdb paginas "<ruta del manifiesto>"`.
    El Markdown de `datos/02_convertidos/` sirve de apoyo, pero no trae páginas.
-3. Registrar cada observación numerada: una entrada por observación, no por
-   respuesta. `cita` es un fragmento **literal** del enunciado, de una sola
+3. Registrar cada observación: una entrada por enunciado distinto, no por
+   respuesta ni por fila. Si el mismo enunciado se repite en varias filas o
+   planos de una tabla, se registra una vez y no se listan los planos. Las
+   observaciones sobre planos sí se registran. No se leen los PDF que son planos
+   (dibujos) y no documentos: importan los comunicados y los correos. `cita` es un fragmento **literal** del enunciado, de una sola
    página y de al menos 25 caracteres; `pagina` es la del PDF.
-4. Si el sentido depende de un mapa, una captura o una marca de color, abrir la
-   página del PDF, poner `requiere_cotejo_visual: true` y describir en `resumen`
-   lo que se ve. La cita de esas entradas no se comprueba contra el texto.
+4. Si el sentido depende de un mapa o una captura, abrir la página del PDF,
+   poner `requiere_cotejo_visual: true` y describir en `resumen` lo que se ve.
+   La cita de esas entradas no se comprueba contra el texto. El texto en rojo
+   de las tablas es énfasis del interventor sobre sus propias observaciones:
+   se extrae como cualquier otro, con `autor: interventoria`.
 5. `autor` es quien levanta la observación. `radicado_origen` es el radicado IDU
    que la originó, o `null` si el documento no lo dice; no lo deduzcas de
    otros documentos. Un traslado sin sus anexos no aporta observaciones.

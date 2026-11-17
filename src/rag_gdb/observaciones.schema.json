@@ -39,7 +39,7 @@
         "cita": {"type": "string", "minLength": 25, "description": "Fragmento literal del enunciado, contenido en una sola página del PDF."},
         "resumen": {"type": "string", "minLength": 10, "description": "Qué se exige, en una frase."},
         "estado_en_documento": {"enum": ["atendida", "parcial", "pendiente", "sin_estado"], "description": "Estado que el propio documento declara para esta observación."},
-        "requiere_cotejo_visual": {"type": "boolean", "description": "true si el sentido depende de mapas, capturas o marcas de color; en ese caso la cita no se comprueba contra el texto."},
+        "requiere_cotejo_visual": {"type": "boolean", "description": "true si el sentido depende de mapas o capturas; en ese caso la cita no se comprueba contra el texto."},
         "referencias": {"type": "array", "items": {"type": "string"}, "description": "Guías o normas citadas (p. ej. GU-IC-06)."}
       }
     }
