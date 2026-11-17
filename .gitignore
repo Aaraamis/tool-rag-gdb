@@ -4,5 +4,7 @@ datos/02_convertidos/
 datos/03_extraido/
 .venv/
 .pytest_cache/
+.ruff_cache/
+*.egg-info/
 __pycache__/
 .lucia/symbols.db
