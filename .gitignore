@@ -1,0 +1,8 @@
+datos/00_originales/
+datos/01_inventario/
+datos/02_convertidos/
+datos/03_extraido/
+.venv/
+.pytest_cache/
+__pycache__/
+.lucia/symbols.db

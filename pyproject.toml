@@ -1,0 +1,20 @@
+[project]
+name = "tool-rag-gdb"
+version = "0.1.0"
+description = "Inventario y conversión verificable del corpus GDB del IDU"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+conversion = ["docling>=2,<3"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+rag-gdb = "rag_gdb.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
