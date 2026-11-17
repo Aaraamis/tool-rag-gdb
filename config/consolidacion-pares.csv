@@ -1,0 +1,158 @@
+clave_a,clave_b,decision,nota
+bd86cc788fb8d7c7,a17b3541152cdea5,si,En la GDB del proyecto las Áreas de Intervención y la fecha  / Asegurar que la fecha de registro de las intervenciones en l
+47f3784a41fb9660,eb918e1ed371e4d7,si,Verificar que en los cuadros de intervenciones del Layout MV / Verificar que en las tablas de reporte del archivo MVGVPL01.
+a3bc51516290a946,43486398b338139f,si,"Ajustar intervenciones 500258, 500275 y 500276 por discrepan / Verificar discrepancias en intervenciones 500230, 500241, 50"
+06f726caa7fcc54d,b35787681bbdd04a,si,"Los layers deben llevar el sufijo de estado (D, E o C) según / Todos los layers, incluidos achurados, capas adicionales y m"
+3bc8e87f5b08a792,97372d12e1734d9b,si,El formato presentado no es el suministrado en el alistamien / El plano MVGVPL01.dwg no se presenta con el formato suminist
+246cc211ccb7fede,98f365fb667c7c59,si,Actualizar los PK_ID de los pompeyanos a los publicados en e / Actualizar los PK_ID de los puentes a los publicados en el S
+7b9320185a5548e5,ab770b76ce2a65f4,si,Revisar la información incorporada en los planos ya que se e / revisar todos los planos del archivo MVGPL01 para garantizar
+295120ddcb95fcb6,e07c016f944619c7,si,Eliminar el texto en observaciones del atributo Tipo Interve / Eliminar el texto en observaciones del atributo ArealInterve
+6d8e5311182bb31e,40de265d8c343b75,no,Diligenciar los atributos obligatorios en la Base de Datos G / Solicitar adjuntar el archivo de Excel 'Diccionario de Atrib
+2db279db54e6d18b,df80f01b423c8f57,si,Verificar el reporte de meta física FOIC09_REPORTE_FINAL_MET / El reporte de elementos del archivo Excel FOIC09 no coincide
+8cd1d821029fc7fa,df80f01b423c8f57,si,El reporte de calzadas difiere de los elementos encontrados  / El reporte de elementos del archivo Excel FOIC09 no coincide
+8cd1d821029fc7fa,739c67627114f7bf,si,El reporte de calzadas difiere de los elementos encontrados  / La cantidad de elementos calzadas no concuerda con la base C
+9f7dce4b521589e1,5fc10c200e56e08c,si,"Es necesario presentar el archivo EstructuraCarpetas.xlsx y  / Diligenciar el reporte de estructura de carpetas, justificar"
+5cc96ec936ab1fa6,9b044e735b20e4fe,si,Verificar que el registro de intervenciones en los planos CA / Revisar que los CIV y PK_ID del archivo Excel correspondan c
+44919974c2d3e428,435dad4b4e90c31b,si,Verificar que las cantidades de elementos en el archivo base / La cantidad de elementos del archivo BASE-IDU-15332018.dwg d
+9e2244af3ef80c77,7b9320185a5548e5,si,Verificar en el archivo MVGVPL01.dwg que los cuadros de inte / Revisar la información incorporada en los planos ya que se e
+739c67627114f7bf,2db279db54e6d18b,si,La cantidad de elementos calzadas no concuerda con la base C / Verificar el reporte de meta física FOIC09_REPORTE_FINAL_MET
+252959a60238d0de,9b044e735b20e4fe,si,Ajustar los CIV y PK_ID en las tablas de reporte para que co / Revisar que los CIV y PK_ID del archivo Excel correspondan c
+f680fb59eb8d7d27,da3a785b0cc48b1a,si,Revisar la información presentada en el cuadro de intervenci / Verificar en el archivo IGVPL01.dwg que los cuadros de inter
+574bea8a2b8c7404,86e06efb567968a5,si,Verificar que todas las intervenciones ubicadas en los plano / Asegurar que las intervenciones relacionadas en los planos s
+4cfb78ba748df7f9,d6b2be51b95bfa11,no,Diligenciar la tabla relacionada (Seguimiento) para el eleme / Diligenciar todas las variables del elemento losa según el a
+eb918e1ed371e4d7,02c4933273c22245,si,Verificar que en las tablas de reporte del archivo MVGVPL01. / Revisar todos los planos del archivo MVGPL01.DWG para garant
+86e06efb567968a5,cafc8a0ba5b5ade6,si,Asegurar que las intervenciones relacionadas en los planos s / Revisar que las intervenciones en los planos coincidan con e
+cec42444a1cb5a80,6d8e5311182bb31e,no,Se requiere diligenciar el archivo DiccionarioAtributos_V7.7 / Diligenciar los atributos obligatorios en la Base de Datos G
+4cf463bcd10aa6ef,0f3f8899a3ed491a,si,Corregir la fecha de registro en la GDB para que coincida co / La fecha de registro de las intervenciones en la GDB debe co
+cec42444a1cb5a80,1518edbfb738f64f,si,Se requiere diligenciar el archivo DiccionarioAtributos_V7.7 / Todo lo marcado con X en el diccionario debe estar debidamen
+47f3784a41fb9660,4cf60da8cc96d678,si,Verificar que en los cuadros de intervenciones del Layout MV / Verificar que las intervenciones ubicadas en los planos coin
+6bd2fb13ebaf1ef0,547f0be3a2d8bb76,no,Diligenciar el campo obligatorio fecha de registro. / Diligenciar los campos obligatorios de Calzada.
+62b257b35bdc4b40,3f849e0c6b5339e0,si,Verificar el reporte de meta física FOIC09_REPORTE_FINAL_MET / Verificar que los elementos del archivo FOIC09_REPORTE_FINAL
+97c5460038086326,fd63385af4a3db96,si,De acuerdo a la Guía GUIC06 se debe eliminar los elementos o / Eliminar los Layers que no contengan información según la gu
+6fb233ecbd573a53,1f125a4b985966ab,si,Los planos de Rehabilitación deben incluir placas de amarre  / Incluir placas de amarre y anexar informe de topografía en p
+f8fdc4133a72d901,b4ef6de6d0b91b07,si,Incorporar información o depurar carpetas vacías sin alterar / Verificar y depurar las carpetas que no contienen informació
+eb918e1ed371e4d7,7b9320185a5548e5,si,Verificar que en las tablas de reporte del archivo MVGVPL01. / Revisar la información incorporada en los planos ya que se e
+00141bf76ed53c51,8bcab34dd66d104b,si,Entregar los informes en DOCX editable y en PDF. / Entregar los informes en DOCX editable.
+eb918e1ed371e4d7,19a34eb3304c81e4,no,Verificar que en las tablas de reporte del archivo MVGVPL01. / Incluir en el plano MVGPL02.DWG los datos CIV y PK_ID para l
+8f9904c59fd3cd9e,b6f97276c8ab57aa,si,Ajustar la segmentación del elemento sardinel para los anden / Ajustar la segmentación del elemento sardinel para que corre
+71b738724c968fb5,68d4636683faa7cb,si,Ajustar los elementos en los planos planta perfil con superp / Ajustar elementos con superposiciones entre Calzadas – Manza
+ad079d29c0dbc83f,cfd9998d54b07d03,si,Solicitar la entrega de toda la información requerida por ca / Verificar y realizar la entrega de todos los elementos inter
+ce0cd4e0c1d5487f,eb918e1ed371e4d7,si,Verificar las intervenciones del archivo digital MVGVPL01.dw / Verificar que en las tablas de reporte del archivo MVGVPL01.
+e94e86c1908ff2bc,ad2125d961af9be8,no,Se recomienda revisar la información correspondiente al espe / Se recomienda revisar todos los planos del archivo MVGPL01.D
+81b1a471703cfed4,6e665e7b2b09ec99,si,Revisar integralmente todos y cada uno de los productos a en / Revisar integralmente todos los productos para garantizar qu
+5cc96ec936ab1fa6,252959a60238d0de,si,Verificar que el registro de intervenciones en los planos CA / Ajustar los CIV y PK_ID en las tablas de reporte para que co
+25da43116a93cabf,51ee081c2dcab7aa,si,"Revisar las coordenadas en la tabla Deflectometria, ya que a / Verificar las coordenadas de la tabla Deflectometria y revis"
+7986115351c121c0,7ec7e93ffcc6d898,no,Identificar la calzada con su respectivo CIV y el PK_ID_Calz / Ajustar el texto PK_Calzada en el archivo MVGVPL01.dwg ya qu
+44919974c2d3e428,07d1e32e9fc14e9a,si,Verificar que las cantidades de elementos en el archivo base / Se recuerda que los elementos presentados deben corresponder
+ce1bdf8cb674ad3e,a17b3541152cdea5,si,Unificar las fechas de reporte de los planos CAD – GDB de to / Asegurar que la fecha de registro de las intervenciones en l
+95b9f777ddbb1b1d,2fcfd96b2c72cfaa,si,Verificar que los elementos cumplan con las relaciones espac / Realizar correcciones a todos los elementos que no cumplan c
+b42e588513ba892a,86525edee61e5de0,si,Las convenciones en los planos de Planta Perfil deben coinci / Las convenciones en los planos planta perfil deben estar aco
+739c67627114f7bf,df80f01b423c8f57,si,La cantidad de elementos calzadas no concuerda con la base C / El reporte de elementos del archivo Excel FOIC09 no coincide
+4cfb78ba748df7f9,a69cf75647f01d1f,si,Diligenciar la tabla relacionada (Seguimiento) para el eleme / Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx l
+5cc96ec936ab1fa6,e0908025e7efd56a,si,Verificar que el registro de intervenciones en los planos CA / El CIV y PK de cada intervención en el plano CAD deben coinc
+b64d7015816575e3,f1afc51fde71d9af,si,El CIV y PK_ID en la tabla de reporte no coinciden con la in / revisar todos los planos del archivo MVGPL01 para garantizar
+21ef8a85cdf4de7d,ad079d29c0dbc83f,si,Entregar la totalidad de los productos para permitir una rev / Solicitar la entrega de toda la información requerida por ca
+1ced6c3f4bfd97ff,eb918e1ed371e4d7,si,Verificar que la ubicación de la intervención T6-006 (CIV 60 / Verificar que en las tablas de reporte del archivo MVGVPL01.
+44919974c2d3e428,8698c38d8d2a1cf0,si,"Verificar que las cantidades de elementos en el archivo base / Las cantidades de la BDG, el DWG y el reporte de meta física"
+841367a11ab55b2d,1609d9a45c9801bd,si,Asegurar que la geometría del elemento y su nomenclatura cum / Representar en planta los elementos con la geometría y los l
+109dcdd5eba2660d,4cfb78ba748df7f9,si,Diligenciar la tabla de seguimiento del elemento losa. / Diligenciar la tabla relacionada (Seguimiento) para el eleme
+ea0217fade02b358,f2e0eed70f6ddfa3,si,No repetir el consecutivo en ningún plano entregado. / No repetir el consecutivo entre planos de distintas temática
+ce0cd4e0c1d5487f,ab770b76ce2a65f4,si,Verificar las intervenciones del archivo digital MVGVPL01.dw / revisar todos los planos del archivo MVGPL01 para garantizar
+47be4a4c5b423adf,e40abae24e5dfaa8,si,Cada elemento va en su layer; no en layers de otros elemento / El layer de un bloque debe corresponder a lo que representa.
+19a34eb3304c81e4,a3bc51516290a946,si,"Incluir en el plano MVGPL02.DWG los datos CIV y PK_ID para l / Ajustar intervenciones 500258, 500275 y 500276 por discrepan"
+3de33d6655a0af3d,00141bf76ed53c51,no,Entregar los planos en DWG y en PDF. / Entregar los informes en DOCX editable y en PDF.
+651006a359aa1925,f1afc51fde71d9af,si,Verificar que el Layout MVGVPL15 del archivo MVGVPL01.dwg in / revisar todos los planos del archivo MVGPL01 para garantizar
+a8cc1bf497d02900,7999ad6eaf8a76d2,no,Complementar los atributos de reporte obligatorio (Fecha Reg / Diligenciar los atributos de reporte obligatorio en la tabla
+a676a6b04101b4f4,6d8e5311182bb31e,si,Diligenciar las tablas respetando los campos obligatorios de / Diligenciar los atributos obligatorios en la Base de Datos G
+819bdfb159e36373,214a52af4db9fd77,si,"Diligenciar todos los atributos del elemento calzada y las r / Diligenciar toda la información requerida en la BDG, ya que "
+8b4fec3999fcf8b4,ccd65796d67f9727,si,Completar en Productos_BDG las hojas Calzada (N/A en opciona / La hoja Ciclorruta (Detalle Ciclorruta) de Productos_BDG sig
+19a34eb3304c81e4,f1afc51fde71d9af,si,Incluir en el plano MVGPL02.DWG los datos CIV y PK_ID para l / revisar todos los planos del archivo MVGPL01 para garantizar
+788303fed10e4051,bd86cc788fb8d7c7,si,"Unificar la fecha de registro en la GOS del proyecto, los pl / En la GDB del proyecto las Áreas de Intervención y la fecha "
+cec42444a1cb5a80,0b59ace89324fdc5,si,Se requiere diligenciar el archivo DiccionarioAtributos_V7.7 / Diligenciar Productos_BDG.xlsx (X de contratista e intervent
+ab770b76ce2a65f4,c37444582dffacbc,si,revisar todos los planos del archivo MVGPL01 para garantizar / Revisar todos los planos del archivo MVGPL01.DWG para garant
+d148edd13434a050,5cc96ec936ab1fa6,no,La fecha de registro de las intervenciones en la GDB debe co / Verificar que el registro de intervenciones en los planos CA
+651006a359aa1925,eb918e1ed371e4d7,si,Verificar que el Layout MVGVPL15 del archivo MVGVPL01.dwg in / Verificar que en las tablas de reporte del archivo MVGVPL01.
+bd86cc788fb8d7c7,28bff988698d68a9,no,En la GDB del proyecto las Áreas de Intervención y la fecha  / El registro de las intervenciones en los planos CAD debe coi
+ef89159436171ca6,651006a359aa1925,si,Verificar que en el cuadro del Layout MVGVPL37 estén todas l / Verificar que el Layout MVGVPL15 del archivo MVGVPL01.dwg in
+36d2f3e32f6a1676,28bff988698d68a9,no,Las áreas de intervención y la fecha de registro en GDB debe / El registro de las intervenciones en los planos CAD debe coi
+0f3f8899a3ed491a,5cc96ec936ab1fa6,no,La fecha de registro de las intervenciones en la GDB debe co / Verificar que el registro de intervenciones en los planos CA
+ef89159436171ca6,9e2244af3ef80c77,si,Verificar que en el cuadro del Layout MVGVPL37 estén todas l / Verificar en el archivo MVGVPL01.dwg que los cuadros de inte
+1bb1d4da4fa678cb,df80f01b423c8f57,si,Verificar el reporte de la meta física en el archivo FOIC09_ / El reporte de elementos del archivo Excel FOIC09 no coincide
+9e2244af3ef80c77,2edc8b37e8ae292d,si,Verificar en el archivo MVGVPL01.dwg que los cuadros de inte / Verificar que los cuadros de intervenciones en los layouts c
+cafc8a0ba5b5ade6,f1afc51fde71d9af,si,Revisar que las intervenciones en los planos coincidan con e / revisar todos los planos del archivo MVGPL01 para garantizar
+2edc8b37e8ae292d,25a3e4eb2349a618,si,Verificar que los cuadros de intervenciones en los layouts c / Verificar que los planos contengan los cuadros de intervenci
+651006a359aa1925,25a3e4eb2349a618,si,Verificar que el Layout MVGVPL15 del archivo MVGVPL01.dwg in / Verificar que los planos contengan los cuadros de intervenci
+ef89159436171ca6,25a3e4eb2349a618,si,Verificar que en el cuadro del Layout MVGVPL37 estén todas l / Verificar que los planos contengan los cuadros de intervenci
+81b1a471703cfed4,21ef8a85cdf4de7d,no,Revisar integralmente todos y cada uno de los productos a en / Entregar la totalidad de los productos para permitir una rev
+c4db401c341cd38a,5cc96ec936ab1fa6,no,Verificar que la fecha de registro en la GDB del proyecto (Á / Verificar que el registro de intervenciones en los planos CA
+81b1a471703cfed4,093e1e8548d0e596,no,"Revisar integralmente todos y cada uno de los productos a en / Entregar la totalidad de los productos, ya que la revisión s"
+b65ddbc8b82cfe85,ab770b76ce2a65f4,si,Se reitera observación sobre intervenciones en planos no des / revisar todos los planos del archivo MVGPL01 para garantizar
+14849c2036cdcc46,9b044e735b20e4fe,si,Ajustar CIV y PK_ID en tablas de reporte para que coincidan  / Revisar que los CIV y PK_ID del archivo Excel correspondan c
+9e2244af3ef80c77,25a3e4eb2349a618,si,Verificar en el archivo MVGVPL01.dwg que los cuadros de inte / Verificar que los planos contengan los cuadros de intervenci
+25a3e4eb2349a618,cafc8a0ba5b5ade6,si,Verificar que los planos contengan los cuadros de intervenci / Revisar que las intervenciones en los planos coincidan con e
+b65ddbc8b82cfe85,f1afc51fde71d9af,si,Se reitera observación sobre intervenciones en planos no des / revisar todos los planos del archivo MVGPL01 para garantizar
+d6b2be51b95bfa11,a497fa8c05a7f9db,no,Diligenciar todas las variables del elemento losa según el a / Diligenciar la tabla relacionada (Seguimiento) para el eleme
+ef89159436171ca6,cafc8a0ba5b5ade6,si,Verificar que en el cuadro del Layout MVGVPL37 estén todas l / Revisar que las intervenciones en los planos coincidan con e
+adca392e315a0b7b,86e06efb567968a5,si,Verificar que todas las intervenciones ubicadas en los plano / Asegurar que las intervenciones relacionadas en los planos s
+cafc8a0ba5b5ade6,ab770b76ce2a65f4,si,Revisar que las intervenciones en los planos coincidan con e / revisar todos los planos del archivo MVGPL01 para garantizar
+e56fb32b9cea0a3d,0f3f8899a3ed491a,si,Se reitera la observación número 5 del memorando 20212150011 / La fecha de registro de las intervenciones en la GDB debe co
+bd86cc788fb8d7c7,5cc96ec936ab1fa6,no,En la GDB del proyecto las Áreas de Intervención y la fecha  / Verificar que el registro de intervenciones en los planos CA
+e2b119c04506b78c,7ec7e93ffcc6d898,no,Identificar todas las calzadas en el archivo digital MVGVPL0 / Ajustar el texto PK_Calzada en el archivo MVGVPL01.dwg ya qu
+ef89159436171ca6,2edc8b37e8ae292d,si,Verificar que en el cuadro del Layout MVGVPL37 estén todas l / Verificar que los cuadros de intervenciones en los layouts c
+86e06efb567968a5,b65ddbc8b82cfe85,si,Asegurar que las intervenciones relacionadas en los planos s / Se reitera observación sobre intervenciones en planos no des
+71b738724c968fb5,c0deb5dd02f3f04e,si,Ajustar los elementos en los planos planta perfil con superp / Ajustar las superposiciones entre los elementos Calzadas y M
+e94e86c1908ff2bc,c51733fd4872a89a,no,Se recomienda revisar la información correspondiente al espe / Revisar todos los planos del archivo MVGPL01.DWG para garant
+4cfb78ba748df7f9,039fe5c929db9850,si,Diligenciar la tabla relacionada (Seguimiento) para el eleme / Se debe diligenciar la tabla de seguimiento del elemento los
+ce1bdf8cb674ad3e,0f3f8899a3ed491a,si,Unificar las fechas de reporte de los planos CAD – GDB de to / La fecha de registro de las intervenciones en la GDB debe co
+e94e86c1908ff2bc,02c4933273c22245,no,Se recomienda revisar la información correspondiente al espe / Revisar todos los planos del archivo MVGPL01.DWG para garant
+25a3e4eb2349a618,ad2125d961af9be8,si,Verificar que los planos contengan los cuadros de intervenci / Se recomienda revisar todos los planos del archivo MVGPL01.D
+c4db401c341cd38a,346717d706229d78,si,Verificar que la fecha de registro en la GDB del proyecto (Á / Se reitera que las Áreas de Intervención y la fecha de regis
+788303fed10e4051,984a28bec8c36653,si,"Unificar la fecha de registro en la GOS del proyecto, los pl / Las Áreas de Intervención y la fecha de registro en la GDB d"
+cec42444a1cb5a80,8e3bfb3c54e02cfe,si,Se requiere diligenciar el archivo DiccionarioAtributos_V7.7 / Diligenciar Productos_BDG.xlsx (X de contratista e intervent
+984a28bec8c36653,5cc96ec936ab1fa6,no,Las Áreas de Intervención y la fecha de registro en la GDB d / Verificar que el registro de intervenciones en los planos CA
+81b1a471703cfed4,f5d27063104e9b2c,no,"Revisar integralmente todos y cada uno de los productos a en / Entregar la totalidad de los productos, ya que la revisión s"
+34ae223ca82c05f1,df80f01b423c8f57,si,Verificar el reporte de meta física FOIC09_REPORTE_FINAL_MET / El reporte de elementos del archivo Excel FOIC09 no coincide
+eb918e1ed371e4d7,9591ceec5e4283ac,si,Verificar que en las tablas de reporte del archivo MVGVPL01. / Revisar todos los planos del archivo MVGPL01.DWG para garant
+da3a785b0cc48b1a,eb918e1ed371e4d7,si,Verificar en el archivo IGVPL01.dwg que los cuadros de inter / Verificar que en las tablas de reporte del archivo MVGVPL01.
+70eb35c38d6f4ca8,21ef8a85cdf4de7d,no,Revisar integralmente todos los productos a entregar para ga / Entregar la totalidad de los productos para permitir una rev
+dea522d7db4561f7,4cfb78ba748df7f9,no,Diligenciar todas las variables del elemento losa según el a / Diligenciar la tabla relacionada (Seguimiento) para el eleme
+238644347d03c368,7ec7e93ffcc6d898,no,Identificar la calzada con su respectivo CIV y el PK_ID_Calz / Ajustar el texto PK_Calzada en el archivo MVGVPL01.dwg ya qu
+cec42444a1cb5a80,6e8be6608c66c1a8,si,Se requiere diligenciar el archivo DiccionarioAtributos_V7.7 / Diligenciar Productos_BDG.xlsx (X de contratista e intervent
+36d2f3e32f6a1676,a17b3541152cdea5,si,Las áreas de intervención y la fecha de registro en GDB debe / Asegurar que la fecha de registro de las intervenciones en l
+c4db401c341cd38a,28bff988698d68a9,no,Verificar que la fecha de registro en la GDB del proyecto (Á / El registro de las intervenciones en los planos CAD debe coi
+81b1a471703cfed4,18bcc29f1575e5c0,no,Revisar integralmente todos y cada uno de los productos a en / Entregar la totalidad de los productos debido a que la revis
+36d2f3e32f6a1676,5cc96ec936ab1fa6,no,Las áreas de intervención y la fecha de registro en GDB debe / Verificar que el registro de intervenciones en los planos CA
+dea522d7db4561f7,a497fa8c05a7f9db,no,Diligenciar todas las variables del elemento losa según el a / Diligenciar la tabla relacionada (Seguimiento) para el eleme
+a578a30c7aa3b779,21ef8a85cdf4de7d,no,Revisar integralmente todos y cada uno de los productos a en / Entregar la totalidad de los productos para permitir una rev
+e56fb32b9cea0a3d,d148edd13434a050,si,Se reitera la observación número 5 del memorando 20212150011 / La fecha de registro de las intervenciones en la GDB debe co
+eb918e1ed371e4d7,c51733fd4872a89a,si,Verificar que en las tablas de reporte del archivo MVGVPL01. / Revisar todos los planos del archivo MVGPL01.DWG para garant
+34ae223ca82c05f1,3f849e0c6b5339e0,si,Verificar el reporte de meta física FOIC09_REPORTE_FINAL_MET / Verificar que los elementos del archivo FOIC09_REPORTE_FINAL
+21ef8a85cdf4de7d,093e1e8548d0e596,si,"Entregar la totalidad de los productos para permitir una rev / Entregar la totalidad de los productos, ya que la revisión s"
+4c623587fe5ae4ae,984a28bec8c36653,si,Las Áreas de Intervención en la GDB deben tener una fecha de / Las Áreas de Intervención y la fecha de registro en la GDB d
+c0deb5dd02f3f04e,6e627028506ed1fa,si,Ajustar las superposiciones entre los elementos Calzadas y M / Ajustar elementos con superposiciones entre Calzadas y Manza
+9864def85052e954,44bf8eeedcdda0f7,si,Diligenciar las tablas respetando los campos obligatorios de / Reiterar que al diligenciar las tablas se deben tener en cue
+f58fe3eedea11296,214a52af4db9fd77,si,"Incorporar toda la información requerida en la BDG para dili / Diligenciar toda la información requerida en la BDG, ya que "
+5cc96ec936ab1fa6,28bff988698d68a9,si,Verificar que el registro de intervenciones en los planos CA / El registro de las intervenciones en los planos CAD debe coi
+d148edd13434a050,28bff988698d68a9,no,La fecha de registro de las intervenciones en la GDB debe co / El registro de las intervenciones en los planos CAD debe coi
+a69cf75647f01d1f,d065f49129939c43,no,Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx l / Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx e
+95b9f777ddbb1b1d,a0ff0589f0ea53b1,si,Verificar que los elementos cumplan con las relaciones espac / Verificar que la rampa esté totalmente contenida en el andén
+1b4ba3f011450655,ad079d29c0dbc83f,si,Se requiere una revisión detallada de la información a entre / Solicitar la entrega de toda la información requerida por ca
+e704aa8720c7a03e,0b59ace89324fdc5,si,Diligenciar completamente el archivo Productos_BDG.xlsx para / Diligenciar Productos_BDG.xlsx (X de contratista e intervent
+093e1e8548d0e596,e74fd5af13c96fbe,no,"Entregar la totalidad de los productos, ya que la revisión s / Revisar integralmente todos los productos a entregar para ev"
+21ef8a85cdf4de7d,e74fd5af13c96fbe,no,Entregar la totalidad de los productos para permitir una rev / Revisar integralmente todos los productos a entregar para ev
+412ab8f6fffd89fb,315c5af08f22210a,si,Presentar el archivo EstructuraCarpetas.xlsx y registrar en  / Entregar el archivo EstructuraCarpetas.xlsx con la hoja Cons
+47be4a4c5b423adf,e9cddfaf8b0682b7,si,Cada elemento va en su layer; no en layers de otros elemento / Cada elemento va en el layer que le corresponde (p. ej. puen
+38bf5f255dba8072,bbe670b414815f81,si,Incluir placas de amarre en los planos de tramos de rehabili / Los planos de tramos viales con levantamiento topográfico de
+4c623587fe5ae4ae,28bff988698d68a9,no,Las Áreas de Intervención en la GDB deben tener una fecha de / El registro de las intervenciones en los planos CAD debe coi
+5cc96ec936ab1fa6,a17b3541152cdea5,no,Verificar que el registro de intervenciones en los planos CA / Asegurar que la fecha de registro de las intervenciones en l
+4c623587fe5ae4ae,5cc96ec936ab1fa6,no,Las Áreas de Intervención en la GDB deben tener una fecha de / Verificar que el registro de intervenciones en los planos CA
+093e1e8548d0e596,18bcc29f1575e5c0,si,"Entregar la totalidad de los productos, ya que la revisión s / Entregar la totalidad de los productos debido a que la revis"
+412ab8f6fffd89fb,9f7dce4b521589e1,si,Presentar el archivo EstructuraCarpetas.xlsx y registrar en  / Es necesario presentar el archivo EstructuraCarpetas.xlsx y 
+1f125a4b985966ab,38bf5f255dba8072,si,Incluir placas de amarre y anexar informe de topografía en p / Incluir placas de amarre en los planos de tramos de rehabili
+a676a6b04101b4f4,9864def85052e954,si,Diligenciar las tablas respetando los campos obligatorios de / Diligenciar las tablas respetando los campos obligatorios de
+c4db401c341cd38a,984a28bec8c36653,si,Verificar que la fecha de registro en la GDB del proyecto (Á / Las Áreas de Intervención y la fecha de registro en la GDB d
+214a52af4db9fd77,892bbaedfb3de38a,si,"Diligenciar toda la información requerida en la BDG, ya que  / Diligenciar todos los atributos y tablas relacionadas de la "
+a17b3541152cdea5,28bff988698d68a9,no,Asegurar que la fecha de registro de las intervenciones en l / El registro de las intervenciones en los planos CAD debe coi
+e74fd5af13c96fbe,f5d27063104e9b2c,no,"Revisar integralmente todos los productos a entregar para ev / Entregar la totalidad de los productos, ya que la revisión s"
+e74fd5af13c96fbe,18bcc29f1575e5c0,no,Revisar integralmente todos los productos a entregar para ev / Entregar la totalidad de los productos debido a que la revis
+6fb233ecbd573a53,dcbe962908a31ec7,si,Los planos de Rehabilitación deben incluir placas de amarre  / Los planos de Rehabilitación deben contener las placas de am

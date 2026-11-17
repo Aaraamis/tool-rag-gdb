@@ -11,11 +11,16 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ### Changed
 
-- `jsonschema` pasa a dependencia del paquete (ya lo instalaba Docling).
+- `jsonschema` y `numpy` pasan a dependencias del paquete (ya las instalaba Docling).
 - La revisión piloto distingue contenido textual conservado de información visual que requiere consultar el PDF.
 
 ### Added
 
+- Consolidación (RF8): `rag-gdb consolidar` agrupa observaciones repetidas con
+  embeddings locales (bge-m3), con revisión de pares dudosos en
+  `config/consolidacion-pares.csv`, frecuencia por radicado IDU y tema según
+  `config/temas.csv` y `config/temas-asignacion.csv`. `rag-gdb checklist` genera el
+  borrador de `checklist-gdb.md`.
 - `rag-gdb proponer`: primera pasada local con Ollama que propone candidatos de
   observación; la cita es el bloque literal del PDF. Prompt en
   `prompts/proponer-observaciones.md`, salida reanudable en `datos/03_candidatos/`.

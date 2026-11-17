@@ -6,6 +6,8 @@ import argparse
 import json
 from pathlib import Path
 
+from .checklist import write_checklist
+from .consolidation import consolidate, ollama_embed
 from .classification import apply_manual_reviews, classify_manifest, write_classification
 from .extraction import page_texts, validate_dir
 from .inventory import build_manifest, write_json
@@ -49,6 +51,17 @@ def main() -> int:
     propose_cmd.add_argument("--prompt", type=Path, default=Path("prompts/proponer-observaciones.md"))
     propose_cmd.add_argument("--manifiesto", type=Path, default=Path("datos/01_inventario/manifiesto.json"))
     propose_cmd.add_argument("--salida-dir", type=Path, default=Path("datos/03_candidatos"))
+    merge = sub.add_parser("consolidar", help="Agrupa observaciones repetidas (RF8) con embeddings locales")
+    merge.add_argument("--extraido-dir", type=Path, default=Path("datos/03_extraido"))
+    merge.add_argument("--salida-dir", type=Path, default=Path("datos/04_consolidado"))
+    merge.add_argument("--decisiones", type=Path, default=Path("config/consolidacion-pares.csv"))
+    merge.add_argument("--modelo", default="bge-m3")
+    merge.add_argument("--url", default="http://localhost:11434")
+    merge.add_argument("--temas", type=Path, default=Path("config/temas.csv"))
+    merge.add_argument("--temas-manuales", type=Path, default=Path("config/temas-asignacion.csv"))
+    check = sub.add_parser("checklist", help="Borrador de checklist-gdb.md desde los grupos consolidados")
+    check.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
+    check.add_argument("--salida", type=Path, default=Path("datos/04_entregables/checklist-gdb.md"))
     args = parser.parse_args()
     if args.command == "inventariar":
         rules = json.loads(args.reglas.read_text()) if args.reglas else None
@@ -70,6 +83,12 @@ def main() -> int:
         invalid = sum(bool(errors) for errors in results.values())
         print(json.dumps({"archivos": len(results), "invalidos": invalid}))
         return 1 if invalid else 0
+    elif args.command == "consolidar":
+        print(json.dumps(consolidate(args.extraido_dir, args.salida_dir, args.decisiones,
+                                     ollama_embed(args.modelo, args.url), args.modelo,
+                                     themes_path=args.temas, overrides_path=args.temas_manuales)))
+    elif args.command == "checklist":
+        print(json.dumps(write_checklist(args.grupos, args.salida)))
     elif args.command == "paginas":
         manifest = json.loads(args.manifiesto.read_text())
         if args.ruta not in {item["ruta"] for item in manifest["archivos"]}:

@@ -1,0 +1,103 @@
+clave,tema,nota
+f1afc51fde71d9af,T09,revisar todos los planos del archivo MVGPL01 para garantizar que las intervencio
+252959a60238d0de,T07,Ajustar los CIV y PK_ID en las tablas de reporte para que coincidan con los plan
+093e1e8548d0e596,T01,"Entregar la totalidad de los productos, ya que la revisión se realiza nuevamente"
+dadd66031e23f67e,T01,"No se entregaron planos de Planta Perfil, se recomienda revisar la información."
+d785dcdf9d73c97a,T10,Corregir el espesor de rodadura asfáltica en la tabla DetalleAIntervencionCalCic
+48edda3546cd12e2,T09,Diligenciar el campo de ENTIDAD O DEPENDENCIA IDU en el archivo FOIC09_REPORTE_F
+f0bdffe7588bcbcd,T08,Ajustar la representación del elemento RedCiclorruta considerando su conectivida
+841367a11ab55b2d,T04,Asegurar que la geometría del elemento y su nomenclatura cumplan con la clasific
+3bc8e87f5b08a792,T02,El formato presentado no es el suministrado en el alistamiento del proyecto y se
+e833445bb3911d2f,T05,"Escalas gráfica, numérica, de rótulo y de viewport deben coincidir y las unidade"
+e448ee5de7214677,T05,Rotar los textos de las intervenciones del archivo MVGVPL01.dwg para facilitar s
+ad079d29c0dbc83f,T01,Solicitar la entrega de toda la información requerida por cada fase presentada d
+fb304c36e2182cef,T09,Diligenciar el archivo FOIC09_REPORTE_FINAL_META_FISICA.xls en los campos especi
+08b632273f2bfd74,T10,El contratista justifica en la hoja de Losa que el alcance del contrato no conte
+e07c016f944619c7,T06,Eliminar el texto en observaciones del atributo ArealIntervencion en el archivo 
+5546fe2a261a2db1,T10,No se diligenció la tabla P_RegistroCampo a pesar de tener justificación para el
+4d4c132c44ccc20f,T10,Revisar los valores consignados en el archivo de reporte de la estructura de pav
+f57ef82d3a18d49a,T04,Ajustar el archivo base para que cada elemento utilice un solo tipo geométrico (
+7ec7e93ffcc6d898,T07,Ajustar el texto PK_Calzada en el archivo MVGVPL01.dwg ya que se incorporó el mi
+401285fe0cc3e8f0,T04,Ajustar los elementos del archivo base para cumplir con el nombre (layer) y geom
+7f5fe07416c35ca2,T05,Asegurar que los colores de los elementos presentados en el cuadro de convencion
+af21f5ee5bddf2ab,T08,Asegurar que no exista duplicidad de elementos en los documentos entregados.
+8ed28bd98e0a752c,T09,Cambiar el elemento MOBILIARIO en el reporte final de meta física (FO-IC-09) por
+3721416090899526,T04,Corregir archivos que no cumplen el estándar de capas y agrupación por filtros (
+6dacb0acc1c06ba4,T06,Corregir el andén que no tiene información relacionada en la tabla Detalle Andén
+f0d85ef577f2aac6,T09,"Corregir el conteo de elementos, ya que existen diferencias entre las ciclorruta"
+5bd08c993836d3b9,T06,Corregir información inconsistente en el atributo Codigo Elemento y errores de l
+b9c7b4b295aeab1f,T06,Corregir la altura interna registrada para el sardinel que aun es de 20 centímet
+42df120946510942,T02,Eliminar el archivo CVGNLP01.dwg por carecer de información gráfica y ajustar el
+e07966f42d4da7fe,T08,Eliminar la rampa identificada con PK_ID_5100049.
+4f76b2df26f821c9,T07,Entregar el archivo RELACION_CAD_CIV.xlsx con la información solicitada para las
+c19894b62e9f2948,T01,Entregar información relacionada con planos de temas estructurales y detalles de
+60ef8be4171fcf4e,T04,Entregar la Hoja LAYOUT_CIV según lineamientos del INSTRUCTIVO y eliminar el res
+35a07365d31cc2ee,T08,Extraer del área de la cuneta con PK_ID_Cuneta 2300019 el área correspondiente a
+e9fb73f55e93c975,T05,Incluir el código de identificación vial (CIV) en los diferentes planos en plant
+d6aa7b94bdf2cef7,T09,Incluir en la Base de Datos Geográfica y el reporte final de Excel las 31 calzad
+16fe15969478656a,T06,Incluir información asociada a las barandas peatonales en la tabla Detalle Mobil
+73a583746f3ea2a5,T06,Incluir información en planos CAD y Base de Datos Geográfica para campos obligat
+d85e696de42836fe,T09,La información en las tablas debe coincidir con la de los planos.
+44db519e9be868e6,T02,La nomenclatura de los archivos de las configuraciones de las capas de la estruc
+12a031f86895aeff,T08,Los elementos representados en la Base de Datos Geográfica no deben ser polígono
+bbe670b414815f81,T05,Los planos de tramos viales con levantamiento topográfico deben contener los pla
+34785b0943f61574,T06,No se encuentra la relación entre el elemento /vea Intervención y la tabla Detal
+f7d3aded86abae44,T08,"Reclasificar el elemento 'Matera' ya que no existe presencia real, sino contened"
+aea3a2fd5ea2e6f5,T06,Reiterar observación sobre tablas relacionales desconectadas (C_BaseGranular no 
+7378fc58c78339f9,T10,Reportar un solo registro por calzada en la tabla EvaluacionEstructural.
+70454f5f46fe2b74,T10,Revisar el atributo costo de la tabla de relación seguimiento del elemento Losa.
+e985d27452dd4678,T02,Revisar los nombres de los archivos Excel con las configuraciones de las capas d
+de2af5e49c2d9bc7,T10,Revisar los valores presentados en el formato de la mezcla utilizada dentro de l
+e94e86c1908ff2bc,T10,Se recomienda revisar la información correspondiente al espesor y tipo de mezcla
+b95d3f0756e31d7d,T09,"Se reitera la diferencia entre los productos CAD y BDG, señalando que existen el"
+d2cfaddd98a3389e,T01,Se reitera lo indicado en la observación No. 2 del memorando 202523500323243 sob
+034093b1dc240e58,T06,Se requiere validación por parte de la Interventoría para campos sujetos a justi
+a38448e7de698e48,T05,Se requiere verificar y ajustar el componente CAD para incorporar elementos míni
+f30a058fafdd4d2d,T09,Se solicita ajustar la información debido a que la fecha de registro del element
+6ed6e496d554c1ec,T08,Segmentar (dividir) los andenes identificados con los PKID 24130614 y 21424.
+60157d52a83bcea4,T09,Verificar el Tipo de Mezcla en las intervenciones debido a diferencias entre la 
+ddaf340f8b11a075,T10,"Verificar el espesor del elemento Losa, ya que se reporta 24 cm pero las cantida"
+b31c50514e12cc2f,T02,"Verificar la continuidad en la numeración de las temáticas, asegurando que los a"
+304c41fdf132af1e,T10,Verificar la información en la tabla Exploración debido a un elemento con enlace
+a2ef0a444c4921b5,T06,"Verificar la integridad de la información en la BDG debido a inconsistencias, co"
+d9e4f527dc06c877,T06,"Verificar las intervenciones de las losas en el atributo FK_ID_Calzada, específi"
+d6b1d97ef5b60d12,T10,Verificar si los índices y/o ensayos no solicitados para el recibo de obra pero 
+015e84076eadac2f,T07,Verificar y ajustar el archivo RelacionElementoConfiguración_IDU-1533.xlsx para 
+11f85acfa7e0c93c,T04,"Verificar y ajustar el archivo base (BASE-IDU-1309-2018.dwg) aplicando filtros, "
+e033d45f7acbb5d4,T02,Verificar y complementar la información en los rótulos para incorporar el dato d
+c1e8f1e1124b7c68,T06,Verificar y corregir la información en atributos de la BDG que no corresponden c
+63ab1d4861f4a6df,T08,incorporar en la BDG los elementos de estructuras presentes en los productos CAD
+a9cdcbf83e4d107e,T08,"reportar todos los elementos intervenidos por el contrato, incluyendo aquellos r"
+82fe60154419cf72,T08,verificar que los elementos intervenidos por el contrato estén debidamente repre
+01e57f0781a8becc,T02,El Layout de cada plano debe ser único y seguir la nomenclatura de su temática.
+edf6a2b75151ba4f,T08,Eliminar de la tabla los registros sin geometría («registros fantasma»).
+32551dd32722624c,T01,Incluir y recodificar los planos modificados aunque no se hubieran presentado.
+868507a310f203a7,T08,Los polígonos del DWG y de la BDG deben coincidir (límites por CIV).
+31feaa36f873b114,T09,Aclarar y corregir las discrepancias entre el DWG base y los feature class.
+67c36d8bcebeea47,T01,Acuerdo de la mesa del 8/6/2021: en la entrega inicial solo DWG; los PDF y las f
+3955333133330834,T01,Cada informe va en la carpeta que le corresponde por numeración (urbanismo en D.
+22ff5b8c83229fbc,T11,Cada remisión debe responder una a una las observaciones previas de la intervent
+1e48d5a9fb80458e,T01,Completar las firmas (revisó y aprobó) de los informes en PDF.
+14d58cb179c2bbfb,T04,Describir todos los niveles del archivo BASE en el reporte Productos_DWG.
+3b195faf1c68230f,T07,Diligenciar Tipo de Puente y CIV en la capa Puente.
+10ee3f6513b83fe6,T04,Diligenciar la hoja obligatoria LAYOUT_CIV (capítulo 8.2).
+46248ca0104e2929,T05,El esquema de ubicación de perforaciones (planos de pavimentos) debe incluir las
+d6bdbb373816b873,T09,El reporte de meta física entregado pertenece a otro contrato; no se verifica la
+00c274ecebb49bc7,T04,Entregar la lista de CIV por Layout.
+6eea9aa3b19adac4,T01,"Entregar las versiones aprobadas por la interventoría, no las iniciales."
+3de33d6655a0af3d,T01,Entregar los planos en DWG y en PDF.
+509cba2ceb5c0ee1,T04,Entregar los reportes Excel de Productos CAD (LAYOUT_CIV y NUEVOSLAYER).
+aa63eb44df59dada,T05,Escala de las secciones transversales distinta de la requerida por Productos_DWG
+80b19c1ddf8b5ad4,T01,Firmar digitalmente los PDF de planos e informes por todos los responsables de c
+d3a7ed917c0f6f3e,T11,Implementar un control de calidad que garantice que lo entregado es la versión a
+abc0fde0adb56ab1,T04,Incluir ConfiguracionCapaEstructura y la lista de nuevos layers en Reportes.
+56363064bac3b57c,T05,Los planos de diseño geométrico deben mostrar la estructura de pavimento de calz
+65bf0f053c9e79bb,T07,No borrar el CIV al corregir atributos: la DTINI ya lo entregó.
+681317cce9332110,T04,No mezclar elementos o capas distintos en un mismo bloque.
+6b6907407eb347fc,T11,No se puede re-radicar los mismos archivos sin cambios como respuesta a las obse
+65ec9f8d13b818a0,T04,Productos_DWG.xlsx debe incluir todos los niveles o layers de los planos.
+3ec9ad96c8eefad6,T04,Registrar en Productos_DWG todos los layers nuevos de todos los planos.
+d44648498d45be1d,T04,Respetar la geometría definida por LAYERCAD para cada elemento.
+eef5fd13fa3d1c89,T01,Respetar los niveles de la estructura de carpetas del alistamiento (D.7.2.Inform
+45f5de54cb45068d,T06,Responder la tabla 9 (validación GDB): totalidad de información y consistencia c
+18fd50c69e1029ad,T04,Usar bloques solo donde corresponde y con el mismo criterio en todos los planos 

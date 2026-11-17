@@ -113,6 +113,27 @@ estado y radicado) y escribe el resultado en `datos/03_extraido/`, siguiendo
 salvo las marcadas con `requiere_cotejo_visual`. Si la cita está en otra
 página, el error indica cuál.
 
+## Consolidación y checklist (RF8)
+
+```bash
+.venv/bin/rag-gdb consolidar   # agrupa observaciones repetidas con bge-m3 (Ollama)
+.venv/bin/rag-gdb checklist    # borrador en datos/04_entregables/checklist-gdb.md
+```
+
+`consolidar` calcula embeddings de cada observación (resumen + cita, con caché
+en `datos/04_consolidado/`), une las que superan 0,85 de similitud siempre que
+ningún par del grupo quede por debajo de 0,78, y deja en `pares-revisar.csv`
+los pares dudosos. Las decisiones revisadas se guardan en
+`config/consolidacion-pares.csv` (`si`/`no` por par de claves) y se aplican en
+cada ejecución. La frecuencia de un requisito es el número de radicados IDU
+distintos: una copia o un traslado no suma. Cada grupo recibe el tema de
+`config/temas.csv` más cercano; `config/temas-asignacion.csv` fija el tema a mano
+por clave de observación.
+
+`checklist` ordena los requisitos por tema y frecuencia, con uno o dos ejemplos
+citados (radicado, archivo y página). Es un borrador hasta que la taxonomía se
+valide y se enlace la normativa vigente (RF7).
+
 ## Revisión piloto
 
 Elegir PDF escaneados, con tablas, guías largas y comunicados con observaciones.

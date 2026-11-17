@@ -65,6 +65,7 @@ En `datos/04_entregables/`:
 - **RF7. Normativa**: identificar código y versión de cada guía o instructivo y marcar cuál es la vigente. La propuesta es automática y la confirmación es manual.
 - **RF7b. Emisor**: cada documento se marca como IDU, interventoría, obra o diseños. Solo los del IDU y la interventoría generan observaciones; los de obra y diseños son contexto (cómo se respondió).
 - **RF8. Consolidación**: la frecuencia de cada observación se cuenta por radicado IDU de origen, para no contar dos veces un traslado. el agente propone una taxonomía de temas, Aramis la valida, y luego se asigna un tema a cada observación y se generan los entregables.
+  Implementado con `rag-gdb consolidar` (embeddings locales y revisión de pares dudosos) y `rag-gdb checklist`. La taxonomía propuesta está en `config/temas.csv`, pendiente de validación.
 - **RF9. Reanudable**: cada etapa registra su estado por documento. Si se agota el cupo de la suscripción, el proceso sigue después desde donde quedó, sin repetir trabajo.
 
 ## 6. Restricciones

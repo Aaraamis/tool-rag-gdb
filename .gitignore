@@ -3,6 +3,7 @@ datos/01_inventario/
 datos/02_convertidos/
 datos/03_extraido/
 datos/03_candidatos/
+datos/04_consolidado/
 .venv/
 .pytest_cache/
 .ruff_cache/

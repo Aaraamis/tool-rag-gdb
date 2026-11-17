@@ -13,6 +13,8 @@
 | 2026-11-17 | Delegar la primera lectura en qwen3.5:9b local (Ollama) con selección de bloques; el agente revisa | Medido contra la referencia del primer lote; aprobado por Aramis |
 | 2026-11-17 | Laya queda para la fase 2 (D4): no extrae y sin ajuste está cerca del azar | Evaluación del repositorio y de sus límites declarados |
 | 2026-11-17 | Emisor IDU por «Al responder cite este número» en la primera página | Muestra de los 72 PDF con radicado numérico; aprobado por Aramis |
+| 2026-11-17 | Frecuencia de un requisito = radicados IDU distintos; la interventoría se informa aparte | ESPECIFICACION RF8 y checklist |
+| 2026-11-17 | Taxonomía de 11 temas propuesta en `config/temas.csv`, pendiente de validación de Aramis | Lectura de los 306 grupos iniciales |
 
 ## Primer inventario en meraxes-f
 
@@ -140,3 +142,27 @@
   documento.
 - El último dígito del radicado IDU parece indicar el tipo (1 salida, 2
   entrada, 3 memorando); no se usa como regla porque la ANI usa el mismo formato.
+
+## Consolidación (RF8), primer borrador
+
+- 504 observaciones de 41 documentos con observaciones quedan en 294 grupos;
+  188 los observó el IDU al menos una vez y 106 solo la interventoría. Los más
+  repetidos: intervenciones de los planos ausentes en las tablas de reporte
+  (16 radicados), fecha de registro de las áreas de intervención distinta entre
+  GDB, CAD y FOIC09 (12), revisar integralmente los productos (10) y FOIC09 que
+  no concuerda con la base CAD y la GDB (8).
+- Agrupación: unión desde 0,85 de similitud con un piso de 0,78 entre todos los
+  miembros, para evitar cadenas. Se revisaron 157 pares dudosos en siete rondas
+  (`config/consolidacion-pares.csv`). Las pruebas mostraron que un par sobre el
+  umbral bloqueado por el piso no se listaba: ahora se revisa también, y un «no»
+  entre dos miembros cierra la revisión entre sus grupos.
+- Tema: centroide del grupo frente a la descripción de cada tema. qwen3.5:9b dio
+  una segunda opinión; coincidieron en 204 de 306 grupos y los 102 desacuerdos
+  se decidieron a mano (`config/temas-asignacion.csv`). Criterio: el tema del
+  objeto observado, no del archivo nombrado; la fecha de registro y el registro
+  de intervenciones van a consistencia entre productos (T09). Caso para validar:
+  el grupo que une el registro de intervenciones con los CIV y PK_ID de las
+  tablas quedó en T07.
+- El checklist usa como requisito el resumen representativo de cada grupo;
+  falta la redacción final, la validación de los temas y el vínculo con la
+  normativa vigente (RF7).
