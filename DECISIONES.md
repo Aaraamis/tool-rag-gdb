@@ -120,5 +120,23 @@
   memorandos de aprobación («se ajusta a los requerimientos»); estos últimos
   sirven para fechar el cierre de observaciones. Las dos copias de GUIC06 se
   sacaron de la selección: son normativa (RF7), no observaciones.
+- Depuración de los 387 candidatos de oficios IDU (2026-11-17): quedan 333
+  observaciones en 37 documentos, todas con `autor: idu`, número tomado del
+  inicio de la cita y radicado de origen leído del encabezado de la página
+  donde aparece (la copia `R-IDU…` hereda así el radicado del memorando DTE que
+  contiene). Se descartaron 54: fórmulas de cierre y avisos sobre mesas de
+  trabajo (37), pies de firma y encabezados (9), fragmentos (5) y ejemplos del
+  mismo enunciado (3). Los resúmenes son los del modelo local, revisados por
+  muestreo. Total extraído: 504 observaciones en 45 documentos.
+- Los 30 documentos IDU sin candidatos no se registran como extraídos: se
+  verificaron dos (memorandos de aprobación sin observaciones); los demás son
+  cartas de remisión de una página o aprobaciones, pendientes de confirmar.
+- Para RF8 se evaluó `bge-m3` (Ollama, 1,2 GB, multilingüe) sobre las 504
+  observaciones (resumen + cita, 19 s). Con similitud ≥ 0,85 con otra de otro
+  documento los pares son el mismo requisito; entre 0,80 y 0,85 casi siempre;
+  entre 0,75 y 0,80 son temas relacionados pero distintos. Propuesta: agrupar
+  de forma automática desde 0,85, revisar los pares entre 0,78 y 0,85 y tratar
+  el resto como distintos. 206 observaciones tienen un par ≥ 0,90 en otro
+  documento.
 - El último dígito del radicado IDU parece indicar el tipo (1 salida, 2
   entrada, 3 memorando); no se usa como regla porque la ANI usa el mismo formato.
