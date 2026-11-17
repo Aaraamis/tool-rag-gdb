@@ -3,7 +3,7 @@ import zipfile
 from pathlib import Path
 
 from rag_gdb.inventory import build_manifest, read_inventory
-from rag_gdb.pipeline import convert_selected
+from rag_gdb.pipeline import convert_selected, profile_manifest
 
 
 def make_ods(path: Path, digest: str) -> None:
@@ -74,3 +74,20 @@ def test_subject_filter_records_reason(tmp_path):
     result = build_manifest(pdfs, ods, {"remitentes": ["@ejemplo.com"]})
     assert result["archivos"][0]["estado"] == "excluido"
     assert result["archivos"][0]["motivo_exclusion"] == "remitente:@ejemplo.com"
+
+
+def test_profile_removes_paths_absent_from_current_manifest(tmp_path, monkeypatch):
+    import rag_gdb.pipeline as pipeline
+
+    output = tmp_path / "perfiles.json"
+    output.write_text(json.dumps({"documentos": {
+        "nombre_alterado.pdf": {"sha256": "abc", "estado": "ok"},
+        "nombre_correcto.pdf": {"sha256": "abc", "estado": "ok", "paginas": 1},
+    }}))
+    monkeypatch.setattr(pipeline, "profile_pdf", lambda path: None)
+    manifest = {"archivos": [{"ruta": "nombre_correcto.pdf", "sha256": "abc"}]}
+
+    result = profile_manifest(manifest, tmp_path, output)
+
+    assert list(result["documentos"]) == ["nombre_correcto.pdf"]
+    assert list(json.loads(output.read_text())["documentos"]) == ["nombre_correcto.pdf"]

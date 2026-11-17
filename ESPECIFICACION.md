@@ -56,6 +56,8 @@ En `datos/04_entregables/`:
 - **RF4. Conversión**: cada PDF se convierte a JSON de Docling + Markdown y se omite en reanudaciones si su hash y ambas salidas siguen vigentes. Los originales no se tocan nunca.
 - **RF5. Clasificación**: tipo de documento y si trata o no de la GDB. Primero reglas; los casos ambiguos los decide el agente.
 - **RF6. Extracción**: de cada documento relevante, sacar las observaciones a JSON validado contra un esquema, con la página de origen.
+  Si una observación depende de mapas, capturas o marcas por color, se coteja
+  la página del PDF; el Markdown por sí solo no basta como evidencia.
 - **RF7. Normativa**: identificar código y versión de cada guía o instructivo y marcar cuál es la vigente. La propuesta es automática y la confirmación es manual.
 - **RF7b. Emisor**: cada documento se marca como IDU, interventoría, obra o diseños. Solo los del IDU y la interventoría generan observaciones; los de obra y diseños son contexto (cómo se respondió).
 - **RF8. Consolidación**: la frecuencia de cada observación se cuenta por radicado IDU de origen, para no contar dos veces un traslado. el agente propone una taxonomía de temas, Aramis la valida, y luego se asigna un tema a cada observación y se generan los entregables.

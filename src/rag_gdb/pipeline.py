@@ -33,7 +33,9 @@ def profile_pdf(path: Path) -> dict:
 
 def profile_manifest(manifest: dict, pdf_dir: Path, output: Path) -> dict:
     previous = json.loads(output.read_text()) if output.exists() else {}
-    results = previous.get("documentos", {})
+    current_paths = {item["ruta"] for item in manifest["archivos"]}
+    results = {path: profile for path, profile in previous.get("documentos", {}).items()
+               if path in current_paths}
     for item in manifest["archivos"]:
         relative = item["ruta"]
         if (results.get(relative, {}).get("sha256") == item["sha256"]
@@ -46,6 +48,7 @@ def profile_manifest(manifest: dict, pdf_dir: Path, output: Path) -> dict:
             results[relative] = {"sha256": item["sha256"], "estado": "error",
                                  "detalle": str(exc)}
         write_json(output, {"version": 1, "documentos": results})
+    write_json(output, {"version": 1, "documentos": results})
     return {"version": 1, "documentos": results}
 
 

@@ -21,3 +21,6 @@
   JSON conservan 14, 41, 21 y 2 páginas respectivamente.
 - El traslado MAB de dos páginas menciona ocho folios anexos que no están en
   ese PDF; se considera contexto y no fuente directa de observaciones.
+- La revisión del piloto confirmó que mapas, capturas y marcas rojas pueden
+  aportar significado que Markdown no conserva. Para esos casos, la extracción
+  de observaciones debe cotejar el PDF y citar la página original.
