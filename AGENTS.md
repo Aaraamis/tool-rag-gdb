@@ -16,6 +16,9 @@ para añadir herramientas o capas.
 3. Al cerrar una sesión, informa las pruebas ejecutadas, los cambios pendientes
    en `Unreleased`, la versión actual y si hay razones para preparar una nueva.
    Para retomar contexto puedes usar `lucia session-start --dir . --compact`.
+   Registra decisiones o hitos verificables con `lucia memory --action add` y
+   versiona `.lucia/memory.jsonl` junto con el cambio que describe. El índice
+   local `.lucia/symbols.db` permanece fuera de Git.
 
 ## Versiones y cambios
 
