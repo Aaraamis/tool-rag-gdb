@@ -10,6 +10,9 @@
 | 2026-11-17 | Esquema RF6: una entrada por observación, con página y cita literal verificable | Piloto sobre C.1443 de junio de 2024 |
 | 2026-11-17 | Unidad de observación: un enunciado distinto por documento; si se repite en varias filas o planos de una tabla se registra una vez y no se listan los planos. Las observaciones sobre planos sí se capturan | Aprobado por Aramis |
 | 2026-11-17 | Se evitan los PDF que son planos (dibujos), no los comunicados que observan planos. La regla de exclusión queda pendiente de definir | Aclarado por Aramis: lo importante son los comunicados y los correos |
+| 2026-11-17 | Delegar la primera lectura en qwen3.5:9b local (Ollama) con selección de bloques; el agente revisa | Medido contra la referencia del primer lote; aprobado por Aramis |
+| 2026-11-17 | Laya queda para la fase 2 (D4): no extrae y sin ajuste está cerca del azar | Evaluación del repositorio y de sus límites declarados |
+| 2026-11-17 | Emisor IDU por «Al responder cite este número» en la primera página | Muestra de los 72 PDF con radicado numérico; aprobado por Aramis |
 
 ## Primer inventario en meraxes-f
 
@@ -61,9 +64,22 @@
   se cuenta por (radicado IDU, número), no por documento.
 - El oficio de junio de 2024 no cita radicado; otro oficio sugiere
   `202434600421281` (13 de marzo de 2024), sin confirmar. Queda nulo.
-- Extracción del lote: 4 de 8 documentos (V1 con 54 observaciones, junio con 16,
-  octubre con 22 y diciembre con 17). Pendientes V2, enero de 2025 y los dos
-  traslados MV2, que no traen el texto de las observaciones.
+- Extracción del lote completa (8 de 8): V1 con 54 observaciones, V2 con 41,
+  junio de 2024 con 16, octubre con 22, diciembre con 17 y enero de 2025 con 21
+  (171 en total). Los dos traslados MV2 quedan registrados sin observaciones
+  porque no traen su texto.
+- La V2 (julio de 2023) y enero de 2025 son rondas de seguimiento: repiten los
+  enunciados anteriores con su estado nuevo. Enero repite las observaciones 1,
+  2, 9 y 10 del radicado `STEST 202434601243021` con la «VALIDACIÓN No. 3»
+  (1 atendida, 2 parcial, 9 parcial, 10 parcial). La consolidación (RF8) debe
+  unir los enunciados repetidos por texto y radicado, y quedarse con el estado
+  más reciente.
+- **Hallazgo de clasificación:** 72 PDF tienen nombre de radicado numérico
+  (p. ej. `2021-06-18_20213560877971.pdf` y su anexo `120213560877971_00002.pdf`).
+  Son oficios y memorandos del IDU con las observaciones de origen, y la
+  clasificación los deja con emisor `por_revisar`. Son la fuente primaria de
+  los radicados que citan los traslados MV2 y los oficios de la interventoría.
+  Pendiente: clasificarlos como IDU y extraerlos.
 - C.1443 BDG V1 (marzo de 2023): 54 observaciones de la interventoría, todas con
   página y cita validadas, incluidas las de planos (tablas 2 a 8). Se registraron
   una vez los enunciados repetidos en las tablas. Se dejó fuera una fila de la
@@ -71,3 +87,38 @@
   corta para citarla. Esa carta no cita radicado IDU: es revisión propia.
 - Las citas de celdas de tabla deben caber en una línea del texto del PDF:
   `pdftotext` intercala las columnas vecinas cuando la celda ocupa varias líneas.
+
+## Delegación en modelos locales
+
+- Laya (NandhaKishorM/laya, Apache-2.0) es un motor de decisión: elige, puntúa
+  y responde sí/no con probabilidades calibradas y una ruta `auto`/`review`. No
+  extrae ni resume. Su README declara que los checkpoints base quedan cerca del
+  azar sin ajuste; el ajuste pide unas 35 filas etiquetadas por pregunta.
+- qwen3.5:9b (Ollama, Q4_K_M, ~11 GB de VRAM cargado) falla al copiar citas
+  literales (53 % inventadas). Eligiendo bloques numerados por página recuperó
+  14/16, 22/22, 34/41 y 52/54 de la referencia del primer lote (junio y octubre
+  de 2024, V2 y V1), con precisión aproximada de 60 a 86 %, en 15 a 61 s por
+  documento. La recuperación está algo inflada porque un bloque puede cubrir
+  varias entradas; la precisión está subestimada porque parte de lo «extra»
+  son hallazgos válidos no registrados. gemma3:4b tuvo 25 % de precisión.
+- Regla de emisor: de los 72 PDF con radicado numérico, 65 llevan «Al
+  responder cite este número» (oficios y memorandos del IDU: STMSV, STEST,
+  DTE, DTINI, STRF…); 2 son de la ANI («Radicado ANI») y 5 son formularios de
+  radicación web o de atención al ciudadano. Con la regla, 87 documentos pasan
+  a emisor IDU, 12 de ellos con otro nombre: `R-IDU…` es el sello de recibido
+  del contratista sobre una carta del IDU, y los anexos MAB contienen el oficio.
+- `rag-gdb proponer` real (segmentación por viñetas, rótulos y frases; bloques
+  de 124 a 277 caracteres de media; deduplicación por texto en cada documento):
+  sobre el primer lote recupera 150 de 171 observaciones de referencia (88 %),
+  con 281 candidatos de los que 162 coinciden con la referencia (58 %), en 3 min.
+  La primera versión, con párrafos completos y cita recortada a 300 caracteres,
+  solo llegaba al 49 %: el modelo elegía bien, pero la cita no contenía la
+  observación.
+- Primera pasada sobre los oficios y memorandos del IDU con señal GDB
+  (`muestras/idu-radicados-1.txt`): 67 documentos, 387 candidatos en 7 min, todos
+  válidos. Los 30 sin candidatos son cartas de remisión de una página o
+  memorandos de aprobación («se ajusta a los requerimientos»); estos últimos
+  sirven para fechar el cierre de observaciones. Las dos copias de GUIC06 se
+  sacaron de la selección: son normativa (RF7), no observaciones.
+- El último dígito del radicado IDU parece indicar el tipo (1 salida, 2
+  entrada, 3 memorando); no se usa como regla porque la ANI usa el mismo formato.

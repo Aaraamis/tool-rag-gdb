@@ -71,7 +71,10 @@ y motivo por archivo. Usa el código al inicio del nombre del PDF; un código
 mencionado en una respuesta no determina su emisor. `por_revisar` significa
 que el nombre o el asunto no aportan evidencia suficiente. La clasificación
 automática no descarta esos archivos ni declara que no tratan de GDB.
-Con `--leer-texto`, las menciones en el PDF se registran como `probable`
+Con `--leer-texto`, si el nombre no tiene un código reconocible, la primera
+página decide el emisor: «Al responder cite este número» marca un oficio o
+memorando del IDU; los radicados de la ANI y los formularios de radicación web
+siguen por revisar. Las menciones en el PDF se registran como `probable`
 (GDB/BDG/geodatabase) o `posible` (SIG/CAD); ambas requieren revisión antes
 de confirmar relevancia. Sin ese flag, la clasificación solo usa metadatos.
 Las decisiones comprobadas se conservan por SHA-256 en
@@ -83,9 +86,23 @@ muestras/lote-observaciones-1.txt`.
 
 ## Extracción de observaciones
 
-El agente lee cada documento relevante y escribe sus observaciones en
-`datos/03_extraido/`, siguiendo `prompts/extraer-observaciones.md` y
-`src/rag_gdb/observaciones.schema.json`.
+La extracción tiene dos pasadas. Primero un modelo local propone candidatos:
+
+```bash
+.venv/bin/rag-gdb proponer --seleccion muestras/idu-radicados-1.txt
+```
+
+`proponer` parte cada página en enunciados (párrafos, viñetas, rótulos como
+«OBSERVACIÓN» o «VALIDACIÓN» y frases si el párrafo es largo; descarta
+encabezados y pies que se repiten), y el modelo de Ollama (`--modelo`, por defecto `qwen3.5:9b-q4_K_M`)
+solo indica qué bloques son observaciones, con `prompts/proponer-observaciones.md`.
+La cita es el texto literal del bloque, así que siempre pasa `validar`. Los
+candidatos quedan en `datos/03_candidatos/` con su `estado.json`; se omiten al
+repetir si no cambian el PDF, el modelo ni el prompt. Requiere Ollama en marcha.
+
+Después el agente revisa los candidatos (quita ruido, une duplicados, fija
+estado y radicado) y escribe el resultado en `datos/03_extraido/`, siguiendo
+`prompts/extraer-observaciones.md` y `src/rag_gdb/observaciones.schema.json`.
 
 ```bash
 .venv/bin/rag-gdb paginas "IDU/<archivo>.pdf"   # texto con marcas de página

@@ -16,9 +16,14 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ### Added
 
+- `rag-gdb proponer`: primera pasada local con Ollama que propone candidatos de
+  observación; la cita es el bloque literal del PDF. Prompt en
+  `prompts/proponer-observaciones.md`, salida reanudable en `datos/03_candidatos/`.
+- Emisor IDU por la primera página («Al responder cite este número») cuando el
+  nombre no trae código; la ANI y los formularios de radicación quedan por revisar.
 - Extracción de observaciones (RF6): esquema JSON, `rag-gdb validar` (esquema,
   hash, página y cita literal contra el PDF), `rag-gdb paginas` y prompt de
-  extracción. Piloto con cuatro oficios C.1443 (109 observaciones en cuatro documentos de interventoría).
+  extracción. Piloto con el primer lote (171 observaciones en los seis oficios C.1443 del primer lote, más dos traslados sin observaciones).
 - Clasificación preliminar conservadora por código inicial, tipo y señales GDB,
   con cola explícita de documentos por revisar.
 - Registro de decisiones manuales de clasificación por SHA-256 y primer lote

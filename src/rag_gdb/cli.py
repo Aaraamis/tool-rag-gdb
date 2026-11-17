@@ -10,6 +10,7 @@ from .classification import apply_manual_reviews, classify_manifest, write_class
 from .extraction import page_texts, validate_dir
 from .inventory import build_manifest, write_json
 from .pipeline import convert_selected, profile_manifest
+from .proposal import ollama_ask, propose_selected
 
 
 def main() -> int:
@@ -40,6 +41,14 @@ def main() -> int:
     pages = sub.add_parser("paginas", help="Imprime el texto de un PDF con marcas de página")
     pages.add_argument("ruta", help="Ruta relativa del PDF tal como aparece en el manifiesto")
     pages.add_argument("--manifiesto", type=Path, default=Path("datos/01_inventario/manifiesto.json"))
+    propose_cmd = sub.add_parser("proponer", help="Candidatos de observación con un modelo local (Ollama)")
+    propose_cmd.add_argument("--seleccion", type=Path, required=True,
+                             help="TXT con una ruta relativa del manifiesto por línea")
+    propose_cmd.add_argument("--modelo", default="qwen3.5:9b-q4_K_M")
+    propose_cmd.add_argument("--url", default="http://localhost:11434")
+    propose_cmd.add_argument("--prompt", type=Path, default=Path("prompts/proponer-observaciones.md"))
+    propose_cmd.add_argument("--manifiesto", type=Path, default=Path("datos/01_inventario/manifiesto.json"))
+    propose_cmd.add_argument("--salida-dir", type=Path, default=Path("datos/03_candidatos"))
     args = parser.parse_args()
     if args.command == "inventariar":
         rules = json.loads(args.reglas.read_text()) if args.reglas else None
@@ -75,7 +84,12 @@ def main() -> int:
         else:
             selected = [line.strip() for line in args.seleccion.read_text().splitlines()
                         if line.strip() and not line.lstrip().startswith("#")]
-            result = convert_selected(manifest, pdf_dir, args.salida_dir, selected)
+            if args.command == "proponer":
+                result = propose_selected(manifest, pdf_dir, args.salida_dir, selected,
+                                          args.prompt.read_text(encoding="utf-8"), args.modelo,
+                                          ollama_ask(args.modelo, args.url))
+            else:
+                result = convert_selected(manifest, pdf_dir, args.salida_dir, selected)
         errors = sum(x["estado"] == "error" for x in result["documentos"].values())
         print(json.dumps({"documentos": len(result["documentos"]), "errores": errors}))
         return 1 if errors else 0

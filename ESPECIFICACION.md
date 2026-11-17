@@ -70,7 +70,7 @@ En `datos/04_entregables/`:
 ## 6. Restricciones
 
 - **Máquina**: todo corre en **meraxes-f** (Fedora, RTX 5070 12 GB).
-- **IA**: el agente (hoy Claude Code con suscripción Pro) **orquesta y hace el trabajo de lectura**. No se usa API con pago por token. El volumen se ajusta al cupo de la suscripción: lotes pequeños y reanudación.
+- **IA**: el agente (hoy Claude Code con suscripción Pro) **orquesta y decide**. No se usa API con pago por token. La primera lectura se delega en un modelo local vía Ollama (`rag-gdb proponer`), y el agente revisa los candidatos. El volumen se ajusta al cupo de la suscripción: lotes pequeños y reanudación.
 - **Independiente del agente**: la lógica vive en scripts Python, prompts en archivos y esquemas JSON. Cualquier agente capaz de leer archivos, ejecutar comandos y escribir JSON debe poder hacer el trabajo.
 - **Minimalismo**: archivos planos (CSV, JSON, JSONL, MD). Sin base de datos, sin frameworks de RAG y sin interfaz en la fase 1.
 
@@ -106,7 +106,7 @@ calcular frecuencias.
 | D1 | 65 comprimidos pendientes. Algunos parecen clave, por ejemplo `Rta CE8495 - Revisión entrega GDB preconstrucción.zip` y anexos de comunicados | Descargar a mano solo los de asunto con revisión, observación o anexo y extraerles los PDF. Las `.gdb.zip` quedan fuera |
 | D2 | 386 enlaces de Drive/Docs pendientes | Fuera de la v1. Revisar una muestra de 20 para estimar cuánto valor tienen |
 | D3 | Términos que Batea no buscó | Pasada de conteo después de la v1 |
-| D4 | Laya en clasificación | Solo en la fase 2, como experimento comparado contra las reglas y el agente |
+| D4 | Laya en clasificación | Solo en la fase 2, como experimento comparado contra las reglas y el agente. Evaluado 2026-11-17: clasifica y puntúa pero no extrae; sin ajuste está cerca del azar. Se ajustaría con las observaciones ya etiquetadas |
 | D5 | ~~Significado de `C.1443`~~ | **Resuelto 2026-11-15**: el prefijo `C.` identifica los comunicados de la interventoría; 1443 es la interventoría del contrato 348 (TM grupo 4) |
 | D6 | ~~Contratos 1385 y 1533~~ | **Resuelto 2026-11-15**: entran al alcance |
 | D7 | ~~Emisor por código~~ | **Resuelto 2026-11-15**: `STEST/STMST` = IDU; `C.` = interventoría; `E-IDU-` = obra; `MI-DIS-IDU-` = memorando interno diseños → obra |

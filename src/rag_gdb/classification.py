@@ -69,6 +69,27 @@ def classify_name(filename: str, subject: str = "") -> tuple[str, str, str, list
     return issuer, kind, relevance, reasons
 
 
+IDU_CITE = re.compile(r"al\s+responder\s+cite\s+este\s+n[uú]mero", re.I)
+ANI = re.compile(r"radicado\s+ani\b", re.I)
+RADICACION_ENTRADA = re.compile(r"RADICACI[OÓ]N\s+WEB|FO-DO-42|FO-SC-04", re.I)
+
+
+def issuer_from_text(first_page: str) -> tuple[str, str | None]:
+    """Emisor por la primera página cuando el nombre no tiene código reconocible.
+
+    Los oficios y memorandos del IDU llevan bajo el radicado «Al responder cite
+    este número». La ANI usa el mismo formato de radicado, y los formularios de
+    radicación web registran documentos que llegan al IDU: ambos siguen por revisar.
+    """
+    if ANI.search(first_page):
+        return "por_revisar", "texto_pdf:otra_entidad_ANI"
+    if RADICACION_ENTRADA.search(first_page):
+        return "por_revisar", "texto_pdf:formulario_radicacion"
+    if IDU_CITE.search(first_page):
+        return "idu", "texto_pdf:radicado_idu"
+    return "por_revisar", None
+
+
 def text_relevance(text: str) -> str:
     if TEXT_GDB.search(text):
         return "probable"
@@ -89,6 +110,20 @@ def classify_manifest(manifest: dict, ods: Path, pdf_dir: Path | None = None) ->
         senders = sorted({row.get("remitente", "") for row in metadata if row.get("remitente")})
         issuer, kind, relevance, reasons = classify_name(Path(item["ruta"]).name, " | ".join(subjects))
         excluded = item["estado"] == "excluido"
+        if not excluded and pdf_dir is not None and issuer == "por_revisar":
+            try:
+                first = subprocess.run(
+                    ["pdftotext", "-l", "1", str(pdf_dir / item["ruta"]), "-"],
+                    capture_output=True, text=True, timeout=30, check=False,
+                ).stdout
+            except (OSError, subprocess.TimeoutExpired):
+                first = ""
+            issuer, reason = issuer_from_text(first)
+            if reason:
+                reasons.append(reason)
+            if issuer != "por_revisar" and kind == "por_revisar":
+                kind = "comunicado"
+                reasons.append("nombre_tipo:comunicado")
         if not excluded and pdf_dir is not None and relevance == "por_revisar":
             try:
                 extracted = subprocess.run(

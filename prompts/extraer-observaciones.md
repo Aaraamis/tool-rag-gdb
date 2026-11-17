@@ -10,8 +10,11 @@ archivos, ejecute comandos y escriba JSON.
 1. Elegir un PDF de `datos/01_inventario/clasificacion.csv` con `gdb` en `si` o
    `probable` y emisor `idu` o `interventoria`. Si ya existe su JSON de salida
    con el mismo `sha256`, omitirlo.
-2. Leer el texto con marcas de página: `rag-gdb paginas "<ruta del manifiesto>"`.
-   El Markdown de `datos/02_convertidos/` sirve de apoyo, pero no trae páginas.
+2. Partir de los candidatos de `datos/03_candidatos/` si existen
+   (`rag-gdb proponer`): su cita ya es literal. Contrastarlos con el texto con
+   marcas de página, `rag-gdb paginas "<ruta del manifiesto>"`, para quitar
+   ruido (respuestas del contratista, encabezados) y añadir lo que falte. El
+   Markdown de `datos/02_convertidos/` sirve de apoyo, pero no trae páginas.
 3. Registrar cada observación: una entrada por enunciado distinto, no por
    respuesta ni por fila. Si el mismo enunciado se repite en varias filas o
    planos de una tabla, se registra una vez y no se listan los planos. Las

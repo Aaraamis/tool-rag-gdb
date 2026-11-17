@@ -76,6 +76,8 @@ def validate_dir(extract_dir: Path, manifest: dict, pdf_dir: Path) -> dict[str, 
     cache: dict[str, list[str]] = {}
     results = {}
     for path in sorted(extract_dir.rglob("*.json")):
+        if path.name == "estado.json":
+            continue
         relative = str(path.relative_to(extract_dir).with_suffix(""))
         try:
             data = json.loads(path.read_text(encoding="utf-8"))

@@ -16,6 +16,8 @@ por reanudación.
 | C.1443, GDB diseños V3, diciembre 2024 | 8 | Nueva respuesta a observaciones IDU; puede repetir hallazgos de octubre. |
 | C.1443, GDB diseños V3, enero 2025 | 10 | Revisión posterior a respuesta de obra; puede repetir hallazgos anteriores. |
 
+**Estado de la extracción (2026-11-17):** los ocho documentos están extraídos y validados con `rag-gdb validar`: seis con observaciones (171 en total) y los dos traslados MV2 sin observaciones propias.
+
 **Siguiente control:** extraer observaciones con página y radicado de origen;
 revisar versiones sucesivas antes de calcular frecuencia. Un traslado sin anexo
 no aporta el texto de la observación original.
