@@ -11,9 +11,9 @@ from pathlib import Path
 from .inventory import read_inventory
 
 DATE_PREFIX = re.compile(r"^\d{4}-\d{2}-\d{2}_")
-GDB = re.compile(r"(?:^|[^A-Z0-9])(?:GDB|BDG)(?=$|[^A-Z0-9])|GEODATABASE|BASE\s+DE\s+DATOS\s+GEOGR|SIG[\s_-]*CAD", re.I)
-TEXT_GDB = re.compile(r"\b(?:GDB|BDG)\b|GEODATABASE|BASE\s+DE\s+DATOS\s+GEOGR", re.I)
-TEXT_SIG_CAD = re.compile(r"\b(?:SIG|CAD)\b|SISTEMA\s+DE\s+INFORMACI[OÓ]N\s+GEOGR", re.I)
+GDB = re.compile(r"(?:^|[^A-Z0-9])(?:GDB|BDG)(?=$|[^A-Z0-9])|GEODATABASE|BASE\s+DE\s+DATOS\s+GEOGR|SIG[\s_-]*CAD", re.IGNORECASE)
+TEXT_GDB = re.compile(r"\b(?:GDB|BDG)\b|GEODATABASE|BASE\s+DE\s+DATOS\s+GEOGR", re.IGNORECASE)
+TEXT_SIG_CAD = re.compile(r"\b(?:SIG|CAD)\b|SISTEMA\s+DE\s+INFORMACI[OÓ]N\s+GEOGR", re.IGNORECASE)
 
 
 def classify_name(filename: str, subject: str = "") -> tuple[str, str, str, list[str]]:
@@ -69,9 +69,9 @@ def classify_name(filename: str, subject: str = "") -> tuple[str, str, str, list
     return issuer, kind, relevance, reasons
 
 
-IDU_CITE = re.compile(r"al\s+responder\s+cite\s+este\s+n[uú]mero", re.I)
-ANI = re.compile(r"radicado\s+ani\b", re.I)
-RADICACION_ENTRADA = re.compile(r"RADICACI[OÓ]N\s+WEB|FO-DO-42|FO-SC-04", re.I)
+IDU_CITE = re.compile(r"al\s+responder\s+cite\s+este\s+n[uú]mero", re.IGNORECASE)
+ANI = re.compile(r"radicado\s+ani\b", re.IGNORECASE)
+RADICACION_ENTRADA = re.compile(r"RADICACI[OÓ]N\s+WEB|FO-DO-42|FO-SC-04", re.IGNORECASE)
 
 
 def issuer_from_text(first_page: str) -> tuple[str, str | None]:

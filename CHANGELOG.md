@@ -32,6 +32,8 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ### Changed
 
+- `pyproject.toml` fija la configuración de Ruff (líneas de 110, Python 3.11); el código pasa
+  `ruff check --preview` sin avisos, que es lo que muestra Zed.
 - La especificación incorpora lo aprendido en el piloto: objetivo de construcción
   del contrato 348, autoridad del alistamiento IDU 2020 compartido con el 351,
   unidad y frecuencia de observaciones, alcance de RF7 y uso acotado de embeddings

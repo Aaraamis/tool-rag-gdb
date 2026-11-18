@@ -89,8 +89,9 @@ def test_read_link_decisions_validates_and_returns_confirmed(tmp_path: Path):
 
 
 def test_decisions_follow_groups_after_reconsolidation(tmp_path: Path):
-    from rag_gdb.normative_links import current_keys, group_key, register_groups, remap_decisions
     import json
+
+    from rag_gdb.normative_links import current_keys, group_key, register_groups, remap_decisions
     old = [{"miembros": [{"clave": "a"}, {"clave": "b"}]}, {"miembros": [{"clave": "c"}, {"clave": "d"}]}]
     path = tmp_path / "grupos.json"
     path.write_text(json.dumps({"grupos": old}), encoding="utf-8")

@@ -7,7 +7,13 @@ import json
 from datetime import date
 from pathlib import Path
 
-from .normative_links import current_keys, group_key, read_group_registry, read_link_decisions, remap_decisions
+from .normative_links import (
+    current_keys,
+    group_key,
+    read_group_registry,
+    read_link_decisions,
+    remap_decisions,
+)
 
 EXAMPLE_CHARS = 160
 
@@ -111,10 +117,10 @@ def render(grupos: dict, today: str | None = None, normative_links: dict[str, li
         "> **Pendiente:** la taxonomía de temas (`config/temas.csv`) requiere validación de Aramis; "
         + normative_status,
         "",
-        "Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos que lo observaron "
-        "(un traslado o una copia no suma); **interventoría ×m** es el número de documentos de la "
-        "interventoría que lo plantean. Entre comillas invertidas van los grupos de observaciones que lo "
-        "respaldan.",
+        ("Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos que lo observaron "
+         "(un traslado o una copia no suma); **interventoría ×m** es el número de documentos de la "
+         "interventoría que lo plantean. Entre comillas invertidas van los grupos de observaciones que lo "
+         "respaldan."),
         "",
         "## Resumen por tema",
         "",
@@ -142,8 +148,8 @@ def render(grupos: dict, today: str | None = None, normative_links: dict[str, li
             continue
         lines += ["", title, ""]
         if practices_section:
-            lines += ["Exigencias recurrentes en las observaciones para las que no se confirmó una regla "
-                      "escrita entre los candidatos normativos revisados. Se indica el tema de cada una.", ""]
+            lines += [("Exigencias recurrentes en las observaciones para las que no se confirmó una regla "
+                       "escrita entre los candidatos normativos revisados. Se indica el tema de cada una."), ""]
         for u in own:
             tags = []
             if u["frecuencia_idu"]:

@@ -1,4 +1,3 @@
-import csv
 import json
 
 import numpy as np
@@ -29,7 +28,7 @@ def test_manual_decisions_force_or_block_merges():
     # la unión forzada se aplica primero; después el piso impide sumar b (lejano de d)
     groups, _ = group(V, KEYS, {frozenset(("a", "d")): "si"}, auto=0.9, floor=0.85)
     assert sorted(map(sorted, groups)) == [[0, 3], [1, 2]]
-    groups, review = group(V, KEYS, {frozenset(("a", "b")): "no"}, auto=0.9, floor=0.85)
+    groups, _ = group(V, KEYS, {frozenset(("a", "b")): "no"}, auto=0.9, floor=0.85)
     assert [0, 1] not in map(sorted, groups)
 
 
@@ -83,7 +82,7 @@ def test_load_observations_skips_state_and_gives_stable_keys(tmp_path):
 def test_no_between_two_members_closes_review_between_their_groups():
     v = _unit([1, 0, 0], [1, 0.05, 0], [0.9, 0.44, 0], [0.9, 0.45, 0])
     keys = ["a", "b", "c", "d"]
-    groups, review = group(v, keys, auto=0.99, floor=0.85)
+    _, review = group(v, keys, auto=0.99, floor=0.85)
     assert review  # {a,b} y {c,d} quedan por revisar
     _, review = group(v, keys, {frozenset(("a", "c")): "no"}, auto=0.99, floor=0.85)
     assert review == []

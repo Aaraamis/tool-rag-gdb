@@ -7,8 +7,8 @@ import json
 from pathlib import Path
 
 from .checklist import editorial_themes, write_checklist
-from .consolidation import consolidate, ollama_embed
 from .classification import apply_manual_reviews, classify_manifest, write_classification
+from .consolidation import consolidate, ollama_embed
 from .extraction import page_texts, validate_dir
 from .inventory import build_manifest, write_json
 from .normative import write_normative

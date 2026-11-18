@@ -39,7 +39,7 @@ def test_manifest_matches_hash_and_keeps_missing(tmp_path):
 
 
 def test_conversion_skips_completed_and_retries_failed(tmp_path, monkeypatch):
-    import rag_gdb.pipeline as pipeline
+    from rag_gdb import pipeline
 
     pdfs = tmp_path / "pdfs"
     pdfs.mkdir()
@@ -77,7 +77,7 @@ def test_subject_filter_records_reason(tmp_path):
 
 
 def test_profile_removes_paths_absent_from_current_manifest(tmp_path, monkeypatch):
-    import rag_gdb.pipeline as pipeline
+    from rag_gdb import pipeline
 
     output = tmp_path / "perfiles.json"
     output.write_text(json.dumps({"documentos": {

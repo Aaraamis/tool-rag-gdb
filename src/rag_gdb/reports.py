@@ -36,38 +36,38 @@ def _cell(text: str, limit: int | None = None) -> str:
 
 def render_matriz(grupos: dict, contracts: dict[str, str], today: str | None = None,
                   themes_by_group: dict[str, str] | None = None) -> str:
-    contract_of = lambda ruta: contracts.get(ruta, SIN_CONTRATO)  # noqa: E731
     themes = {t["tema"]: t["nombre"] for t in grupos["temas"]}
     rows: dict[str, list[tuple]] = {code: [] for code in themes}
     for group in grupos["grupos"]:
+        theme = (themes_by_group or {}).get(group["grupo"], group["tema"])
         for m in group["miembros"]:
-            rows[(themes_by_group or {}).get(group["grupo"], group["tema"])].append((date_of(m["ruta"]), m["ruta"], m["id"], m))
+            rows[theme].append((date_of(m["ruta"]), m["ruta"], m["id"], m))
     total = sum(len(r) for r in rows.values())
     docs = len({m["ruta"] for g in grupos["grupos"] for m in g["miembros"]})
-    unknown = sum(contract_of(r[1]) == SIN_CONTRATO for r in sum(rows.values(), []))
+    unknown = sum(ruta not in contracts for theme_rows in rows.values() for _, ruta, _, _ in theme_rows)
     lines = [
         "# Matriz de observaciones GDB — borrador",
         "",
-        f"> Generado por `rag-gdb matriz` el {today or date.today().isoformat()}: {total} observaciones de "
-        f"{docs} documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis; "
-        "el tema es el del requisito redactado en `config/requisitos-redaccion.csv` cuando existe).",
-        "> **Contrato:** contrato de obra según `config/contratos-documentos.csv`, revisado por documento "
-        "con su evidencia (asunto, texto o respuesta que cita el mismo radicado); "
-        f"{unknown} de {total} observaciones quedan «{SIN_CONTRATO}» hasta revisar la primera página del PDF. "
-        "**Fecha:** la del prefijo del nombre del archivo (fecha de envío), no la del oficio.",
+        (f"> Generado por `rag-gdb matriz` el {today or date.today().isoformat()}: {total} observaciones de "
+         f"{docs} documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis; "
+         "el tema es el del requisito redactado en `config/requisitos-redaccion.csv` cuando existe)."),
+        ("> **Contrato:** contrato de obra según `config/contratos-documentos.csv`, revisado por documento "
+         "con su evidencia (asunto, texto o respuesta que cita el mismo radicado); "
+         f"{unknown} de {total} observaciones quedan «{SIN_CONTRATO}» hasta revisar la primera página "
+         "del PDF. **Fecha:** la del prefijo del nombre del archivo (fecha de envío), no la del oficio."),
         "",
         "## Resumen por tema",
         "",
         "| Tema | Observaciones |",
         "|---|---:|",
     ]
-    lines += [f"| {code}. {themes[code]} | {len(rows[code])} |" for code in themes]
-    for code in themes:
-        lines += ["", f"## {code}. {themes[code]}", "",
+    lines += [f"| {code}. {name} | {len(rows[code])} |" for code, name in themes.items()]
+    for code, name in themes.items():
+        lines += ["", f"## {code}. {name}", "",
                   "| Fecha | Contrato | Autor | Referencia | Observación |", "|---|---|---|---|---|"]
         for fecha, ruta, _, m in sorted(rows[code], key=lambda r: (r[0], r[1], r[2])):
             origin = m["radicado_origen"] or "sin radicado"
-            lines.append(f"| {fecha} | {contract_of(ruta)} | {m['autor']} | "
+            lines.append(f"| {fecha} | {contracts.get(ruta, SIN_CONTRATO)} | {m['autor']} | "
                          f"{_cell(origin)}, `{_cell(ruta)}`, p. {m['pagina']}, {m['id']} | "
                          f"{_cell(m['resumen'], QUOTE_CHARS)} |")
     return "\n".join(lines) + "\n"
@@ -129,8 +129,8 @@ def render_informe(data: dict, today: str | None = None) -> str:
     lines = [
         "# Informe del corpus GDB — borrador",
         "",
-        f"> Generado por `rag-gdb informe` el {today or date.today().isoformat()}. "
-        f"Cada uno de los {len(files)} PDF del manifiesto aparece una sola vez en el apéndice.",
+        (f"> Generado por `rag-gdb informe` el {today or date.today().isoformat()}. "
+         f"Cada uno de los {len(files)} PDF del manifiesto aparece una sola vez en el apéndice."),
         "",
         "## Resumen",
         "",
@@ -143,9 +143,9 @@ def render_informe(data: dict, today: str | None = None) -> str:
         "",
         "## Entrada",
         "",
-        f"- Archivos PDF en disco: {data['inventario']['archivos_pdf']}; "
-        f"coincidentes con la hoja de Batea: {data['inventario']['coincidentes']}; "
-        f"huérfanos: {data['inventario']['huerfanos']}.",
+        (f"- Archivos PDF en disco: {data['inventario']['archivos_pdf']}; "
+         f"coincidentes con la hoja de Batea: {data['inventario']['coincidentes']}; "
+         f"huérfanos: {data['inventario']['huerfanos']}."),
         f"- Filas descargadas de la hoja sin archivo en disco (ausentes): {len(data['ausentes'])}.",
         "",
         "## Descartados y pendientes",
@@ -158,8 +158,8 @@ def render_informe(data: dict, today: str | None = None) -> str:
         "",
         "## OCR y conversión",
         "",
-        f"- Documentos que necesitan OCR según el perfil técnico: {len(ocr)}; "
-        f"de ellos, {len(pending_ocr)} siguen pendientes.",
+        (f"- Documentos que necesitan OCR según el perfil técnico: {len(ocr)}; "
+         f"de ellos, {len(pending_ocr)} siguen pendientes."),
         f"- PDF convertidos con Docling (JSON + Markdown): {data['convertidos']}.",
         f"- Archivos sin perfil técnico: {len(data['sin_perfil'])}.",
         "",
@@ -177,7 +177,9 @@ def render_informe(data: dict, today: str | None = None) -> str:
 
 def write_informe(manifest_path: Path, profiles_path: Path, classification_path: Path,
                   converted_path: Path, extract_dir: Path, output: Path) -> dict:
-    load = lambda p: json.loads(p.read_text(encoding="utf-8"))  # noqa: E731
+    def load(path: Path) -> dict:
+        return json.loads(path.read_text(encoding="utf-8"))
+
     extracted = {}
     for path in sorted(extract_dir.rglob("*.json")):
         if path.name == "estado.json":

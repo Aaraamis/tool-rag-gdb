@@ -88,7 +88,7 @@ def convert_selected(manifest: dict, pdf_dir: Path, output_dir: Path,
         try:
             convert_one(pdf_dir / relative, json_path, md_path)
             state["documentos"][relative] = {"sha256": item["sha256"], "estado": "ok"}
-        except Exception as exc:
+        except Exception as exc:  # noqa: BLE001 — se registra por documento y se reintenta al repetir
             state["documentos"][relative] = {"sha256": item["sha256"], "estado": "error",
                                              "detalle": str(exc)}
         write_json(state_path, state)

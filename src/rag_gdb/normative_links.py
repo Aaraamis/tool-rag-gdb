@@ -122,7 +122,7 @@ def review_links(candidates_path: Path, output_path: Path, state_path: Path, tem
                         selected.append({"requisito_id": requirement, "tipo": kind,
                                          "motivo": str(item.get("motivo", "")).strip()})
                 state["grupos"][key] = {"estado": "ok", "enlaces": selected[:2]}
-        except Exception as exc:  # el servicio local puede fallar por lote; queda reintentable
+        except Exception as exc:  # noqa: BLE001 — el servicio local puede fallar por lote; reintentable
             for key in batch:
                 state["grupos"][key] = {"estado": "error", "detalle": str(exc)}
         write_json(state_path, state)

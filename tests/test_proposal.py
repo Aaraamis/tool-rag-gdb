@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 
 from rag_gdb import extraction, proposal
 from rag_gdb.classification import issuer_from_text
@@ -9,8 +8,8 @@ from rag_gdb.proposal import page_blocks, propose, propose_selected
 FOOTER = "Calle 95 No 15 47 Piso 6 Teléfono 622 5099 Bogotá D.C., Colombia"
 PAGES = [
     f"Respetados Señores, se remite la revisión de la entrega.\n\n{FOOTER}",
-    f"OBSERVACIÓN IDU: Se solicita incluir el archivo de estructura de carpetas.\n\n"
-    f"RESPUESTA CONTRATISTA: Se revisa y se ajusta la carpeta indicada.\n\n{FOOTER}",
+    ("OBSERVACIÓN IDU: Se solicita incluir el archivo de estructura de carpetas.\n\n"
+     f"RESPUESTA CONTRATISTA: Se revisa y se ajusta la carpeta indicada.\n\n{FOOTER}"),
     f"- No se incluyen planos PDF en la carpeta de urbanismo.\n\n{FOOTER}",
 ]
 TEMPLATE = "Elige bloques.\n{bloques}"
@@ -38,8 +37,8 @@ def test_short_documents_keep_repeated_blocks():
 def test_propose_takes_literal_block_and_coerces_fields():
     ask, calls = _fake([
         '{"observaciones": []}',
-        '{"observaciones": [{"bloque": "B2", "numero": 1, "autor": "IDU", "resumen": "x"},'
-        ' {"bloque": "B2"}, {"bloque": "B99"}, {"bloque": "B4"}]}',
+        ('{"observaciones": [{"bloque": "B2", "numero": 1, "autor": "IDU", "resumen": "x"},'
+         ' {"bloque": "B2"}, {"bloque": "B99"}, {"bloque": "B4"}]}'),
         "esto no es JSON",
     ])
     candidates, failed = propose(PAGES, TEMPLATE, ask)
@@ -54,8 +53,8 @@ def test_propose_takes_literal_block_and_coerces_fields():
 
 def test_long_block_is_cut_at_a_word_boundary():
     page = "Se solicita " + "verificar la geometría de cada elemento " * 20
-    ask, _ = _fake(['{"observaciones": [{"bloque": "B1", "autor": "interventoria", '
-                    '"resumen": "Verificar la geometría."}]}'])
+    ask, _ = _fake([('{"observaciones": [{"bloque": "B1", "autor": "interventoria", '
+                     '"resumen": "Verificar la geometría."}]}')])
     (obs,), _ = propose([page], TEMPLATE, ask)
     assert len(obs["cita"]) <= proposal.MAX_CITA and page.startswith(obs["cita"])
 
@@ -68,10 +67,10 @@ def test_propose_selected_writes_valid_candidates_and_resumes(tmp_path, monkeypa
     monkeypatch.setattr(proposal, "page_texts", lambda path: PAGES)
     monkeypatch.setattr(extraction, "page_texts", lambda path: PAGES)
     ask, calls = _fake(['{"observaciones": []}',
-                        '{"observaciones": [{"bloque": "B2", "autor": "idu", '
-                        '"resumen": "Incluir el reporte de carpetas."}]}',
-                        '{"observaciones": [{"bloque": "B4", "autor": "interventoria", '
-                        '"resumen": "Entregar planos en PDF."}]}'])
+                        ('{"observaciones": [{"bloque": "B2", "autor": "idu", '
+                         '"resumen": "Incluir el reporte de carpetas."}]}'),
+                        ('{"observaciones": [{"bloque": "B4", "autor": "interventoria", '
+                         '"resumen": "Entregar planos en PDF."}]}')])
     out = tmp_path / "cand"
     state = propose_selected(manifest, tmp_path / "pdf", out, ["IDU/doc.pdf"], TEMPLATE, "m", ask)
     assert state["documentos"]["IDU/doc.pdf"]["estado"] == "ok"

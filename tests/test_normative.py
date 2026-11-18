@@ -3,8 +3,13 @@ from pathlib import Path
 import openpyxl
 import pytest
 
-from rag_gdb.normative import (checklist_items_xlsx, digest_path, products_dwg_items,
-                               render_normative, verify_register)
+from rag_gdb.normative import (
+    checklist_items_xlsx,
+    digest_path,
+    products_dwg_items,
+    render_normative,
+    verify_register,
+)
 
 
 def test_verify_register_checks_file_hash(tmp_path: Path):

@@ -23,7 +23,7 @@ MIN_BLOCK = 25
 MAX_BLOCK = 500
 MAX_CITA = 600
 SEGMENTER = "3"  # cambia la clave de reanudación cuando cambia la segmentación
-IDU_MARK = re.compile(r"OBSERVACI[OÓ]N\s+IDU", re.I)
+IDU_MARK = re.compile(r"OBSERVACI[OÓ]N\s+IDU", re.IGNORECASE)
 # Una línea que empieza con viñeta, numeral o rótulo abre un enunciado nuevo.
 ITEM_START = re.compile(
     r"^\s*(?:[-•·▪◦●]\s*|o\s+(?=[A-ZÁÉÍÓÚÑ])|\(?\d{1,2}[.)]\s+|\(?[a-z][.)]\s+|[ivx]{1,4}[.)]\s+"
@@ -165,7 +165,7 @@ def propose_selected(manifest: dict, pdf_dir: Path, output_dir: Path, selected: 
                 "observaciones": candidates})
             record.update(estado="error" if failed else "ok", candidatos=len(candidates),
                           paginas_error=failed)
-        except Exception as exc:  # se registra por documento y se reintenta al repetir
+        except Exception as exc:  # noqa: BLE001 — se registra por documento y se reintenta al repetir
             record.update(estado="error", detalle=str(exc))
         state["documentos"][relative] = record
         write_json(state_path, state)

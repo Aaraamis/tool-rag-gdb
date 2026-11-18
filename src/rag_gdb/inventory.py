@@ -82,7 +82,7 @@ def build_manifest(pdf_dir: Path, ods: Path, rules: dict | None = None) -> dict:
         files.append({
             "ruta": path.relative_to(pdf_dir).as_posix(), "sha256": digest,
             "estado": "excluido" if excluded else "coincidente" if matches else "huerfano",
-            "motivo_exclusion": "; ".join(sorted(set(x for x in reasons if x))) if excluded else None,
+            "motivo_exclusion": "; ".join(sorted({x for x in reasons if x})) if excluded else None,
             "claves_inventario": [r["clave"] for r in matches],
         })
     absent = [

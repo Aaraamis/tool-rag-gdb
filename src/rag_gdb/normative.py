@@ -19,7 +19,7 @@ from .pipeline import _run
 PARAGRAPH = 700  # tamaño máximo de un fragmento de la guía en el catálogo
 GUIDE_NOISE = re.compile(r"^(?:GUÍA|GUÍA ENTREGA DE PRODUCTOS|REALIZADOS EN LA INFRAESTRUCTURA|ESPACIO PÚBLICO$|"
                          r"CÓDIGO\s+PROCESO|GU-IC-06\s+INNOVACIÓN|Página \d+ de \d+|Formato: FO-|"
-                         r"FO-DE-|Clasificación de la información)", re.I)
+                         r"FO-DE-|Clasificación de la información)", re.IGNORECASE)
 
 
 def read_register(path: Path) -> list[dict]:
@@ -63,7 +63,7 @@ def guide_sections(pdf: Path, code: str) -> list[dict]:
     starts = []  # primera aparición de cada numeral después de la tabla de contenido
     cursor = 0
     for number, title in toc:
-        pattern = re.compile(rf"^\s*{re.escape(number)}\.?\s+{re.escape(title.split()[0])}", re.I)
+        pattern = re.compile(rf"^\s*{re.escape(number)}\.?\s+{re.escape(title.split()[0])}", re.IGNORECASE)
         for k in range(max(cursor, 120), len(lines)):
             if pattern.match(lines[k]):
                 starts.append((k, number, title))
@@ -152,7 +152,8 @@ def checklist_items(xls: Path) -> list[dict]:
         command = ["soffice", f"-env:UserInstallation=file://{profile}", "--headless", "--norestore",
                    "--convert-to", "xlsx", "--outdir", str(output), str(source)]
         try:
-            result = subprocess.run(command, capture_output=True, text=True, timeout=180, env=env)
+            result = subprocess.run(command, capture_output=True, text=True, timeout=180, env=env,
+                                    check=False)  # el código de salida se revisa abajo
         except FileNotFoundError as exc:
             raise RuntimeError("FO-IC-05 requiere LibreOffice (comando soffice)") from exc
         converted = output / "foic05.xlsx"
