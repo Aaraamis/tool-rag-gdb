@@ -15,6 +15,9 @@
 | 2026-11-17 | Emisor IDU por «Al responder cite este número» en la primera página | Muestra de los 72 PDF con radicado numérico; aprobado por Aramis |
 | 2026-11-17 | Frecuencia de un requisito = radicados IDU distintos; la interventoría se informa aparte | ESPECIFICACION RF8 y checklist |
 | 2026-11-17 | Taxonomía de 11 temas propuesta en `config/temas.csv`, pendiente de validación de Aramis | Lectura de los 306 grupos iniciales |
+| 2026-11-17 | El paquete `IDU-351-2020` es el alistamiento oficial de 2020 entregado por el IDU para los contratos 348 y 351; aplica a la entrega de construcción del 348 | Confirmación de Aramis; 649 archivos del origen y la copia coinciden por hash |
+| 2026-11-17 | La similitud de embeddings solo ordena candidatos de enlace normativo; cada enlace se confirma manualmente | La primera medición RF7 produjo falsos positivos incluso por encima de 0,70 |
+| 2026-11-17 | Código y entregables finales viajan por Git; los intermedios ignorados se trasladan en un paquete privado con SHA-256 | La siguiente sesión se ejecutará fuera de meraxes-f |
 
 ## Primer inventario en meraxes-f
 
@@ -143,7 +146,7 @@
 - El último dígito del radicado IDU parece indicar el tipo (1 salida, 2
   entrada, 3 memorando); no se usa como regla porque la ANI usa el mismo formato.
 
-## Consolidación (RF8), primer borrador
+## Consolidación (RF8), borrador editorial
 
 - 504 observaciones de 41 documentos con observaciones quedan en 294 grupos;
   188 los observó el IDU al menos una vez y 106 solo la interventoría. Los más
@@ -163,6 +166,25 @@
   de intervenciones van a consistencia entre productos (T09). Caso para validar:
   el grupo que une el registro de intervenciones con los CIV y PK_ID de las
   tablas quedó en T07.
-- El checklist usa como requisito el resumen representativo de cada grupo;
-  falta la redacción final, la validación de los temas y el vínculo con la
-  normativa vigente (RF7).
+- El checklist usa como requisito el resumen representativo de cada grupo. RF7
+  ya está revisado para los 294 grupos; faltan la redacción final y la validación
+  de los temas.
+
+## Normativa (RF7), catálogo y revisión completa
+
+- Los 24 documentos del registro coinciden por SHA-256 con el paquete oficial
+  de 649 archivos entregado para los contratos 348 y 351.
+- El catálogo extrae requisitos de GU-IC-06, FO-IC-05, `Productos_BDG` y
+  `Productos_DWG`, incluida la hoja `ElementosConstruccion (Récord)`.
+- `bge-m3` propone cinco enlaces por cada grupo consolidado. El tema completo
+  mejora la recuperación frente a usar solo su código, pero la aceptación queda
+  manual porque una similitud alta no garantiza equivalencia normativa.
+- `qwen3.5:9b` revisó los cinco candidatos de los 294 grupos y sugirió 60
+  enlaces. La revisión humana cubre ya los 294 grupos: de los 188 observados por
+  el IDU, 177 tienen respaldo normativo y 11 quedan como prácticas sin regla
+  oficial equivalente; de los 106 exclusivos de la interventoría, 84 tienen
+  respaldo y 22 quedan como prácticas observadas. En total se aceptaron 307
+  relaciones en 261 grupos (216 directas y 91 parciales); 33 grupos no tienen
+  respaldo escrito localizado. Una ausencia de sugerencia del modelo no se
+  interpreta por sí sola como ausencia de norma: cada caso fue revisado contra
+  el catálogo.

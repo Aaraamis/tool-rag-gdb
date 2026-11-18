@@ -1,8 +1,9 @@
 # tool-rag-gdb
 
-Pipeline local para preparar el corpus de geodatabases del IDU. El primer hito
-implementa inventario por SHA-256, perfil de texto por página y conversión piloto
-reanudable. La [especificación](ESPECIFICACION.md) registra las metas de fase 1.
+Pipeline local para preparar el corpus de geodatabases del IDU. Implementa
+inventario verificable, conversión reanudable, extracción y consolidación de
+observaciones, y enlace manual con la normativa del alistamiento IDU 2020. La
+[especificación](ESPECIFICACION.md) registra las metas de fase 1.
 `VERSION` indica la versión actual; [AGENTS.md](AGENTS.md) define cuándo y cómo
 actualizarla. `python3 tools/check_repo.py` comprueba versión y changelog.
 
@@ -16,8 +17,11 @@ python3 -m venv .venv
 ```
 
 `pdfinfo` y `pdftotext` (Poppler) deben estar en `PATH`. Docling se instala solo
-para convertir. Los PDF y resultados viven fuera de Git.
+para convertir. RF7 requiere `soffice` (LibreOffice) para leer la plantilla XLS
+FO-IC-05 sin modificarla. Los PDF y resultados viven fuera de Git.
 Los entregables finales en `datos/04_entregables/` sí se podrán versionar.
+Los intermedios ignorados por Git pueden trasladarse siguiendo
+`INSTRUCCIONES_TRASPASO.md`; nunca se publica ese paquete privado en GitHub.
 Para retomar el trabajo del repositorio puede usarse `lucia session-start
 --dir . --compact`; el pipeline no invoca Lucía.
 
@@ -117,7 +121,7 @@ página, el error indica cuál.
 
 ```bash
 .venv/bin/rag-gdb consolidar   # agrupa observaciones repetidas con bge-m3 (Ollama)
-.venv/bin/rag-gdb checklist    # borrador en datos/04_entregables/checklist-gdb.md
+.venv/bin/rag-gdb checklist    # genera datos/04_entregables/checklist-gdb.md
 ```
 
 `consolidar` calcula embeddings de cada observación (resumen + cita, con caché
@@ -131,12 +135,55 @@ distintos: una copia o un traslado no suma. Cada grupo recibe el tema de
 por clave de observación.
 
 `checklist` ordena los requisitos por tema y frecuencia, con uno o dos ejemplos
-citados (radicado, archivo y página). Es un borrador hasta que la taxonomía se
-valide y se enlace la normativa vigente (RF7).
+citados (radicado, archivo y página). Los 294 grupos ya tienen revisión normativa:
+261 cuentan con al menos un enlace confirmado y 33 se identifican como prácticas
+observadas sin respaldo escrito localizado. Sigue siendo un borrador hasta validar
+la taxonomía y editar la redacción representativa de cada grupo.
+
+## Normativa vigente (RF7)
+
+```bash
+.venv/bin/rag-gdb normativa \
+  --raiz ~/datos/tool-rag-gdb/entrada/alistamiento/IDU-351-2020
+```
+
+El comando verifica por SHA-256 los 24 documentos registrados en
+`config/normativa.csv` y genera el catálogo estructurado en
+`datos/04_consolidado/catalogo-normativa.json` y el entregable revisable en
+`datos/04_entregables/normativa-vigente.md`. Extrae los numerales de GU-IC-06,
+los ítems de FO-IC-05, las validaciones y reglas topológicas de `Productos_BDG`
+y las hojas aplicables a construcción de `Productos_DWG`. La conversión de
+FO-IC-05 ocurre sobre una copia y un perfil temporal de LibreOffice.
+
+Para ordenar candidatos de enlace entre los grupos consolidados y el catálogo:
+
+```bash
+.venv/bin/rag-gdb enlazar-normativa
+```
+
+El resultado queda en `datos/04_consolidado/normativa-enlaces-revisar.csv` con
+cinco candidatos por grupo. `bge-m3` incorpora el tema y el texto del grupo,
+pero la similitud solo ordena la revisión: no confirma automáticamente un
+enlace normativo.
+
+Como segunda opinión mecánica y reanudable puede ejecutarse:
+
+```bash
+.venv/bin/rag-gdb revisar-enlaces-normativa
+```
+
+`qwen3.5:9b` clasifica los candidatos como directos o parciales, o los deja
+vacíos. Sus resultados en `datos/04_consolidado/normativa-enlaces-modelo.csv`
+siguen siendo propuestas. Las decisiones confirmadas por el agente se guardan
+en `config/normativa-enlaces.csv`; `rag-gdb checklist` incorpora únicamente
+las filas con `decision=si` y separa como prácticas observadas los grupos
+revisados sin respaldo oficial. La revisión actual contiene 307 relaciones
+aceptadas: 216 directas y 91 parciales.
 
 ## Revisión piloto
 
 Elegir PDF escaneados, con tablas, guías largas y comunicados con observaciones.
 Comparar cada original con su Markdown y anotar pérdidas con página en
 `docs/revision-piloto.md`. La revisión define ajustes antes de
-ampliar el corpus. No se publica un checklist normativo en este hito.
+ampliar el corpus. El checklist actual es un entregable revisable y no sustituye
+el cotejo con los PDF cuando una observación depende de información visual.

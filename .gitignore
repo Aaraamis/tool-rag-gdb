@@ -4,9 +4,11 @@ datos/02_convertidos/
 datos/03_extraido/
 datos/03_candidatos/
 datos/04_consolidado/
+datos/INSTRUCCIONES_DATOS.md
 .venv/
 .pytest_cache/
 .ruff_cache/
 *.egg-info/
 __pycache__/
 .lucia/symbols.db
+transferencia/
