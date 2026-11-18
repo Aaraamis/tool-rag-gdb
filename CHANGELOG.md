@@ -18,6 +18,9 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 - `config/requisitos-redaccion.csv` redacta el checklist como 93 requisitos genéricos y
   verificables que agrupan los 294 grupos, con 7 reasignaciones de tema; checklist y matriz
   la aplican y `docs/revision-editorial.md` resume criterios y puntos para validar.
+- El checklist presenta en una sección separada las prácticas observadas sin respaldo
+  escrito (criterio de aceptación 6); `docs/aceptacion-fase1.md` registra el estado de los
+  seis criterios.
 - `contratos.csv` incluye 1558, interventoría del contrato 1533.
 
 ### Fixed

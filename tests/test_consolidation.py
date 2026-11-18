@@ -106,6 +106,11 @@ def test_editorial_wording_merges_groups_into_one_requirement(tmp_path):
                 reviewed_links={group_key(g1), group_key(g2)}, editorial=editorial)
     assert "**R-T02-01** Requisito único. — IDU ×2 `G001` `G002`" in md
     assert "## T02. Dos" in md and "Normativa directo: **N1**" in md and "Práctica" not in md
+    md = render({"temas": themes, "grupos": [g1, g2]}, today="2026-11-18", normative_links={},
+                reviewed_links={group_key(g1), group_key(g2)}, editorial=editorial)
+    practices = md.split("## Prácticas observadas sin respaldo escrito localizado")
+    assert len(practices) == 2 and "**R-T02-01** (T02) Requisito único" in practices[1]
+    assert "## T02. Dos" not in md
     bad = tmp_path / "mal.csv"
     bad.write_text("clave_grupo,grupo,tema_grupo,requisito_id,tema,requisito\n"
                    "k1,G001,T01,R1,T01,Texto A\nk2,G002,T01,R1,T01,Texto B\n", encoding="utf-8")

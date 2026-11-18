@@ -126,10 +126,24 @@ def render(grupos: dict, today: str | None = None, normative_links: dict[str, li
         own = [u for u in units if u["tema"] == code]
         lines.append(f"| {code}. {themes[code]['nombre']} | {len(own)} | "
                      f"{sum(u['frecuencia_idu'] > 0 for u in own)} | {sum(u['frecuencia_idu'] for u in own)} |")
-    for code in order:
-        own = sorted((u for u in units if u["tema"] == code),
-                     key=lambda u: (-u["frecuencia_idu"], -u["documentos"], u["id"]))
-        lines += ["", f"## {code}. {themes[code]['nombre']}", ""]
+
+    def is_practice(u: dict) -> bool:
+        return normative_links is not None and not u["links"] and u["revisados"] == len(u["grupos"])
+
+    sections = [(f"## {code}. {themes[code]['nombre']}", code, False) for code in order]
+    if any(is_practice(u) for u in units):
+        sections.append(("## Prácticas observadas sin respaldo escrito localizado", None, True))
+    for title, section_code, practices_section in sections:
+        own = sorted((u for u in units if is_practice(u) == practices_section
+                      and (practices_section or u["tema"] == section_code)),
+                     key=lambda u: (order.index(u["tema"]) if practices_section else 0,
+                                    -u["frecuencia_idu"], -u["documentos"], u["id"]))
+        if not own:
+            continue
+        lines += ["", title, ""]
+        if practices_section:
+            lines += ["Exigencias recurrentes en las observaciones para las que no se confirmó una regla "
+                      "escrita entre los candidatos normativos revisados. Se indica el tema de cada una.", ""]
         for u in own:
             tags = []
             if u["frecuencia_idu"]:
@@ -138,6 +152,8 @@ def render(grupos: dict, today: str | None = None, normative_links: dict[str, li
                 tags.append(f"interventoría ×{u['documentos_interventoria']}")
             text = u["texto"].rstrip(".")
             label = f"**{u['id']}** " if u["redactado"] else ""
+            if practices_section:
+                label += f"({u['tema']}) "
             refs = " ".join(f"`{code}`" for code in u["grupos"])
             lines.append(f"- [ ] {label}{text[:1].upper()}{text[1:]}. — {' · '.join(tags)} {refs}")
             if normative_links is not None:

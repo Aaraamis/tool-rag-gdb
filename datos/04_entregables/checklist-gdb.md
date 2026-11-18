@@ -149,10 +149,6 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
   - «se incluye un (1) elemento sin representación gráfica (OBJECTID 44)» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
   - «se incluye un (1) elemento sin representación gráfica (OBJECTID 44)» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16)
-- [ ] **R-T08-08** Hacer coincidir los polígonos del DWG y de la BDG, con límites por CIV. — interventoría ×2 `G206`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «los polígonos que se describen en el DWG y la BDG difieren (límites por CIV). Ajustar plano DWG.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 18)
-  - «los polígonos que se describen en el DWG y la BDG difieren (límites por CIV). Ajustar plano DWG.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 13)
 
 ## T05. Contenido gráfico de los planos
 
@@ -211,19 +207,9 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
 - [ ] **R-T05-11** Representar los elementos existentes, como las calzadas, en los planos de intervención. — IDU ×1 `G110`
   - Normativa directo: **Productos_DWG LAYERCAD 59** — Calzada: layer CAD CALZADA, geometría POLÍGONO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
   - «2. En los planos MVGVPL01.dwg se debe incluir las calzadas existentes.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 3)
-- [ ] **R-T05-05** Incluir en cada plano el cuadro del sistema de referencia, con su época. — interventoría ×4 `G195` `G228` `G290`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Los planos deben incluir el sistema de referencia empleado (coordenadas cartesianas)» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-  - «información del sistema de referencia geodésico de manera incompleta (época)» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
 - [ ] **R-T05-12** Mostrar en los planos de diseño geométrico la estructura de pavimento de calzada y andén. — interventoría ×1 `G256`
   - Normativa directo: **Productos_DWG Récord F31** — Planos de Secciones Transversales (niveles en eje y bordes, pendientes transversales, estructura del pavimento con espesores construidos)
   - «La estructura no se encuentra en los planos de DG.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
-- [ ] **R-T05-13** Incluir las coordenadas de los puntos en el esquema de ubicación de perforaciones. — interventoría ×1 `G229`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «No se incluye coordenadas de puntos» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
-- [ ] **R-T05-14** Incluir en los planos la nota aclaratoria de que la interventoría no aprueba diseños. — interventoría ×1 `G258`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «carecen de la leyenda aclaratoria de interventoría» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6)
 
 ## T01. Estructura de carpetas y completitud de la entrega
 
@@ -270,9 +256,6 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
 - [ ] **R-T01-09** Entregar las versiones aprobadas por la interventoría, no las iniciales. — interventoría ×1 `G235`
   - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
   - «Las versiones de planos no corresponden a las versiones aprobadas (planos versión inicial). Verificar.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 6)
-- [ ] **R-T01-10** Acordar en mesa de trabajo el momento de entrega de PDF y firmas; en la mesa del 8/6/2021 se acordó DWG en la entrega inicial y PDF firmados tras la aprobación. — interventoría ×1 `G212`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Los planos en formato PDF deberán ser entregados una vez se cuente con la aprobación de la interventoría y la DTINI.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
 
 ## T02. Nomenclatura de archivos y planos
 
@@ -309,25 +292,14 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa parcial: **GU-IC-06 §7.1.2 ¶3** — proyecto. Se debe duplicar o crear un NUEVO ARCHIVO si en el proyecto se tiene más de un tipo de estructura en las calzadas o losas. Está identificada con …
   - «2. Se reitera observación, en el archivo RelacionElementoConfiguración la nomenclatura de los archivos de las configuraciones de las capas de la estructura no …» (DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 3)
   - «6. Se reitera la observación referente a los nombres de los archivos exel con las configuraciones de las capas de las estructuras.» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
-- [ ] **R-T02-10** Indicar en las tablas de reporte el formato de fecha utilizado (año/mes/día). — IDU ×1 `G120`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «3. Se encontró que en los siguientes planos: MVGVPL11.DWG y MVGVPL49.DWG, el formato de fecha es Año/Mes/Día, por ser los únicos planos con este formato …» (DTE 20212150248313, `IDU/2021-08-14_2. 1. 120213561231691_00002-memo.pdf`, p. 8)
 - [ ] **R-T02-08** Completar la tabla de modificaciones del rótulo con todas las versiones y sus fechas. — interventoría ×4 `G191` `G225`
   - Normativa directo: **FO-IC-05 A.2.l** — Completitud información rótulo: Diligenciamiento de la información solicitada en el rótulo de los planos, correspondiente al proyecto y profesionales
   - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
   - «La información de modificaciones en el rótulo para algunos planos se encuentra incompleta (fecha)» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
   - «Se debe tener especialmente cuidado con la información en los planos, donde se registran las modificaciones de los archivos DWG» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] **R-T02-03** Nombrar los informes solo con su codificación, sin nombres extensos ni sufijos. — interventoría ×2 `G261` `G273`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «tiene por objeto evitar problemas al momento de copiar la información dada la extensión de nombres de archivos y carpetas» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6)
-  - «Los nombres de archivos de informes deben ser coherentes con la estructura de codificación.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
 
 ## T10. Ensayos e información técnica asociada
 
-- [ ] **R-T10-01** Verificar que las coordenadas de la tabla Deflectometria queden dentro de su calzada. — IDU ×5 `G008`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «10. Se reitera que en la tabla Deflectometria se debe verificar las coordenadas, algunas se encuentran por fuera de sus respectivas calzadas.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6)
-  - «24. En la tabla Deflectometria se deben verificar las coordenadas, algunos puntos se encuentran por fuera de la respectiva calzada.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 14)
 - [ ] **R-T10-03** Hacer coincidir espesores y tipo de mezcla entre tablas de la BDG, cuadros de reporte y planos. — IDU ×3 `G021` `G143` `G170`
   - Normativa parcial: **Productos_DWG Récord F28** — Sección típica con espesores y tipo de materiales utilizados, pendiente Transversal, acotados
   - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
@@ -351,15 +323,9 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
   - «8. En la tabla EvaluacionEstructural del elemento calzada, se encontraron varios registros y de acuerdo al archivo Excel DiccionarioAtributos_V7.2, se debe …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 6)
   - «3. En la tabla EvaluacionEstructural de la GDB del proyecto se debe verificar la información incorporada en el atributo SN Efectivo, dado que es diferente a la …» (DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 4)
-- [ ] **R-T10-07** Verificar que no se repitan deflexiones entre segmentos en DeflexionCalculo. — IDU ×1 `G173`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «5. Se reitera la observación sobre la información capturada en la tabla DeflexionCalculo, las relaciones no cumplen lo establecido en la estructura de la base …» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
 - [ ] **R-T10-08** Enlazar correctamente las exploraciones con sus tablas asociadas (S_Piezometros). — IDU ×1 `G175`
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
   - «2. Se debe verificar la información incorporada en la tabla Exploración ya que existe un elemento con enlace de la tabla S_Piezometros.» (DTE 20202150230133, `IDU/2020-12-01_02 DTE 20202150230133.pdf`, p. 5)
-- [ ] **R-T10-09** Verificar la inclusión de índices y ensayos del alcance contractual según la especificación IDU 510-11. — IDU ×1 `G179`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «13. En el tema de las Evaluaciones Estructural y Superficial, es necesario verificar la observación “La especificación IDU 510-11 no establece esta valor como …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 11)
 
 ## T07. Codificación CIV y PK_ID
 
@@ -445,9 +411,6 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa parcial: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
   - «No todos los niveles del archivo BASE-02 se encuentran descritos en el reporte» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
   - «este no se ha diligenciado integralmente. No se incluyen todos los niveles o layers contenidos en los planos» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-- [ ] **R-T04-07** Ubicar grillas, coordenadas y textos del rótulo en los layers del filtro ROTULO. — interventoría ×1 `G242`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Los niveles de grillas y coordenadas no se encuentran definidos en el grupo o filtro ROTULO.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
 
 ## T11. Proceso de entrega y control de calidad
 
@@ -456,14 +419,6 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa parcial: **GU-IC-06 §11.1 ¶1** — El contenido de los archivos, su calidad, su completitud y autenticidad de la firma digital, es responsabilidad de los actores de infraestructura, por tanto, …
   - «Se recomienda revisar integralmente todos y cada uno de los productos a entregar, de manera que puedan garantizar, tras las actividades de ajuste o corrección, …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 6)
   - «Se recomienda revisar integralmente todos y cada uno de los productos a entregar, de manera que puedan garantizar, tras las actividades de ajuste o corrección, …» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 3)
-- [ ] **R-T11-04** Solicitar mesa de trabajo con la DTINI solo después de atender todas las observaciones. — IDU ×1 · interventoría ×1 `G146` `G252`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «3. Se reitera la solicitud de Mesa de trabajo requerida mediante correo electrónico de 23/07/2020. Aunque el memorando de observaciones a tratar en la mesa de …» (DTE 20202150230133, `IDU/2020-12-01_02 DTE 20202150230133.pdf`, p. 6)
-  - «dicha mesa de trabajo se gestionará con el IDU una vez el Interventor verifique» (sin radicado, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-- [ ] **R-T11-03** No reincidir en observaciones anteriores, no re-radicar archivos sin cambios y no empeorar la calidad de una entrega previa; en esos casos la entrega se objeta. — interventoría ×3 `G270` `G271` `G292`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «reinciden en las observaciones y hallazgos de versiones previas» (sin radicado, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-  - «las versiones de los archivos son las mismas entre los productos radicados» (sin radicado, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 7)
 - [ ] **R-T11-02** Responder una a una las observaciones previas, incluidas las tablas de revisión y de validación de la GDB. — interventoría ×2 `G219` `G284` `G285`
   - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
   - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
@@ -494,3 +449,53 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa parcial: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
   - «Este archivo debe ser utilizado como referencia externa (xref) para la presentaciónde todos los temas a entregar para cada una de las etapas objeto del …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
   - «el mismo corresponde a una imagen con problemas de referencia externa» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
+
+## Prácticas observadas sin respaldo escrito localizado
+
+Exigencias recurrentes en las observaciones para las que no se confirmó una regla escrita entre los candidatos normativos revisados. Se indica el tema de cada una.
+
+- [ ] **R-T08-08** (T08) Hacer coincidir los polígonos del DWG y de la BDG, con límites por CIV. — interventoría ×2 `G206`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «los polígonos que se describen en el DWG y la BDG difieren (límites por CIV). Ajustar plano DWG.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 18)
+  - «los polígonos que se describen en el DWG y la BDG difieren (límites por CIV). Ajustar plano DWG.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 13)
+- [ ] **R-T05-05** (T05) Incluir en cada plano el cuadro del sistema de referencia, con su época. — interventoría ×4 `G195` `G228` `G290`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «Los planos deben incluir el sistema de referencia empleado (coordenadas cartesianas)» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
+  - «información del sistema de referencia geodésico de manera incompleta (época)» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
+- [ ] **R-T05-13** (T05) Incluir las coordenadas de los puntos en el esquema de ubicación de perforaciones. — interventoría ×1 `G229`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «No se incluye coordenadas de puntos» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
+- [ ] **R-T05-14** (T05) Incluir en los planos la nota aclaratoria de que la interventoría no aprueba diseños. — interventoría ×1 `G258`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «carecen de la leyenda aclaratoria de interventoría» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6)
+- [ ] **R-T01-10** (T01) Acordar en mesa de trabajo el momento de entrega de PDF y firmas; en la mesa del 8/6/2021 se acordó DWG en la entrega inicial y PDF firmados tras la aprobación. — interventoría ×1 `G212`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «Los planos en formato PDF deberán ser entregados una vez se cuente con la aprobación de la interventoría y la DTINI.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
+- [ ] **R-T02-10** (T02) Indicar en las tablas de reporte el formato de fecha utilizado (año/mes/día). — IDU ×1 `G120`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «3. Se encontró que en los siguientes planos: MVGVPL11.DWG y MVGVPL49.DWG, el formato de fecha es Año/Mes/Día, por ser los únicos planos con este formato …» (DTE 20212150248313, `IDU/2021-08-14_2. 1. 120213561231691_00002-memo.pdf`, p. 8)
+- [ ] **R-T02-03** (T02) Nombrar los informes solo con su codificación, sin nombres extensos ni sufijos. — interventoría ×2 `G261` `G273`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «tiene por objeto evitar problemas al momento de copiar la información dada la extensión de nombres de archivos y carpetas» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6)
+  - «Los nombres de archivos de informes deben ser coherentes con la estructura de codificación.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
+- [ ] **R-T10-01** (T10) Verificar que las coordenadas de la tabla Deflectometria queden dentro de su calzada. — IDU ×5 `G008`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «10. Se reitera que en la tabla Deflectometria se debe verificar las coordenadas, algunas se encuentran por fuera de sus respectivas calzadas.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6)
+  - «24. En la tabla Deflectometria se deben verificar las coordenadas, algunos puntos se encuentran por fuera de la respectiva calzada.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 14)
+- [ ] **R-T10-07** (T10) Verificar que no se repitan deflexiones entre segmentos en DeflexionCalculo. — IDU ×1 `G173`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «5. Se reitera la observación sobre la información capturada en la tabla DeflexionCalculo, las relaciones no cumplen lo establecido en la estructura de la base …» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
+- [ ] **R-T10-09** (T10) Verificar la inclusión de índices y ensayos del alcance contractual según la especificación IDU 510-11. — IDU ×1 `G179`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «13. En el tema de las Evaluaciones Estructural y Superficial, es necesario verificar la observación “La especificación IDU 510-11 no establece esta valor como …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 11)
+- [ ] **R-T04-07** (T04) Ubicar grillas, coordenadas y textos del rótulo en los layers del filtro ROTULO. — interventoría ×1 `G242`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «Los niveles de grillas y coordenadas no se encuentran definidos en el grupo o filtro ROTULO.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
+- [ ] **R-T11-04** (T11) Solicitar mesa de trabajo con la DTINI solo después de atender todas las observaciones. — IDU ×1 · interventoría ×1 `G146` `G252`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «3. Se reitera la solicitud de Mesa de trabajo requerida mediante correo electrónico de 23/07/2020. Aunque el memorando de observaciones a tratar en la mesa de …» (DTE 20202150230133, `IDU/2020-12-01_02 DTE 20202150230133.pdf`, p. 6)
+  - «dicha mesa de trabajo se gestionará con el IDU una vez el Interventor verifique» (sin radicado, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
+- [ ] **R-T11-03** (T11) No reincidir en observaciones anteriores, no re-radicar archivos sin cambios y no empeorar la calidad de una entrega previa; en esos casos la entrega se objeta. — interventoría ×3 `G270` `G271` `G292`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «reinciden en las observaciones y hallazgos de versiones previas» (sin radicado, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
+  - «las versiones de los archivos son las mismas entre los productos radicados» (sin radicado, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 7)
