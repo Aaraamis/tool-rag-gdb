@@ -33,7 +33,7 @@ def digest_path(path: Path) -> str:
         return hashlib.sha256(path.read_bytes()).hexdigest()
     digest = hashlib.sha256()
     for item in sorted(p for p in path.rglob("*") if p.is_file()):
-        digest.update(str(item.relative_to(path)).encode())
+        digest.update(item.relative_to(path).as_posix().encode())
         digest.update(hashlib.sha256(item.read_bytes()).digest())
     return digest.hexdigest()
 

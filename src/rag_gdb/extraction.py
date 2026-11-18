@@ -53,8 +53,8 @@ def validate_extraction(data: dict, manifest: dict, pdf_dir: Path,
         return [f"documento.ruta no está en el manifiesto: {document['ruta']}"]
     if item["sha256"] != document["sha256"]:
         errors.append("documento.sha256 no coincide con el manifiesto")
-    if relative is not None and relative != str(Path(document["ruta"]).with_suffix("")):
-        errors.append(f"el archivo debe llamarse {Path(document['ruta']).with_suffix('.json')}")
+    if relative is not None and relative != Path(document["ruta"]).with_suffix("").as_posix():
+        errors.append(f"el archivo debe llamarse {Path(document['ruta']).with_suffix('.json').as_posix()}")
     ids = [o["id"] for o in data["observaciones"]]
     errors += [f"id repetido: {i}" for i in sorted({i for i in ids if ids.count(i) > 1})]
     if document["ruta"] not in cache:
@@ -78,12 +78,12 @@ def validate_dir(extract_dir: Path, manifest: dict, pdf_dir: Path) -> dict[str, 
     for path in sorted(extract_dir.rglob("*.json")):
         if path.name == "estado.json":
             continue
-        relative = str(path.relative_to(extract_dir).with_suffix(""))
+        relative = path.relative_to(extract_dir).with_suffix("").as_posix()
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError as exc:
-            results[str(path.relative_to(extract_dir))] = [f"JSON inválido: {exc}"]
+            results[path.relative_to(extract_dir).as_posix()] = [f"JSON inválido: {exc}"]
             continue
-        results[str(path.relative_to(extract_dir))] = validate_extraction(
+        results[path.relative_to(extract_dir).as_posix()] = validate_extraction(
             data, manifest, pdf_dir, relative, cache)
     return results
