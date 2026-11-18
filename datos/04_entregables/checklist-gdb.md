@@ -1,1041 +1,496 @@
 # Checklist GDB — borrador
 
-> Generado por `rag-gdb checklist` el 2026-11-17 a partir de 504 observaciones de 41 documentos, agrupadas en 294 requisitos.
-> **Pendiente:** la taxonomía de temas (`config/temas.csv`) requiere validación de Aramis; la revisión normativa está confirmada para los 294 grupos; 33 quedan identificados como prácticas observadas sin respaldo escrito localizado. Cada requisito conserva todavía la redacción representativa de su grupo.
+> Generado por `rag-gdb checklist` el 2026-11-18 a partir de 504 observaciones de 41 documentos, agrupadas en 294 grupos y 93 requisitos.
+> **Pendiente:** la taxonomía de temas (`config/temas.csv`) requiere validación de Aramis; la revisión normativa está confirmada para los 294 grupos; 13 requisitos quedan identificados como prácticas observadas sin respaldo escrito localizado. 93 requisitos tienen redacción propuesta en `config/requisitos-redaccion.csv`, pendiente de validación de Aramis.
 
-Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos que lo observaron (un traslado o una copia no suma); **interventoría ×m** es el número de documentos de la interventoría que lo plantean.
+Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos que lo observaron (un traslado o una copia no suma); **interventoría ×m** es el número de documentos de la interventoría que lo plantean. Entre comillas invertidas van los grupos de observaciones que lo respaldan.
 
 ## Resumen por tema
 
 | Tema | Requisitos | Observados por el IDU | Radicados IDU (suma) |
 |---|---:|---:|---:|
-| T09. Consistencia entre CAD, GDB y meta física | 29 | 26 | 63 |
-| T06. Atributos de la GDB y diccionario de atributos | 39 | 32 | 47 |
-| T08. Geometría y topología de la GDB | 31 | 29 | 42 |
-| T05. Contenido gráfico de los planos | 41 | 22 | 34 |
-| T01. Estructura de carpetas y completitud de la entrega | 31 | 11 | 23 |
-| T02. Nomenclatura de archivos y planos | 29 | 20 | 23 |
-| T10. Ensayos e información técnica asociada | 15 | 15 | 21 |
-| T07. Codificación CIV y PK_ID | 17 | 10 | 18 |
-| T03. Archivo base CAD y referencias externas | 15 | 11 | 13 |
-| T04. Layers, filtros y geometría en CAD | 34 | 9 | 13 |
-| T11. Proceso de entrega y control de calidad | 13 | 3 | 12 |
+| T09. Consistencia entre CAD, GDB y meta física | 8 | 7 | 60 |
+| T06. Atributos de la GDB y diccionario de atributos | 8 | 7 | 43 |
+| T08. Geometría y topología de la GDB | 8 | 6 | 32 |
+| T05. Contenido gráfico de los planos | 14 | 10 | 31 |
+| T01. Estructura de carpetas y completitud de la entrega | 10 | 5 | 25 |
+| T02. Nomenclatura de archivos y planos | 10 | 8 | 25 |
+| T10. Ensayos e información técnica asociada | 9 | 9 | 20 |
+| T07. Codificación CIV y PK_ID | 8 | 5 | 17 |
+| T04. Layers, filtros y geometría en CAD | 9 | 5 | 13 |
+| T11. Proceso de entrega y control de calidad | 4 | 2 | 12 |
+| T03. Archivo base CAD y referencias externas | 5 | 5 | 10 |
 
 ## T09. Consistencia entre CAD, GDB y meta física
 
-- [ ] Revisar todos los planos del archivo MVGPL01 para garantizar que las intervenciones (ej. CIV: 1006480 y PK:51564) aparezcan en las tablas de reporte. — IDU ×16 `G001`
+- [ ] **R-T09-02** Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09. — IDU ×18 · interventoría ×2 `G004` `G017` `G046` `G081` `G092` `G107` `G127` `G145` `G210`
+  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
+  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta** — Verificación del cumplimiento de la meta física: Se verifica el formato de reporte de seguimiento final entregado e incorporado en la base de datos geográfica …
+  - Normativa directo: **FO-IC-05 B.6.a** — Se presentan todos los elementos de la sección transversal y mobiliario urbano: SI NO Observaciones: Todos los elementos objeto del contrato correspondientes a …
+  - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
+  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
+  - «4. Se recomienda verificar el reporte de meta física FOIC09_REPORTE_FINAL_META_FISICA_V_ 1.0, ya que los elementos definidos no concuerdan con lo establecido …» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 3)
+  - «4. Se recomienda verificar el reporte de meta física FOIC09_REPORTE_FINAL_META_FISICA_V_ 1.0, ya que los elementos definidos no concuerdan con lo establecido …» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 3)
+- [ ] **R-T09-01** Incluir en las tablas de reporte de los planos todas las intervenciones dibujadas, y viceversa, en todos los planos. — IDU ×16 `G001` `G112`
   - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
   - «1. Se reitera la siguiente observación: se recomienda realizar una revisión de todos los planos del archivo “MVGPL01” con el fin de garantizar que en las …» (DTINI 20212350355403, `IDU/2021-10-29_120213861635311_00002.pdf`, p. 2)
   - «4. Se reitera que en el archivo MVGVPL01.dwg – Layout MVGVPL06 se debe verificar que en las tablas de reporte se encuentren todas las intervenciones. Ejemplo …» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 4)
-- [ ] En la GDB del proyecto las Áreas de Intervención y la fecha de registro es diferente a la reportada en los planos CAD y en el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0, deben ser iguales. — IDU ×12 `G002`
+- [ ] **R-T09-03** Hacer coincidir áreas de intervención y fechas entre GDB, planos, FOIC09 y tablas de seguimiento. — IDU ×14 `G002` `G134` `G153`
   - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
   - «2. Se reitera la observación número 5 del memorando 20212150011573 “En la GDB del proyecto las Áreas de Intervención y la fecha de registro es diferente a la …» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 2)
   - «6. En la GDB del proyecto las Áreas de Intervención y la fecha de registro es diferente a la reportada en los planos CAD y en el archivo …» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 6)
-- [ ] Verificar el reporte de meta física FOIC09_REPORTE_FINAL_META_FISICA_V_1.0 ya que los elementos definidos no concuerdan con lo establecido en el archivo base CAD y la base de datos GDB. — IDU ×8 `G004`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta** — Verificación del cumplimiento de la meta física: Se verifica el formato de reporte de seguimiento final entregado e incorporado en la base de datos geográfica …
-  - «4. Se recomienda verificar el reporte de meta física FOIC09_REPORTE_FINAL_META_FISICA_V_ 1.0, ya que los elementos definidos no concuerdan con lo establecido …» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 3)
-  - «4. Se recomienda verificar el reporte de meta física FOIC09_REPORTE_FINAL_META_FISICA_V_ 1.0, ya que los elementos definidos no concuerdan con lo establecido …» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 3)
-- [ ] Verificar que las cantidades de elementos en el archivo base, la BDG y el reporte FO-IC09 sean iguales para cumplir la meta física. — IDU ×3 · interventoría ×1 `G017`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «2. Los elementos representados en el archivo base (BASE-IDU-1309-2018.dwg) y en la Base de Datos Geográfica – BDG y reportados en el archivo FO-IC09, no …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 6)
-  - «2. Se recuerda que los elementos presentados deben corresponder entre el archivo base CAD, Base de Datos Geográfica – BDG y reporte de meta física (FO-IC-09); …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 4)
-- [ ] Diligenciar el campo de ENTIDAD O DEPENDENCIA IDU en el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0. — IDU ×2 `G022`
+- [ ] **R-T09-04** Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo. — IDU ×6 · interventoría ×1 `G022` `G054` `G059` `G064` `G069` `G076` `G124`
   - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - «9. En el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0, diligenciar el campo de ENTIDAD O DEPENDENCIA IDU.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 6)
   - «12. En el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0 complementar el campo: Entidad o Dependencia IDU» (DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 9)
-- [ ] Verificar la meta física entregada para esta fase del contrato debido a la discrepancia entre elementos CAD y BDG. — IDU ×2 `G046`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «3. Se solicita verificar la meta física entregada para esta fase del contrato debido a que la cantidad de elementos presentados en la información CAD y en la …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 5)
-  - «2. Se solicita verificar la meta física entregada para esta fase del contrato debido a que la cantidad de elementos presentados en la información CAD y en la …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 5)
-- [ ] Ajustar la información de los elementos en el elemento Área Intervención y la tabla DetalleAIntervencionCalCic, considerando que existen 434 elementos frente a 329 registros. — IDU ×1 `G051`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «20. En el elemento Área Intervención se presentan 434 elementos, en la tabla DetalleAIntervencionCalCic, 329 registros, ajustar esta información y tener en …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 13)
-- [ ] Diligenciar el archivo FOIC09_REPORTE_FINAL_META_FISICA.xls en los campos especificados. — IDU ×1 · interventoría ×1 `G054`
-  - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «9. Se requiere que el archivo FOIC09_REPORTE_FINAL_META_FISICA.xls, este debidamente diligenciado, específicamente los campos que se muestran en la siguiente …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 7)
-  - «se debe diligenciar y entregar el archivo de Excel proporcionado al momento del alistamiento, denominado FOIC09_REPORTE_FINAL_META_FISICA.xlsx» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-- [ ] Incluir los apiques reportados en la GDB del proyecto en el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0. — IDU ×1 `G059`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «8. En el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0, se debe incluir los apiques reportados en la GDB del proyecto.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 6)
-- [ ] Se aclara que variables como Funcionalidad, Ancho, Área, Espesor, Modulo Rotura no tienen relación con la justificación del no diligenciamiento y se relacionan como intervención Losas en el reporte FOIC09. — IDU ×1 `G062`
+- [ ] **R-T09-05** Reportar el tipo de intervención coherente entre FOIC09, tablas de seguimiento y etapa (en preconstrucción: Estudios y Diseños). — IDU ×3 `G062` `G067` `G097`
   - Normativa directo: **GU-IC-06 §8.2 ¶4** — actor de infraestructura, en el marco del alcance del proyecto en cuestión. Interventoría: Al igual que en el campo anterior, la interventoría validará con una …
   - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
   - «Se aclara que las variables como Funcionalidad Losa-Orden-FilaPosición-Ancho-Área-Espesor Losa-Modulo Rotura etc., no tiene relación con la justificación del …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 14)
-- [ ] Ajustar el nombre del tipo de elemento INTERVENCIONCALZADA por AREAINTERVENCION en el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0. — IDU ×1 `G064`
-  - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «3. Se recomienda ajustar el nombre del tipo de elemento INTERVENCIONCALZADA por AREAINTERVENCION en el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0.» (DTE 20212150175863, `IDU/2021-06-21_2.1 120213560877981_00002-obs GIS20-15-jun-21.pdf`, p. 2)
-- [ ] Ajustar el tipo de intervención en el archivo de Excel, ya que se reporta como mantenimiento periódico pero la tabla de seguimiento indica reconstrucción. — IDU ×1 `G067`
-  - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
   - «Se solicita ajustar el tipo de intervención porque en el archivo de Excel “FOIC09_Reporte_Final_Meta_Fisica_V1.0” se encuentra que es mantenimiento periódico, …» (DTINI 20212350355403, `IDU/2021-10-29_120213861635311_00002.pdf`, p. 5)
-- [ ] Ajustar la información del archivo Excel para identificar cada elemento de mobiliario (Bolardo, caneca, etc.) según la GDB y el plano Base IDU-1531-2018. — IDU ×1 `G069`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «7. En el archivo de Excel “FOIC09_REPORTE_FINAL_META_FISICA_V_1.0” no es posible identificar cada uno de los elementos que hacen parte del mobiliario (Bolardo, …» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 8)
-- [ ] Cambiar el elemento MOBILIARIO en el reporte final de meta física (FO-IC-09) por los tipos específicos instalados para obtener un total desagregado. — IDU ×1 `G076`
-  - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «11. Se solicita cambiar en el archivo de reporte final de meta física (FO-IC-09) el elemento (MOBILIARIO) por cada uno de los tipos de mobiliario instalados, …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 9)
-- [ ] Corregir el conteo de elementos, ya que existen diferencias entre las ciclorrutas y sardineles del archivo base CAD y las demás fuentes. — IDU ×1 `G081`
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta** — Verificación del cumplimiento de la meta física: Se verifica el formato de reporte de seguimiento final entregado e incorporado en la base de datos geográfica …
-  - «1. Aún no corresponde el conteo de elementos. Se encuentran diferencias en las ciclorrutas y los sardineles del archivo base CAD y las demás fuentes. Reiterado …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 2)
-- [ ] El conteo de elementos debe coincidir entre el DWG base, el FOIC09 y la BDG, incluida la capa Elemento Puente Polígono. — IDU ×1 `G092`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «Se recuerda que el conteo de los elementos presentados en el archivo "BASE-IDU-0348-2020.dwg" debe coincidir» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-- [ ] En el FOIC09 de preconstrucción el tipo de intervención se diligencia como Estudios y Diseños. — IDU ×1 `G097`
-  - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «Se solicita realizar el ajuste en el archivo de reporte final de meta física» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-- [ ] Incluir en la Base de Datos Geográfica y el reporte final de Excel las 31 calzadas que no aparecen en los planos CAD. — IDU ×1 `G107`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «En la Base de Datos Geográfica y en el archivo de Excel del reporte final de la meta física se encontraron 31 calzadas, sin embargo, esta información no se …» (DTINI 20212350368463, `IDU/2021-11-09_120213861675211_00002.pdf`, p. 3)
-- [ ] La información en las tablas debe coincidir con la de los planos. — IDU ×1 `G112`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «sentido, es importante mencionar que la información que se encuentra en las tablas debe coincidir con la de los planos. -» (DTE 20212150248313, `IDU/2021-08-14_2. 1. 120213561231691_00002-memo.pdf`, p. 5)
-- [ ] No se encuentran reportados los elementos del objeto AreaIntervencion en el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0. — IDU ×1 `G124`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «9. En el archivo FOIC09_REPORTE_FINAL_META_FISICA_V_1.0 no se encuentran reportados los elementos del objeto AreaIntervencion.» (DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 8)
-- [ ] Reclamar las diferencias en la cantidad de elementos presentados entre los productos CAD, BDG y reporte final de meta física. — IDU ×1 `G127`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «3. Se reitera el numeral 2 del memorando 20232350161243, debido a que se siguen presentado diferencias en la cantidad de elementos presentados en los productos …» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 5)
-- [ ] Revisar la fecha de intervención de la tabla de relación seguimiento del elemento Losa, pues es diferente a la fecha reportada de la tabla Losa. — IDU ×1 `G134`
+- [ ] **R-T09-06** Hacer coincidir el número de registros de las tablas relacionadas con los elementos de su capa. — IDU ×2 `G051` `G140`
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «12. Revisar la fecha de intervención de la tabla de relación seguimiento del elemento Losa, pues es diferente a la fecha reportada de la tabla Losa.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 7)
-- [ ] Se detecta una inconsistencia donde la capa de calzada presenta 50 elementos, pero la Tabla EvaluaciónFuncional solo registra 26 registros. — IDU ×1 `G140`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
+  - «20. En el elemento Área Intervención se presentan 434 elementos, en la tabla DetalleAIntervencionCalCic, 329 registros, ajustar esta información y tener en …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 13)
   - «6. Se debe verificar la información presentada en la Base de Datos Geográfica, toda vez que están presentando 50 elementos en la capa de calzada, sin embargo, …» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 4)
-- [ ] Se reitera la diferencia entre los productos CAD y BDG, señalando que existen elementos como bolardos no incorporados en la BDG. — IDU ×1 `G145`
-  - Normativa directo: **FO-IC-05 B.6.a** — Se presentan todos los elementos de la sección transversal y mobiliario urbano: SI NO Observaciones: Todos los elementos objeto del contrato correspondientes a …
-  - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
-  - «2. Dado el numeral anterior, se reitera lo descrito en el memorando 20232350001653 en lo relacionado con la diferencia que se encuentra entre los diferentes …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 5)
-- [ ] Se solicita ajustar la información debido a que la fecha de registro del elemento calzada (30/07/2020 en GDB y Excel) difiere de la fecha en la tabla de seguimiento (31/07/2020). — IDU ×1 `G153`
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «Se encontró que el elemento calzada tiene una fecha de registro del 30/07/2020 en la GDB y en el archivo de excel “FOIC09_Reporte_Final_Meta_Fisica_V_1.0”, sin …» (DTINI 20212350355403, `IDU/2021-10-29_120213861635311_00002.pdf`, p. 3)
-- [ ] Verificar el Tipo de Mezcla en las intervenciones debido a diferencias entre la BDG y los archivos CAD. — IDU ×1 `G168`
+- [ ] **R-T09-07** Hacer coincidir el tipo de mezcla entre la BDG y los archivos CAD. — IDU ×1 `G168`
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - Normativa parcial: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
   - «11. Se debe verificar el Tipo de Mezcla en las intervenciones, se encuentran diferencias entre la BDG y los archivos CAD.» (DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 9)
-- [ ] Aclarar y corregir las discrepancias entre el DWG base y los feature class. — interventoría ×1 `G210`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «existen discrepancia entre los límites de andenes, calzadas, área de intervención» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 13)
-- [ ] El reporte de meta física (D.23.2.Reportes) debe corresponder al proyecto y a la versión vigente. — interventoría ×1 `G231`
+- [ ] **R-T09-08** Entregar el reporte de meta física del propio proyecto y en su versión vigente. — interventoría ×1 `G231` `G232`
   - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta** — Verificación del cumplimiento de la meta física: Se verifica el formato de reporte de seguimiento final entregado e incorporado en la base de datos geográfica …
   - «El reporte de meta física no se corresponde al proyecto actual. Incluir la versión más reciente y ajustada.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] El reporte de meta física entregado pertenece a otro contrato; no se verifica la meta física. — interventoría ×1 `G232`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta** — Verificación del cumplimiento de la meta física: Se verifica el formato de reporte de seguimiento final entregado e incorporado en la base de datos geográfica …
-  - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «El documento de reporte proporcionado corresponde a otro objeto de proyecto o» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
 
 ## T06. Atributos de la GDB y diccionario de atributos
 
-- [ ] La información de la GDB debe diligenciarse según el DiccionarioAtributos (GUIA 06) y reportar observaciones si faltan atributos obligatorios. — IDU ×5 `G010`
+- [ ] **R-T06-01** Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro. — IDU ×17 · interventoría ×2 `G010` `G013` `G014` `G052` `G053` `G055` `G088` `G103` `G200` `G201` `G227`
   - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - «3. La información de la GDB se debe diligenciar de acuerdo al DiccionarioAtributos, de acuerdo a lo establecido en la GUIA 06; además si en algún momento un …» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 2)
   - «3. La información de la GDB se debe diligenciar de acuerdo al DiccionarioAtributos, de acuerdo a lo establecido en la GUIA 06; además si en algún momento un …» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 2)
-- [ ] Diligenciar las tablas respetando los campos obligatorios del archivo DiccionarioAtributos y realizar ajustes necesarios. — IDU ×4 `G013`
-  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «9. Al momento de diligenciar las tablas se debe tener en cuenta los campos obligatorios de acuerdo al archivo de Excel DiccionarioAtributos, se recomienda …» (DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 4)
-  - «4. Al momento de diligenciar las tablas se debe tener en cuenta los campos obligatorios de acuerdo al archivo de Excel “DiccionarioAtributos”, se recomienda …» (DTE 20212150175863, `IDU/2021-06-21_2.1 120213560877981_00002-obs GIS20-15-jun-21.pdf`, p. 3)
-- [ ] Diligenciar toda la información requerida en la BDG, ya que existen atributos sin datos solicitados (ej. exploraciones y calzadas). — IDU ×4 `G014`
-  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «10. No se encuentra incorporada toda la información requerida en la BDG dado que existen atributos que no contienen los datos solicitados para esta fase (etapa …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 9)
-  - «No se encuentra incorporada toda la información requerida en la BDG dado que existen atributos que no contienen los datos solicitados» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 7)
-- [ ] Diligenciar Productos_BDG.xlsx (X de contratista e interventoría; N/A o parcial con justificación contractual y técnica). — IDU ×3 `G016`
+- [ ] **R-T06-05** Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo. — IDU ×7 `G057` `G068` `G082` `G126` `G160` `G167` `G188`
+  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - Normativa directo: **GU-IC-06 §8.2 ¶3** — Prefactibilidad y Factibilidad), junto con el archivo en formato Excel Productos_BDG.xlsx debidamente diligenciado en las hojas de cálculo color azul oscuro …
-  - «Se requiere en la entrega del diccionario de atributos archivo (Productos_BDG.xlsx), se encuentre debidamente diligenciado» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-  - «14. Se requiere en la entrega del archivo (Productos_BDG.xlsx), que este se encuentre debidamente diligenciado por contratista e interventoría para todos los …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 10)
-- [ ] Diligenciar la tabla relacionada (Seguimiento) para el elemento Losa en el archivo Excel DiccionarioAtributos_V7.2. — IDU ×2 `G023`
   - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
+  - «30. En el archivo Excel DiccionarioAtributos_V7.2, elemento Arealntervencion atributo» (DTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 19)
+  - «11. Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx el elemento Losa, el contratista manifiesta el no diligenciamiento de los atributos …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 7)
+- [ ] **R-T06-07** Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas. — IDU ×6 `G083` `G084` `G109` `G131` `G176` `G177` `G183`
+  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
+  - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
+  - «5. Aún se encuentran información inconsistente en el atributo “Codigo Elemento”; por ejemplo, en el OBJECTID 20 y además el atributo de localización también …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
+  - «En la tabla DetalleAreaIntervencionCalzadaCiclorruta se encontraron varios campos sin información que son obligatorios para el tipo de intervención: Reparación …» (DTE 20212150242143, `IDU/2021-08-13_1.1 120213561214751_00002-memo.pdf`, p. 6)
+- [ ] **R-T06-02** Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento. — IDU ×4 · interventoría ×2 `G023` `G080` `G108` `G123` `G129` `G207`
+  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - «31. En el archivo Excel DiccionarioAtributos_V7.2 para el elemento Losa se debe diligenciar la tabla relacionada (Seguimiento).» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 18)
   - «10. Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx la tabla seguimiento relacionada al elemento Losa, el contratista manifiesta el no …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 7)
-- [ ] Justificar técnicamente o contractualmente en el campo Observaciones cualquier atributo no diligenciado totalmente o marcado como N/A en la BDG. — IDU ×2 `G037`
+- [ ] **R-T06-03** Justificar técnica o contractualmente en Observaciones cada atributo no diligenciado o N/A, con validación de la interventoría. — IDU ×4 `G037` `G119` `G150`
   - Normativa directo: **GU-IC-06 §8.2 ¶4** — actor de infraestructura, en el marco del alcance del proyecto en cuestión. Interventoría: Al igual que en el campo anterior, la interventoría validará con una …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - «En los casos donde un atributo no se encuentre totalmente diligenciado en la BDG o no aplique – N/A, debe existir la debida justificación de carácter técnico o …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 10)
   - «En los casos donde un atributo no se encuentre totalmente diligenciado en la BDG o no aplique – N/A, debe existir la debida justificación de carácter técnico o …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 9)
-- [ ] No modificar la estructura de la GDB, se debe utilizar la enviada en la etapa de alistamiento. — IDU ×2 `G040`
+- [ ] **R-T06-04** Diligenciar Productos_BDG.xlsx en todas sus hojas, con la X de contratista e interventoría y N/A justificado en lo opcional. — IDU ×3 · interventoría ×3 `G016` `G190`
+  - Normativa directo: **GU-IC-06 §8.2 ¶3** — Prefactibilidad y Factibilidad), junto con el archivo en formato Excel Productos_BDG.xlsx debidamente diligenciado en las hojas de cálculo color azul oscuro …
+  - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
+  - «Se requiere en la entrega del diccionario de atributos archivo (Productos_BDG.xlsx), se encuentre debidamente diligenciado» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
+  - «14. Se requiere en la entrega del archivo (Productos_BDG.xlsx), que este se encuentre debidamente diligenciado por contratista e interventoría para todos los …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 10)
+- [ ] **R-T06-06** Usar la estructura de la GDB enviada en el alistamiento, sin modificarla. — IDU ×2 `G040`
   - Normativa directo: **GU-IC-06 §7.1.1 ¶4** —  FOIC01 REPORTE DE ELEMENTOS VIALES OBJETO DE LA CONTRATACION  FOIC02_REPORTE PARA LA ACTUALIZACIÓN DE LOS ESTUDIOS, DIAGNOSTICOS, DISEÑOS E INTERVENCIONES …
   - «7. La estructura de la GDB no se debe modificar, se debe utilizar la enviada en la etapa de alistamiento.» (DTE 20212150056813, `IDU/2021-03-10_177_20212150056813anexo.pdf`, p. 4)
   - «5. Se recomienda verificar la estructura de la GDB enviada en la etapa de alistamiento, ya que se debe utilizar esta, y no se le debe cambiar su formato.» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 3)
-- [ ] Complementar atributos de reporte obligatorio como Fecha Registro en la tabla Calzada. — IDU ×1 `G052`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «5. En la tabla Calzada se debe complementar los atributos de reporte obligatorio como Fecha Registro.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 4)
-- [ ] Complementar los atributos de reporte obligatorio como costado en la tabla Exploración. — IDU ×1 `G053`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «6. En la tabla Exploración se debe complementar los atributos de reporte obligatorio como costado.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 5)
-- [ ] Diligenciar todas las variables del elemento losa según el archivo de Excel DiccionarioAtributos V7.2. — IDU ×1 `G055`
-  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «22. Se solicita diligenciar todas las variables del elemento losa de acuerdo al archivo de Excel DiccionarioAtributos V7.2.» (DTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 15)
-- [ ] Eliminar el texto en observaciones del atributo ArealIntervencion en el archivo Excel DiccionarioAtributos_V7.2. — IDU ×1 `G057`
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «30. En el archivo Excel DiccionarioAtributos_V7.2, elemento Arealntervencion atributo» (DTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 19)
-- [ ] Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx el elemento Losa para incluir los atributos Funcionalidad LosaOrden-Fila-Posición-Ancho, ya que el contratista manifiesta no diligenciarlos pero la GDB los tiene. — IDU ×1 `G068`
-  - Normativa directo: **GU-IC-06 §8.2 ¶3** — Prefactibilidad y Factibilidad), junto con el archivo en formato Excel Productos_BDG.xlsx debidamente diligenciado en las hojas de cálculo color azul oscuro …
-  - «11. Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx el elemento Losa, el contratista manifiesta el no diligenciamiento de los atributos …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 7)
-- [ ] Corregir el andén que no tiene información relacionada en la tabla Detalle Andén y Separador. — IDU ×1 `G080`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «9. Uno de los andenes no tiene información relacionada en la tabla “ Detalle Andén y Separador”. Corregir. Se informa además que:» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Corregir inconsistencias entre la información diligenciada en la BDG y el archivo DiccionarioAtributos_V7.7 1533 v0.xlsx. — IDU ×1 `G082`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - Normativa parcial: **GU-IC-06 §8.2 ¶3** — Prefactibilidad y Factibilidad), junto con el archivo en formato Excel Productos_BDG.xlsx debidamente diligenciado en las hojas de cálculo color azul oscuro …
-  - «10. Se reitera el ítem 12 del memorando 20222350336933, debido a que se siguen presentado inconsistencias entre la información diligenciada en la BDG y lo …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 9)
-- [ ] Corregir información inconsistente en el atributo Codigo Elemento y errores de localización (ej. OBJECTID 20, Sardinel). — IDU ×1 `G083`
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «5. Aún se encuentran información inconsistente en el atributo “Codigo Elemento”; por ejemplo, en el OBJECTID 20 y además el atributo de localización también …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Corregir la altura interna registrada para el sardinel que aun es de 20 centímetros. — IDU ×1 `G084`
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «6. La altura interna registrada para el sardinel aun es de 20 centímetros. Corregir. Reiterado numeral 12 del memorando 202323500376603. “Baranda Peatonal”:» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Diligenciar los atributos de reporte obligatorio en la tabla del elemento calzada, como Número Carriles. — IDU ×1 `G088`
-  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «6. En la tabla del elemento calzada se deben diligenciar los atributos de reporte obligatorio por ejemplo Número Carriles.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 5)
-- [ ] Garantizar la completitud de la información atributiva para todos los elementos de la BDG. — IDU ×1 `G103`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «8. Se requiere garantizar la completitud de la información atributiva asociada a la totalidad de elementos presentados en la BDG.» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 7)
-- [ ] Incluir información asociada a las barandas peatonales en la tabla Detalle Mobiliario. — IDU ×1 `G108`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «7. No se encuentra la información asociada a las barandas peatonales en la tabla “Detalle Mobiliario”. Reiterado numeral 15 del memorando 202323500376603. …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Incluir información en planos CAD y Base de Datos Geográfica para campos obligatorios del tipo de intervención Reparación profunda (Bacheo). — IDU ×1 `G109`
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «En la tabla DetalleAreaIntervencionCalzadaCiclorruta se encontraron varios campos sin información que son obligatorios para el tipo de intervención: Reparación …» (DTE 20212150242143, `IDU/2021-08-13_1.1 120213561214751_00002-memo.pdf`, p. 6)
-- [ ] Mencionar el motivo por el cual no se ingresó información en el campo Observaciones y diligenciar el atributo TramoSeguimiento – TestigoSeguimiento en la BDG. — IDU ×1 `G119`
-  - Normativa directo: **GU-IC-06 §8.2 ¶4** — actor de infraestructura, en el marco del alcance del proyecto en cuestión. Interventoría: Al igual que en el campo anterior, la interventoría validará con una …
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «Por lo anterior, se solicita mencionar el motivo por el cual no se ingresó la información en el campo “Observaciones”. ** En el archivo de Excel …» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 8)
-- [ ] No se encuentra la relación entre el elemento /vea Intervención y la tabla DetalleAlntervencionCalCic. — IDU ×1 `G123`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «19. En el elemento /vea Intervención no se encuentra la relación a la taba DetalleAlntervencionCalCic.» (DTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 14)
-- [ ] No se reportan diligenciadas las tablas S_Piezometros, P_EnsayoCampo, P_EnsayoSPT y P_RegistroCampo en el archivo DiccionarioAtributos_V7.2_1383.xlsx, aunque la información existe en la GDB del proyecto. — IDU ×1 `G126`
-  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «1. En el archivo DiccionarioAtributos_V7.2_1383.xlsx, no se reportan diligenciadas las tablas: S_Piezometros- P_EnsayoCampo- P_EnsayoSPT- P_RegistroCampo, pero …» (DTE 20202150230133, `IDU/2020-12-01_02 DTE 20202150230133.pdf`, p. 3)
-- [ ] Reiterar observación sobre tablas relacionales desconectadas (C_BaseGranular no asociada a ConfiguracionEstructura). — IDU ×1 `G129`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «7. Se encuentran desconectadas entre si las tablas relacionales asociadas al elemento CALZADA. Por ejemplo, la tabla relacional C_BaseGranular con 7 registros …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 7)
-- [ ] Se requiere validación por parte de la Interventoría para campos sujetos a justificaciones técnico/contractuales. — IDU ×1 `G150`
-  - Normativa directo: **GU-IC-06 §8.2 ¶4** — actor de infraestructura, en el marco del alcance del proyecto en cuestión. Interventoría: Al igual que en el campo anterior, la interventoría validará con una …
-  - «10. Se requiere validación por parte de la Interventoría para aquellos campos que están sujetos a justificaciones técnico/contractuales por parte del …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 8)
-- [ ] Solicitar adjuntar el archivo de Excel 'Diccionario de Atributos' en la próxima entrega para validar que los atributos obligatorios en la Base de Datos Geográfica no contradigan la especificación IDU 510-11. — IDU ×1 `G160`
-  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «10. En la Base de Datos Geográfica se encontraron algunos atributos que son obligatorios sin diligenciar, y la justificación en el archivo de Excel: …» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 9)
-- [ ] Validar que los documentos entregados coincidan con el alistamiento, corrigiendo discrepancias como el archivo del diccionario de atributos. — IDU ×1 `G167`
-  - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «1. Es necesario sean validados los documentos utilizados debido a que se encuentran archivos que no corresponde con el alistamiento enviado, ejemplo el archivo …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 6)
-- [ ] Verificar la información del atributo SN Efectivo en la tabla EvaluacionEstructural de la GDB, confrontándola con el INFORME DEFLECTOMETRIA V-0.00.PDF y los anexos entregados. — IDU ×1 `G174`
-  - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
-  - «3. En la tabla EvaluacionEstructural de la GDB del proyecto se debe verificar la información incorporada en el atributo SN Efectivo, dado que es diferente a la …» (DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 4)
-- [ ] Verificar la integridad de la información en la BDG debido a inconsistencias, como elementos embebidos 'No contiene' en losas que sí los tienen según ilustración y datos incompletos en atributos de confinamiento externo. — IDU ×1 `G176`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «Se solicita verificar la integridad de la información incorporada en la BDG, debido a que se encuentran inconsistencias en varios elementos y tablas, un …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 7)
-- [ ] Verificar las intervenciones de las losas en el atributo FK_ID_Calzada, específicamente para PK_ID_Losa 3500043 donde el reporte indica FK_ID_Calzada 514006 pero la ubicación real es la calzada 514008. — IDU ×1 `G177`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «5. Verificar las intervenciones de las losas en el atributo FK_ID_Calzada ejemplo PK_ID_Losa 3500043, el elemento se encuentra reportado FK_ID_Calzada 514006 …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 4)
-- [ ] Verificar y corregir la información en atributos de la BDG que no corresponden con los productos digitales, como el espesor incorrecto en secciones típicas. — IDU ×1 `G183`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
-  - «Se reitera el numeral 7 del memorando 20232350161243 en lo relacionado con verificar la información incorporada en la BDG, debido a que se encuentran en …» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 7)
-- [ ] Verificar y realizar ajustes en el archivo de diccionario de atributos para depurar o incorporar la información de elementos no presentes en la BDG. — IDU ×1 `G188`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - «15. Se solicita verificar y realizar los respectivos ajustes en el archivo (DiccionarioAtributos_V7.7 1531 v0.xlsx) dado que se presentan hojas de cálculo con …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 9)
-- [ ] Completar en Productos_BDG las hojas Calzada (N/A en opcionales) y Ciclorruta (columnas de consultoría e interventoría). — interventoría ×3 `G190`
-  - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
-  - Normativa directo: **GU-IC-06 §8.2 ¶3** — Prefactibilidad y Factibilidad), junto con el archivo en formato Excel Productos_BDG.xlsx debidamente diligenciado en las hojas de cálculo color azul oscuro …
-  - «encontrando falta del diligenciamiento en la hoja de Calzada» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-- [ ] Diligenciar el campo obligatorio fecha de registro en todos los feature class. — interventoría ×2 `G200`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «No se ha diligenciado el campo fecha de registro (obligatorio).» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
-  - «No se ha diligenciado el campo fecha de registro (obligatorio).» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15)
-- [ ] Diligenciar los campos obligatorios de Exploración según Productos_BDG. — interventoría ×2 `G201`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «la tabla se encuentra parcialmente diligenciada, sin información en la mayoría de los campos obligatorios» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15)
-  - «la tabla se encuentra parcialmente diligenciada, sin información en la mayoría de los campos obligatorios» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
-- [ ] Poblar las tablas relacionadas del modelo de datos. — interventoría ×2 `G207`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
-  - «No tiene información en las tablas relacionadas según el modelo de datos establecido» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
-  - «No tiene información en las tablas relacionadas según el modelo de datos establecido» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15)
-- [ ] Diligenciar los campos obligatorios de Calzada. — interventoría ×1 `G227`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «No se han diligenciados los campos Tipo Superficie, Tipo Funcionalidad y Fecha de registro (obligatorios).» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15)
-- [ ] No eliminar los registros de un feature class al corregirlo; justificar cualquier retiro. — interventoría ×1 `G267`
+- [ ] **R-T06-08** No eliminar registros de un feature class al corregirlo; justificar cualquier retiro. — interventoría ×1 `G267`
   - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
   - «en esta ocasión se han eliminado los registros del Feature Class» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16)
-- [ ] Responder la tabla 9 (validación GDB): totalidad de información y consistencia conceptual. — interventoría ×1 `G285`
-  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «estás no han sido respondidas por el contratista, razón por la cual se debe atender las solicitudes relacionadas a totalidad de información» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17)
 
 ## T08. Geometría y topología de la GDB
 
-- [ ] Verificar todos los elementos buscando errores de topología como superposición (Overlap) y espacios entre elementos (Gap), realizando los ajustes respectivos. — IDU ×6 `G006`
+- [ ] **R-T08-01** Corregir superposiciones y huecos entre elementos según el archivo Reglas Topológicas, revisando todos los planos y sin afectar otros elementos. — IDU ×12 `G006` `G012` `G024` `G071` `G158`
   - Normativa directo: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
   - Normativa directo: **VALIDACIONES_BDG 2.4. b. Huecos entre elementos** — b. Huecos entre elementos: Esta regla precisa que no haya vacíos dentro de un elemento o entre polígonos de elementos adyacentes.
   - «10. Se presentan errores de topología, como se muestra en el ejemplo de la ilustración 8, donde se evidencia el error de superposición (Overlap) y de espacio …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 8)
   - «11. Se presentan errores de topología, como se muestra en el ejemplo de la ilustración 7, donde se evidencia el error de superposición (Overlap) y de espacio …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 9)
-- [ ] Ajustar las superposiciones entre los elementos Calzadas y Manzanas en el archivo MVGVPL01.dwg. — IDU ×4 `G012`
-  - Normativa directo: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
-  - «17. En el archivo MVGVPL01.dwg, se deben ajustar los superposiciones entre los elementos Calzadas – Manzanas.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 11)
-  - «17. En el archivo MVGVPL01.dwg, se deben ajustar los superposiciones entre los elementos Calzadas _ Manzanas.» (DIE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 12)
-- [ ] Existen inconsistencias topológicas como superposición de elementos que deben corregirse siguiendo las reglas del archivo Excel Reglas Topológicas. — IDU ×2 `G024`
-  - Normativa directo: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
-  - «26. Se encuentran inconsistencias topológicas como superposición de elementos, se debe tener en cuenta lo solicitado en el archivo de Excel Reglas Topológicas.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 15)
-  - «11. Se reitera que se encuentran inconsistencias topologícas: superposición de elementos, se debe tener en cuenta el archivo de Excel Reglas Topológicas. Se …» (DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 4)
-- [ ] Ajustar la representación del elemento RedCiclorruta considerando su conectividad de red y segregación por cada cambio de elemento. — IDU ×2 `G027`
+- [ ] **R-T08-03** Segmentar según las reglas: áreas de intervención en el límite de cada calzada, sardineles por elemento de espacio público y CIV, andenes donde corresponda y redes de ciclorruta con conectividad. — IDU ×7 `G027` `G028` `G045` `G070` `G159`
   - Normativa parcial: **REGLAS_TOPOLOGICAS 6** — 6. MUST NOT HAVE DANGLES: NO DEBE HABER LÍNEAS SUELTAS (aplica por elemento según la hoja)
+  - Normativa parcial: **REGLAS_TOPOLOGICAS 14** — 14. MUST BE COVERED BY BOUNDARY OF: EL LIMITE DE LÍNEA DEBE COINCIDIR CON LIMITE DE POLÍGONO (aplica por elemento según la hoja)
+  - Normativa parcial: **REGLAS_TOPOLOGICAS 3** — 3. ÁREA BOUNDARY MUST BE COVERED BY BOUNDARY OF: LOS LIMITES SON COINCIDENTES DE DOS CLASES (aplica por elemento según la hoja)
+  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
   - «7. Se debe tener en cuenta en la representación del elemento (RedCiclorruta) la conectividad de la red y su segregación por cada cambio de elemento sobre el …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 6)
   - «5. Se debe tener en cuenta en la representación del elemento (RedCiclorruta) la conectividad de la red y su segregación por cada 6» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 6)
-- [ ] Ajustar la segmentación del elemento sardinel para que corresponda con los elementos del espacio público (andenes o separadores) y no solo a las calzadas, considerando los cambios de segmentos CIV. — IDU ×2 `G028`
-  - Normativa parcial: **REGLAS_TOPOLOGICAS 14** — 14. MUST BE COVERED BY BOUNDARY OF: EL LIMITE DE LÍNEA DEBE COINCIDIR CON LIMITE DE POLÍGONO (aplica por elemento según la hoja)
-  - «6. Se solicita ajustar la segmentación del elemento sardinel, debido a que esta se realizó con relación a las calzadas, pero se aclara que los cortes deben …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 7)
-  - «1. Se solicita ajustar la segmentación del elemento sardinel para los andenes, debido a que presenta inconsistencia como se evidencia en la ilustración 3, la …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 5)
-- [ ] Segmentar polígonos de Área de Intervención que crucen dos calzadas y verificar todas las intervenciones. — IDU ×2 `G045`
-  - Normativa parcial: **REGLAS_TOPOLOGICAS 3** — 3. ÁREA BOUNDARY MUST BE COVERED BY BOUNDARY OF: LOS LIMITES SON COINCIDENTES DE DOS CLASES (aplica por elemento según la hoja)
-  - «9. Si un polígono de Área de Intervención se cruza con dos calzadas, éste debe ser segmentado con respecto al límite de las calzadas, como observación general …» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 7)
-  - «6. Si un Área de Intervención se cruza con dos calzadas, esta debe ser segmentada en el límite de las calzadas; como observación general se deben verificar …» (DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 6)
-- [ ] Verificar que los elementos cumplan con las relaciones espaciales correctas (ej. rampa contenida en andén sin superposición con calzada). — IDU ×2 `G047`
+- [ ] **R-T08-04** Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes. — IDU ×5 `G095` `G096` `G102` `G111` `G128` `G155` `G165`
+  - Normativa directo: **VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos** — Atributos cualitativos de los elementos: la revisión de este ítem se realiza a los atributos cualitativos de los elementos entregados por el proyecto , …
+  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
+  - Normativa parcial: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
+  - «3. De los pompeyanos 16 pompeyanos presentados, se solicita eliminar el pompeyano identificado con (PK_ID_Pompeyano – 4600002) por corresponder con un desnivel …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 6)
+  - «7. Se solicita eliminar la rampa (PK_ID_5100049). 8.» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 7)
+- [ ] **R-T08-02** Cumplir las relaciones de contenencia: rampas dentro del andén y elementos de puente y cunetas dentro del límite de intervención. — IDU ×4 `G047` `G116` `G169`
   - Normativa directo: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
   - Normativa directo: **VALIDACIONES_BDG 2.4. c. Contenencia elementos** — c. Contenencia elementos: Requiere que los polígonos o puntos de un elemento de entidad estén contenido en polígonos o puntos de otro elemento
   - «9. Se deben tener en cuenta las relaciones espaciales que existen entre los elementos con el fin que al momento de su representación esta corresponda con la …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 8)
   - «8. Se reitera el ítem 9 del memorando 20222350336933, donde se expresa que se debe tener en cuenta las relaciones espaciales que existen entre los elementos …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 8)
-- [ ] Ajustar la segmentación del elemento sardinel según lo solicitado en el memorando 20232350161243. — IDU ×1 `G070`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «2. Se reitera el numeral 1 del memorando 20232350161243, donde se solicita ajustar la segmentación del elemento sardinel.» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 5)
-- [ ] Ajustar los elementos con superposiciones y revisar todos los planos. — IDU ×1 `G071`
-  - Normativa directo: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
-  - «7. Se deben ajustar los elementos con superposiciones, se recomienda revisar todos los planos.» (DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 3)
-- [ ] Asegurar que no exista duplicidad de elementos en los documentos entregados. — IDU ×1 `G075`
+- [ ] **R-T08-05** No representar elementos duplicados ni polígonos multiparte con el mismo PK_ID. — IDU ×2 `G075` `G117`
   - Normativa parcial: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
-  - «3. Verificar en los documentos entregados que no exista duplicidad, como se evidencia en el ejemplo de la ilustración 3.» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 6)
-- [ ] Eliminar el elemento Pompeyano con ID 4600002 por corresponder a un desnivel de ingreso y reclasificar el elemento con ID 4600016 como Rampa. — IDU ×1 `G095`
-  - Normativa directo: **VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos** — Atributos cualitativos de los elementos: la revisión de este ítem se realiza a los atributos cualitativos de los elementos entregados por el proyecto , …
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «3. De los pompeyanos 16 pompeyanos presentados, se solicita eliminar el pompeyano identificado con (PK_ID_Pompeyano – 4600002) por corresponder con un desnivel …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 6)
-- [ ] Eliminar la rampa identificada con PK_ID_5100049. — IDU ×1 `G096`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «7. Se solicita eliminar la rampa (PK_ID_5100049). 8.» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 7)
-- [ ] Extraer del área de la cuneta con PK_ID_Cuneta 2300019 el área correspondiente a la cuneta con PK_ID_Cuneta - 2300050 y posteriormente eliminar la cuneta original (2300050). — IDU ×1 `G102`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «5. Se requiere extraer del área de la cuneta (PK_ID_Cuneta 2300019) el área de la cuneta (PK_ID_Cuneta - 2300050) y posteriormente eliminar la cuneta (2300050).» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 7)
-- [ ] Incorporar las áreas de los elementos pompeyanos a las calzadas para solucionar la excepción de superposición (Overlap) y garantizar la continuidad entre dos calzadas. — IDU ×1 `G111`
-  - Normativa parcial: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
-  - «12. Se aclara que existe una excepción de superposición (Overlap) entre los elementos de pompeyano y calzada, por lo cual es necesario incorporar las áreas de …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 10)
-- [ ] Los elementos de puente no deben quedar fuera del área de espacio público entregada. — IDU ×1 `G116`
-  - Normativa directo: **VALIDACIONES_BDG 2.4. c. Contenencia elementos** — c. Contenencia elementos: Requiere que los polígonos o puntos de un elemento de entidad estén contenido en polígonos o puntos de otro elemento
-  - «Se solicita verificar y realizar los respectivos ajustes en las áreas del espacio público donde son representados puentes» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 7)
-- [ ] Los elementos representados en la Base de Datos Geográfica no deben ser polígonos multipartes con el mismo código PK_ID. — IDU ×1 `G117`
   - Normativa directo: **REGLAS_TOPOLOGICAS 13** — 13. MUST BE SINGLE PART: DEBE SER UNA SOLA ENTIDAD (aplica por elemento según la hoja)
-  - Normativa directo: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
+  - «3. Verificar en los documentos entregados que no exista duplicidad, como se evidencia en el ejemplo de la ilustración 3.» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 6)
   - «8. Los elementos representados en la Base de Datos Geográfica no deben ser representados como polígonos multipartes, como en el ejemplo que se muestra en la …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 7)
-- [ ] Reclasificar el elemento 'Matera' ya que no existe presencia real, sino contenedores de raíz o protectores de árbol asociados a los árboles. — IDU ×1 `G128`
-  - Normativa directo: **VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos** — Atributos cualitativos de los elementos: la revisión de este ítem se realiza a los atributos cualitativos de los elementos entregados por el proyecto , …
-  - «4. Es necesario verificar el elemento clasificado como matera, debido a que como se evidencia en la ilustración 3 no se existe presencia de estas, pero se …» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 5)
-- [ ] Se exige incorporar en el elemento puente la representación del deprimido y todos sus elementos conformadores (apoyos intermedios, vigas, etc.) que actualmente no están en la BDG. — IDU ×1 `G141`
+- [ ] **R-T08-06** Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario. — IDU ×2 `G141` `G148` `G149` `G162` `G185` `G186` `G187`
   - Normativa directo: **GU-IC-06 §9.8 ¶2** —  Baranda  Viga  Losa de Aproximación  Barrera  Aleta Estribo  Pila  Cercha  Caisson  Pilote  Diafragma  Columna  Rampa Puente  GuardaRueda  Dado …
-  - «embargo, el deprimido y los elementos que lo conforman no están representados ni en la Base de Datos Geográfica (BDG). Se requiere que la representación del …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 4)
-- [ ] Se requiere revisar la consistencia del polígono en la BDG asociado al PUENTE frente a la geometría del deprimido y realizar salvedades técnicas si es necesario para justificar disparidades. — IDU ×1 `G148`
   - Normativa parcial: **VALIDACIONES_BDG 3.1. Proyectos que cuentan con topografía** — Proyectos que cuentan con topografía: Se evalúa la exactitud de posición de la base de datos geográfica con los archivos CAD.
-  - «Lo anterior, teniendo en cuenta que no es consistente el polígono que se incorporó en la BDG asociado al elemento PUENTE, conforme la geometría del deprimido …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 4)
-- [ ] Se requiere revisar y representar en la BDG todas las áreas y elementos dentro del límite del proyecto (zonas verdes, cunetas, mobiliario, estructuras) que actualmente faltan. — IDU ×1 `G149`
   - Normativa parcial: **VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta** — Verificación del cumplimiento de la meta física: Se verifica el formato de reporte de seguimiento final entregado e incorporado en la base de datos geográfica …
-  - «Existen áreas contempladas en el límite del proyecto que no son representadas en la Base de Datos Geográfica – BDG, por lo cual se recuerda que todas las áreas …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 5)
-- [ ] Se solicita eliminar el elemento matera debido a que no cumple con la definición del elemento. — IDU ×1 `G155`
-  - Normativa directo: **VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos** — Atributos cualitativos de los elementos: la revisión de este ítem se realiza a los atributos cualitativos de los elementos entregados por el proyecto , …
-  - «4. Se solicita eliminar el elemento matera, debido a que las materas presentadas no cumplen con la definición del elemento.» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 6)
-- [ ] Se solicitan ajustes para corregir errores topológicos como sobreposiciones y huecos en el archivo digital MVGVPL01.dwg. — IDU ×1 `G158`
-  - Normativa directo: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
-  - Normativa directo: **VALIDACIONES_BDG 2.4. b. Huecos entre elementos** — b. Huecos entre elementos: Esta regla precisa que no haya vacíos dentro de un elemento o entre polígonos de elementos adyacentes.
-  - «3. En el archivo digital MVGVPL01.dwg se presentan algunos errores topológicos como sobre posiciones y huecos, se solicita realizar los ajustes necesarios.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 3)
-- [ ] Segmentar (dividir) los andenes identificados con los PKID 24130614 y 21424. — IDU ×1 `G159`
   - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «8. No se han segmentado (dividido) los andenes identificados con los PKID 24130614 y 21424. Reiterado numeral 19 del memorando 202323500376603.» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Solicitar la incorporación de la zona verde existente en los Productos CAD dentro del límite de intervención que no fue incluida en el andén. — IDU ×1 `G162`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «10. Existen áreas no representadas en la BDG como el caso del ejemplo de la ilustración 6, donde se evidencia que en los Productos CAD existe un elemento …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 8)
-- [ ] Usar pompeyano solo en cruces con calzadas; en ingresos a predio usar rampa, sin dividir el andén. — IDU ×1 `G165`
-  - Normativa directo: **VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos** — Atributos cualitativos de los elementos: la revisión de este ítem se realiza a los atributos cualitativos de los elementos entregados por el proyecto , …
-  - «Se solicita verificar la representación del elemento pompeyano, debido a que este solo existe si se presentan cruces con otras calzadas» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 8)
-- [ ] Verificar el elemento cuneta ya que se encuentra por fuera del límite de intervención y aclarar que según los tipos presentados debe estar incluido en el elemento andén. — IDU ×1 `G169`
-  - Normativa directo: **VALIDACIONES_BDG 2.4. c. Contenencia elementos** — c. Contenencia elementos: Requiere que los polígonos o puntos de un elemento de entidad estén contenido en polígonos o puntos de otro elemento
-  - «11. Verificar el elemento cuneta presentado debido a que se encuentra por fuera del límite de intervención como se evidencia en la ilustración 7, se aclara que …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 8)
-- [ ] Incorporar en la BDG los elementos de estructuras presentes en los productos CAD pero ausentes en la base de datos. — IDU ×1 `G185`
-  - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
-  - Normativa parcial: **VALIDACIONES_BDG 3.1. Proyectos que cuentan con topografía** — Proyectos que cuentan con topografía: Se evalúa la exactitud de posición de la base de datos geográfica con los archivos CAD.
-  - «12. En los productos CAD se presenta información relacionada con estructuras, pero en la BDG no se presenta ningún elemento, por lo cual se solicita su …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 9)
-- [ ] Reportar todos los elementos intervenidos por el contrato, incluyendo aquellos relacionados con estructuras construidas. — IDU ×1 `G186`
-  - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
-  - «14. No se encuentran reportados todos los elementos intervenidos por el contrato, por ejemplo, los relacionados con las estructuras construidas en el archivo …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 9)
-- [ ] Verificar que los elementos intervenidos por el contrato estén debidamente representados en la BDG con sus respectivos atributos. — IDU ×1 `G187`
   - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
   - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - «13. Dados los numerales anteriores, se solicita verificar que los elementos intervenidos por el contrato se encuentren debidamente representados en la BDG y …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 9)
-- [ ] Eliminar de la tabla los registros sin geometría («registros fantasma»). — interventoría ×2 `G203`
+  - «embargo, el deprimido y los elementos que lo conforman no están representados ni en la Base de Datos Geográfica (BDG). Se requiere que la representación del …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 4)
+  - «Existen áreas contempladas en el límite del proyecto que no son representadas en la Base de Datos Geográfica – BDG, por lo cual se recuerda que todas las áreas …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 5)
+- [ ] **R-T08-07** Eliminar los registros sin geometría. — interventoría ×2 `G203`
   - Normativa directo: **GU-IC-06 §8.3 ¶1** — Se entregará una BDG por cada etapa del contrato, los elementos representados en la BDG deberán corresponder a la geometría de: punto, línea o polígono; …
   - «se incluye un (1) elemento sin representación gráfica (OBJECTID 44)» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
   - «se incluye un (1) elemento sin representación gráfica (OBJECTID 44)» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16)
-- [ ] Los polígonos del DWG y de la BDG deben coincidir (límites por CIV). — interventoría ×2 `G206`
+- [ ] **R-T08-08** Hacer coincidir los polígonos del DWG y de la BDG, con límites por CIV. — interventoría ×2 `G206`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «los polígonos que se describen en el DWG y la BDG difieren (límites por CIV). Ajustar plano DWG.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 18)
   - «los polígonos que se describen en el DWG y la BDG difieren (límites por CIV). Ajustar plano DWG.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 13)
 
 ## T05. Contenido gráfico de los planos
 
-- [ ] Incluir placas de amarre y anexar informe de topografía en planos de tramos de rehabilitación vial. — IDU ×5 `G009`
-  - Normativa parcial: **FO-IC-05 A.2.j** — Placas de amarre: Se presentan las placas o puntos de amarre según la convención del IDU
-  - «2. En los planos de tramos de rehabilitación vial se debe incluir las placas de amarre y anexar su respectivo informe de topografía.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 3)
-  - «1. Se reitera observación, en los planos de los tramos de rehabilitación vial se debe incluir las placas de amarre y anexar su respectivo informe de topografía» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 2)
-- [ ] Las convenciones en los planos de Planta Perfil deben coincidir con los elementos presentados, incluyendo mobiliario urbano, servicios públicos y señales de tránsito. — IDU ×3 `G019`
+- [ ] **R-T05-04** Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base. — IDU ×7 · interventoría ×4 `G019` `G035` `G074` `G138` `G194` `G248` `G249`
   - Normativa directo: **FO-IC-05 A.2.h** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
+  - Normativa parcial: **Productos_DWG Récord F31** — Planos de Secciones Transversales (niveles en eje y bordes, pendientes transversales, estructura del pavimento con espesores construidos)
+  - Normativa directo: **FO-IC-05 A.3.k** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
   - «4. En los planos de Planta Perfil, las convenciones deben estar acorde a los elementos presentados en los planos, falta mobiliario urbano, elementos de …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 3)
   - «4. En los planos de Planta Perfil, las convenciones deben estar acorde a los elementos presentados en los planos, falta mobiliario urbano, elementos de …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
-- [ ] Ajustar la escala en los planos de Secciones Transversales, ya que el rótulo indica 1:500 pero las secciones tienen una escala de 1:100. — IDU ×2 `G026`
-  - Normativa directo: **FO-IC-05 A.5.f** — Escalas detalles: Las escalas de detalle se presentan en un rango de escalas estándar (múltiplo de 5) entre 1:10 a 1:100
-  - «2. En los planos de Secciones Transversales se debe ajustar la escala, en el rotulo se encuentra como escala 1:500 pero las escalas de las secciones son 1:100.» (OTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 4)
-  - «2. En los planos de Secciones Transversales se debe ajustar la escala, en el rotulo se encuentra como escala 1:500 pero las escalas de las secciones son 1:100.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 3)
-- [ ] Escalas gráfica, numérica, de rótulo y de viewport deben coincidir y las unidades del archivo ser metros. — IDU ×2 `G034`
+- [ ] **R-T05-07** Incluir en los planos planta-perfil y de rehabilitación las placas de amarre certificadas (IGAC) y anexar el informe de topografía. — IDU ×5 · interventoría ×1 `G009` `G259`
+  - Normativa parcial: **FO-IC-05 A.2.j** — Placas de amarre: Se presentan las placas o puntos de amarre según la convención del IDU
+  - Normativa directo: **FO-IC-05 A.2.f** — Cuadro coordenadas placas de amarre: Cuadro de coordenadas Norte, Este y altura de las placas o puntos de amarre topográfico
+  - «2. En los planos de tramos de rehabilitación vial se debe incluir las placas de amarre y anexar su respectivo informe de topografía.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 3)
+  - «1. Se reitera observación, en los planos de los tramos de rehabilitación vial se debe incluir las placas de amarre y anexar su respectivo informe de topografía» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 2)
+- [ ] **R-T05-02** Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano. — IDU ×4 · interventoría ×4 `G034` `G039` `G171` `G193` `G196` `G197` `G239`
   - Normativa parcial: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
   - Normativa parcial: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
+  - Normativa parcial: **Productos_DWG Récord F24** — Escala numérica - Escala grafica
   - «Se solicita verificar el tema de las escalas presentadas, se recuerda que las escalas gráficas» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 6)
   - «Se recuerda que deben coincidir las escalas gráficas, las distancias que representan, el valor de las grillas, las escalas numéricas, las incorporadas en los …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 6)
-- [ ] Incluir el elemento manzana en las convenciones de los planos MVGVPL01.dwg. — IDU ×2 `G035`
-  - Normativa directo: **FO-IC-05 A.2.h** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
-  - «3. En los planos MVGVPL01.dwg se debe incluir en las convenciones de los planos el elemento manzana.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 4)
-  - «3. Se debe incluir en las convenciones de los planos el elemento manzana.» (DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 4)
-- [ ] Los planos de Planta Perfil deben contener las cotas de rasante del eje, Borde Izquierdo y Derecho. — IDU ×2 `G038`
+- [ ] **R-T05-01** Incluir en cada plano los mínimos de la guía: un solo norte sobre la grilla, grilla de coordenadas, convenciones, escalas y rótulo completo. — IDU ×3 · interventoría ×1 `G048` `G118` `G152` `G288` `G289`
+  - Normativa parcial: **GU-IC-06 §9.4 ¶1** — Los productos entregables corresponderán con los señalados en el archivo Excel Productos_DWG.xlsx en la hoja ElementosConstruccion (Récord) identificada con …
+  - Normativa parcial: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
+  - Normativa directo: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
+  - Normativa directo: **Productos_DWG Récord F35** — Nomenclatura vial, Códigos CIV
+  - Normativa directo: **FO-IC-05 A.2.k** — Grilla coordenadas: Representación de la cuadricula de coordenadas cada 50 o 100 mts, según escala del plano
+  - Normativa directo: **FO-IC-05 A.3.o** — Grilla coordenadas: Representación de la cuadrícula de coordenadas cada 50 o 100 mts, según escala del plano
+  - Normativa directo: **FO-IC-05 A.2.c** — Norte magnético: El plano presenta el norte magnético según la grilla de coordenadas planas
+  - Normativa directo: **FO-IC-05 A.3.c** — Norte magnético: El plano presenta el norte magnético según la grilla de coordenadas planas
+  - «Los planos deben contener toda la información correspondiente a la respetiva especialidad que representa» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
+  - «8. Los planos deben contener solo un bloque norte ubicado en la intersección de la grilla y verificar que no tenga superposición con los elementos de Área …» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 7)
+- [ ] **R-T05-03** Usar en secciones transversales y estructuras las escalas definidas en Productos_DWG y en ParametrosPresentacionPlanos. — IDU ×3 · interventoría ×2 `G026` `G133` `G221` `G238`
+  - Normativa directo: **FO-IC-05 A.5.f** — Escalas detalles: Las escalas de detalle se presentan en un rango de escalas estándar (múltiplo de 5) entre 1:10 a 1:100
+  - Normativa directo: **FO-IC-05 A.5.e** — Escalas planta: Las escalas en planta corresponden a las establecidas en el instructivo para la presentación de planos y archivos
+  - Normativa directo: **Productos_DWG Escalas F21** — 5.2. Secciones transversales (Incluye la toma en terreno de la ST) y sección típica: 1 : 50, 1 : 100
+  - Normativa parcial: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
+  - «2. En los planos de Secciones Transversales se debe ajustar la escala, en el rotulo se encuentra como escala 1:500 pero las escalas de las secciones son 1:100.» (OTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 4)
+  - «2. En los planos de Secciones Transversales se debe ajustar la escala, en el rotulo se encuentra como escala 1:500 pero las escalas de las secciones son 1:100.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 3)
+- [ ] **R-T05-06** Incluir en los planos planta-perfil las cotas de rasante del eje y de los bordes izquierdo y derecho. — IDU ×3 `G038` `G077`
   - Normativa directo: **Productos_DWG Récord F26** — Planta Perfil: En planta se deben presentar las líneas de ejes, bordes, sumideros, limite de intervención y abcisado, en el perfil longitudinal de tener las …
   - «2. Los planos de Planta Perfil, el perfil debe contener las cotas de rasante del eje, Borde Izquierdo – Derecho.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 3)
   - «2. Los planos de Planta Perfil, el perfil debe contener las cotas de rasante del eje, Borde Izquierdo - Derecho.» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
-- [ ] Los planos deben tener su respectiva escala gráfica, de acuerdo a lo establecido en la GUIA 06. — IDU ×2 `G039`
-  - Normativa directo: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
-  - «4. Los planos deben tener su respectiva escala gráfica, de acuerdo a lo establecido en la GUIA 06.» (DTE 20212150054383, `IDU/2021-03-05_176_20212150054383anexo.pdf`, p. 3)
-  - «5. Los planos deben tener su respectiva escala gráfica y Norte, de acuerdo a lo establecido en la guía GUIC06.» (DTE 20212150056813, `IDU/2021-03-10_177_20212150056813anexo.pdf`, p. 3)
-- [ ] Rotar los textos de las intervenciones del archivo MVGVPL01.dwg para facilitar su lectura. — IDU ×2 `G043`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+- [ ] **R-T05-09** Ubicar textos de grilla e intervenciones legibles y sin superposiciones. — IDU ×3 `G043` `G073`
+  - Normativa parcial: **FO-IC-05 A.2.k** — Grilla coordenadas: Representación de la cuadricula de coordenadas cada 50 o 100 mts, según escala del plano
   - «9. Se solicita rotar los textos de las intervenciones del archivo MVGVPL01.dwg, de tal manera que facilite su lectura.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 6)
   - «3. Se reitera que en el archivo MVGVPL01.dwg se debe rotar los textos de las intervenciones para tener una mejor lectura de los mismos. Ejemplo Intervenciones …» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 3)
-- [ ] Cada plano debe cumplir los mínimos de la guía: norte, grilla, convenciones, escalas y rótulo completo. — IDU ×1 `G048`
-  - Normativa parcial: **GU-IC-06 §9.4 ¶1** — Los productos entregables corresponderán con los señalados en el archivo Excel Productos_DWG.xlsx en la hoja ElementosConstruccion (Récord) identificada con …
-  - «Los planos deben contener toda la información correspondiente a la respetiva especialidad que representa» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
-- [ ] Ajustar los textos de la grilla de coordenada para evitar superposiciones. — IDU ×1 `G073`
-  - Normativa parcial: **FO-IC-05 A.2.k** — Grilla coordenadas: Representación de la cuadricula de coordenadas cada 50 o 100 mts, según escala del plano
-  - «7. Los textos de la grilla de coordenada se deben ajustar para no tener superposición de los mismos.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 7)
-- [ ] Asegurar que los colores de los elementos presentados en el cuadro de convenciones coincidan exactamente con los indicados en el archivo base del proyecto (ejemplo: AI_AREAINTERVENCION_C Color 20 vs Convenciones color Magenta 4). — IDU ×1 `G074`
-  - Normativa directo: **FO-IC-05 A.2.h** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
-  - «6. Se reitera que para los elementos presentados en el cuadro de convenciones los colores deben ser iguales a los indicados en el archivo base del proyecto, …» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 4)
-- [ ] Colocar las cotas del perfil rasante, borde izquierdo y borde derecho en el plano MVGVPP02.dwg. — IDU ×1 `G077`
-  - Normativa directo: **Productos_DWG Récord F26** — Planta Perfil: En planta se deben presentar las líneas de ejes, bordes, sumideros, limite de intervención y abcisado, en el perfil longitudinal de tener las …
-  - «3. Plano MVGVPP02.dwg. En el perfil se deben colocar las cotas del perfil rasante, borde izquierdo y borde derecho.» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 3)
-- [ ] Entregar los planos de localización. — IDU ×1 `G101`
-  - Normativa parcial: **GU-IC-06 §9.4 ¶1** — Los productos entregables corresponderán con los señalados en el archivo Excel Productos_DWG.xlsx en la hoja ElementosConstruccion (Récord) identificada con …
-  - «Se solicita la entrega de los planos de localización.» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
-- [ ] Incluir el código de identificación vial (CIV) en los diferentes planos en planta ya que no se presenta actualmente. — IDU ×1 `G105`
+- [ ] **R-T05-08** Mostrar legibles en los planos en planta la nomenclatura vial y los CIV de calzadas y andenes. — IDU ×1 · interventoría ×3 `G105` `G199`
   - Normativa directo: **Productos_DWG Récord F35** — Nomenclatura vial, Códigos CIV
-  - «7. No se presenta en los planos el código de identificación vial - CIV, por lo cual se requieres sea incluido en los diferentes planos en planta.» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 7)
-- [ ] Incluir el tipo de mezcla asfáltica utilizada en los cuadros de descripción de las intervenciones. — IDU ×1 `G106`
-  - Normativa parcial: **Productos_DWG Récord F28** — Sección típica con espesores y tipo de materiales utilizados, pendiente Transversal, acotados
-  - «11. En los cuadros de descripción de las intervenciones se debe incluir el tipo de mezcla asfáltica utilizada.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 8)
-- [ ] Incluir las calzadas existentes en los planos MVGVPL01.dwg. — IDU ×1 `G110`
-  - Normativa directo: **Productos_DWG LAYERCAD 59** — Calzada: layer CAD CALZADA, geometría POLÍGONO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
-  - «2. En los planos MVGVPL01.dwg se debe incluir las calzadas existentes.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 3)
-- [ ] Los planos deben contener solo un bloque norte en la intersección de la grilla sin superposición con elementos de Área Intervención. — IDU ×1 `G118`
-  - Normativa parcial: **VALIDACIONES_BDG 2.4. a. Superposición elementos** — a. Superposición elementos: No debe existir superposición de elementos, consigo mismo o con otros. Esta regla aplica para elementos de tipo línea, punto y …
-  - «8. Los planos deben contener solo un bloque norte ubicado en la intersección de la grilla y verificar que no tenga superposición con los elementos de Área …» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 7)
-- [ ] No se presentaron los planos del componente Vial, por lo que no se realizó la validación de las observaciones del memorando anterior. — IDU ×1 `G125`
-  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - «1. No se presentaron los planos del componente Vial, por tal razón no se realizó la validación de las observaciones del memorando anterior.» (DTE 20212150074483, `IDU/2021-03-24_120213560479481_00002.pdf`, p. 2)
-- [ ] Revisar la escala de los planos en el componente de Estructuras – Otras Estructuras para que cumplan con los parámetros del archivo 'ParametrosPresentacionPlanos_V1'. — IDU ×1 `G133`
-  - Normativa directo: **FO-IC-05 A.5.e** — Escalas planta: Las escalas en planta corresponden a las establecidas en el instructivo para la presentación de planos y archivos
-  - «5. Se solicita revisar la escala de los planos, esta debe cumplir con los parámetros de la guía GUIC06 y el archivo de Excel “ParametrosPresentacionPlanos_V1”. …» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 7)
-- [ ] Revisar que las convenciones estén acorde al contenido del plano. — IDU ×1 `G138`
-  - Normativa directo: **FO-IC-05 A.2.h** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
-  - «3. Se solicita revisar que las convenciones estén acorde al contenido del plano.» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 6)
-- [ ] Se requiere verificar y ajustar el componente CAD para incorporar elementos mínimos según la guía GU-IC-06, como escala gráfica/numérica y Códigos de Identificación Vial (CIV). — IDU ×1 `G152`
-  - Normativa directo: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
-  - Normativa directo: **Productos_DWG Récord F35** — Nomenclatura vial, Códigos CIV
-  - «Se requiere se verifique el componente CAD debido a que no toda la información se encuentra ajustada a lo solicitado en la guía GU-IC-06, como son: la …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 7)
-- [ ] Verificar el uso de las escalas en los planos, asegurando la presencia de escala gráfica y definición correcta. — IDU ×1 `G171`
-  - Normativa directo: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
-  - «5. Se reitera la observación No. 9 del memorando 202523500323243. Se solicita verificar el uso de las escalas en los planos, se observa en los ejemplos de la …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 6)
-- [ ] Escalas y sistemas de coordenadas invertidos en figuras de un plano general. — interventoría ×3 `G193`
-  - Normativa directo: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
-  - Normativa parcial: **Productos_DWG Récord F24** — Escala numérica - Escala grafica
-  - «se presentan escalas y sistemas de coordenadas invertidos» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-- [ ] Incluir convenciones del plano base y del tema presentado en cada plano. — interventoría ×3 `G194`
-  - Normativa directo: **FO-IC-05 A.2.h** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
-  - «no incluyen información como convenciones del plano base» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 5)
-- [ ] Incluir en cada plano el sistema de referencia empleado. — interventoría ×3 `G195`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Los planos deben incluir el sistema de referencia empleado (coordenadas cartesianas)» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-- [ ] Incluir escala gráfica en los planos (secciones transversales y pavimentos). — interventoría ×3 `G196`
-  - Normativa parcial: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
-  - «Incluir escala gráfica en los planos de secciones transversales.» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 5)
-- [ ] Indicar con claridad todas las escalas de cada plano (planta y localización). — interventoría ×3 `G197`
-  - Normativa parcial: **Productos_DWG Récord F24** — Escala numérica - Escala grafica
-  - «Indicar de manera clara las diferentes escalas descritas en todos los planos» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-- [ ] Mostrar legibles la nomenclatura vial y los códigos CIV de calzada y andenes en todos los planos. — interventoría ×3 `G199`
   - Normativa directo: **FO-IC-05 A.2.g** — Nomenclatura vial: Los planos presentan la nomenclatura vial actual de los corredores viales y vías conectantes del proyecto o contrato
   - Normativa parcial: **Productos_DWG INSTRUCTIVO_LAYOUT_CIV C2** — CIV: Código de Identificación Vial de los tramos relacionados para el contrato
+  - «7. No se presenta en los planos el código de identificación vial - CIV, por lo cual se requieres sea incluido en los diferentes planos en planta.» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 7)
   - «no incluyen la nomenclatura vial y códigos de CIV de calzada y andenes» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-- [ ] Corregir la escala de las secciones transversales. — interventoría ×1 `G221`
-  - Normativa directo: **Productos_DWG Escalas F21** — 5.2. Secciones transversales (Incluye la toma en terreno de la ST) y sección típica: 1 : 50, 1 : 100
-  - «no se dio respuesta a la observación sobre la escala del plano de secciones transversales» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-- [ ] El cuadro del sistema de referencia debe incluir la época; corregir en todos los planos. — interventoría ×1 `G228`
+- [ ] **R-T05-10** Indicar el tipo de mezcla asfáltica en los cuadros de descripción de intervenciones. — IDU ×1 `G106`
+  - Normativa parcial: **Productos_DWG Récord F28** — Sección típica con espesores y tipo de materiales utilizados, pendiente Transversal, acotados
+  - «11. En los cuadros de descripción de las intervenciones se debe incluir el tipo de mezcla asfáltica utilizada.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 8)
+- [ ] **R-T05-11** Representar los elementos existentes, como las calzadas, en los planos de intervención. — IDU ×1 `G110`
+  - Normativa directo: **Productos_DWG LAYERCAD 59** — Calzada: layer CAD CALZADA, geometría POLÍGONO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
+  - «2. En los planos MVGVPL01.dwg se debe incluir las calzadas existentes.» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 3)
+- [ ] **R-T05-05** Incluir en cada plano el cuadro del sistema de referencia, con su época. — interventoría ×4 `G195` `G228` `G290`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «Los planos deben incluir el sistema de referencia empleado (coordenadas cartesianas)» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
   - «información del sistema de referencia geodésico de manera incompleta (época)» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
-- [ ] El esquema de ubicación de perforaciones (planos de pavimentos) debe incluir las coordenadas de los puntos. — interventoría ×1 `G229`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «No se incluye coordenadas de puntos» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
-- [ ] Escala de las secciones transversales distinta de la requerida por Productos_DWG. — interventoría ×1 `G238`
-  - Normativa parcial: **Productos_DWG Récord F42** — Escala numérica - Escala grafica
-  - «Presentado 1:200, requerido 1:50 o 1:100» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 9)
-- [ ] Escala gráfica y numérica coherentes en cada plano. — interventoría ×1 `G239`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Algunos planos indican escalas gráficas y numéricas diferentes.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
-- [ ] Incluir convenciones completas en secciones transversales y cotas de pavimento. — interventoría ×1 `G248`
-  - Normativa directo: **FO-IC-05 A.2.h** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
-  - Normativa parcial: **Productos_DWG Récord F31** — Planos de Secciones Transversales (niveles en eje y bordes, pendientes transversales, estructura del pavimento con espesores construidos)
-  - «No hay convenciones en planos de secciones transversales.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
-- [ ] Incluir convenciones para la planta en los planos de geotecnia. — interventoría ×1 `G249`
-  - Normativa directo: **FO-IC-05 A.3.k** — Convenciones: Se presenta el cuadro de convenciones de los objetos representados en los planos
-  - «Algunos planos no incluyen convenciones para la planta.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
-- [ ] Los planos de diseño geométrico deben mostrar la estructura de pavimento de calzada y andén. — interventoría ×1 `G256`
+- [ ] **R-T05-12** Mostrar en los planos de diseño geométrico la estructura de pavimento de calzada y andén. — interventoría ×1 `G256`
   - Normativa directo: **Productos_DWG Récord F31** — Planos de Secciones Transversales (niveles en eje y bordes, pendientes transversales, estructura del pavimento con espesores construidos)
   - «La estructura no se encuentra en los planos de DG.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
-- [ ] Los planos deben llevar la nota aclaratoria de que la interventoría no aprueba diseños. — interventoría ×1 `G258`
+- [ ] **R-T05-13** Incluir las coordenadas de los puntos en el esquema de ubicación de perforaciones. — interventoría ×1 `G229`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «No se incluye coordenadas de puntos» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
+- [ ] **R-T05-14** Incluir en los planos la nota aclaratoria de que la interventoría no aprueba diseños. — interventoría ×1 `G258`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «carecen de la leyenda aclaratoria de interventoría» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6)
-- [ ] Los planos planta-perfil deben incluir la información topográfica (placas de amarre). — interventoría ×1 `G259`
-  - Normativa directo: **FO-IC-05 A.2.f** — Cuadro coordenadas placas de amarre: Cuadro de coordenadas Norte, Este y altura de las placas o puntos de amarre topográfico
-  - «Los planos planta-perfil no tienen información de topografía» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 14)
-- [ ] Todos los planos deben incluir la grilla de coordenadas. — interventoría ×1 `G288`
-  - Normativa directo: **FO-IC-05 A.2.k** — Grilla coordenadas: Representación de la cuadricula de coordenadas cada 50 o 100 mts, según escala del plano
-  - Normativa directo: **FO-IC-05 A.3.o** — Grilla coordenadas: Representación de la cuadrícula de coordenadas cada 50 o 100 mts, según escala del plano
-  - «No todos los planos incluyen grilla.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 15)
-- [ ] Todos los planos deben llevar el norte. — interventoría ×1 `G289`
-  - Normativa directo: **FO-IC-05 A.2.c** — Norte magnético: El plano presenta el norte magnético según la grilla de coordenadas planas
-  - Normativa directo: **FO-IC-05 A.3.c** — Norte magnético: El plano presenta el norte magnético según la grilla de coordenadas planas
-  - «Algunos planos no tienen el norte.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
-- [ ] Todos los planos incluyen el cuadro con el sistema de coordenadas (georreferenciación). — interventoría ×1 `G290`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «No incluye cuadro con información del sistema de coordenadas» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 13)
 
 ## T01. Estructura de carpetas y completitud de la entrega
 
-- [ ] Entregar la totalidad de los productos para permitir una revisión completa de toda la información. — IDU ×6 `G005`
+- [ ] **R-T01-02** Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles. — IDU ×9 `G020` `G099` `G101` `G125` `G147` `G157` `G161`
+  - Normativa directo: **Productos_DWG Récord F26** — Planta Perfil: En planta se deben presentar las líneas de ejes, bordes, sumideros, limite de intervención y abcisado, en el perfil longitudinal de tener las …
+  - Normativa parcial: **GU-IC-06 §9.4 ¶1** — Los productos entregables corresponderán con los señalados en el archivo Excel Productos_DWG.xlsx en la hoja ElementosConstruccion (Récord) identificada con …
+  - Normativa parcial: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
+  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
+  - «1. No se entregaron planos de Planta Perfil, se recomienda revisar la información.» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 2)
+  - «1. No se entregaron planos de Planta Perfil, se recomienda revisar la informacion.» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 2)
+- [ ] **R-T01-01** Entregar la totalidad de los productos de la etapa, con los anexos de cada carpeta del alistamiento (registro fotográfico, informes finales, entidades diferentes al IDU); la revisión se repite sobre todos ellos. — IDU ×8 `G005` `G044`
   - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
   - «Se debe realizar la entrega de la totalidad de los productos, dado que la revisión de la información se realiza nuevamente sobre todos los productos.» (DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 4)
   - «Se debe realizar la entrega de la totalidad de los productos, dado que la revisión de la información se realiza nuevamente sobre todos los productos.» (DTE 20212150175863, `IDU/2021-06-21_2.1 120213560877981_00002-obs GIS20-15-jun-21.pdf`, p. 3)
-- [ ] Es necesario presentar el archivo EstructuraCarpetas.xlsx y realizar la observación correspondiente sobre la entrega o no de la información de la carpeta en el campo CONTRATISTAS. — IDU ×4 `G015`
+- [ ] **R-T01-06** Diligenciar EstructuraCarpetas.xlsx: registrar en CONTRATISTAS la entrega o no de cada carpeta, justificar contractual y técnicamente las no entregadas y no marcar «Ok» lo que no está. — IDU ×4 · interventoría ×1 `G015` `G268`
   - Normativa parcial: **GU-IC-06 §7.1.4 ¶2** — el archivo Excel EstructuraCarpetas.xlsx; para cada etapa del contrato existe una hoja de cálculo con el nombre de la etapa que se requiere entregar, en la que …
+  - Normativa parcial: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
   - «15. Es necesario presentar el archivo (1. EstructuraCarpetas .xlsx), y en el campo (CONTRATISTAS) realizar la respectiva observación de la entrega o no de …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 11)
   - «15. Es necesario presentar el archivo (EstructuraCarpetas .xlsx), y en el campo (CONTRATISTAS) realizar la respectiva observación de la entrega o no de …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 11)
-- [ ] No se entregaron planos de Planta Perfil, se recomienda revisar la información. — IDU ×3 `G020`
-  - Normativa directo: **Productos_DWG Récord F26** — Planta Perfil: En planta se deben presentar las líneas de ejes, bordes, sumideros, limite de intervención y abcisado, en el perfil longitudinal de tener las …
-  - Normativa parcial: **GU-IC-06 §9.4 ¶1** — Los productos entregables corresponderán con los señalados en el archivo Excel Productos_DWG.xlsx en la hoja ElementosConstruccion (Récord) identificada con …
-  - «1. No se entregaron planos de Planta Perfil, se recomienda revisar la información.» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 2)
-  - «1. No se entregaron planos de Planta Perfil, se recomienda revisar la informacion.» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 2)
-- [ ] Incorporar información o depurar carpetas vacías sin alterar la numeración. — IDU ×2 `G036`
+- [ ] **R-T01-05** No entregar carpetas obligatorias vacías ni archivos sueltos: incorporar la información o depurar la carpeta sin alterar la numeración. — IDU ×3 · interventoría ×1 `G036` `G121` `G243`
   - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
+  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
   - «2. Como se muestra en el ejemplo de la ilustración 3, se encuentran carpetas que no contienen información, por lo cual se solicita, incorporar la información o …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 5)
   - «1. Se solicita verificar la información presentada y depurar las diferentes carpetas que no contienen información, se recuerda que no se deben presentar …» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 2)
-- [ ] Se solicita anexar los archivos correspondientes a las carpetas suministradas en la información de alistamiento del proyecto (Registro Fotográfico, Informes Finales y Entidades Diferentes al IDU). — IDU ×2 `G044`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «15. Se solicita anexar los archivos correspondiente a las carpetas suministradas en la información de alistamiento del proyecto: …» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 8)
-  - «13. Se debe anexar la información correspondiente a las carpetas suministradas en la información de alistamiento del proyecto: …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 8)
-- [ ] Entregar información relacionada con planos de temas estructurales y detalles de espacio público arquitectónicos. — IDU ×1 `G099`
-  - Normativa parcial: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «4. No se presenta información relacionada con planos de los temas estructurales, en los Urbanísticos los detalles de espacio público (Arquitectónicos), por lo …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 5)
-- [ ] No dejar archivos sueltos en la estructura de carpetas; el reporte va en D.23.2.Reportes. — IDU ×1 `G121`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «Se solicita incluir el archivo "1. EstructuraCarpetas.xlsx" en la carpeta "D.23.2. Reportes"» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
-- [ ] Se reitera lo indicado en la observación No. 2 del memorando 202523500323243 sobre información en especialidad de Estructuras que evidencia un deprimido para el acceso al patio. — IDU ×1 `G147`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «1. Se reitera lo indicado en la observación No. 2 del memorando 202523500323243. Se presenta información en la especialidad de Estructuras que evidencia un …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 3)
-- [ ] Se solicita la entrega de las salidas gráficas en formato .PDF de los planos presentados. — IDU ×1 `G156`
+- [ ] **R-T01-07** Entregar los planos en DWG y en PDF, y los informes en DOCX editable y en PDF, en todas las carpetas. — IDU ×1 · interventoría ×2 `G156` `G204` `G236` `G240`
   - Normativa directo: **GU-IC-06 §8.4 ¶2** — (Word, Excel, AutoCAD, JPG, entre otros) y a su vez el archivo en formato .PDF. La carpeta principal de cada proyecto deberá identificarse con el código …
-  - «5. Se solicita la entrega de las salidas gráficas en formato .PDF de los planos presentados.» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 4)
-- [ ] Se solicita verificar y realizar la entrega de la información de los protectores de árboles, los cuales no están en los productos digitales. — IDU ×1 `G157`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «3. No se presentan los planos (Arquitectónicos – corresponden con los detalles del espacio público y mobiliario urbano), pero en la sección típica ilustración …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 6)
-- [ ] Solicitar la entrega de los planos y documentos digitales faltantes para temas de localización y topografía. — IDU ×1 `G161`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «6. No se presentan los planos y demás documentos digitales para los temas de: localización y topografía, por lo cual se solicita su entrega. 7.» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 7)
-- [ ] Entregar los informes en DOCX editable. — interventoría ×2 `G204`
   - Normativa directo: **GU-IC-06 §11.1 ¶1** — El contenido de los archivos, su calidad, su completitud y autenticidad de la firma digital, es responsabilidad de los actores de infraestructura, por tanto, …
+  - Normativa directo: **GU-IC-06 §8 ¶14** — en el cuadro ESCALA. Se deberá generar un archivo PDF que se incluirá en la misma carpeta del respectivo tema, con el nombre del layout, los archivos PDF …
+  - «5. Se solicita la entrega de las salidas gráficas en formato .PDF de los planos presentados.» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 4)
   - «no se encuentran archivos editables en formato DOCX» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 5)
-  - «Los informes deben ser entregados en formato editable DOCX y PDF.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] Incluir y recodificar los planos modificados aunque no se hubieran presentado. — interventoría ×2 `G205`
+- [ ] **R-T01-04** Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas. — interventoría ×3 `G217` `G251` `G260` `G266` `G272` `G281` `G283` `G287` `G291`
+  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
+  - Normativa directo: **GU-IC-06 §7.1.4 ¶2** — el archivo Excel EstructuraCarpetas.xlsx; para cada etapa del contrato existe una hoja de cálculo con el nombre de la etapa que se requiere entregar, en la que …
+  - «se ha nombrado el folder con la numeración D.5.2.1» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
+  - «Las estructuras de directorios, codificación y nombre deben ser la misma proporcionada al inicio del contrato con el alistamiento.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
+- [ ] **R-T01-03** Incluir y recodificar todos los planos modificados, aunque no se hubieran presentado antes, junto con el listado de diseños modificados. — interventoría ×2 `G205` `G244`
   - Normativa parcial: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
   - «En caso de que existan planos que no se hayan presentado pero hayan sido objeto de modificación, estos deberán incluirse en futuras entregas» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
   - «En caso de que existan planos que no se hayan presentado, pero hayan sido objeto de modificación, estos deberán incluirse en futuras entregas» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 3)
-- [ ] Acuerdo de la mesa del 8/6/2021: en la entrega inicial solo DWG; los PDF y las firmas, tras la aprobación. — interventoría ×1 `G212`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Los planos en formato PDF deberán ser entregados una vez se cuente con la aprobación de la interventoría y la DTINI.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
-- [ ] Cada informe va en la carpeta que le corresponde por numeración (urbanismo en D.3.2.1). — interventoría ×1 `G217`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «se ha nombrado el folder con la numeración D.5.2.1» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
-- [ ] Completar las firmas (revisó y aprobó) de los informes en PDF. — interventoría ×1 `G220`
+- [ ] **R-T01-08** Firmar digitalmente los PDF de planos e informes por todos los responsables de contratista e interventoría (revisó y aprobó). — interventoría ×2 `G220` `G241`
   - Normativa directo: **GU-IC-06 §6 ¶2** — Los archivos deberán presentarse únicamente en formato digital, deberán ser avalados por los profesionales que intervienen en su elaboración, mediante firma …
   - «los siguientes informes carecen de una o varias firmas» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 5)
-- [ ] Entregar las versiones aprobadas por la interventoría, no las iniciales. — interventoría ×1 `G235`
+  - «Los planos e informes en PDF deben venir firmados digitalmente por todos los profesionales responsables del contratista de obra y la interventoría.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
+- [ ] **R-T01-09** Entregar las versiones aprobadas por la interventoría, no las iniciales. — interventoría ×1 `G235`
   - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
   - «Las versiones de planos no corresponden a las versiones aprobadas (planos versión inicial). Verificar.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 6)
-- [ ] Entregar los planos en DWG y en PDF. — interventoría ×1 `G236`
-  - Normativa directo: **GU-IC-06 §8 ¶14** — en el cuadro ESCALA. Se deberá generar un archivo PDF que se incluirá en la misma carpeta del respectivo tema, con el nombre del layout, los archivos PDF …
-  - «Los planos deben ser entregados en formato DWG y PDF.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] Falta el PDF de los planos en varias carpetas de la entrega. — interventoría ×1 `G240`
-  - Normativa directo: **GU-IC-06 §8.4 ¶2** — (Word, Excel, AutoCAD, JPG, entre otros) y a su vez el archivo en formato .PDF. La carpeta principal de cada proyecto deberá identificarse con el código …
-  - «No se incluyen planos PDF.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 5)
-- [ ] Firmar digitalmente los PDF de planos e informes por todos los responsables de contratista e interventoría. — interventoría ×1 `G241`
-  - Normativa directo: **GU-IC-06 §6 ¶2** — Los archivos deberán presentarse únicamente en formato digital, deberán ser avalados por los profesionales que intervienen en su elaboración, mediante firma …
-  - «Los planos e informes en PDF deben venir firmados digitalmente por todos los profesionales responsables del contratista de obra y la interventoría.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] Hay carpetas obligatorias sin contenido entregado. — interventoría ×1 `G243`
-  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - «No entregado por el contratista.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 6)
-- [ ] Hay planos modificados que no se entregaron. — interventoría ×1 `G244`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «Planos modificados y no entregados» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 5)
-- [ ] La estructura de directorios debe ser la del alistamiento inicial, sin cambios. — interventoría ×1 `G251`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «no se ajustan al alistamiento inicial proporcionado por el IDU» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
-- [ ] Mantener estructura de carpetas, codificación y nombres exactamente como en el alistamiento. — interventoría ×1 `G260`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «Las estructuras de directorios, codificación y nombre deben ser la misma proporcionada al inicio del contrato con el alistamiento.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] No duplicar la carpeta de pavimentos dentro de Geotecnia o aclarar su versión. — interventoría ×1 `G266`
-  - Normativa parcial: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «se localizan dos carpetas, una relacionado al informe de geotécnica y otra de pavimentos» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
-- [ ] No marcar «Ok» carpetas que no están en la entrega; justificar contractual y técnicamente las no entregadas. — interventoría ×1 `G268`
-  - Normativa parcial: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «algunos numerales se han marcado como» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 1)
-- [ ] Nombre de carpeta distinto al de la estructura oficial. — interventoría ×1 `G272`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «El nombre de carpeta no corresponde a la estructura de directorios. Ajustar.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 5)
-- [ ] Respetar la escritura exacta del nombre de cada carpeta. — interventoría ×1 `G281`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «tiene una escritura incorrecta (doble punto en la escritura)» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
-- [ ] Respetar los niveles de la estructura de carpetas del alistamiento (D.7.2.Informes). — interventoría ×1 `G283`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «presenta nomenclatura de nivel diferente a la del archivo remitido en el alistamiento» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
-- [ ] Subcarpeta ubicada en un nivel que no corresponde a la estructura. — interventoría ×1 `G287`
-  - Normativa directo: **GU-IC-06 §7.1.4 ¶2** — el archivo Excel EstructuraCarpetas.xlsx; para cada etapa del contrato existe una hoja de cálculo con el nombre de la etapa que se requiere entregar, en la que …
-  - «Se incluye en la carpeta de planos, el directorio D.3.2.informes. Reorganizar.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 5)
-- [ ] Ubicar las carpetas de estructuras en los directorios del alistamiento, con su escritura exacta. — interventoría ×1 `G291`
-  - Normativa directo: **GU-IC-06 §8.4 ¶1** — Conforme a la estructura de carpetas suministradas, se deberá incorporar la totalidad de la información estandarizada, incluyendo todos los soportes de los …
-  - «La escritura del directorio de planos es incorrecta (subcarpetas)» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
+- [ ] **R-T01-10** Acordar en mesa de trabajo el momento de entrega de PDF y firmas; en la mesa del 8/6/2021 se acordó DWG en la entrega inicial y PDF firmados tras la aprobación. — interventoría ×1 `G212`
+  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - «Los planos en formato PDF deberán ser entregados una vez se cuente con la aprobación de la interventoría y la DTINI.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 4)
 
 ## T02. Nomenclatura de archivos y planos
 
-- [ ] El formato presentado no es el suministrado en el alistamiento del proyecto y se eliminaron los campos del topógrafo del Constructor. — IDU ×2 `G032`
+- [ ] **R-T02-05** Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado. — IDU ×6 · interventoría ×3 `G091` `G094` `G122` `G135` `G142` `G172` `G230` `G253`
+  - Normativa parcial: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
+  - «Se requiere revisar y ajustar el consecutivo de los planos debido a que como se muestra en la ilustración 5» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 5)
+  - «5. Se presenta el archivo (CVGNLP01.dwg) pero el plano no contiene ningún tipo de información, como se puede observar en la ilustración 4, pero es diligenciada …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 5)
+- [ ] **R-T02-02** Nombrar cada DWG según la codificación de la guía y nombrar su layout igual al plano; el layout es único y el nombre coincide con el reportado en el rótulo. — IDU ×4 · interventoría ×2 `G033` `G093` `G132` `G202` `G255`
+  - Normativa directo: **FO-IC-05 A.2.o** — Nombre archivos: Nombre de los archivos CAD según instructivo para presentación de planos y archivos vigente
+  - Normativa directo: **GU-IC-06 §8 ¶13** — que sean requeridos tanto por la interventoría como por la supervisión del contrato. Después de contar con la información estandarizada en los respectivos …
+  - Normativa directo: **FO-IC-05 A.2.n** — Nombre layouts: Nombre de layouts según la nomenclatura del plano según el instructivo para la presentación de planos y archivos vigente
+  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
+  - «8. Se debe ajustar el nombre del archivo AutoCAD, presenta diferencia con el reportado en el formato de los planos.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5)
+  - «8. Se debe ajustar el nombre del archivo AutoCAD, presenta diferencia con el reportado en el formato de los planos. IDU-1384-2017» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6)
+- [ ] **R-T02-06** Usar el rótulo del alistamiento (ROTULO.xlsm) sin editar sus bloques ni eliminar campos, como los del topógrafo de constructor e interventoría. — IDU ×4 `G032` `G085` `G089`
   - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
   - «1. El formato presentado no es el suministrado en el alistamiento del proyecto, se recuerda que no se debe realizar ningún ajuste a la información …» (DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 2)
   - «1. El plano MVGVPL01.dwg no se presenta con el formato suministrado en la información de alistamiento del proyecto, se recuerda que no se debe realizar ningún …» (DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 2)
-- [ ] El nombre del archivo AutoCAD presenta diferencia con el reportado en el formato de los planos. — IDU ×2 `G033`
-  - Normativa directo: **FO-IC-05 A.2.o** — Nombre archivos: Nombre de los archivos CAD según instructivo para presentación de planos y archivos vigente
-  - «8. Se debe ajustar el nombre del archivo AutoCAD, presenta diferencia con el reportado en el formato de los planos.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5)
-  - «8. Se debe ajustar el nombre del archivo AutoCAD, presenta diferencia con el reportado en el formato de los planos. IDU-1384-2017» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6)
-- [ ] Reiterar la observación sobre que el nombre del archivo base CAD no cumple con la nomenclatura GUIC06 (BASE-IDU-XXX-YYYY.dwg). — IDU ×2 `G042`
+- [ ] **R-T02-09** Citar en el campo REFERENCIA del rótulo todos los archivos de referencia externa reales, con su nombre exacto. — IDU ×3 · interventoría ×3 `G031` `G065` `G198`
+  - Normativa parcial: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
+  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
+  - «11. En el archivo MVGVPL01.dwg, el campo del formato REFERENCIA se diligenció con un solo archivo como XREF o referencia externa y como se aprecia en la imagen …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 7)
+  - «6. En el campo del formato REFERENCIA solamente se diligenció un solo archivo como XREF o referencia externa y como se aprecia en la imagen se tienen (2) …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6)
+- [ ] **R-T02-07** Diligenciar todos los campos del rótulo, incluidos CONSECUTIVO y cantidad de planchas, de forma coherente con los layouts. — IDU ×3 `G090` `G139` `G182`
+  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
+  - Normativa directo: **FO-IC-05 A.2.n** — Nombre layouts: Nombre de layouts según la nomenclatura del plano según el instructivo para la presentación de planos y archivos vigente
+  - «2. El campo del formato: CONSECTIVO del archivo MVGVPL01.dwg debe estar debidamente diligenciado.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 3)
+  - «Se solicita verificar la integridad de todos los rótulos presentados en la especialidad de Geotecnia» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 6)
+- [ ] **R-T02-01** Nombrar el archivo base CAD según la GU-IC-06 (BASE-IDU-XXX-YYYY.dwg). — IDU ×2 `G042`
   - Normativa directo: **GU-IC-06 §8 ¶8** — 1. Contener únicamente los elementos de competencia del IDU, con su respectiva geometría relacionada en los archivos de Productos_DWG.xlsx. en la hoja de …
   - «1. Se reitera la observación respecto al nombre del archivo base del proyecto CAD que es utilizado como referencia externa dado que no cumple con la …» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 2)
   - «1. El nombre del archivo de la base del proyecto CAD no cumple con la nomenclatura de acuerdo a la GUIC06_GUIA_ENTREGA_PRODUCTOS_FORMATO_ DIGITAL_V_1.0, en el …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 2)
-- [ ] Ajustar el rótulo campo de referencia en el plano de topografía, ya que el texto digitado menciona BASE-1385-2017.dwg pero la referencia externa es BASE-TOP1385-2017.dwg. — IDU ×1 `G065`
-  - Normativa parcial: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «1. En el plano de topografía ajustar el rotulo campo de referencia ya que el texto digitado menciona BASE-1385-2017.dwg, pero la referencia externa es …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 2)
-- [ ] Corregir la edición indebida de bloques de rótulos (nombres, matriculas, fechas, etc.) para cumplir con el estándar de atributos. — IDU ×1 `G085`
-  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
-  - «4. En la ilustración 4 se puede evidenciar que fueron editados los bloques de los rótulos, en varios campos, como, por ejemplo, nombres y matriculas de …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 6)
-- [ ] Diligenciar los rótulos utilizando el archivo ROTULO_V01_20220302.xlsm especificado. — IDU ×1 `G089`
-  - Normativa directo: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
-  - «Para el diligenciamiento de los rótulos se cuenta con el archivo (ROTULO_V01_20220302.xlsm).» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 6)
-- [ ] El campo del formato CONSECTIVO del archivo MVGVPL01.dwg debe estar debidamente diligenciado. — IDU ×1 `G090`
-  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
-  - «2. El campo del formato: CONSECTIVO del archivo MVGVPL01.dwg debe estar debidamente diligenciado.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 3)
-- [ ] El consecutivo de los planos debe seguir el orden de las carpetas (carátula y localización son los planos 1 y 2). — IDU ×1 `G091`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Se requiere revisar y ajustar el consecutivo de los planos debido a que como se muestra en la ilustración 5» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 5)
-- [ ] El nombre de la plancha debe coincidir con el nombre del layout según la GUIA 06. — IDU ×1 `G093`
-  - Normativa directo: **GU-IC-06 §8 ¶13** — que sean requeridos tanto por la interventoría como por la supervisión del contrato. Después de contar con la información estandarizada en los respectivos …
-  - «1. El nombre de la plancha debe ser igual al nombre del layout, de acuerdo a lo establecido en la GUIA 06.» (DTE 20212150054383, `IDU/2021-03-05_176_20212150054383anexo.pdf`, p. 2)
-- [ ] Eliminar el archivo CVGNLP01.dwg por carecer de información gráfica y ajustar el consecutivo de planos y rótulos. — IDU ×1 `G094`
-  - Normativa parcial: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «5. Se presenta el archivo (CVGNLP01.dwg) pero el plano no contiene ningún tipo de información, como se puede observar en la ilustración 4, pero es diligenciada …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 5)
-- [ ] La nomenclatura de los archivos de las configuraciones de las capas de la estructura no se encuentra de acuerdo a la guía GUIC06. — IDU ×1 `G113`
+- [ ] **R-T02-04** Nombrar los archivos de configuración de capas de las estructuras según la GU-IC-06. — IDU ×2 `G113` `G136`
   - Normativa parcial: **GU-IC-06 §7.1.2 ¶3** — proyecto. Se debe duplicar o crear un NUEVO ARCHIVO si en el proyecto se tiene más de un tipo de estructura en las calzadas o losas. Está identificada con …
   - «2. Se reitera observación, en el archivo RelacionElementoConfiguración la nomenclatura de los archivos de las configuraciones de las capas de la estructura no …» (DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 3)
-- [ ] Mencionar en las tablas de reporte que los planos MVGVPL11.DWG y MVGVPL49.DWG utilizan formato de fecha Año/Mes/Día para evitar confusión. — IDU ×1 `G120`
+  - «6. Se reitera la observación referente a los nombres de los archivos exel con las configuraciones de las capas de las estructuras.» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
+- [ ] **R-T02-10** Indicar en las tablas de reporte el formato de fecha utilizado (año/mes/día). — IDU ×1 `G120`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «3. Se encontró que en los siguientes planos: MVGVPL11.DWG y MVGVPL49.DWG, el formato de fecha es Año/Mes/Día, por ser los únicos planos con este formato …» (DTE 20212150248313, `IDU/2021-08-14_2. 1. 120213561231691_00002-memo.pdf`, p. 8)
-- [ ] No repetir el consecutivo en ningún plano entregado. — IDU ×1 · interventoría ×1 `G122`
-  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «Se solicita verificar la numeración de los consecutivos, toda vez que se presentan planos con el mismo número de consecutivo» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 5)
-- [ ] Revisar el nombre de archivo y layout, ya que no cumple la estructura definida en la guía GUIC06. — IDU ×1 `G132`
-  - Normativa directo: **FO-IC-05 A.2.n** — Nombre layouts: Nombre de layouts según la nomenclatura del plano según el instructivo para la presentación de planos y archivos vigente
-  - Normativa directo: **FO-IC-05 A.2.o** — Nombre archivos: Nombre de los archivos CAD según instructivo para presentación de planos y archivos vigente
-  - «2. Revisar el nombre de archivo y layout, ya que no cumple la estructura definida en la guía GUIC06.» (DTE 20212150056813, `IDU/2021-03-10_177_20212150056813anexo.pdf`, p. 2)
-- [ ] Revisar los consecutivos de todos los planos, se deben presentar de acuerdo a lo establecido en la guía GUIC06. — IDU ×1 `G135`
-  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «3. Revisar los consecutivos de todos los planos, se deben presentar de acuerdo a lo establecido en la guía GUIC06..» (DTE 20212150056813, `IDU/2021-03-10_177_20212150056813anexo.pdf`, p. 2)
-- [ ] Revisar los nombres de los archivos Excel con las configuraciones de las capas de las estructuras. — IDU ×1 `G136`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «6. Se reitera la observación referente a los nombres de los archivos exel con las configuraciones de las capas de las estructuras.» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
-- [ ] Rótulos de Geotecnia coherentes en nomenclatura de Layouts, consecutivos y cantidad de planchas, según ROTULO.xlsm. — IDU ×1 `G139`
-  - Normativa directo: **FO-IC-05 A.2.n** — Nombre layouts: Nombre de layouts según la nomenclatura del plano según el instructivo para la presentación de planos y archivos vigente
-  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
-  - «Se solicita verificar la integridad de todos los rótulos presentados en la especialidad de Geotecnia» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 6)
-- [ ] Se recomienda ajustar el consecutivo del archivo de AutoCAD 'MVGPP02.DWG' ya que en la carpeta especificada solo existe un plano. — IDU ×1 `G142`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «3. Se recomienda ajustar el consecutivo del archivo de AutoCAD “MVGPP02.DWG” porque en la carpeta ”C.2.1.3.Planta perfil” solo existe un plano.» (DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 2)
-- [ ] Verificar la continuidad en la numeración de las temáticas, asegurando que los archivos y planos correspondientes sean consecutivos y que el total entregado coincida con la cantidad requerida. — IDU ×1 `G172`
-  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «Es necesario verificar la continuidad en la numeración de las diferentes temáticas presentadas, en el ejemplo de la ilustración 5, se muestra que los planos …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 8)
-- [ ] Verificar y complementar la información en los rótulos para incorporar el dato del campo CONSECUTIVO. — IDU ×1 `G182`
-  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
-  - «9. Es necesario verificar y complementar la información solicitada en los rótulos para que no se presente lo que se evidencia en el ejemplo de la ilustración 6 …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 9)
-- [ ] Completar en el rótulo la información de modificaciones, incluida la fecha. — interventoría ×3 `G191`
+- [ ] **R-T02-08** Completar la tabla de modificaciones del rótulo con todas las versiones y sus fechas. — interventoría ×4 `G191` `G225`
   - Normativa directo: **FO-IC-05 A.2.l** — Completitud información rótulo: Diligenciamiento de la información solicitada en el rótulo de los planos, correspondiente al proyecto y profesionales
   - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
   - «La información de modificaciones en el rótulo para algunos planos se encuentra incompleta (fecha)» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4)
-- [ ] Los nombres de los archivos de referencia citados en el rótulo deben coincidir con los reales. — interventoría ×3 `G198`
-  - Normativa parcial: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
-  - «Validar la escritura correcta para los nombres en los archivos de referencia en el rótulo» (STEST 202434601243021, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 5)
-- [ ] El Layout de cada plano debe ser único y seguir la nomenclatura de su temática. — interventoría ×2 `G202`
-  - Normativa directo: **FO-IC-05 A.2.n** — Nombre layouts: Nombre de layouts según la nomenclatura del plano según el instructivo para la presentación de planos y archivos vigente
-  - «tienen la misma nomenclatura de Layout en diferentes archivos DWG» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 6)
-  - «Los Layout de todos los planos DWG son nombrados de la misma forma» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
-- [ ] Diligenciar en los planos el registro de modificaciones de los DWG. — interventoría ×1 `G225`
-  - Normativa directo: **GU-IC-06 §8.1.3** — Las instrucciones para diligenciar el rotulo podrán ser consultadas en el archivo Excel ROTULO.xlsm.
   - «Se debe tener especialmente cuidado con la información en los planos, donde se registran las modificaciones de los archivos DWG» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] El número de plancha (4 bloques de 2 caracteres) no puede repetirse dentro de una misma temática. — interventoría ×1 `G230`
-  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «No se atendió la observación de la numeración y nomenclatura de las planchas para los planos de geotecnia y estructuras» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-- [ ] La numeración de planos debe corresponder al rótulo: sin planchas repetidas ni saltos. — interventoría ×1 `G253`
-  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «La numeración de planos es incorrecta» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 9)
-- [ ] Layout con el mismo nombre del archivo DWG y número de plancha único y consecutivo. — interventoría ×1 `G255`
-  - Normativa directo: **FO-IC-05 A.2.n** — Nombre layouts: Nombre de layouts según la nomenclatura del plano según el instructivo para la presentación de planos y archivos vigente
-  - Normativa directo: **FO-IC-05 A.2.m** — Numeración planos: Numeración de planos de acuerdo al instructivo para la presentación de planos y archivos vigente
-  - «Los errores que se presentan en la codificación son de dos tipos: a) Layout con nombres diferentes al archivo de plano DWG.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] No añadir nombres extensos a la codificación de los informes; dejar solo la codificación de la carátula. — interventoría ×1 `G261`
+- [ ] **R-T02-03** Nombrar los informes solo con su codificación, sin nombres extensos ni sufijos. — interventoría ×2 `G261` `G273`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «tiene por objeto evitar problemas al momento de copiar la información dada la extensión de nombres de archivos y carpetas» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6)
-- [ ] Nombres de informes coherentes con la codificación; sin sufijos que los alarguen. — interventoría ×1 `G273`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «Los nombres de archivos de informes deben ser coherentes con la estructura de codificación.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
 
 ## T10. Ensayos e información técnica asociada
 
-- [ ] Revisar las coordenadas en la tabla Deflectometria, ya que algunas se encuentran por fuera de sus respectivas calzadas. — IDU ×5 `G008`
+- [ ] **R-T10-01** Verificar que las coordenadas de la tabla Deflectometria queden dentro de su calzada. — IDU ×5 `G008`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «10. Se reitera que en la tabla Deflectometria se debe verificar las coordenadas, algunas se encuentran por fuera de sus respectivas calzadas.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6)
   - «24. En la tabla Deflectometria se deben verificar las coordenadas, algunos puntos se encuentran por fuera de la respectiva calzada.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 14)
-- [ ] Corregir el espesor de rodadura asfáltica en la tabla DetalleAIntervencionCalCic, ya que se reporta de 2 cm pero los planos CAD muestran espesores diferentes. — IDU ×2 `G021`
+- [ ] **R-T10-03** Hacer coincidir espesores y tipo de mezcla entre tablas de la BDG, cuadros de reporte y planos. — IDU ×3 `G021` `G143` `G170`
   - Normativa parcial: **Productos_DWG Récord F28** — Sección típica con espesores y tipo de materiales utilizados, pendiente Transversal, acotados
+  - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
   - «21. En la tabla DetalleAIntervencionCalCic, se reporta el espesor de rodadura asfáltica en de 2 cm, pero en los cuadros de los planos CAD se presentan …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 13)
   - «8. Se reitera que en la tabla DetalleAIntervencionCalCic, se reporta un espesor de rodadura asfáltica de 81 cm, se solicita revisar y ajustar» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 5)
-- [ ] Anexar los informes aprobados de los ensayos de Deflectometría. — IDU ×2 `G029`
+- [ ] **R-T10-02** Anexar los informes aprobados de los ensayos (deflectometría, evaluación estructural). — IDU ×3 `G029` `G154`
   - Normativa directo: **GU-IC-06 §8.2 ¶7** — Archivo(s) Excel que contiene la estructura(s) instalada(s) o diseñada(s) de los elementos calzada y losa, junto con los resultados de los ensayos de …
   - «12. Se debe anexar los informes aprobados de los ensayos de Deflectometria ya que solamente se realiza la entrega de los anexos.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 8)
   - «14. Se solicita anexar los informes aprobados de los ensayos de Deflectometria ya que únicamente se realiza la entrega de los anexos.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 8)
-- [ ] El contratista justifica en la hoja de Losa que el alcance del contrato no contempla levantamiento topográfico de las intervenciones. — IDU ×1 `G056`
+- [ ] **R-T10-04** Diligenciar las tablas de ensayos cuando los informes los registran; justificar solo lo que el alcance excluye. — IDU ×2 `G056` `G060`
   - Normativa parcial: **GU-IC-06 §9.5 ¶4** — las unidades de muestreo el número de losas que las componen. En caso de que dentro de la información entregada por el IDU se incluya el inventario de las …
-  - «23. En el archivo DiccionarioAtributos_V7.2. el contratista justifica en la hoja de Losa lo siguiente “El alcance del contrato no contempla levantamiento …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 14)
-- [ ] No se diligenció la tabla P_RegistroCampo a pesar de tener justificación para el no diligenciamiento, y los informes entregados relacionan la toma de estos ensayos. — IDU ×1 `G060`
   - Normativa directo: **GU-IC-06 §8.2 ¶4** — actor de infraestructura, en el marco del alcance del proyecto en cuestión. Interventoría: Al igual que en el campo anterior, la interventoría validará con una …
+  - «23. En el archivo DiccionarioAtributos_V7.2. el contratista justifica en la hoja de Losa lo siguiente “El alcance del contrato no contempla levantamiento …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 14)
   - «7. No se fue diligenciada la tabla P_RegistroCampo, aunque se encuentra la justificación en el DiccionarioAtributos_V7.2 1385 del no diligenciamiento, sin …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 5)
-- [ ] Revisar los valores consignados en el archivo de reporte de la estructura de pavimento ubicado en la carpeta de C11.3/CEP. — IDU ×1 `G061`
+- [ ] **R-T10-05** Revisar los valores de los reportes de estructura de pavimento y de mezcla (carpeta C11.3/CEP). — IDU ×2 `G061` `G137`
   - Normativa directo: **GU-IC-06 §8.2 ¶7** — Archivo(s) Excel que contiene la estructura(s) instalada(s) o diseñada(s) de los elementos calzada y losa, junto con los resultados de los ensayos de …
   - «32. Revisar los valores consignados en el archivo de reporte de la estructura de pavimento de la carpeta de C11.3/CEP.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 18)
-- [ ] Reportar un solo registro por calzada en la tabla EvaluacionEstructural. — IDU ×1 `G130`
-  - Normativa directo: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
-  - «8. En la tabla EvaluacionEstructural del elemento calzada, se encontraron varios registros y de acuerdo al archivo Excel DiccionarioAtributos_V7.2, se debe …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 6)
-- [ ] Revisar el atributo costo de la tabla de relación seguimiento del elemento Losa. — IDU ×1 `G131`
-  - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
-  - «11. Se solicita revisar el atributo costo de la tabla de relación seguimiento del elemento Losa.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6)
-- [ ] Revisar los valores presentados en el formato de la mezcla utilizada dentro de la carpeta C11.3/CEP. — IDU ×1 `G137`
-  - Normativa parcial: **GU-IC-06 §8.2 ¶7** — Archivo(s) Excel que contiene la estructura(s) instalada(s) o diseñada(s) de los elementos calzada y losa, junto con los resultados de los ensayos de …
   - «13. Se reitera que en la carpeta de C11.3/CEP se deben revisar los valores presentados en el formato de la mezcla utilizada.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 7)
-- [ ] Se recomienda revisar la información correspondiente al espesor y tipo de mezcla de todos los planos del archivo 'MVGPL01.DWG'. — IDU ×1 `G143`
-  - Normativa directo: **Productos_DWG Récord F28** — Sección típica con espesores y tipo de materiales utilizados, pendiente Transversal, acotados
-  - «4. Se recomienda revisar la información correspondiente al espesor y tipo de mezcla de todos los planos del archivo “MVGPL01.DWG”.» (DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 2)
-- [ ] Se solicita anexar el informe de los ensayos de la evaluación estructural. — IDU ×1 `G154`
-  - Normativa directo: **GU-IC-06 §8.2 ¶7** — Archivo(s) Excel que contiene la estructura(s) instalada(s) o diseñada(s) de los elementos calzada y losa, junto con los resultados de los ensayos de …
-  - «8. Se solicita anexar el informe de los ensayos de la evaluación estructural. Se recomienda revisar integralmente todos y cada uno de los productos a entregar, …» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 6)
-- [ ] Verificar el espesor del elemento Losa, ya que se reporta 24 cm pero las cantidades en los cuadros de reporte son diferentes. — IDU ×1 `G170`
+- [ ] **R-T10-06** Reportar un solo registro por calzada en EvaluacionEstructural, con SN efectivo coherente con el informe de deflectometría. — IDU ×2 `G130` `G174`
+  - Normativa directo: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
   - Normativa directo: **VALIDACIONES_BDG 4.2. Atributos cuantitativos** — Atributos cuantitativos: Se revisará la totalidad de los atributos cuantitativos, mediante el uso de modelos que permiten calcular los valores finales y así …
-  - «9. Verificar el espesor del elemento Losa, se reporta un espesor de 24 cm, pero en los cuadros de reporte hay cantidades diferentes.» (DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6)
-- [ ] Verificar la información de todos los segmentos entregados debido a deflexiones repetidas en la tabla DeflexionCalculo. — IDU ×1 `G173`
+  - «8. En la tabla EvaluacionEstructural del elemento calzada, se encontraron varios registros y de acuerdo al archivo Excel DiccionarioAtributos_V7.2, se debe …» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 6)
+  - «3. En la tabla EvaluacionEstructural de la GDB del proyecto se debe verificar la información incorporada en el atributo SN Efectivo, dado que es diferente a la …» (DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 4)
+- [ ] **R-T10-07** Verificar que no se repitan deflexiones entre segmentos en DeflexionCalculo. — IDU ×1 `G173`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «5. Se reitera la observación sobre la información capturada en la tabla DeflexionCalculo, las relaciones no cumplen lo establecido en la estructura de la base …» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
-- [ ] Verificar la información en la tabla Exploración debido a un elemento con enlace incorrecto a la tabla S_Piezometros. — IDU ×1 `G175`
+- [ ] **R-T10-08** Enlazar correctamente las exploraciones con sus tablas asociadas (S_Piezometros). — IDU ×1 `G175`
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
   - «2. Se debe verificar la información incorporada en la tabla Exploración ya que existe un elemento con enlace de la tabla S_Piezometros.» (DTE 20202150230133, `IDU/2020-12-01_02 DTE 20202150230133.pdf`, p. 5)
-- [ ] Verificar si los índices y/o ensayos no solicitados para el recibo de obra pero parte del alcance contractual están incluidos en la especificación IDU 510-11. — IDU ×1 `G179`
+- [ ] **R-T10-09** Verificar la inclusión de índices y ensayos del alcance contractual según la especificación IDU 510-11. — IDU ×1 `G179`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «13. En el tema de las Evaluaciones Estructural y Superficial, es necesario verificar la observación “La especificación IDU 510-11 no establece esta valor como …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 11)
 
 ## T07. Codificación CIV y PK_ID
 
-- [ ] Identificar todas las calzadas con su respectivo CIV y PK_ID en el archivo MVGVPL01.DWG. — IDU ×5 `G007`
+- [ ] **R-T07-01** Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato. — IDU ×7 · interventoría ×4 `G007` `G050` `G104` `G192` `G211` `G224`
   - Normativa parcial: **FO-IC-05 A.1** — No. CIVs reportados en CAD No. de segmentos viales presentados en los archivos CAD Observaciones: Aclaraciones cuando no hay correspondencia entre los …
-  - «2. Se reitera la siguiente observación: en el archivo de AutoCAD “MVGVPL01.DWG” se deben identificar todas las calzadas con su respectivo CIV y PK_ID.» (DTE 20212150248313, `IDU/2021-08-14_2. 1. 120213561231691_00002-memo.pdf`, p. 8)
-  - «2. Se reitera la siguiente observación: en el archivo de AutoCAD “MVGVPL01.DWG” se deben identificar todas las calzadas con su respectivo CIV y PK_ID.» (DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 6)
-- [ ] Verificar que el registro de intervenciones en los planos CAD coincida con la GDB y el archivo Excel FOIC09_REPORTE_FINAL_META_FISICA_V.10, revisando CIV y PK_ID. — IDU ×5 `G011`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «2. El registro de las intervenciones en los planos CAD debe coincidir con la presentada en la GDB, y el archivo de Excel …» (DTE 20212150303513, `IDU/2021-09-28_120213561432511_00002.pdf`, p. 3)
-  - «4. Se reitera la siguiente observación: los CIV y PK_ID que se encuentran en las tablas de reporte deben coincidir no solo con los planos, sino también con la …» (DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 7)
-- [ ] Usar los PK_ID y CIV asignados por el IDU (SIGIDU), no una codificación propia del contrato. — IDU ×1 `G050`
-  - Normativa directo: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
-  - «Existen elementos que corresponden con los códigos de elemento (PK_ID), que se encuentran reservados para el contrato» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 9)
-- [ ] Ajustar el texto PK_Calzada en el archivo MVGVPL01.dwg ya que se incorporó el mismo identificador en dos calzadas. — IDU ×1 `G066`
-  - Normativa directo: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
-  - «4. En el archivo digital MVGVPL01.dwg ajustar el texto PK_Calzada, en dos calzadas se incorporó el texto con el mismo identificador.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 4)
-- [ ] Entregar el archivo RELACION_CAD_CIV.xlsx con la información solicitada para las dos fases presentadas. — IDU ×1 `G098`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «14. Se solicita la entrega del archivo (RELACION_CAD_CIV.xlsx) con la información solicitada, para las dos fases presentadas.» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 11)
-- [ ] Incluir el Código de Identificación Vial (CIV) para todos los elementos y ajustar el elemento 'ELEMENTO PUENTE POLIGONO' desglosándolo en sus componentes válidos como Aleta Estribo, Dado, Rampa Puente, Tablero, etc. — IDU ×1 `G104`
   - Normativa directo: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
   - Normativa directo: **GU-IC-06 §9.8 ¶2** —  Baranda  Viga  Losa de Aproximación  Barrera  Aleta Estribo  Pila  Cercha  Caisson  Pilote  Diafragma  Columna  Rampa Puente  GuardaRueda  Dado …
-  - «13. Es necesario incluir el Código de Identificación Vial – CIV para todos los elementos reportados el cual es solicitado en el formato, adicionalmente se debe …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 10)
-- [ ] Unificar las redes de ciclorruta identificadas: unir los IDs (5300005 y 5300006) en el ID 5300005, y unir los IDs (5300008 y 5300009) en el ID 5300008. — IDU ×1 `G163`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «6. En el elemento Red de Ciclorruta es necesario unificar las redes identificadas: (PK_ID_RedCiclorruta – 5300005 y 5300006) en (PK_ID_RedCiclorruta – …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 7)
-- [ ] Unificar los andenes identificados (PK_ID_Anden – 92082480 y 400004) en el nuevo ID (PK_ID_Anden - 92082479), y unificar los andenes (PK_ID_Anden – 92082487 y 400006) en el mismo nuevo ID. — IDU ×1 `G164`
-  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
-  - «4. Se solicita unificar los andenes identificados: (PK_ID_Anden – 92082480 y 400004) en (PK_ID_Anden - 92082479), (PK_ID_Anden – 92082487 y 400006) en …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 7)
-- [ ] Verificar que la información de los CIV 14000199-PK 507168 y CIV 14000166-PK 506897 coincida con el reporte de Excel. — IDU ×1 `G178`
+  - Normativa directo: **FO-IC-05 B.7.b** — Los elementos nuevos se codifican según rangos suministrados: SI NO Completitud % Observaciones: Los elementos nuevos se codifican según los rangos …
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
+  - «2. Se reitera la siguiente observación: en el archivo de AutoCAD “MVGVPL01.DWG” se deben identificar todas las calzadas con su respectivo CIV y PK_ID.» (DTE 20212150248313, `IDU/2021-08-14_2. 1. 120213561231691_00002-memo.pdf`, p. 8)
+  - «2. Se reitera la siguiente observación: en el archivo de AutoCAD “MVGVPL01.DWG” se deben identificar todas las calzadas con su respectivo CIV y PK_ID.» (DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 6)
+- [ ] **R-T07-04** Hacer coincidir CIV y PK_ID entre planos, tablas de reporte, GDB y FOIC09. — IDU ×6 `G011` `G178`
+  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
   - Normativa directo: **GU-IC-06 §7.1.1 ¶3** — FO-IC-09 intervenidos en la ejecución del contrato (aplica para cualquier etapa del _REPORTE_FINAL_ contrato). La información dispuesta en este archivo debe …
-  - «7. Se reitera la observación referida a los CIV 14000199-PK 507168, CIV 14000166-PK 506897, la información es diferente a la reportada en el archivo de Excel …» (DTE 20212150034243, `IDU/2021-02-22_141732_1.pdf`, p. 5)
-- [ ] Verificar y ajustar el archivo RelacionElementoConfiguración_IDU-1533.xlsx para corregir códigos de calzadas no entregados en la BDG y estructuras de pavimento sin configuración. — IDU ×1 `G180`
+  - «2. El registro de las intervenciones en los planos CAD debe coincidir con la presentada en la GDB, y el archivo de Excel …» (DTE 20212150303513, `IDU/2021-09-28_120213561432511_00002.pdf`, p. 3)
+  - «4. Se reitera la siguiente observación: los CIV y PK_ID que se encuentran en las tablas de reporte deben coincidir no solo con los planos, sino también con la …» (DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 7)
+- [ ] **R-T07-08** Diligenciar RELACION_CAD_CIV.xlsx y RelacionElementoConfiguración de forma coherente con la BDG. — IDU ×2 `G098` `G180`
+  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
   - Normativa directo: **GU-IC-06 §7.1.2 ¶3** — proyecto. Se debe duplicar o crear un NUEVO ARCHIVO si en el proyecto se tiene más de un tipo de estructura en las calzadas o losas. Está identificada con …
   - Normativa parcial: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
+  - «14. Se solicita la entrega del archivo (RELACION_CAD_CIV.xlsx) con la información solicitada, para las dos fases presentadas.» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 11)
   - «Se solicita verificar y realizar los ajustes respectivos en el archivo (RelacionElementoConfiguración_IDU-1533.xlsx) toda vez que son presentados códigos de …» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 9)
-- [ ] Corregir los PK_ID que difieren del alistamiento IDU, sobre todo en los extremos sur y norte del grupo 4. — interventoría ×3 `G192`
-  - Normativa directo: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
-  - «se determina que algunos PK_ID de elementos presentados en la GDB ajustada por el contratista difieren de los alistamientos» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 9)
-- [ ] Todo registro con CIV debe tener PK y viceversa. — interventoría ×2 `G208`
+- [ ] **R-T07-03** No repetir un PK_ID entre registros del mismo feature class ni entre elementos en los planos. — IDU ×1 · interventoría ×1 `G066` `G265`
+  - Normativa directo: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
+  - «4. En el archivo digital MVGVPL01.dwg ajustar el texto PK_Calzada, en dos calzadas se incorporó el texto con el mismo identificador.» (DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 4)
+  - «Se presenta duplicidad de registros con el mismo numero de PK_ID» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 20)
+- [ ] **R-T07-07** Unificar los identificadores de elementos continuos (redes de ciclorruta, andenes) según lo indicado por el IDU. — IDU ×1 `G163` `G164`
+  - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
+  - «6. En el elemento Red de Ciclorruta es necesario unificar las redes identificadas: (PK_ID_RedCiclorruta – 5300005 y 5300006) en (PK_ID_RedCiclorruta – …» (DTINI 20232350161243, `IDU/2023-07-04_20232350161243(1).pdf`, p. 7)
+- [ ] **R-T07-02** Asegurar que todo registro con CIV tenga PK_ID y viceversa. — interventoría ×2 `G208`
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de las relación entre eleme** — Verificación de las relación entre elementos y/o tablas: Se verifica la relación entre elementos y/o tablas (el dato que debe ser incorporado en el atributo …
   - Normativa parcial: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
   - «existen registros con número de CIV pero sin PK (OBJECTID 86) y viceversa» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 19)
   - «existen registros con número de CIV pero sin PK (OBJECTID 86) y viceversa» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15)
-- [ ] Actualizar los PK_ID de los pompeyanos a los publicados en el SIGIDU. — interventoría ×1 `G211`
-  - Normativa directo: **FO-IC-05 B.7.b** — Los elementos nuevos se codifican según rangos suministrados: SI NO Completitud % Observaciones: Los elementos nuevos se codifican según los rangos …
-  - «Los pompeyanos contenidos en la GDB presentada por el contratista con PK_ID» (STEST 202434601243021, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 8)
-- [ ] Diligenciar Tipo de Puente y CIV en la capa Puente. — interventoría ×1 `G224`
-  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
-  - Normativa parcial: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
-  - «Puente: se incluye nueva capa, faltando el diligenciamiento de los campos Tipo de Puente y CIV.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16)
-- [ ] No borrar el CIV al corregir atributos: la DTINI ya lo entregó. — interventoría ×1 `G262`
+- [ ] **R-T07-05** No borrar los CIV entregados por la DTINI al corregir atributos. — interventoría ×1 `G262`
   - Normativa directo: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
   - «se han omitido en la mayoría de Feature Class los CIV, a pesar de que estos han sido proporcionados por la DTINI» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16)
-- [ ] No duplicar PK_ID entre registros de un mismo feature class. — interventoría ×1 `G265`
-  - Normativa directo: **VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ** — Verificación de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla: Inexistencia de duplicidad del atributo PK_ID_Xxxxx de cada elemento y/o tabla.
-  - «Se presenta duplicidad de registros con el mismo numero de PK_ID» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 20)
-- [ ] Solicitar por la interventoría la actualización del alistamiento para los elementos sin codificación IDU. — interventoría ×1 `G286`
+- [ ] **R-T07-06** Para elementos sin codificación IDU, solicitar por medio de la interventoría la actualización del alistamiento. — interventoría ×1 `G286`
   - Normativa directo: **GU-IC-06 §7.1.1 ¶5** — requerir agregar un nuevo elemento, atributo o dominio se deberá hacer el requerimiento a la DTE a través del correo electrónico SERVIDORDEMAPAS@IDU.GOV.CO o …
   - Normativa parcial: **FO-IC-05 B.7.b** — Los elementos nuevos se codifican según rangos suministrados: SI NO Completitud % Observaciones: Los elementos nuevos se codifican según los rangos …
   - «existen elementos como pompeyanos, estaciones, y elementos puente que no contienen codificación asignada por el IDU» (STEST 202434601243021, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 8)
 
-## T03. Archivo base CAD y referencias externas
-
-- [ ] El campo REFERENCIA en el archivo MVGVPL01.dwg se diligenció con un solo archivo XREF, pero visualmente existen dos archivos relacionados. — IDU ×2 `G031`
-  - Normativa parcial: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «11. En el archivo MVGVPL01.dwg, el campo del formato REFERENCIA se diligenció con un solo archivo como XREF o referencia externa y como se aprecia en la imagen …» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 7)
-  - «6. En el campo del formato REFERENCIA solamente se diligenció un solo archivo como XREF o referencia externa y como se aprecia en la imagen se tienen (2) …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6)
-- [ ] Realizar ajustes pertinentes ya que algunas referencias de los planos no están cargando correctamente. — IDU ×2 `G041`
-  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «4. Algunas referencias de los planos no están cargando correctamente, por lo tanto, se solicita realizar los ajustes pertinentes.» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 6)
-  - «3. Las referencias de los planos no cargan de manera correcta, se recomienda realizar los ajustes necesarios.» (DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 6)
-- [ ] Mover la subcarpeta de referencias externas (xRef) a D.2.BaseDWG. — IDU ×1 `G049`
-  - Normativa parcial: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «En el ejemplo de la ilustración 3, se presenta una subcarpeta» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
-- [ ] Incluir elementos de exploración con su layer respectivo en el archivo BASE-TOP-1385-2017 según DefinicionesElementos_V7.1.xlsx. — IDU ×1 `G058`
-  - Normativa directo: **Productos_DWG LAYERCAD 8** — Exploración: layer CAD EXPLORACION, geometría PUNTO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
-  - Normativa directo: **Productos_DWG LAYERCAD 9** — Bloque Exploración: layer CAD EXPLORACION, geometría BLOQUE, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
-  - «4. En el archivo BASE-TOP-1385-2017, se debe incluir los elementos de exploración con su layer respectivo de acuerdo al archivo DefinicionesElementos_V7.1.xlsx.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 4)
-- [ ] Corregir archivos con unidades de dibujo diferentes a metros (ej. BASE-IDU-1531-2018, CVURAR01) usando el comando DWGUNITS. — IDU ×1 `G078`
-  - Normativa directo: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
-  - «3. Aún se encuentran archivos con unidades de dibujo diferentes a metros; por ejemplo, en los archivos “BASE-IDU-1531-2018” y “CVURAR01”. Use el comando …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Crear un único archivo DWG con los elementos de la meta física del proyecto. — IDU ×1 `G086`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «.5.1 ArchivÓ Base Es necesariocrear un único archivo en formato ('.dwg), que contenga únicamentelos elementosde la meta física del proyecto. El nombre de este …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
-- [ ] Depurar el archivo base CAD 'BASE-IDU-1531-2018' para que solo presente los elementos de la meta física correspondientes con la base de datos geográfica. — IDU ×1 `G087`
-  - Normativa directo: **GU-IC-06 §8 ¶8** — 1. Contener únicamente los elementos de competencia del IDU, con su respectiva geometría relacionada en los archivos de Productos_DWG.xlsx. en la hoja de …
-  - «2. Depurar el archivo base CAD “ BASE-IDU-1531-2018”. Se recuerda que en este archivo solo debe presentar los elementos de la meta física, los que deben ser …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 2)
-- [ ] Las referencias externas (XREF) deben cargar correctamente; usar rutas relativas. — IDU ×1 `G114`
-  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «Es necesario verificar todos los archivos donde son utilizadas referencias externas, que estas carguen de manera correcta» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 7)
-- [ ] Se requiere validar la totalidad de archivos .dwg y ajustar la unidad de medida a metros, evidenciándose actualmente entrega en milímetros. — IDU ×1 `G151`
-  - Normativa directo: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
-  - «4. Se requiere validar la totalidad de archivos en formato .dwg y realizar el ajuste de la unidad de medida a metros, conforme a lo establecido en el numeral …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 5)
-- [ ] Utilizar el archivo como referencia externa (xref) para la presentación de todos los temas. — IDU ×1 `G166`
-  - Normativa directo: **GU-IC-06 §8 ¶9** —  Las letras XXX hacen referencia al número del contrato.  Las letras YYYY al año del contrato. Por ejemplo, BASE-01-IDU-5-2014. En el caso de proyectos de …
-  - «Este archivo debe ser utilizado como referencia externa (xref) para la presentaciónde todos los temas a entregar para cada una de las etapas objeto del …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
-- [ ] Vincular elementos no incluidos en la meta física como referencia externa en un archivo 'BASE-02-IDU', asegurando que solo los elementos estipulados en 'productos_DWG.xlsx' aparezcan en 'BASE-01IDU'. — IDU ×1 `G184`
-  - Normativa directo: **GU-IC-06 §8 ¶8** — 1. Contener únicamente los elementos de competencia del IDU, con su respectiva geometría relacionada en los archivos de Productos_DWG.xlsx. en la hoja de …
-  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «Por otra parte, se informa que los elementos que no hacen parte de la meta física del contrato, se pueden vincular como una referencia externa en un archivo …» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 3)
-- [ ] Atender integralmente: el nombre de la carpeta de referencias externas debe ser xRef, no XREF. — interventoría ×3 `G189`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «reemplazando el nombre de la carpeta de referencias externas con mayúscula fija» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
-- [ ] Las referencias externas (XREF) de los DWG deben resolverse sin errores. — interventoría ×1 `G254`
-  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «Error en DWG de Av. Esperanza» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 9)
-- [ ] Los planos de localización deben entregarse como dibujo con referencias externas resueltas, no como imagen. — interventoría ×1 `G257`
-  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - Normativa parcial: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
-  - «el mismo corresponde a una imagen con problemas de referencia externa» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
-- [ ] Referencias externas (XREF) corregidas. — interventoría ×1 `G278`
-  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
-  - «XREF: se atendieron las observaciones.» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-
 ## T04. Layers, filtros y geometría en CAD
 
-- [ ] De acuerdo a la Guía GUIC06 se debe eliminar los elementos o layers que no se encuentre en el dibujo. — IDU ×3 `G018`
+- [ ] **R-T04-01** Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0. — IDU ×5 · interventoría ×1 `G025` `G030` `G058` `G072` `G216` `G263`
+  - Normativa directo: **Productos_DWG LAYERCAD 25** — Matera: layer CAD MATERA, geometría PUNTO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
+  - Normativa parcial: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
+  - Normativa parcial: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
+  - Normativa directo: **Productos_DWG LAYERCAD 8** — Exploración: layer CAD EXPLORACION, geometría PUNTO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
+  - Normativa directo: **Productos_DWG LAYERCAD 9** — Bloque Exploración: layer CAD EXPLORACION, geometría BLOQUE, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
+  - «3. En el plano de Diseño Geométrico se encuentra el layer MU_MATERA_C pero la etapa entregada es de Estudios y Diseños, se debe ajustar de acuerdo al archivo …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 3)
+  - «3. En el plano de Diseño Geométrico se encuentra el layer MU_MATERA_C pero la etapa entregada es de Estudios y Diseños, se debe ajustar de acuerdo al archivo …» (OTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 4)
+- [ ] **R-T04-04** Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base. — IDU ×3 · interventoría ×2 `G079` `G115` `G181` `G213` `G214` `G222` `G275`
+  - Normativa directo: **GU-IC-06 §8 ¶4** — o entidad que entrega la información como se muestra en la Figura 4, de acuerdo con esto, el contratista elegirá el layout de su etapa o temática y eliminará …
+  - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
+  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
+  - «4. Aún se encuentran archivos que no cumplen el estándar de capas; por ejemplo, el archivo “CVURAR01” no cumple con la agrupación de las capas por filtros. …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
+  - «1. Los Layers del plano BASE-1531-2018.DWG deben estar dentro de los filtros que se encuentran establecidos en el alistamiento, y su nomenclatura debe» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 5)
+- [ ] **R-T04-05** Eliminar los layers sin información y los elementos que no pertenecen al dibujo. — IDU ×3 `G018`
   - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
   - «7. De acuerdo a la Guía GUIC06 se debe eliminar los elementos o layers que no se encuentre en el dibujo.» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6)
   - «7. De acuerdo a la Guía GUIC06 se debe eliminar los elementos o layers que no se encuentre en el dibujo.» (DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5)
-- [ ] Ajustar el layer MU_MATERA_C en el plano de Diseño Geométrico para la etapa de Estudios y Diseños según el archivo DefinicionesElementos_V7.1.xlsx. — IDU ×2 `G025`
-  - Normativa directo: **Productos_DWG LAYERCAD 25** — Matera: layer CAD MATERA, geometría PUNTO, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
-  - «3. En el plano de Diseño Geométrico se encuentra el layer MU_MATERA_C pero la etapa entregada es de Estudios y Diseños, se debe ajustar de acuerdo al archivo …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 3)
-  - «3. En el plano de Diseño Geométrico se encuentra el layer MU_MATERA_C pero la etapa entregada es de Estudios y Diseños, se debe ajustar de acuerdo al archivo …» (OTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 4)
-- [ ] Asegurar que la geometría del elemento y su nomenclatura cumplan con la clasificación de la Guía IC-06, identificando plenamente la nomenclatura vial, código CIV e identificador PK. — IDU ×2 `G030`
-  - Normativa parcial: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - Normativa parcial: **FO-IC-05 B.5** — Los elementos se encuentran codificados SI NO Observaciones: Todos los elementos se encuentran codificados según la base geográfica suministrada por el IDU o …
-  - «2. Se debe tener en cuenta el tipo de geometría del elemento, y la nomenclatura de acuerdo con la clasificación del elemento de acuerdo con su representación, …» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 2)
-  - «Se debe tener en cuenta el tipo de geometría del elemento, y la nomenclatura de acuerdo con la clasificación del elemento» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
-- [ ] Ajustar el archivo base para que cada elemento utilice un solo tipo geométrico (Polyline), eliminando mezclas como Line y Polyline en elementos REDCICLORRUTA_C. — IDU ×1 `G063`
+- [ ] **R-T04-02** Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados. — IDU ×1 · interventoría ×3 `G063` `G218` `G269` `G282` `G293` `G294`
   - Normativa directo: **Productos_DWG LAYERCAD 76** — Red de Ciclorruta: layer CAD REDCICLORRUTA, geometría LÍNEA, estados E: EXISTENTE D: DISEÑO C: INTERVENIDO
-  - «6. En el archivo base presentado (BASE-IDU-1533-2018.dwg) en algunos elementos son utilizado más de un tipo (ver tabla 2), por lo cual se solicita realizar el …» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 7)
-- [ ] Ajustar los elementos del archivo base para cumplir con el nombre (layer) y geometría, corrigiendo las discrepancias mostradas en la tabla 2 y asegurando que los elementos tipo punto tengan su respectiva representación de bloque. — IDU ×1 `G072`
   - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «8. Se requiere el ajuste de los elementos presentados en el archivo base (BASE-IDU-1531-2018.dwg), debido a que los elementos deben cumplir tanto en el nombre …» (STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 7)
-- [ ] Corregir archivos que no cumplen el estándar de capas y agrupación por filtros (ej. CVURAR01). — IDU ×1 `G079`
-  - Normativa directo: **GU-IC-06 §8 ¶4** — o entidad que entrega la información como se muestra en la Figura 4, de acuerdo con esto, el contratista elegirá el layout de su etapa o temática y eliminará …
-  - «4. Aún se encuentran archivos que no cumplen el estándar de capas; por ejemplo, el archivo “CVURAR01” no cumple con la agrupación de las capas por filtros. …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
-- [ ] Entregar la Hoja LAYOUT_CIV según lineamientos del INSTRUCTIVO y eliminar el resto de hojas del archivo 'Productos_DWG.xlsx' suministrado. — IDU ×1 `G100`
+  - «6. En el archivo base presentado (BASE-IDU-1533-2018.dwg) en algunos elementos son utilizado más de un tipo (ver tabla 2), por lo cual se solicita realizar el …» (DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 7)
+  - «se encuentran elementos con geometría Polilínea y Bloques (más de una geometría, no permitido)» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
+- [ ] **R-T04-09** Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla. — IDU ×1 · interventoría ×2 `G100` `G226` `G233` `G234` `G237` `G247`
   - Normativa parcial: **GU-IC-06 §8.2 ¶1** — La ejecución de los proyectos en las etapas de (Diseño, Ejecución, Diagnostico, Conservación) generará como producto obligatorio la entrega de los siguientes …
+  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
   - «3. Se debe entregar la Hoja LAYOUT_CIV según los lineamientos de la hoja INSTRUCTIVO LAYOUT_CIV y eliminar el resto de hojas del archivo “Productos_DWG.xlsx” …» (DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 3)
-- [ ] Los Layers del plano BASE-1531-2018.DWG deben estar dentro de los filtros establecidos en el alistamiento y su nomenclatura debe cumplir con lo requerido. — IDU ×1 `G115`
-  - Normativa directo: **GU-IC-06 §8 ¶4** — o entidad que entrega la información como se muestra en la Figura 4, de acuerdo con esto, el contratista elegirá el layout de su etapa o temática y eliminará …
-  - «1. Los Layers del plano BASE-1531-2018.DWG deben estar dentro de los filtros que se encuentran establecidos en el alistamiento, y su nomenclatura debe» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 5)
-- [ ] Verificar y ajustar el archivo base (BASE-IDU-1309-2018.dwg) aplicando filtros, estados correctos y lineamientos de la guía GU-IC-06. — IDU ×1 `G181`
-  - Normativa directo: **GU-IC-06 §8 ¶4** — o entidad que entrega la información como se muestra en la Figura 4, de acuerdo con esto, el contratista elegirá el layout de su etapa o temática y eliminará …
-  - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
-  - «Se solicita verificar y ajustar el archivo base (BASE-IDU-1309-2018.dwg) siguiendo los lineamientos definidos en la guía GU-IC-06, debido a que existen …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 7)
-- [ ] Todos los layers, incluidos achurados, capas adicionales y mobiliario, llevan el sufijo de estado. — interventoría ×2 `G209`
+  - «tampoco se ha diligenciado la hoja denominada LAYOUT_CIV» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
+- [ ] **R-T04-03** Añadir a todos los layers, incluidos achurados, capas adicionales y mobiliario, el sufijo de estado (E, D o C) de la etapa. — interventoría ×2 `G209`
   - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
   - «Los layers contenidos en achurados no indican estado (E,D,P,C).» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 11)
   - «Los nombres de layers no indican el estado en todos los casos (E, D, P).» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] Agrupar todos los layers en sus filtros (numeral 7.1.2); los diseños de espacio público carecen de filtros. — interventoría ×1 `G213`
-  - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
-  - «no todos los layers están agrupados en los respectivos filtros tal como se indica en el numeral 7.1.2» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 12)
-- [ ] Aplicar la estandarización de la guía y los nombres y filtros de layers a todos los planos, no solo al mapa base. — interventoría ×1 `G214`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
-  - «es para todos los planos elaborados en la respectiva etapa y no solo para el mapa base» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 12)
-- [ ] Cada achurado en la capa de su elemento. — interventoría ×1 `G215`
-  - Normativa directo: **GU-IC-06 §8 ¶10** — Para la representación de los achurados se podrán generar tantos archivos como sean necesarios y se deberán utilizar en los demás productos como referencias …
-  - «no existe consistencia en las capas de los achurados, ya que existen entidades como coberturas vegetales incluidos en los achurados de concreto» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 11)
-- [ ] Cada elemento va en su layer; no en layers de otros elementos. — interventoría ×1 `G216`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «Existen elementos en niveles de representación que no se corresponden.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
-- [ ] Cada layer admite una sola geometría; no mezclar polilíneas y bloques. — interventoría ×1 `G218`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «se encuentran elementos con geometría Polilínea y Bloques (más de una geometría, no permitido)» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
-- [ ] Definir filtros de layer por esquema o temática, incluidas las convenciones. — interventoría ×1 `G222`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «No existen filtros de Layer por esquema o temática.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] Describir todos los niveles del archivo BASE en el reporte Productos_DWG. — interventoría ×1 `G223`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «No todos los niveles del archivo BASE-02 se encuentran descritos en el reporte» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
-- [ ] Diligenciar la hoja obligatoria LAYOUT_CIV (capítulo 8.2). — interventoría ×1 `G226`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «tampoco se ha diligenciado la hoja denominada LAYOUT_CIV» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-- [ ] Entregar el listado de nuevos layers y el de CIV por Layout. — interventoría ×1 `G233`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «Se debe presentar listado de nuevos Layer y listado de CIV por Layout.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] Entregar la lista de CIV por Layout. — interventoría ×1 `G234`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «se reitera el no cumplimiento con la entrega de la lista de CIV por Layout» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 11)
-- [ ] Entregar los reportes Excel de Productos CAD (LAYOUT_CIV y NUEVOSLAYER). — interventoría ×1 `G237`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «De manera general se realiza observación por la falta de entrega de los reportes en formato Excel, correspondientes a Productos CAD» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 9)
-- [ ] Grillas, coordenadas y textos deben ir en layers del grupo o filtro ROTULO. — interventoría ×1 `G242`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «Los niveles de grillas y coordenadas no se encuentran definidos en el grupo o filtro ROTULO.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
-- [ ] Incluir ConfiguracionCapaEstructura y la lista de nuevos layers en Reportes. — interventoría ×1 `G247`
-  - Normativa directo: **GU-IC-06 §8.2 ¶6** — Ésta información debe ser revisada y aprobada por la interventoría y validada por el área supervisora del contrato, deberá contener la meta física que será …
-  - «No se incluye archivos de "Configuracióncapaestructura" y lista de nuevos "Layers" utilizados en el proyecto.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] No dejar elementos de diseño en el Layer 0. — interventoría ×1 `G263`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «Existen elementos de diseño en Layer 0.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] No dibujar achurados en layers de otros elementos. — interventoría ×1 `G264`
-  - Normativa parcial: **GU-IC-06 §8 ¶10** — Para la representación de los achurados se podrán generar tantos archivos como sean necesarios y se deberán utilizar en los demás productos como referencias …
-  - «Existen achurados en niveles de otros elementos.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] No mezclar elementos o capas distintos en un mismo bloque. — interventoría ×1 `G269`
-  - Normativa parcial: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «Se presentan bloques donde se mezclan diferentes elementos o capas en uno solo.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
-- [ ] Organizar los achurados por capas y filtros, sin mezclarlos con otros elementos. — interventoría ×1 `G274`
+- [ ] **R-T04-06** Dibujar cada achurado en la capa de su elemento y organizarlo en su filtro. — interventoría ×2 `G215` `G264` `G274`
   - Normativa directo: **GU-IC-06 §8 ¶10** — Para la representación de los achurados se podrán generar tantos archivos como sean necesarios y se deberán utilizar en los demás productos como referencias …
   - Normativa parcial: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
-  - «Los achurados no están organizados por capas y filtros.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
-- [ ] Organizar los layers en filtros por temática, como en la BDG. — interventoría ×1 `G275`
-  - Normativa directo: **GU-IC-06 §8 ¶5** — y organizados por filtros con la misma estructura de la BDG como se muestra en la Figura 3, aquellos layers que no se utilicen deberán ser eliminados. Según la …
-  - «Se debe generar un filtro por grupo de layers según la temática.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
-- [ ] Presentar el conteo de elementos por layer. — interventoría ×1 `G276`
+  - «no existe consistencia en las capas de los achurados, ya que existen entidades como coberturas vegetales incluidos en los achurados de concreto» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 11)
+  - «Existen achurados en niveles de otros elementos.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 10)
+- [ ] **R-T04-08** Registrar en Productos_DWG.xlsx todos los layers y niveles de los planos, los layers nuevos y el conteo de elementos por layer. — interventoría ×2 `G223` `G276` `G277` `G280`
   - Normativa parcial: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «No se presenta conteo de elementos para cada Layer o nivel tal como recomienda el IDU.» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
-- [ ] Productos_DWG.xlsx debe incluir todos los niveles o layers de los planos. — interventoría ×1 `G277`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
+  - «No todos los niveles del archivo BASE-02 se encuentran descritos en el reporte» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3)
   - «este no se ha diligenciado integralmente. No se incluyen todos los niveles o layers contenidos en los planos» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8)
-- [ ] Registrar en Productos_DWG todos los layers nuevos de todos los planos. — interventoría ×1 `G280`
+- [ ] **R-T04-07** Ubicar grillas, coordenadas y textos del rótulo en los layers del filtro ROTULO. — interventoría ×1 `G242`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «El contratista incluyo únicamente 5 capas o nuevos layers en el archivo de Excel» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 11)
-- [ ] Respetar la geometría definida por LAYERCAD para cada elemento. — interventoría ×1 `G282`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «No se cumple con la geometría para los elementos presentados en el archivo DWG (punto, línea, polígono).» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
-- [ ] Una sola geometría por capa. — interventoría ×1 `G293`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «errores en capas como Contenedor Raíz, la cual incluye diferentes geometrías como líneas, achurados y bloques» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 12)
-- [ ] Usar bloques solo donde corresponde y con el mismo criterio en todos los planos (no mezclar HATCH y bloque). — interventoría ×1 `G294`
-  - Normativa directo: **Productos_DWG LAYERCAD regla** — Representar cada elemento en el layer CAD, tipo de geometría y estado definidos en LAYERCAD.
-  - «algunos elementos se están incluyendo como bloques sin realmente serlo» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 11)
+  - «Los niveles de grillas y coordenadas no se encuentran definidos en el grupo o filtro ROTULO.» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 11)
 
 ## T11. Proceso de entrega y control de calidad
 
-- [ ] Revisar integralmente todos los productos a entregar para garantizar que las correcciones no afecten otros elementos y eviten reprocesos. — IDU ×10 `G003`
+- [ ] **R-T11-01** Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista. — IDU ×11 · interventoría ×2 `G003` `G144` `G245` `G246` `G250` `G279`
   - Normativa parcial: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
+  - Normativa parcial: **GU-IC-06 §11.1 ¶1** — El contenido de los archivos, su calidad, su completitud y autenticidad de la firma digital, es responsabilidad de los actores de infraestructura, por tanto, …
   - «Se recomienda revisar integralmente todos y cada uno de los productos a entregar, de manera que puedan garantizar, tras las actividades de ajuste o corrección, …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 6)
   - «Se recomienda revisar integralmente todos y cada uno de los productos a entregar, de manera que puedan garantizar, tras las actividades de ajuste o corrección, …» (DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 3)
-- [ ] Se recuerda revisar integralmente la información para garantizar que todos los productos digitales cumplan los estándares de calidad exigidos por la entidad. — IDU ×1 `G144`
-  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - Normativa parcial: **GU-IC-06 §11.1 ¶1** — El contenido de los archivos, su calidad, su completitud y autenticidad de la firma digital, es responsabilidad de los actores de infraestructura, por tanto, …
-  - «Se recuerda que las observaciones previas no deben considerarse exhaustivas y tanto el contratista como la interventoría deben revisar integralmente la …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 8)
-- [ ] Se reitera la solicitud de Mesa de trabajo requerida mediante correo electrónico de 23/07/2020, ya que el contratista manifiesta que requiere dicha mesa para resolver inquietudes. — IDU ×1 `G146`
+- [ ] **R-T11-04** Solicitar mesa de trabajo con la DTINI solo después de atender todas las observaciones. — IDU ×1 · interventoría ×1 `G146` `G252`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «3. Se reitera la solicitud de Mesa de trabajo requerida mediante correo electrónico de 23/07/2020. Aunque el memorando de observaciones a tratar en la mesa de …» (DTE 20202150230133, `IDU/2020-12-01_02 DTE 20202150230133.pdf`, p. 6)
-- [ ] Cada remisión debe responder una a una las observaciones previas de la interventoría. — interventoría ×1 `G219`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «este no contiene respuesta tácita al tratamiento de cada observación elevado por la interventoría» (sin radicado, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
-- [ ] Implementar controles de calidad a cada producto digital antes de entregar. — interventoría ×1 `G245`
-  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - «no implementar los controles de calidad a cada uno de los productos digitales derivan en un desgaste innecesario» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 7)
-- [ ] Implementar un control de calidad que garantice que lo entregado es la versión aprobada y firmada. — interventoría ×1 `G246`
-  - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - «Se debe implementar un proceso de calidad para que en las futuras entregas, los productos como planos, informes y anexos» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8)
-- [ ] La aplicación de la guía GU-IC-06 a toda la información es responsabilidad exclusiva del contratista. — interventoría ×1 `G250`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «la responsabilidad es exclusiva del contratista en la aplicación de los criterios y requerimientos de la Guía» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17)
-- [ ] La mesa de trabajo con la DTINI se solicita solo después de atender todas las observaciones. — interventoría ×1 `G252`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «dicha mesa de trabajo se gestionará con el IDU una vez el Interventor verifique» (sin radicado, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-- [ ] No reincidir en observaciones de versiones previas: la entrega se objeta. — interventoría ×1 `G270`
+- [ ] **R-T11-03** No reincidir en observaciones anteriores, no re-radicar archivos sin cambios y no empeorar la calidad de una entrega previa; en esos casos la entrega se objeta. — interventoría ×3 `G270` `G271` `G292`
   - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «reinciden en las observaciones y hallazgos de versiones previas» (sin radicado, `IDU/2025-01-09_1443_723824_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 10)
-- [ ] No se puede re-radicar los mismos archivos sin cambios como respuesta a las observaciones; deben corregirse y justificarse. — interventoría ×1 `G271`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
   - «las versiones de los archivos son las mismas entre los productos radicados» (sin radicado, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 7)
-- [ ] Reforzar el control de calidad de los productos digitales antes de entregar. — interventoría ×1 `G279`
+- [ ] **R-T11-02** Responder una a una las observaciones previas, incluidas las tablas de revisión y de validación de la GDB. — interventoría ×2 `G219` `G284` `G285`
   - Normativa directo: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
-  - «Dada la cantidad de observaciones presentadas, se solicita al contratista que se refuercen los controles de calidad a los productos digitales» (sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 15)
-- [ ] Responder cada observación de las tablas de la revisión inicial. — interventoría ×1 `G284`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
+  - Normativa parcial: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
+  - «este no contiene respuesta tácita al tratamiento de cada observación elevado por la interventoría» (sin radicado, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
   - «el contratista no da respuesta a las observaciones contenidas en las tablas 3, 4, 5, 6, 7 y 8» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 12)
-- [ ] Una segunda entrega no puede empeorar la calidad de la primera; se objeta la entrega. — interventoría ×1 `G292`
-  - Práctica observada: no se confirmó respaldo escrito entre los candidatos revisados.
-  - «se refleja una disminución en la calidad de los productos digitales» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17)
+
+## T03. Archivo base CAD y referencias externas
+
+- [ ] **R-T03-02** Verificar que todas las referencias externas carguen sin errores, con rutas relativas. — IDU ×3 · interventoría ×2 `G041` `G114` `G254` `G278`
+  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
+  - «4. Algunas referencias de los planos no están cargando correctamente, por lo tanto, se solicita realizar los ajustes pertinentes.» (STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 6)
+  - «3. Las referencias de los planos no cargan de manera correcta, se recomienda realizar los ajustes necesarios.» (DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 6)
+- [ ] **R-T03-01** Mantener un único archivo base con solo los elementos de la meta física y coherente con la BDG; los elementos ajenos van en BASE-02 como referencia externa. — IDU ×3 `G086` `G087` `G184`
+  - Normativa directo: **GU-IC-06 §8 ¶8** — 1. Contener únicamente los elementos de competencia del IDU, con su respectiva geometría relacionada en los archivos de Productos_DWG.xlsx. en la hoja de …
+  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
+  - «.5.1 ArchivÓ Base Es necesariocrear un único archivo en formato ('.dwg), que contenga únicamentelos elementosde la meta física del proyecto. El nombre de este …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
+  - «2. Depurar el archivo base CAD “ BASE-IDU-1531-2018”. Se recuerda que en este archivo solo debe presentar los elementos de la meta física, los que deben ser …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 2)
+- [ ] **R-T03-05** Configurar las unidades de dibujo en metros en todos los DWG (DWGUNITS). — IDU ×2 `G078` `G151`
+  - Normativa directo: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
+  - «3. Aún se encuentran archivos con unidades de dibujo diferentes a metros; por ejemplo, en los archivos “BASE-IDU-1531-2018” y “CVURAR01”. Use el comando …» (DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3)
+  - «4. Se requiere validar la totalidad de archivos en formato .dwg y realizar el ajuste de la unidad de medida a metros, conforme a lo establecido en el numeral …» (DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 5)
+- [ ] **R-T03-04** Ubicar las referencias externas en la carpeta xRef (escrita así) dentro de D.2.BaseDWG. — IDU ×1 · interventoría ×3 `G049` `G189`
+  - Normativa parcial: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
+  - «En el ejemplo de la ilustración 3, se presenta una subcarpeta» (STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)
+- [ ] **R-T03-03** Presentar todos los temas con el archivo base como referencia externa; los planos de localización van como dibujo, no como imagen. — IDU ×1 · interventoría ×1 `G166` `G257`
+  - Normativa directo: **GU-IC-06 §8 ¶9** —  Las letras XXX hacen referencia al número del contrato.  Las letras YYYY al año del contrato. Por ejemplo, BASE-01-IDU-5-2014. En el caso de proyectos de …
+  - Normativa directo: **GU-IC-06 §8 ¶11** — información que aparece en otros archivos y que es necesaria para la presentación del plano o de la base a entregar. Al guardar las referencias externas, estas …
+  - Normativa parcial: **GU-IC-06 §8 ¶7** — formato .dwg que se usará como referencia externa en todos los planos en planta presentados para cada componente. Esta información se presentará en el Model …
+  - «Este archivo debe ser utilizado como referencia externa (xref) para la presentaciónde todos los temas a entregar para cada una de las etapas objeto del …» (OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4)
+  - «el mismo corresponde a una imagen con problemas de referencia externa» (sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2)

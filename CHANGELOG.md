@@ -15,6 +15,9 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 - `config/grupos-registro.csv` y `rag-gdb registrar-grupos` conservan los miembros de los
   294 grupos revisados; el checklist traslada enlaces normativos y revisiones al grupo
   actual que reúne la mayoría de sus observaciones, de modo que sobreviven a reconsolidar.
+- `config/requisitos-redaccion.csv` redacta el checklist como 93 requisitos genéricos y
+  verificables que agrupan los 294 grupos, con 7 reasignaciones de tema; checklist y matriz
+  la aplican y `docs/revision-editorial.md` resume criterios y puntos para validar.
 - `contratos.csv` incluye 1558, interventoría del contrato 1533.
 
 ### Fixed

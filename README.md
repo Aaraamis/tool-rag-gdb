@@ -189,6 +189,12 @@ checklist traslada cada decisión al grupo actual que reúne la mayoría de sus
 observaciones; si el grupo se dividió, vuelve a quedar pendiente. Tras revisar
 grupos nuevos, ejecutar `.venv/bin/rag-gdb registrar-grupos` (solo añade).
 
+La redacción del checklist vive en `config/requisitos-redaccion.csv`: cada grupo
+se asigna a un requisito (`R-Txx-nn`) con tema y texto. Los grupos que comparten
+requisito se presentan juntos, con frecuencia, enlaces y ejemplos sumados, y la
+matriz usa el mismo tema. Los grupos nuevos sin fila conservan su enunciado
+representativo. Criterios y decisiones pendientes: `docs/revision-editorial.md`.
+
 ## Revisión piloto
 
 Elegir PDF escaneados, con tablas, guías largas y comunicados con observaciones.

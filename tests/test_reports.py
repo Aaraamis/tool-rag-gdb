@@ -15,11 +15,11 @@ def test_matriz_lists_every_member_under_its_theme():
     member = {"ruta": "IDU/2023-03-29_1443_1.pdf", "id": "obs-001", "autor": "idu",
               "radicado_origen": "DTE 1", "pagina": 2, "resumen": "a | b"}
     grupos = {"temas": [{"tema": "T01", "nombre": "Uno"}, {"tema": "T02", "nombre": "Dos"}],
-              "grupos": [{"tema": "T01", "miembros": [member, {**member, "id": "obs-002"}]}]}
+              "grupos": [{"grupo": "G001", "tema": "T01", "miembros": [member, {**member, "id": "obs-002"}]}]}
     text = render_matriz(grupos, {"IDU/2023-03-29_1443_1.pdf": "348"}, today="2026-01-01")
     assert "2 observaciones de 1 documentos" in text
     assert text.count("| 2023-03-29 | 348 | idu |") == 2
-    assert "a \| b" in text
+    assert r"a \| b" in text
 
 
 def test_informe_counts_each_file_once():
@@ -34,3 +34,12 @@ def test_informe_counts_each_file_once():
     assert [f["estado"] for f in data["archivos"]] == ["procesado", "pendiente", "descartado"]
     assert data["ocr"] == ["IDU/b.pdf"] and data["sin_perfil"] == ["IDU/a.pdf", "IDU/c.pdf"]
     assert render_informe(data, today="2026-01-01").count("`IDU/") == 3
+
+
+def test_matriz_uses_editorial_theme_when_given():
+    member = {"ruta": "IDU/a.pdf", "id": "obs-001", "autor": "idu", "radicado_origen": None,
+              "pagina": 1, "resumen": "x"}
+    grupos = {"temas": [{"tema": "T01", "nombre": "Uno"}, {"tema": "T02", "nombre": "Dos"}],
+              "grupos": [{"grupo": "G001", "tema": "T01", "miembros": [member]}]}
+    text = render_matriz(grupos, {}, today="2026-01-01", themes_by_group={"G001": "T02"})
+    assert "| T01. Uno | 0 |" in text and "| T02. Dos | 1 |" in text

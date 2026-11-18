@@ -34,13 +34,14 @@ def _cell(text: str, limit: int | None = None) -> str:
     return text
 
 
-def render_matriz(grupos: dict, contracts: dict[str, str], today: str | None = None) -> str:
+def render_matriz(grupos: dict, contracts: dict[str, str], today: str | None = None,
+                  themes_by_group: dict[str, str] | None = None) -> str:
     contract_of = lambda ruta: contracts.get(ruta, SIN_CONTRATO)  # noqa: E731
     themes = {t["tema"]: t["nombre"] for t in grupos["temas"]}
     rows: dict[str, list[tuple]] = {code: [] for code in themes}
     for group in grupos["grupos"]:
         for m in group["miembros"]:
-            rows[group["tema"]].append((date_of(m["ruta"]), m["ruta"], m["id"], m))
+            rows[(themes_by_group or {}).get(group["grupo"], group["tema"])].append((date_of(m["ruta"]), m["ruta"], m["id"], m))
     total = sum(len(r) for r in rows.values())
     docs = len({m["ruta"] for g in grupos["grupos"] for m in g["miembros"]})
     unknown = sum(contract_of(r[1]) == SIN_CONTRATO for r in sum(rows.values(), []))
@@ -48,7 +49,8 @@ def render_matriz(grupos: dict, contracts: dict[str, str], today: str | None = N
         "# Matriz de observaciones GDB — borrador",
         "",
         f"> Generado por `rag-gdb matriz` el {today or date.today().isoformat()}: {total} observaciones de "
-        f"{docs} documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis).",
+        f"{docs} documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis; "
+        "el tema es el del requisito redactado en `config/requisitos-redaccion.csv` cuando existe).",
         "> **Contrato:** contrato de obra según `config/contratos-documentos.csv`, revisado por documento "
         "con su evidencia (asunto, texto o respuesta que cita el mismo radicado); "
         f"{unknown} de {total} observaciones quedan «{SIN_CONTRATO}» hasta revisar la primera página del PDF. "
@@ -71,12 +73,13 @@ def render_matriz(grupos: dict, contracts: dict[str, str], today: str | None = N
     return "\n".join(lines) + "\n"
 
 
-def write_matriz(grupos_path: Path, output: Path, contracts_path: Path) -> dict:
+def write_matriz(grupos_path: Path, output: Path, contracts_path: Path,
+                 themes_by_group: dict[str, str] | None = None) -> dict:
     grupos = json.loads(grupos_path.read_text(encoding="utf-8"))
     if not grupos.get("temas"):
         raise ValueError("grupos.json no tiene temas: ejecuta `rag-gdb consolidar` con config/temas.csv")
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(render_matriz(grupos, read_contracts(contracts_path)), encoding="utf-8")
+    output.write_text(render_matriz(grupos, read_contracts(contracts_path), themes_by_group=themes_by_group), encoding="utf-8")
     return {"observaciones": sum(len(g["miembros"]) for g in grupos["grupos"]),
             "documentos": len({m["ruta"] for g in grupos["grupos"] for m in g["miembros"]})}
 

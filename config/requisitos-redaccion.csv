@@ -1,0 +1,295 @@
+clave_grupo,grupo,tema_grupo,requisito_id,tema,requisito
+230ecb9f76130edc,G005,T01,R-T01-01,T01,"Entregar la totalidad de los productos de la etapa, con los anexos de cada carpeta del alistamiento (registro fotográfico, informes finales, entidades diferentes al IDU); la revisión se repite sobre todos ellos."
+39bbf5db17b0b5ab,G044,T01,R-T01-01,T01,"Entregar la totalidad de los productos de la etapa, con los anexos de cada carpeta del alistamiento (registro fotográfico, informes finales, entidades diferentes al IDU); la revisión se repite sobre todos ellos."
+ededcbef676f249f,G020,T01,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+1da43deaca3a081b,G099,T01,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+13c2d17d294da775,G101,T05,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+6fbb5fda818e3450,G125,T05,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+86063b187981e643,G147,T01,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+d95b4c5bd4acdd42,G157,T01,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+bd3de95347a058b9,G161,T01,R-T01-02,T01,"Verificar que no falten productos de ninguna especialidad: planos de localización, topografía, planta-perfil, componente vial, estructuras, espacio público y elementos como protectores de árboles."
+654ef2493eec1139,G205,T01,R-T01-03,T01,"Incluir y recodificar todos los planos modificados, aunque no se hubieran presentado antes, junto con el listado de diseños modificados."
+0ff8b07a72e9c328,G244,T01,R-T01-03,T01,"Incluir y recodificar todos los planos modificados, aunque no se hubieran presentado antes, junto con el listado de diseños modificados."
+0fe911c78d68874f,G217,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+afa06b022d81b935,G251,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+58b3999fe245bf71,G260,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+498dde2e23ffdaa3,G266,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+67277805b0063c6c,G272,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+fd236c9a6ab9aef9,G281,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+d6eb326607da9287,G283,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+0d8a0959c78bd601,G287,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+b0c7d22cd4811532,G291,T01,R-T01-04,T01,"Conservar exactamente la estructura de carpetas del alistamiento: nombres con su escritura exacta, niveles, codificación y numeración, cada informe en su carpeta y sin carpetas duplicadas."
+abc14c6e1bc5a6b6,G036,T01,R-T01-05,T01,No entregar carpetas obligatorias vacías ni archivos sueltos: incorporar la información o depurar la carpeta sin alterar la numeración.
+22e2b5974f424cff,G121,T01,R-T01-05,T01,No entregar carpetas obligatorias vacías ni archivos sueltos: incorporar la información o depurar la carpeta sin alterar la numeración.
+fb0d1246b3d1cf35,G243,T01,R-T01-05,T01,No entregar carpetas obligatorias vacías ni archivos sueltos: incorporar la información o depurar la carpeta sin alterar la numeración.
+dac4b885757b29e1,G015,T01,R-T01-06,T01,"Diligenciar EstructuraCarpetas.xlsx: registrar en CONTRATISTAS la entrega o no de cada carpeta, justificar contractual y técnicamente las no entregadas y no marcar «Ok» lo que no está."
+db9c6a84b1fe1f77,G268,T01,R-T01-06,T01,"Diligenciar EstructuraCarpetas.xlsx: registrar en CONTRATISTAS la entrega o no de cada carpeta, justificar contractual y técnicamente las no entregadas y no marcar «Ok» lo que no está."
+40c349f91395b8be,G156,T01,R-T01-07,T01,"Entregar los planos en DWG y en PDF, y los informes en DOCX editable y en PDF, en todas las carpetas."
+21ca8ef5191bbef8,G204,T01,R-T01-07,T01,"Entregar los planos en DWG y en PDF, y los informes en DOCX editable y en PDF, en todas las carpetas."
+96930e6ac27d24e7,G236,T01,R-T01-07,T01,"Entregar los planos en DWG y en PDF, y los informes en DOCX editable y en PDF, en todas las carpetas."
+3a9967d6c9ee6686,G240,T01,R-T01-07,T01,"Entregar los planos en DWG y en PDF, y los informes en DOCX editable y en PDF, en todas las carpetas."
+f0f85a8f8b8cc610,G220,T01,R-T01-08,T01,Firmar digitalmente los PDF de planos e informes por todos los responsables de contratista e interventoría (revisó y aprobó).
+0f2479171a307db2,G241,T01,R-T01-08,T01,Firmar digitalmente los PDF de planos e informes por todos los responsables de contratista e interventoría (revisó y aprobó).
+d6a5cd553d95c3e9,G235,T01,R-T01-09,T01,"Entregar las versiones aprobadas por la interventoría, no las iniciales."
+330251a63c766c7e,G212,T01,R-T01-10,T01,Acordar en mesa de trabajo el momento de entrega de PDF y firmas; en la mesa del 8/6/2021 se acordó DWG en la entrega inicial y PDF firmados tras la aprobación.
+aeafce674ff06fb1,G042,T02,R-T02-01,T02,Nombrar el archivo base CAD según la GU-IC-06 (BASE-IDU-XXX-YYYY.dwg).
+3321fd0f12db1b58,G033,T02,R-T02-02,T02,Nombrar cada DWG según la codificación de la guía y nombrar su layout igual al plano; el layout es único y el nombre coincide con el reportado en el rótulo.
+23af149509a96e61,G093,T02,R-T02-02,T02,Nombrar cada DWG según la codificación de la guía y nombrar su layout igual al plano; el layout es único y el nombre coincide con el reportado en el rótulo.
+b29bc51df7c40ed1,G132,T02,R-T02-02,T02,Nombrar cada DWG según la codificación de la guía y nombrar su layout igual al plano; el layout es único y el nombre coincide con el reportado en el rótulo.
+cefe1d32c762d3bf,G202,T02,R-T02-02,T02,Nombrar cada DWG según la codificación de la guía y nombrar su layout igual al plano; el layout es único y el nombre coincide con el reportado en el rótulo.
+369f70efefab0259,G255,T02,R-T02-02,T02,Nombrar cada DWG según la codificación de la guía y nombrar su layout igual al plano; el layout es único y el nombre coincide con el reportado en el rótulo.
+16b682990ec964d5,G261,T02,R-T02-03,T02,"Nombrar los informes solo con su codificación, sin nombres extensos ni sufijos."
+2ca37f267502f037,G273,T02,R-T02-03,T02,"Nombrar los informes solo con su codificación, sin nombres extensos ni sufijos."
+6e7f3fb81be9bea6,G113,T02,R-T02-04,T02,Nombrar los archivos de configuración de capas de las estructuras según la GU-IC-06.
+15448e30ec5dc1d0,G136,T02,R-T02-04,T02,Nombrar los archivos de configuración de capas de las estructuras según la GU-IC-06.
+5ed72c5105e9e8d5,G091,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+c0281c37b73cc277,G094,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+3023a78863c6bb7b,G122,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+e35790ac07e1ad50,G135,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+5203f23db0862e01,G142,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+f064398387742af0,G172,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+f7a4c15f4603fba1,G230,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+2aa13d46890c72a0,G253,T02,R-T02-05,T02,"Numerar planos y planchas de forma única y continua dentro de cada temática, siguiendo el orden de las carpetas (carátula y localización primero), sin repetidos ni saltos y con el total igual al entregado."
+373e85fb257c052f,G032,T02,R-T02-06,T02,"Usar el rótulo del alistamiento (ROTULO.xlsm) sin editar sus bloques ni eliminar campos, como los del topógrafo de constructor e interventoría."
+d4bfb6717f79feb1,G085,T02,R-T02-06,T02,"Usar el rótulo del alistamiento (ROTULO.xlsm) sin editar sus bloques ni eliminar campos, como los del topógrafo de constructor e interventoría."
+6d2f6778afe1a1bc,G089,T02,R-T02-06,T02,"Usar el rótulo del alistamiento (ROTULO.xlsm) sin editar sus bloques ni eliminar campos, como los del topógrafo de constructor e interventoría."
+7236d0937f96b3b2,G090,T02,R-T02-07,T02,"Diligenciar todos los campos del rótulo, incluidos CONSECUTIVO y cantidad de planchas, de forma coherente con los layouts."
+6af8ac0d451fc275,G139,T02,R-T02-07,T02,"Diligenciar todos los campos del rótulo, incluidos CONSECUTIVO y cantidad de planchas, de forma coherente con los layouts."
+c8529ed8faccb39b,G182,T02,R-T02-07,T02,"Diligenciar todos los campos del rótulo, incluidos CONSECUTIVO y cantidad de planchas, de forma coherente con los layouts."
+9c2d508cdfdd20a7,G191,T02,R-T02-08,T02,Completar la tabla de modificaciones del rótulo con todas las versiones y sus fechas.
+61567e8904dbd5cd,G225,T02,R-T02-08,T02,Completar la tabla de modificaciones del rótulo con todas las versiones y sus fechas.
+c8650ec16e08524c,G031,T03,R-T02-09,T02,"Citar en el campo REFERENCIA del rótulo todos los archivos de referencia externa reales, con su nombre exacto."
+79ac47bd97c4367a,G065,T02,R-T02-09,T02,"Citar en el campo REFERENCIA del rótulo todos los archivos de referencia externa reales, con su nombre exacto."
+6340e392ca763412,G198,T02,R-T02-09,T02,"Citar en el campo REFERENCIA del rótulo todos los archivos de referencia externa reales, con su nombre exacto."
+a3ab1a8a95b473b2,G120,T02,R-T02-10,T02,Indicar en las tablas de reporte el formato de fecha utilizado (año/mes/día).
+5a560f90a4529020,G086,T03,R-T03-01,T03,Mantener un único archivo base con solo los elementos de la meta física y coherente con la BDG; los elementos ajenos van en BASE-02 como referencia externa.
+ce71533e2c6b6e32,G087,T03,R-T03-01,T03,Mantener un único archivo base con solo los elementos de la meta física y coherente con la BDG; los elementos ajenos van en BASE-02 como referencia externa.
+de600285063810ef,G184,T03,R-T03-01,T03,Mantener un único archivo base con solo los elementos de la meta física y coherente con la BDG; los elementos ajenos van en BASE-02 como referencia externa.
+9be2a7a19166ef1b,G041,T03,R-T03-02,T03,"Verificar que todas las referencias externas carguen sin errores, con rutas relativas."
+988c2e7d0f436356,G114,T03,R-T03-02,T03,"Verificar que todas las referencias externas carguen sin errores, con rutas relativas."
+3a1f5a50448a67bc,G254,T03,R-T03-02,T03,"Verificar que todas las referencias externas carguen sin errores, con rutas relativas."
+e3f49e65238b386c,G278,T03,R-T03-02,T03,"Verificar que todas las referencias externas carguen sin errores, con rutas relativas."
+ab31e6ffe50c59e2,G166,T03,R-T03-03,T03,"Presentar todos los temas con el archivo base como referencia externa; los planos de localización van como dibujo, no como imagen."
+f726856ede54321f,G257,T03,R-T03-03,T03,"Presentar todos los temas con el archivo base como referencia externa; los planos de localización van como dibujo, no como imagen."
+239fd686dc7d5eba,G049,T03,R-T03-04,T03,Ubicar las referencias externas en la carpeta xRef (escrita así) dentro de D.2.BaseDWG.
+eab4810e9c2d8dae,G189,T03,R-T03-04,T03,Ubicar las referencias externas en la carpeta xRef (escrita así) dentro de D.2.BaseDWG.
+f4ce37e77b72d8a7,G078,T03,R-T03-05,T03,Configurar las unidades de dibujo en metros en todos los DWG (DWGUNITS).
+88313fcd848dcedb,G151,T03,R-T03-05,T03,Configurar las unidades de dibujo en metros en todos los DWG (DWGUNITS).
+db57d088f15315bd,G025,T04,R-T04-01,T04,"Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0."
+7f1d06103f2dc4aa,G030,T04,R-T04-01,T04,"Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0."
+8752efb3058518b2,G058,T03,R-T04-01,T04,"Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0."
+ceccbbc1332e28d5,G072,T04,R-T04-01,T04,"Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0."
+f0219633b1497db2,G216,T04,R-T04-01,T04,"Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0."
+8ee44fcf66e9d34b,G263,T04,R-T04-01,T04,"Dibujar cada elemento en el layer que le corresponde según DefinicionesElementos y LAYERCAD, incluidos exploraciones y mobiliario; nada de diseño en el Layer 0."
+ae98db7f11e8f943,G063,T04,R-T04-02,T04,"Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados."
+cd41a6f12a48f95d,G218,T04,R-T04-02,T04,"Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados."
+2ed481f138eb609a,G269,T04,R-T04-02,T04,"Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados."
+9a4508b426a7f90e,G282,T04,R-T04-02,T04,"Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados."
+b5f4cf61fa611584,G293,T04,R-T04-02,T04,"Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados."
+2d5c2bb2a8226ffe,G294,T04,R-T04-02,T04,"Usar la geometría definida por LAYERCAD: una sola geometría por layer y bloques con el mismo criterio en todos los planos, sin mezclar líneas, polilíneas, bloques o achurados."
+0659e90f121ff401,G209,T04,R-T04-03,T04,"Añadir a todos los layers, incluidos achurados, capas adicionales y mobiliario, el sufijo de estado (E, D o C) de la etapa."
+1287f5ffdca8967d,G079,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+ea2cfb2621f9c3d7,G115,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+4dc1cb74330efdcf,G181,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+24b4d56b794f823c,G213,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+179cd70bfb0f110b,G214,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+d3afdf5107a862b7,G222,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+b172a3c6e7409e38,G275,T04,R-T04-04,T04,"Agrupar todos los layers de todos los planos en los filtros por temática del alistamiento, no solo en el archivo base."
+4ba9124d0df0173a,G018,T04,R-T04-05,T04,Eliminar los layers sin información y los elementos que no pertenecen al dibujo.
+f17404099323c97b,G215,T04,R-T04-06,T04,Dibujar cada achurado en la capa de su elemento y organizarlo en su filtro.
+618bc989bf7ba3c1,G264,T04,R-T04-06,T04,Dibujar cada achurado en la capa de su elemento y organizarlo en su filtro.
+e56cc5c1e5c36167,G274,T04,R-T04-06,T04,Dibujar cada achurado en la capa de su elemento y organizarlo en su filtro.
+727105aaf80757b9,G242,T04,R-T04-07,T04,"Ubicar grillas, coordenadas y textos del rótulo en los layers del filtro ROTULO."
+f7974e3b558e0961,G223,T04,R-T04-08,T04,"Registrar en Productos_DWG.xlsx todos los layers y niveles de los planos, los layers nuevos y el conteo de elementos por layer."
+1dd51426f5bfe611,G276,T04,R-T04-08,T04,"Registrar en Productos_DWG.xlsx todos los layers y niveles de los planos, los layers nuevos y el conteo de elementos por layer."
+a9aa1017e9553c2e,G277,T04,R-T04-08,T04,"Registrar en Productos_DWG.xlsx todos los layers y niveles de los planos, los layers nuevos y el conteo de elementos por layer."
+e3119cd4c0ac0d3e,G280,T04,R-T04-08,T04,"Registrar en Productos_DWG.xlsx todos los layers y niveles de los planos, los layers nuevos y el conteo de elementos por layer."
+307193f916b55049,G100,T04,R-T04-09,T04,"Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla."
+0db0c4ab253fca27,G226,T04,R-T04-09,T04,"Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla."
+ba9c2ccd3c47bd5e,G233,T04,R-T04-09,T04,"Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla."
+8a5cf4d3d629d38a,G234,T04,R-T04-09,T04,"Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla."
+61eb726d1ce37a2d,G237,T04,R-T04-09,T04,"Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla."
+917dae75e340d114,G247,T04,R-T04-09,T04,"Entregar los reportes de productos CAD: hoja LAYOUT_CIV diligenciada, NUEVOSLAYER y ConfiguracionCapaEstructura, sin hojas sobrantes de la plantilla."
+f8d6936957eb3ba1,G048,T05,R-T05-01,T05,"Incluir en cada plano los mínimos de la guía: un solo norte sobre la grilla, grilla de coordenadas, convenciones, escalas y rótulo completo."
+344929f6d647eed4,G118,T05,R-T05-01,T05,"Incluir en cada plano los mínimos de la guía: un solo norte sobre la grilla, grilla de coordenadas, convenciones, escalas y rótulo completo."
+2f486ec77a0686cd,G152,T05,R-T05-01,T05,"Incluir en cada plano los mínimos de la guía: un solo norte sobre la grilla, grilla de coordenadas, convenciones, escalas y rótulo completo."
+1ae0897ee861ab67,G288,T05,R-T05-01,T05,"Incluir en cada plano los mínimos de la guía: un solo norte sobre la grilla, grilla de coordenadas, convenciones, escalas y rótulo completo."
+b9330aa9d62b183b,G289,T05,R-T05-01,T05,"Incluir en cada plano los mínimos de la guía: un solo norte sobre la grilla, grilla de coordenadas, convenciones, escalas y rótulo completo."
+80783b0686a4ae21,G034,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+2c0d0b9ea92de917,G039,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+35d4bc7a2e67c8c0,G171,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+1000cc06dba061f7,G193,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+a800032f18130281,G196,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+4fe28102cad27775,G197,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+dd70ca8834dcd294,G239,T05,R-T05-02,T05,Presentar escala gráfica y numérica claras y coherentes con el rótulo y el viewport en cada vista del plano.
+67c7722b589f28df,G026,T05,R-T05-03,T05,Usar en secciones transversales y estructuras las escalas definidas en Productos_DWG y en ParametrosPresentacionPlanos.
+5cd5b99882693713,G133,T05,R-T05-03,T05,Usar en secciones transversales y estructuras las escalas definidas en Productos_DWG y en ParametrosPresentacionPlanos.
+c39d8cacba8fdf2b,G221,T05,R-T05-03,T05,Usar en secciones transversales y estructuras las escalas definidas en Productos_DWG y en ParametrosPresentacionPlanos.
+8da3bcd115475dbd,G238,T05,R-T05-03,T05,Usar en secciones transversales y estructuras las escalas definidas en Productos_DWG y en ParametrosPresentacionPlanos.
+aaabe6a972250509,G019,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+1de017c0f0bd32b9,G035,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+7867dd81599c7348,G074,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+26753ff88a24af65,G138,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+9b589a6664960f03,G194,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+ccc2f72419e2d366,G248,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+872ceedaedff0278,G249,T05,R-T05-04,T05,"Incluir convenciones completas del plano base y del tema, acordes con lo dibujado y con los colores del archivo base."
+e715144ff6658fc5,G195,T05,R-T05-05,T05,"Incluir en cada plano el cuadro del sistema de referencia, con su época."
+173d17f35cf0f659,G228,T05,R-T05-05,T05,"Incluir en cada plano el cuadro del sistema de referencia, con su época."
+9756d4a0f8ec16f2,G290,T05,R-T05-05,T05,"Incluir en cada plano el cuadro del sistema de referencia, con su época."
+337316771c43e7c7,G038,T05,R-T05-06,T05,Incluir en los planos planta-perfil las cotas de rasante del eje y de los bordes izquierdo y derecho.
+11e6faa0d0c9eecc,G077,T05,R-T05-06,T05,Incluir en los planos planta-perfil las cotas de rasante del eje y de los bordes izquierdo y derecho.
+71a382546d1c4223,G009,T05,R-T05-07,T05,Incluir en los planos planta-perfil y de rehabilitación las placas de amarre certificadas (IGAC) y anexar el informe de topografía.
+a37c4c5a187951b8,G259,T05,R-T05-07,T05,Incluir en los planos planta-perfil y de rehabilitación las placas de amarre certificadas (IGAC) y anexar el informe de topografía.
+43d0725d9b8289e6,G105,T05,R-T05-08,T05,Mostrar legibles en los planos en planta la nomenclatura vial y los CIV de calzadas y andenes.
+08c8eef320904ff1,G199,T05,R-T05-08,T05,Mostrar legibles en los planos en planta la nomenclatura vial y los CIV de calzadas y andenes.
+63a3dacf1ba80990,G043,T05,R-T05-09,T05,Ubicar textos de grilla e intervenciones legibles y sin superposiciones.
+4c60dcfcc40381f6,G073,T05,R-T05-09,T05,Ubicar textos de grilla e intervenciones legibles y sin superposiciones.
+397cb77a33f0fe09,G106,T05,R-T05-10,T05,Indicar el tipo de mezcla asfáltica en los cuadros de descripción de intervenciones.
+916f41f4ab8a45d6,G110,T05,R-T05-11,T05,"Representar los elementos existentes, como las calzadas, en los planos de intervención."
+d705aae779216659,G256,T05,R-T05-12,T05,Mostrar en los planos de diseño geométrico la estructura de pavimento de calzada y andén.
+b1173d9d2142ffb5,G229,T05,R-T05-13,T05,Incluir las coordenadas de los puntos en el esquema de ubicación de perforaciones.
+03d5b3141b30b555,G258,T05,R-T05-14,T05,Incluir en los planos la nota aclaratoria de que la interventoría no aprueba diseños.
+05f569a3321b8676,G010,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+3f9ece2d598a1a8c,G013,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+685665c1a6046617,G014,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+8014458e5c469061,G052,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+095936aaaac63221,G053,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+5ae16513004faf94,G055,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+dcd18e9b61e51f6d,G088,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+c2877a4a95a2be98,G103,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+6f6466afd9b2e5f3,G200,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+87a65cfa36062d92,G201,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+393e280fbbbbf508,G227,T06,R-T06-01,T06,"Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro."
+991aca4418956dd8,G023,T06,R-T06-02,T06,"Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento."
+c2060bc1831f87ed,G080,T06,R-T06-02,T06,"Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento."
+2ceeed7588a73e7a,G108,T06,R-T06-02,T06,"Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento."
+028cdfdb7aa2c28a,G123,T06,R-T06-02,T06,"Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento."
+49510afa3ebd9f00,G129,T06,R-T06-02,T06,"Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento."
+d6d8402b8f44a52d,G207,T06,R-T06-02,T06,"Poblar las tablas relacionadas del modelo de datos (seguimiento de losas, detalle de andén, mobiliario e intervención) y conectarlas a su elemento."
+99dbf8c74018082a,G037,T06,R-T06-03,T06,"Justificar técnica o contractualmente en Observaciones cada atributo no diligenciado o N/A, con validación de la interventoría."
+10ba3e088c134255,G119,T06,R-T06-03,T06,"Justificar técnica o contractualmente en Observaciones cada atributo no diligenciado o N/A, con validación de la interventoría."
+6e4f3bb4049fcefe,G150,T06,R-T06-03,T06,"Justificar técnica o contractualmente en Observaciones cada atributo no diligenciado o N/A, con validación de la interventoría."
+8f988c284df1129b,G016,T06,R-T06-04,T06,"Diligenciar Productos_BDG.xlsx en todas sus hojas, con la X de contratista e interventoría y N/A justificado en lo opcional."
+6037a4d5beff2eff,G190,T06,R-T06-04,T06,"Diligenciar Productos_BDG.xlsx en todas sus hojas, con la X de contratista e interventoría y N/A justificado en lo opcional."
+7c5a894ffe02d544,G057,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+a09eb2f65a45158b,G068,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+f50dc860508a25eb,G082,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+eb000faab6a1bc4a,G126,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+5660af2f1d8546dd,G160,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+37973c4975553b8c,G167,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+c63424a8678bc450,G188,T06,R-T06-05,T06,"Entregar el DiccionarioAtributos del alistamiento coherente con la BDG: tablas diligenciadas, elementos presentes y sin textos ajenos al atributo."
+0b571ce69c107d96,G040,T06,R-T06-06,T06,"Usar la estructura de la GDB enviada en el alistamiento, sin modificarla."
+81546643f2d74462,G083,T06,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+060644e5b74b65db,G084,T06,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+20e7f5cd5d753312,G109,T06,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+f77d4bcb557a2882,G131,T10,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+1faa02a4ee1dc673,G176,T06,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+7edefaa4bb186c1a,G177,T06,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+c4fe3a0c4c3d42c4,G183,T06,R-T06-07,T06,"Verificar que los valores de los atributos correspondan a lo construido y a los productos digitales: códigos, dimensiones, espesores, costos, elementos embebidos y llaves foráneas."
+8065a00af4e4673d,G267,T06,R-T06-08,T06,No eliminar registros de un feature class al corregirlo; justificar cualquier retiro.
+ad6482620b48160a,G007,T07,R-T07-01,T07,"Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato."
+63e07b168cb700d2,G050,T07,R-T07-01,T07,"Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato."
+2dfe75f5facd0e42,G104,T07,R-T07-01,T07,"Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato."
+771fc0915d7f80a0,G192,T07,R-T07-01,T07,"Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato."
+b2c20f0b7a6367c2,G211,T07,R-T07-01,T07,"Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato."
+be0e7640b980e7a2,G224,T07,R-T07-01,T07,"Identificar cada elemento con el CIV y el PK_ID del alistamiento publicados en el SIGIDU, sin codificación propia del contrato."
+3edce8949bee1fe3,G208,T07,R-T07-02,T07,Asegurar que todo registro con CIV tenga PK_ID y viceversa.
+7999c92568ce08c2,G066,T07,R-T07-03,T07,No repetir un PK_ID entre registros del mismo feature class ni entre elementos en los planos.
+c1d4d7d822b44727,G265,T07,R-T07-03,T07,No repetir un PK_ID entre registros del mismo feature class ni entre elementos en los planos.
+db8c3c241ad3e5ff,G011,T07,R-T07-04,T07,"Hacer coincidir CIV y PK_ID entre planos, tablas de reporte, GDB y FOIC09."
+238361711aa9c2ba,G178,T07,R-T07-04,T07,"Hacer coincidir CIV y PK_ID entre planos, tablas de reporte, GDB y FOIC09."
+4d64f5ffe0a594cb,G262,T07,R-T07-05,T07,No borrar los CIV entregados por la DTINI al corregir atributos.
+1cc3d91b962133cb,G286,T07,R-T07-06,T07,"Para elementos sin codificación IDU, solicitar por medio de la interventoría la actualización del alistamiento."
+3900321798e9a80a,G163,T07,R-T07-07,T07,"Unificar los identificadores de elementos continuos (redes de ciclorruta, andenes) según lo indicado por el IDU."
+3503354b1e26f4e6,G164,T07,R-T07-07,T07,"Unificar los identificadores de elementos continuos (redes de ciclorruta, andenes) según lo indicado por el IDU."
+473c22dc357b96c8,G098,T07,R-T07-08,T07,Diligenciar RELACION_CAD_CIV.xlsx y RelacionElementoConfiguración de forma coherente con la BDG.
+89c751cbf072d12c,G180,T07,R-T07-08,T07,Diligenciar RELACION_CAD_CIV.xlsx y RelacionElementoConfiguración de forma coherente con la BDG.
+e1d1a48298c82776,G006,T08,R-T08-01,T08,"Corregir superposiciones y huecos entre elementos según el archivo Reglas Topológicas, revisando todos los planos y sin afectar otros elementos."
+713aaf3b96f80c09,G012,T08,R-T08-01,T08,"Corregir superposiciones y huecos entre elementos según el archivo Reglas Topológicas, revisando todos los planos y sin afectar otros elementos."
+314eaf095c223a40,G024,T08,R-T08-01,T08,"Corregir superposiciones y huecos entre elementos según el archivo Reglas Topológicas, revisando todos los planos y sin afectar otros elementos."
+ff70c8a923ac930a,G071,T08,R-T08-01,T08,"Corregir superposiciones y huecos entre elementos según el archivo Reglas Topológicas, revisando todos los planos y sin afectar otros elementos."
+8b03f1c920627399,G158,T08,R-T08-01,T08,"Corregir superposiciones y huecos entre elementos según el archivo Reglas Topológicas, revisando todos los planos y sin afectar otros elementos."
+dc16aff2134abebf,G047,T08,R-T08-02,T08,Cumplir las relaciones de contenencia: rampas dentro del andén y elementos de puente y cunetas dentro del límite de intervención.
+13f89fd2fb526eee,G116,T08,R-T08-02,T08,Cumplir las relaciones de contenencia: rampas dentro del andén y elementos de puente y cunetas dentro del límite de intervención.
+d52b7482af7eda7f,G169,T08,R-T08-02,T08,Cumplir las relaciones de contenencia: rampas dentro del andén y elementos de puente y cunetas dentro del límite de intervención.
+3b51682d7209bad7,G027,T08,R-T08-03,T08,"Segmentar según las reglas: áreas de intervención en el límite de cada calzada, sardineles por elemento de espacio público y CIV, andenes donde corresponda y redes de ciclorruta con conectividad."
+3cd128f2ca8c4427,G028,T08,R-T08-03,T08,"Segmentar según las reglas: áreas de intervención en el límite de cada calzada, sardineles por elemento de espacio público y CIV, andenes donde corresponda y redes de ciclorruta con conectividad."
+5ffcd48758263925,G045,T08,R-T08-03,T08,"Segmentar según las reglas: áreas de intervención en el límite de cada calzada, sardineles por elemento de espacio público y CIV, andenes donde corresponda y redes de ciclorruta con conectividad."
+5a842b97882bb38d,G070,T08,R-T08-03,T08,"Segmentar según las reglas: áreas de intervención en el límite de cada calzada, sardineles por elemento de espacio público y CIV, andenes donde corresponda y redes de ciclorruta con conectividad."
+5e461ec98f4c039a,G159,T08,R-T08-03,T08,"Segmentar según las reglas: áreas de intervención en el límite de cada calzada, sardineles por elemento de espacio público y CIV, andenes donde corresponda y redes de ciclorruta con conectividad."
+1488f127d3804271,G095,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+77581e554061f467,G096,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+47aaa76ab922f5cb,G102,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+74ea2d05d1cf0398,G111,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+178bfbbb422293b6,G128,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+8e4ca681bdd38d38,G155,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+e6a190967f8a3c6a,G165,T08,R-T08-04,T08,"Clasificar correctamente cada elemento según su definición: pompeyano solo en cruces con calzada (su área se incorpora a la calzada), rampa en ingresos a predio y sin materas o cunetas inexistentes."
+87e98643cdd80bc4,G075,T08,R-T08-05,T08,No representar elementos duplicados ni polígonos multiparte con el mismo PK_ID.
+25beb715ac4a7eb4,G117,T08,R-T08-05,T08,No representar elementos duplicados ni polígonos multiparte con el mismo PK_ID.
+437a9d23de4bc5f1,G141,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+5ed947fb586e99f0,G148,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+ce270c74b5edaa7f,G149,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+8554a57da0f945ee,G162,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+d04e5fa97a00aad4,G185,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+c1d497c7dcdda93a,G186,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+b71350c20c83cf02,G187,T08,R-T08-06,T08,"Representar en la BDG todos los elementos intervenidos dentro del límite del proyecto, incluidas estructuras, puentes y deprimidos, zonas verdes y mobiliario."
+025f2f0948242a1e,G203,T08,R-T08-07,T08,Eliminar los registros sin geometría.
+c146f71633675ebf,G206,T08,R-T08-08,T08,"Hacer coincidir los polígonos del DWG y de la BDG, con límites por CIV."
+fa5931623be244dc,G001,T09,R-T09-01,T09,"Incluir en las tablas de reporte de los planos todas las intervenciones dibujadas, y viceversa, en todos los planos."
+3e5676150543f233,G112,T09,R-T09-01,T09,"Incluir en las tablas de reporte de los planos todas las intervenciones dibujadas, y viceversa, en todos los planos."
+1e2232821c37060b,G004,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+7f219ba361e6cfb4,G017,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+ef6c0af16d4c2851,G046,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+70e98933f59241bf,G081,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+6e9fc00a54b8afe7,G092,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+cd51bcfa034a43ff,G107,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+cbaf94918e06ca74,G127,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+48e6814072ae2626,G145,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+7b6e9f3fa4ef161f,G210,T09,R-T09-02,T09,"Hacer coincidir la cantidad de elementos por tipo entre el archivo base CAD, la BDG y el reporte de meta física FOIC09."
+fa2388c2565b7444,G002,T09,R-T09-03,T09,"Hacer coincidir áreas de intervención y fechas entre GDB, planos, FOIC09 y tablas de seguimiento."
+aa58b3ef8977dadf,G134,T09,R-T09-03,T09,"Hacer coincidir áreas de intervención y fechas entre GDB, planos, FOIC09 y tablas de seguimiento."
+f937f9c725e09bfe,G153,T09,R-T09-03,T09,"Hacer coincidir áreas de intervención y fechas entre GDB, planos, FOIC09 y tablas de seguimiento."
+383ee9539fe9ba60,G022,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+e747970d4ca3f3d6,G054,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+f690f2c172502b32,G059,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+86f19f13c096bd0f,G064,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+921b3fd551032ac0,G069,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+b6e75156d75d73f2,G076,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+188d4f10d2e570ec,G124,T09,R-T09-04,T09,"Diligenciar el FOIC09 completo: Entidad o Dependencia IDU, nombres de tipo de elemento del modelo, todos los elementos reportados (áreas de intervención, apiques) y mobiliario desagregado por tipo."
+37f824e4900efd31,G062,T09,R-T09-05,T09,"Reportar el tipo de intervención coherente entre FOIC09, tablas de seguimiento y etapa (en preconstrucción: Estudios y Diseños)."
+460be4de0bc57d89,G067,T09,R-T09-05,T09,"Reportar el tipo de intervención coherente entre FOIC09, tablas de seguimiento y etapa (en preconstrucción: Estudios y Diseños)."
+4c34c3350208f1d9,G097,T09,R-T09-05,T09,"Reportar el tipo de intervención coherente entre FOIC09, tablas de seguimiento y etapa (en preconstrucción: Estudios y Diseños)."
+76c94cc1d1aa9678,G051,T09,R-T09-06,T09,Hacer coincidir el número de registros de las tablas relacionadas con los elementos de su capa.
+2493b8901743a2c0,G140,T09,R-T09-06,T09,Hacer coincidir el número de registros de las tablas relacionadas con los elementos de su capa.
+a2b361d62dd11c52,G168,T09,R-T09-07,T09,Hacer coincidir el tipo de mezcla entre la BDG y los archivos CAD.
+6bf154749ecae07a,G231,T09,R-T09-08,T09,Entregar el reporte de meta física del propio proyecto y en su versión vigente.
+17af413f786fd7d7,G232,T09,R-T09-08,T09,Entregar el reporte de meta física del propio proyecto y en su versión vigente.
+c7cdd99d88ea77e6,G008,T10,R-T10-01,T10,Verificar que las coordenadas de la tabla Deflectometria queden dentro de su calzada.
+25795a4e6e2149ed,G029,T10,R-T10-02,T10,"Anexar los informes aprobados de los ensayos (deflectometría, evaluación estructural)."
+70d0037298ba6f57,G154,T10,R-T10-02,T10,"Anexar los informes aprobados de los ensayos (deflectometría, evaluación estructural)."
+36e48435a15cb1f6,G021,T10,R-T10-03,T10,"Hacer coincidir espesores y tipo de mezcla entre tablas de la BDG, cuadros de reporte y planos."
+c9ad79dfd257c94e,G143,T10,R-T10-03,T10,"Hacer coincidir espesores y tipo de mezcla entre tablas de la BDG, cuadros de reporte y planos."
+51a8e82b12e3bae2,G170,T10,R-T10-03,T10,"Hacer coincidir espesores y tipo de mezcla entre tablas de la BDG, cuadros de reporte y planos."
+6161c4d4e0ccb9c0,G056,T10,R-T10-04,T10,Diligenciar las tablas de ensayos cuando los informes los registran; justificar solo lo que el alcance excluye.
+e2fd3cf23f665901,G060,T10,R-T10-04,T10,Diligenciar las tablas de ensayos cuando los informes los registran; justificar solo lo que el alcance excluye.
+77a52d7516546b08,G061,T10,R-T10-05,T10,Revisar los valores de los reportes de estructura de pavimento y de mezcla (carpeta C11.3/CEP).
+0a206b058063ca13,G137,T10,R-T10-05,T10,Revisar los valores de los reportes de estructura de pavimento y de mezcla (carpeta C11.3/CEP).
+2da33e57a33471de,G130,T10,R-T10-06,T10,"Reportar un solo registro por calzada en EvaluacionEstructural, con SN efectivo coherente con el informe de deflectometría."
+8732c8780068b47d,G174,T06,R-T10-06,T10,"Reportar un solo registro por calzada en EvaluacionEstructural, con SN efectivo coherente con el informe de deflectometría."
+7ff2f0ccb15176a2,G173,T10,R-T10-07,T10,Verificar que no se repitan deflexiones entre segmentos en DeflexionCalculo.
+d64234caf38e9a83,G175,T10,R-T10-08,T10,Enlazar correctamente las exploraciones con sus tablas asociadas (S_Piezometros).
+db34e6b111cda2ea,G179,T10,R-T10-09,T10,Verificar la inclusión de índices y ensayos del alcance contractual según la especificación IDU 510-11.
+90ab65abe691bd20,G003,T11,R-T11-01,T11,"Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista."
+7cdf7a428468604f,G144,T11,R-T11-01,T11,"Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista."
+f18698f17163907b,G245,T11,R-T11-01,T11,"Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista."
+e2ad09f51fe0ae38,G246,T11,R-T11-01,T11,"Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista."
+009f084322774166,G250,T11,R-T11-01,T11,"Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista."
+8e9ded442054912e,G279,T11,R-T11-01,T11,"Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista."
+8478839581c90aa0,G219,T11,R-T11-02,T11,"Responder una a una las observaciones previas, incluidas las tablas de revisión y de validación de la GDB."
+0ce507d390c200de,G284,T11,R-T11-02,T11,"Responder una a una las observaciones previas, incluidas las tablas de revisión y de validación de la GDB."
+17fb435c1a9c2c33,G285,T06,R-T11-02,T11,"Responder una a una las observaciones previas, incluidas las tablas de revisión y de validación de la GDB."
+3f7e19b23deb2e02,G270,T11,R-T11-03,T11,"No reincidir en observaciones anteriores, no re-radicar archivos sin cambios y no empeorar la calidad de una entrega previa; en esos casos la entrega se objeta."
+72140a08d738fc32,G271,T11,R-T11-03,T11,"No reincidir en observaciones anteriores, no re-radicar archivos sin cambios y no empeorar la calidad de una entrega previa; en esos casos la entrega se objeta."
+3a8474b0669741bc,G292,T11,R-T11-03,T11,"No reincidir en observaciones anteriores, no re-radicar archivos sin cambios y no empeorar la calidad de una entrega previa; en esos casos la entrega se objeta."
+6228a819c642b92a,G146,T11,R-T11-04,T11,Solicitar mesa de trabajo con la DTINI solo después de atender todas las observaciones.
+4bf7487c11a60ef9,G252,T11,R-T11-04,T11,Solicitar mesa de trabajo con la DTINI solo después de atender todas las observaciones.

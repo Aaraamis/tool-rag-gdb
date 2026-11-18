@@ -1,23 +1,23 @@
 # Matriz de observaciones GDB — borrador
 
-> Generado por `rag-gdb matriz` el 2026-11-18: 504 observaciones de 41 documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis).
+> Generado por `rag-gdb matriz` el 2026-11-18: 504 observaciones de 41 documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis; el tema es el del requisito redactado en `config/requisitos-redaccion.csv` cuando existe).
 > **Contrato:** contrato de obra según `config/contratos-documentos.csv`, revisado por documento con su evidencia (asunto, texto o respuesta que cita el mismo radicado); 51 de 504 observaciones quedan «sin determinar» hasta revisar la primera página del PDF. **Fecha:** la del prefijo del nombre del archivo (fecha de envío), no la del oficio.
 
 ## Resumen por tema
 
 | Tema | Observaciones |
 |---|---:|
-| T01. Estructura de carpetas y completitud de la entrega | 46 |
-| T02. Nomenclatura de archivos y planos | 38 |
-| T03. Archivo base CAD y referencias externas | 24 |
-| T04. Layers, filtros y geometría en CAD | 41 |
-| T05. Contenido gráfico de los planos | 67 |
-| T06. Atributos de la GDB y diccionario de atributos | 70 |
+| T01. Estructura de carpetas y completitud de la entrega | 48 |
+| T02. Nomenclatura de archivos y planos | 42 |
+| T03. Archivo base CAD y referencias externas | 18 |
+| T04. Layers, filtros y geometría en CAD | 43 |
+| T05. Contenido gráfico de los planos | 65 |
+| T06. Atributos de la GDB y diccionario de atributos | 69 |
 | T07. Codificación CIV y PK_ID | 33 |
 | T08. Geometría y topología de la GDB | 49 |
 | T09. Consistencia entre CAD, GDB y meta física | 87 |
 | T10. Ensayos e información técnica asociada | 26 |
-| T11. Proceso de entrega y control de calidad | 23 |
+| T11. Proceso de entrega y control de calidad | 24 |
 
 ## T01. Estructura de carpetas y completitud de la entrega
 
@@ -28,6 +28,7 @@
 | 2021-03-17 | 1383 | idu | OTE 20212150071823, `IDU/2021-03-17_R-IDU1383-0060-21 ALCANCE MEMO 20213660036533 ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA CONSERVACION 2017-2018.pdf`, p. 2, obs-001 | No se entregaron planos de Planta Perfil, se recomienda revisar la información. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 8, obs-015 | Se solicita anexar los archivos correspondientes a las carpetas suministradas en la información de alistamiento del proyecto (Registro Fotográfico, Informes Finales y Entidades Diferentes al IDU). |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 8, obs-013 | Anexar la información correspondiente a las carpetas suministradas en el alistamiento del proyecto (Registro Fotográfico, Informes Finales, Entidades Diferentes al IDU). |
+| 2021-03-24 | sin determinar | idu | DTE 20212150074483, `IDU/2021-03-24_120213560479481_00002.pdf`, p. 2, obs-001 | No se presentaron los planos del componente Vial, por lo que no se realizó la validación de las observaciones del memorando anterior. |
 | 2021-06-18 | 1384 | idu | DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 4, obs-011 | Entregar la totalidad de los productos para permitir una revisión completa de toda la información. |
 | 2021-06-21 | 1384 | idu | DTE 20212150175863, `IDU/2021-06-21_2.1 120213560877981_00002-obs GIS20-15-jun-21.pdf`, p. 3, obs-006 | Entregar la totalidad de los productos, ya que la revisión se realiza nuevamente sobre todos ellos. |
 | 2021-10-01 | sin determinar | idu | DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 7, obs-006 | Entregar la totalidad de los productos debido a que la revisión se realiza nuevamente sobre todos ellos. |
@@ -66,6 +67,7 @@
 | 2023-11-07 | 1533 | idu | DTINI 202300000317753, `IDU/2023-11-07_202300000317753_DTINI observa planos record 1533-2018.pdf`, p. 4, obs-006 | Se solicita la entrega de las salidas gráficas en formato .PDF de los planos presentados. |
 | 2024-06-24 | 348 | idu | sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 1, obs-001 | Diligenciar el reporte de estructura de carpetas, justificar las carpetas no entregadas y no alterar la numeración. |
 | 2024-06-24 | 348 | idu | sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2, obs-002 | No dejar archivos sueltos en la estructura de carpetas; el reporte va en D.23.2.Reportes. |
+| 2024-06-24 | 348 | idu | sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2, obs-003 | Entregar los planos de localización. |
 | 2024-06-24 | 348 | interventoria | sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 1, obs-008 | No marcar «Ok» carpetas que no están en la entrega; justificar contractual y técnicamente las no entregadas. |
 | 2024-06-24 | 348 | interventoria | sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2, obs-009 | Respetar los niveles de la estructura de carpetas del alistamiento (D.7.2.Informes). |
 | 2026-03-04 | 1712 | idu | DTINI 202623500078293, `IDU/2026-03-04_1202623500078293_00001 Observaciones Planos Record.pdf`, p. 3, obs-001 | Se reitera lo indicado en la observación No. 2 del memorando 202523500323243 sobre información en especialidad de Estructuras que evidencia un deprimido para el acceso al patio. |
@@ -75,8 +77,12 @@
 | Fecha | Contrato | Autor | Referencia | Observación |
 |---|---|---|---|---|
 | 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 2, obs-001 | El nombre del archivo de la base del proyecto CAD no cumple con la nomenclatura establecida en la guía de entrega. |
+| 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5, obs-006 | Se diligenció un solo archivo como referencia externa en el campo REFERENCIA, pero existen dos archivos relacionados. |
 | 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5, obs-008 | El nombre del archivo AutoCAD presenta diferencia con el reportado en el formato de los planos. |
+| 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 7, obs-011 | El campo REFERENCIA en el archivo MVGVPL01.dwg se diligenció con un solo archivo XREF, pero visualmente existen dos archivos relacionados. |
+| 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6, obs-006 | Se diligenció un solo archivo como referencia externa en el campo REFERENCIA, pero se identificaron dos archivos relacionados. |
 | 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6, obs-008 | Se debe ajustar el nombre del archivo AutoCAD, ya presenta diferencia con el reportado en el formato de los planos (IDU-1384-2017). |
+| 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 8, obs-009 | El campo REFERENCIA del archivo MVGVPL01.dwg se diligenció con un solo archivo como XREF, pero visualmente existen 2 archivos relacionados. |
 | 2021-01-22 | 1383 | idu | DTE 20212150011573, `IDU/2021-01-22_167_anexo_20212150011573_SI.pdf`, p. 2, obs-001 | El formato presentado no es el suministrado en el alistamiento del proyecto y se eliminaron los campos del topógrafo del Constructor. |
 | 2021-02-02 | 1383 | idu | DTE 20212150011563, `IDU/2021-02-02_DTE 20212150011563 RECORD 2019.pdf`, p. 2, obs-001 | El plano MVGVPL01.dwg no se presenta con el formato suministrado y se eliminaron los campos topógrafo del Constructor e Interventoría. |
 | 2021-02-12 | 1385 | idu | DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 2, obs-001 | Ajustar el rótulo campo de referencia en el plano de topografía, ya que el texto digitado menciona BASE-1385-2017.dwg pero la referencia externa es BASE-TOP1385-2017.dwg. |
@@ -117,14 +123,8 @@
 
 | Fecha | Contrato | Autor | Referencia | Observación |
 |---|---|---|---|---|
-| 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5, obs-006 | Se diligenció un solo archivo como referencia externa en el campo REFERENCIA, pero existen dos archivos relacionados. |
-| 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 7, obs-011 | El campo REFERENCIA en el archivo MVGVPL01.dwg se diligenció con un solo archivo XREF, pero visualmente existen dos archivos relacionados. |
 | 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4, obs-001 | Crear un único archivo DWG con los elementos de la meta física del proyecto. |
 | 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 4, obs-002 | Utilizar el archivo como referencia externa (xref) para la presentación de todos los temas. |
-| 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6, obs-006 | Se diligenció un solo archivo como referencia externa en el campo REFERENCIA, pero se identificaron dos archivos relacionados. |
-| 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 8, obs-009 | El campo REFERENCIA del archivo MVGVPL01.dwg se diligenció con un solo archivo como XREF, pero visualmente existen 2 archivos relacionados. |
-| 2021-02-12 | 1385 | idu | DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 4, obs-004 | Incluir elementos de exploración con su layer respectivo en el archivo BASE-TOP-1385-2017 según DefinicionesElementos_V7.1.xlsx |
-| 2021-02-12 | 1385 | idu | DTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 5, obs-003 | Incluir los elementos de exploración con su layer respectivo en el archivo BASE-TOP-1385-2017 según DefinicionesElementos_V7.1.xlsx. |
 | 2021-10-01 | sin determinar | idu | DTE 20212150313383, `IDU/2021-10-01_120213561457741_00002.pdf`, p. 6, obs-003 | Las referencias de los planos no cargan correctamente, se requieren ajustes. |
 | 2023-01-25 | 1531 | idu | STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 6, obs-004 | Realizar ajustes pertinentes ya que algunas referencias de los planos no están cargando correctamente. |
 | 2023-03-29 | 348 | interventoria | sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 9, obs-039 | Las referencias externas (XREF) de los DWG deben resolverse sin errores. |
@@ -149,7 +149,9 @@
 | 2020-11-25 | 1384 | idu | DTE 20202150245873, `IDU/2020-11-25_120203560946451_00002.pdf`, p. 5, obs-007 | De acuerdo a la Guía GUIC06 se debe eliminar los elementos o layers que no se encuentren en el dibujo. |
 | 2020-11-25 | 1384 | idu | OTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 6, obs-007 | De acuerdo a la Guía GUIC06 se debe eliminar los elementos o layers que no se encuentre en el dibujo. |
 | 2021-02-12 | 1385 | idu | DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 3, obs-003 | Ajustar el layer MU_MATERA_C en el plano de Diseño Geométrico para la etapa de Estudios y Diseños según el archivo DefinicionesElementos_V7.1.xlsx. |
+| 2021-02-12 | 1385 | idu | DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 4, obs-004 | Incluir elementos de exploración con su layer respectivo en el archivo BASE-TOP-1385-2017 según DefinicionesElementos_V7.1.xlsx |
 | 2021-02-12 | 1385 | idu | OTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 4, obs-002 | Ajustar el layer MU_MATERA_C en el plano de Diseño Geométrico para la etapa de Estudios y Diseños, conforme al archivo DefinicionesElementos V7.1.xlsx. |
+| 2021-02-12 | 1385 | idu | DTE 20212150024523, `IDU/2021-02-12_R-IDU1385-0014-21 RTA MAB-2-1463-0173-20 RAD IDU 20205261211672 ARCHIVOS CAD Y BASE DATOS GEOGRAFICA ETAPA DISEÑO 2019.pdf`, p. 5, obs-003 | Incluir los elementos de exploración con su layer respectivo en el archivo BASE-TOP-1385-2017 según DefinicionesElementos_V7.1.xlsx. |
 | 2023-01-25 | 1531 | idu | STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 5, obs-001 | Los Layers del plano BASE-1531-2018.DWG deben estar dentro de los filtros establecidos en el alistamiento y su nomenclatura debe cumplir con lo requerido. |
 | 2023-01-25 | 1531 | idu | STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 6, obs-002 | Eliminar los Layers que no contengan información según la guía GUIC06. |
 | 2023-03-29 | 348 | interventoria | sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 8, obs-016 | Incluir ConfiguracionCapaEstructura y la lista de nuevos layers en Reportes. |
@@ -214,7 +216,6 @@
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 3, obs-003 | Rotar textos de intervenciones en archivo MVGVPL01.dwg para mejorar la lectura. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 4, obs-006 | Asegurar que los colores de los elementos presentados en el cuadro de convenciones coincidan exactamente con los indicados en el archivo base del proyecto (ejemplo: AI_AREAINTERVENCION_C Color 20 vs … |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 2, obs-001 | Incluir placas de amarre en los planos de tramos de rehabilitación vial y anexar informe de topografía respectivo |
-| 2021-03-24 | sin determinar | idu | DTE 20212150074483, `IDU/2021-03-24_120213560479481_00002.pdf`, p. 2, obs-001 | No se presentaron los planos del componente Vial, por lo que no se realizó la validación de las observaciones del memorando anterior. |
 | 2021-06-18 | 1384 | idu | DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 2, obs-001 | Los planos de tramos viales con levantamiento topográfico deben contener los planos de amarre y anexar el respectivo informe de topografía. |
 | 2021-06-18 | 1384 | idu | DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 2, obs-002 | Las convenciones en los planos planta perfil deben estar acorde a su contenido, verificando que elementos como las curvas de nivel mencionadas existan tanto en las convenciones como en el plano y su … |
 | 2023-01-25 | 1531 | idu | STESV 20233360084541, `IDU/2023-01-25_20233360084541.pdf`, p. 6, obs-003 | Revisar que las convenciones estén acorde al contenido del plano. |
@@ -234,7 +235,6 @@
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 6, obs-009 | Los planos deben llevar la nota aclaratoria de que la interventoría no aprueba diseños. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 8, obs-017 | Corregir la escala de las secciones transversales. |
 | 2023-08-09 | 1531 | idu | STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 7, obs-007 | Incluir el código de identificación vial (CIV) en los diferentes planos en planta ya que no se presenta actualmente. |
-| 2024-06-24 | 348 | idu | sin radicado, `IDU/2024-06-24_1443_637224_070700_CON_REV_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2, obs-003 | Entregar los planos de localización. |
 | 2024-10-23 | 348 | idu | STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 3, obs-003 | Cada plano debe cumplir los mínimos de la guía: norte, grilla, convenciones, escalas y rótulo completo. |
 | 2024-10-23 | 348 | interventoria | STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4, obs-004 | Escalas y sistemas de coordenadas invertidos en figuras de un plano general. |
 | 2024-10-23 | 348 | interventoria | STEST 202434601243021, `IDU/2024-10-23_1443_696124_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 4, obs-005 | Indicar con claridad todas las escalas de cada plano (planta y localización). |
@@ -286,11 +286,11 @@
 | 2021-03-12 | sin determinar | idu | DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 3, obs-005 | Verificar la estructura de la GDB enviada en la etapa de alistamiento para asegurar que no se modifique su formato. |
 | 2021-03-15 | 1383 | idu | DTE 20212150071823, `IDU/2021-03-15_20212150071823.pdf`, p. 2, obs-003 | La información de la GDB se debe diligenciar de acuerdo al DiccionarioAtributos según la GUIA 06; además si en algún momento un atributo obligatorio no se toma se debe poner la observación … |
 | 2021-03-17 | 1383 | idu | OTE 20212150071823, `IDU/2021-03-17_R-IDU1383-0060-21 ALCANCE MEMO 20213660036533 ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA CONSERVACION 2017-2018.pdf`, p. 2, obs-003 | La información de la GOB debe diligenciarse conforme al OiccionarioAtributos y la GUIA 06, reportando observaciones si algún atributo obligatorio no se toma. |
+| 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6, obs-011 | Revisar el atributo costo de la tabla de relación seguimiento del elemento Losa. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 4, obs-005 | Verificar las intervenciones de las losas en el atributo FK_ID_Calzada, específicamente para PK_ID_Losa 3500043 donde el reporte indica FK_ID_Calzada 514006 pero la ubicación real es la calzada … |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 5, obs-006 | Diligenciar los atributos de reporte obligatorio en la tabla del elemento calzada, como Número Carriles. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 7, obs-010 | Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx la tabla seguimiento relacionada al elemento Losa, ya que el contratista manifiesta no diligenciar atributos pero la GDB los tiene. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 7, obs-011 | Ajustar en el archivo Excel DiccionarioAtributos_V7.2.xlsx el elemento Losa para incluir los atributos Funcionalidad LosaOrden-Fila-Posición-Ancho, ya que el contratista manifiesta no diligenciarlos … |
-| 2021-04-26 | 1385 | idu | DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 4, obs-003 | Verificar la información del atributo SN Efectivo en la tabla EvaluacionEstructural de la GDB, confrontándola con el INFORME DEFLECTOMETRIA V-0.00.PDF y los anexos entregados. |
 | 2021-06-18 | 1384 | idu | DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 4, obs-008 | Diligenciar las tablas respetando los campos obligatorios del archivo DiccionarioAtributos y realizar ajustes necesarios. |
 | 2021-06-21 | 1384 | idu | DTE 20212150175863, `IDU/2021-06-21_2.1 120213560877981_00002-obs GIS20-15-jun-21.pdf`, p. 3, obs-004 | Diligenciar las tablas respetando los campos obligatorios del archivo 'DiccionarioAtributos' y realizar ajustes necesarios. |
 | 2021-08-13 | 1384 | idu | DTE 20212150242143, `IDU/2021-08-13_1.1 120213561214751_00002-memo.pdf`, p. 5, obs-003 | Reiterar que al diligenciar las tablas se deben tener en cuenta los campos obligatorios de acuerdo al archivo de Excel 'DiccionarioAtributos' y realizar los ajustes necesarios. |
@@ -316,7 +316,6 @@
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15, obs-033 | Diligenciar los campos obligatorios de Exploración según Productos_BDG. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16, obs-034 | No eliminar los registros de un feature class al corregirlo; justificar cualquier retiro. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15, obs-035 | Poblar las tablas relacionadas del modelo de datos. |
-| 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17, obs-039 | Responder la tabla 9 (validación GDB): totalidad de información y consistencia conceptual. |
 | 2023-08-09 | 1531 | idu | STESV 202333601342401, `IDU/2023-08-09_1202333601342401_00001.pdf`, p. 9, obs-015 | verificar y realizar ajustes en el archivo de diccionario de atributos para depurar o incorporar la información de elementos no presentes en la BDG. |
 | 2023-09-07 | 1533 | idu | DTINI 202323500285933, `IDU/2023-09-07_1202323500285933_00001--observaciones Georreferenciacion..pdf`, p. 7, obs-008 | Verificar y corregir la información en atributos de la BDG que no corresponden con los productos digitales, como el espesor incorrecto en secciones típicas. |
 | 2024-02-28 | 1531 | idu | DTINI 202423500066313, `IDU/2024-02-28_202423500066313 resp DTINI.pdf`, p. 3, obs-005 | Corregir información inconsistente en el atributo Codigo Elemento y errores de localización (ej. OBJECTID 20, Sardinel). |
@@ -539,12 +538,12 @@
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 5, obs-008 | Revisar y ajustar el espesor de rodadura asfáltica reportado como 81 cm en la tabla DetalleAIntervencionCalCic |
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6, obs-009 | Verificar el espesor del elemento Losa, ya que se reporta 24 cm pero las cantidades en los cuadros de reporte son diferentes. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6, obs-010 | Revisar las coordenadas en la tabla Deflectometria, ya que algunas se encuentran por fuera de sus respectivas calzadas. |
-| 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 6, obs-011 | Revisar el atributo costo de la tabla de relación seguimiento del elemento Losa. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 7, obs-013 | Revisar los valores presentados en el formato de la mezcla utilizada dentro de la carpeta C11.3/CEP. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074443, `IDU/2021-03-19_120213560460101_00002.pdf`, p. 8, obs-014 | Se solicita anexar los informes aprobados de los ensayos de Deflectometría. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 5, obs-007 | Verificar las coordenadas en la tabla Deflectometria para asegurar que coincidan con el carril indicado (ej. carril 1). |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 6, obs-008 | Reportar un solo registro por calzada en la tabla EvaluacionEstructural. |
 | 2021-03-19 | 1384 | idu | DTE 20212150074493, `IDU/2021-03-19_120213560460121_00002.pdf`, p. 8, obs-012 | Anexar los informes aprobados de los ensayos de Deflectometría. |
+| 2021-04-26 | 1385 | idu | DTE 20212150103483, `IDU/2021-04-26_Anexo MAB-1-1463-0025-21(2).pdf`, p. 4, obs-003 | Verificar la información del atributo SN Efectivo en la tabla EvaluacionEstructural de la GDB, confrontándola con el INFORME DEFLECTOMETRIA V-0.00.PDF y los anexos entregados. |
 | 2021-06-18 | 1384 | idu | DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 2, obs-004 | Se recomienda revisar la información correspondiente al espesor y tipo de mezcla de todos los planos del archivo 'MVGPL01.DWG'. |
 | 2021-06-18 | 1384 | idu | DTE 20212150175853, `IDU/2021-06-18_120213560877971_00002.pdf`, p. 4, obs-009 | Verificar en la tabla Deflectometria que las coordenadas estén dentro de sus respectivas calzadas, ya que algunas se encuentran fuera. |
 | 2021-06-21 | 1384 | idu | DTE 20212150175863, `IDU/2021-06-21_2.1 120213560877981_00002-obs GIS20-15-jun-21.pdf`, p. 3, obs-005 | Verificar las coordenadas de la tabla Deflectometria y revisar integralmente todos los productos para evitar reprocesos. |
@@ -570,6 +569,7 @@
 | 2023-03-29 | 348 | interventoria | sin radicado, `IDU/2023-03-29_1443_443723_070700_CON_REVISION_BDG_V1.pdf`, p. 15, obs-029 | Reforzar el control de calidad de los productos digitales antes de entregar. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 7, obs-012 | Implementar controles de calidad a cada producto digital antes de entregar. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 12, obs-027 | Responder cada observación de las tablas de la revisión inicial. |
+| 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17, obs-039 | Responder la tabla 9 (validación GDB): totalidad de información y consistencia conceptual. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17, obs-040 | Una segunda entrega no puede empeorar la calidad de la primera; se objeta la entrega. |
 | 2023-07-27 | 348 | interventoria | sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 17, obs-041 | La aplicación de la guía GU-IC-06 a toda la información es responsabilidad exclusiva del contratista. |
 | 2024-12-10 | 348 | interventoria | sin radicado, `IDU/2024-12-10_1443_715424_070700_CON_OBSERV_DITINI_GEODATABASE_V3.pdf`, p. 2, obs-016 | Cada remisión debe responder una a una las observaciones previas de la interventoría. |

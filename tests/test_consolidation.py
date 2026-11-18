@@ -87,3 +87,27 @@ def test_no_between_two_members_closes_review_between_their_groups():
     assert review  # {a,b} y {c,d} quedan por revisar
     _, review = group(v, keys, {frozenset(("a", "c")): "no"}, auto=0.99, floor=0.85)
     assert review == []
+
+
+def test_editorial_wording_merges_groups_into_one_requirement(tmp_path):
+    from rag_gdb.checklist import read_editorial
+    themes = [{"tema": "T01", "nombre": "Uno"}, {"tema": "T02", "nombre": "Dos"}]
+    g1 = {"grupo": "G001", "tema": "T01", "representante": "uno", "frecuencia_idu": 1, "documentos": 1,
+          "documentos_interventoria": 0, "miembros": [_obs("a", "IDU/m1.pdf", "idu", "DTE 1") | {"clave": "a"}]}
+    g2 = {"grupo": "G002", "tema": "T01", "representante": "dos", "frecuencia_idu": 1, "documentos": 1,
+          "documentos_interventoria": 0, "miembros": [_obs("b", "IDU/m2.pdf", "idu", "DTE 2") | {"clave": "b"}]}
+    path = tmp_path / "redaccion.csv"
+    path.write_text("clave_grupo,grupo,tema_grupo,requisito_id,tema,requisito\n"
+                    f"{group_key(g1)},G001,T01,R-T02-01,T02,Requisito único\n"
+                    f"{group_key(g2)},G002,T01,R-T02-01,T02,Requisito único\n", encoding="utf-8")
+    editorial = read_editorial(path)
+    md = render({"temas": themes, "grupos": [g1, g2]}, today="2026-11-18",
+                normative_links={group_key(g1): [{"id": "N1", "tipo": "directo", "texto": "Regla"}]},
+                reviewed_links={group_key(g1), group_key(g2)}, editorial=editorial)
+    assert "**R-T02-01** Requisito único. — IDU ×2 `G001` `G002`" in md
+    assert "## T02. Dos" in md and "Normativa directo: **N1**" in md and "Práctica" not in md
+    bad = tmp_path / "mal.csv"
+    bad.write_text("clave_grupo,grupo,tema_grupo,requisito_id,tema,requisito\n"
+                   "k1,G001,T01,R1,T01,Texto A\nk2,G002,T01,R1,T01,Texto B\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="distintos"):
+        read_editorial(bad)

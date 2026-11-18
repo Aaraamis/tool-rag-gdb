@@ -6,7 +6,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .checklist import write_checklist
+from .checklist import editorial_themes, write_checklist
 from .consolidation import consolidate, ollama_embed
 from .classification import apply_manual_reviews, classify_manifest, write_classification
 from .extraction import page_texts, validate_dir
@@ -69,6 +69,7 @@ def main() -> int:
     check.add_argument("--catalogo", type=Path,
                        default=Path("datos/04_consolidado/catalogo-normativa.json"))
     check.add_argument("--registro", type=Path, default=Path("config/grupos-registro.csv"))
+    check.add_argument("--redaccion", type=Path, default=Path("config/requisitos-redaccion.csv"))
     registry = sub.add_parser("registrar-grupos",
                               help="Registra los miembros de los grupos actuales para trasladar decisiones")
     registry.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
@@ -77,6 +78,8 @@ def main() -> int:
     matrix.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
     matrix.add_argument("--salida", type=Path, default=Path("datos/04_entregables/matriz-observaciones.md"))
     matrix.add_argument("--contratos", type=Path, default=Path("config/contratos-documentos.csv"))
+    matrix.add_argument("--redaccion", type=Path, default=Path("config/requisitos-redaccion.csv"))
+    matrix.add_argument("--registro", type=Path, default=Path("config/grupos-registro.csv"))
     report = sub.add_parser("informe", help="informe-corpus.md: estado de cada archivo del manifiesto")
     report.add_argument("--manifiesto", type=Path, default=Path("datos/01_inventario/manifiesto.json"))
     report.add_argument("--perfiles", type=Path, default=Path("datos/01_inventario/perfiles.json"))
@@ -145,11 +148,12 @@ def main() -> int:
                                      themes_path=args.temas, overrides_path=args.temas_manuales)))
     elif args.command == "checklist":
         print(json.dumps(write_checklist(args.grupos, args.salida, args.enlaces, args.catalogo,
-                                         args.registro)))
+                                         args.registro, args.redaccion)))
     elif args.command == "registrar-grupos":
         print(json.dumps(register_groups(args.grupos, args.registro)))
     elif args.command == "matriz":
-        print(json.dumps(write_matriz(args.grupos, args.salida, args.contratos)))
+        print(json.dumps(write_matriz(args.grupos, args.salida, args.contratos,
+                                      editorial_themes(args.grupos, args.redaccion, args.registro))))
     elif args.command == "informe":
         print(json.dumps(write_informe(args.manifiesto, args.perfiles, args.clasificacion,
                                        args.convertidos, args.extraido_dir, args.salida)))
