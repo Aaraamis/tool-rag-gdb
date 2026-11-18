@@ -86,3 +86,22 @@ def test_read_link_decisions_validates_and_returns_confirmed(tmp_path: Path):
 
     assert reviewed == {"key"}
     assert links["key"][0]["tipo"] == "directo"
+
+
+def test_decisions_follow_groups_after_reconsolidation(tmp_path: Path):
+    from rag_gdb.normative_links import current_keys, group_key, register_groups, remap_decisions
+    import json
+    old = [{"miembros": [{"clave": "a"}, {"clave": "b"}]}, {"miembros": [{"clave": "c"}, {"clave": "d"}]}]
+    path = tmp_path / "grupos.json"
+    path.write_text(json.dumps({"grupos": old}), encoding="utf-8")
+    registry = tmp_path / "registro.csv"
+    assert register_groups(path, registry) == {"grupos": 2, "registrados": 2}
+    assert register_groups(path, registry)["registrados"] == 0
+    grown = {"miembros": [{"clave": "a"}, {"clave": "b"}, {"clave": "nueva"}]}
+    split = [{"miembros": [{"clave": "c"}]}, {"miembros": [{"clave": "d"}]}]
+    from rag_gdb.normative_links import read_group_registry
+    mapping = current_keys([grown, *split], read_group_registry(registry))
+    k1, k2 = group_key(old[0]), group_key(old[1])
+    links, reviewed = remap_decisions({k1: [{"id": "N1"}]}, {k1, k2}, mapping)
+    assert links == {group_key(grown): [{"id": "N1"}]}
+    assert reviewed == {group_key(grown)}

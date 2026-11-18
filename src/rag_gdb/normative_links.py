@@ -166,3 +166,64 @@ def read_link_decisions(path: Path, catalog: list[dict]) -> tuple[dict[str, list
             if decision == "si":
                 confirmed[key].append({**by_id[row["requisito_id"]], "tipo": kind, "nota": row["nota"]})
     return dict(confirmed), reviewed
+
+
+def read_group_registry(path: Path) -> dict[str, set[str]]:
+    """Miembros de cada clave de grupo revisada (`config/grupos-registro.csv`)."""
+    registry: dict[str, set[str]] = defaultdict(set)
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as stream:
+            for row in csv.DictReader(stream):
+                registry[row["clave_grupo"]].add(row["clave_miembro"])
+    return dict(registry)
+
+
+def register_groups(grupos_path: Path, registry_path: Path) -> dict:
+    """Añade al registro las claves de los grupos actuales que aún no figuran; nunca borra."""
+    registry = read_group_registry(registry_path)
+    groups = json.loads(grupos_path.read_text(encoding="utf-8"))["grupos"]
+    new = [g for g in groups if group_key(g) not in registry]
+    write_header = not registry_path.exists()
+    registry_path.parent.mkdir(parents=True, exist_ok=True)
+    with registry_path.open("a", encoding="utf-8", newline="") as stream:
+        writer = csv.writer(stream, lineterminator="\n")
+        if write_header:
+            writer.writerow(["clave_grupo", "clave_miembro"])
+        for g in new:
+            key = group_key(g)
+            writer.writerows([key, member] for member in sorted(m["clave"] for m in g["miembros"]))
+    return {"grupos": len(groups), "registrados": len(new)}
+
+
+def current_keys(groups: list[dict], registry: dict[str, set[str]]) -> dict[str, str]:
+    """Traslada cada clave registrada al grupo actual que contiene la mayoría de sus miembros.
+
+    Tras reconsolidar con más documentos, un grupo revisado suele ganar miembros y cambiar de
+    clave; sus decisiones siguen aplicando. Si ningún grupo actual reúne más de la mitad de los
+    miembros (el grupo se dividió), la clave no se traslada y el grupo vuelve a quedar pendiente.
+    """
+    owner = {m["clave"]: group_key(g) for g in groups for m in g["miembros"]}
+    mapping = {group_key(g): group_key(g) for g in groups}
+    for old, members in registry.items():
+        if old in mapping:
+            continue
+        counts: dict[str, int] = defaultdict(int)
+        for member in members:
+            if member in owner:
+                counts[owner[member]] += 1
+        if counts:
+            best = max(counts, key=lambda k: (counts[k], k))
+            if counts[best] * 2 > len(members):
+                mapping[old] = best
+    return mapping
+
+
+def remap_decisions(links: dict[str, list[dict]], reviewed: set[str],
+                    mapping: dict[str, str]) -> tuple[dict[str, list[dict]], set[str]]:
+    """Expresa enlaces y revisiones con las claves de los grupos actuales."""
+    moved: dict[str, list[dict]] = defaultdict(list)
+    for key, items in links.items():
+        if key in mapping:
+            target = moved[mapping[key]]
+            target += [item for item in items if item["id"] not in {t["id"] for t in target}]
+    return dict(moved), {mapping[key] for key in reviewed if key in mapping}

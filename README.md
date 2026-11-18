@@ -182,6 +182,13 @@ las filas con `decision=si` y separa como prácticas observadas los grupos
 revisados sin respaldo oficial. La revisión actual contiene 307 relaciones
 aceptadas: 216 directas y 91 parciales.
 
+Las decisiones se guardan por `clave_grupo`, un hash de los miembros del grupo.
+Como una reconsolidación con más documentos cambia esas claves,
+`config/grupos-registro.csv` conserva los miembros de cada grupo revisado y el
+checklist traslada cada decisión al grupo actual que reúne la mayoría de sus
+observaciones; si el grupo se dividió, vuelve a quedar pendiente. Tras revisar
+grupos nuevos, ejecutar `.venv/bin/rag-gdb registrar-grupos` (solo añade).
+
 ## Revisión piloto
 
 Elegir PDF escaneados, con tablas, guías largas y comunicados con observaciones.

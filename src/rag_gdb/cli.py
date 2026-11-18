@@ -12,7 +12,7 @@ from .classification import apply_manual_reviews, classify_manifest, write_class
 from .extraction import page_texts, validate_dir
 from .inventory import build_manifest, write_json
 from .normative import write_normative
-from .normative_links import propose_links, review_links
+from .normative_links import propose_links, register_groups, review_links
 from .pipeline import convert_selected, profile_manifest
 from .proposal import ollama_ask, propose_selected
 from .reports import write_informe, write_matriz
@@ -68,6 +68,11 @@ def main() -> int:
     check.add_argument("--enlaces", type=Path, default=Path("config/normativa-enlaces.csv"))
     check.add_argument("--catalogo", type=Path,
                        default=Path("datos/04_consolidado/catalogo-normativa.json"))
+    check.add_argument("--registro", type=Path, default=Path("config/grupos-registro.csv"))
+    registry = sub.add_parser("registrar-grupos",
+                              help="Registra los miembros de los grupos actuales para trasladar decisiones")
+    registry.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
+    registry.add_argument("--registro", type=Path, default=Path("config/grupos-registro.csv"))
     matrix = sub.add_parser("matriz", help="matriz-observaciones.md desde los grupos consolidados")
     matrix.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
     matrix.add_argument("--salida", type=Path, default=Path("datos/04_entregables/matriz-observaciones.md"))
@@ -139,7 +144,10 @@ def main() -> int:
                                      ollama_embed(args.modelo, args.url), args.modelo,
                                      themes_path=args.temas, overrides_path=args.temas_manuales)))
     elif args.command == "checklist":
-        print(json.dumps(write_checklist(args.grupos, args.salida, args.enlaces, args.catalogo)))
+        print(json.dumps(write_checklist(args.grupos, args.salida, args.enlaces, args.catalogo,
+                                         args.registro)))
+    elif args.command == "registrar-grupos":
+        print(json.dumps(register_groups(args.grupos, args.registro)))
     elif args.command == "matriz":
         print(json.dumps(write_matriz(args.grupos, args.salida, args.contratos)))
     elif args.command == "informe":

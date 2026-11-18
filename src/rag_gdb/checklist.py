@@ -6,7 +6,7 @@ import json
 from datetime import date
 from pathlib import Path
 
-from .normative_links import group_key, read_link_decisions
+from .normative_links import current_keys, group_key, read_group_registry, read_link_decisions, remap_decisions
 
 EXAMPLE_CHARS = 160
 
@@ -102,7 +102,7 @@ def render(grupos: dict, today: str | None = None, normative_links: dict[str, li
 
 
 def write_checklist(grupos_path: Path, output: Path, links_path: Path | None = None,
-                    catalog_path: Path | None = None) -> dict:
+                    catalog_path: Path | None = None, registry_path: Path | None = None) -> dict:
     grupos = json.loads(grupos_path.read_text(encoding="utf-8"))
     if not grupos.get("temas"):
         raise ValueError("grupos.json no tiene temas: ejecuta `rag-gdb consolidar` con config/temas.csv")
@@ -110,6 +110,9 @@ def write_checklist(grupos_path: Path, output: Path, links_path: Path | None = N
     if links_path and catalog_path and links_path.exists() and catalog_path.exists():
         catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
         links, reviewed = read_link_decisions(links_path, catalog)
+        if registry_path:
+            mapping = current_keys(grupos["grupos"], read_group_registry(registry_path))
+            links, reviewed = remap_decisions(links, reviewed, mapping)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(render(grupos, normative_links=links, reviewed_links=reviewed), encoding="utf-8")
     return {"requisitos": len(grupos["grupos"]),

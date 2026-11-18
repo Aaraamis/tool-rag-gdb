@@ -12,6 +12,11 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
   por documento con evidencia: 453 de 504 observaciones tienen contrato) y
   `rag-gdb informe` genera `informe-corpus.md` con el estado de cada PDF del manifiesto.
 
+- `config/grupos-registro.csv` y `rag-gdb registrar-grupos` conservan los miembros de los
+  294 grupos revisados; el checklist traslada enlaces normativos y revisiones al grupo
+  actual que reúne la mayoría de sus observaciones, de modo que sobreviven a reconsolidar.
+- `contratos.csv` incluye 1558, interventoría del contrato 1533.
+
 ### Fixed
 
 - El perfil técnico retira rutas obsoletas cuando cambia la extracción de nombres del corpus.
