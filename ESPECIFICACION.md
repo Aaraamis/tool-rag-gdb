@@ -39,7 +39,7 @@ Objetivo secundario: dejar un corpus limpio, convertido y con datos de referenci
 |---|---|---|
 | PDF descargados por tool-batea | Copia local en meraxes-f (origen: Drive, `Gmail - Recolector de adjuntos/IDU`) | ≈ 490 archivos, ya filtrados a mano (se borraron los de accidentalidad) |
 | Hoja `Recolector_de_adjuntos` | `.ods` / Google Sheet de Batea, pestaña `Inventario` | Por adjunto: fecha, remitente, asunto, id de correo, nombre, md5, sha256, enlace, estado |
-| `contratos.csv` | Completo (2026-11-15) | `contrato, tipo, contrato_obra, proyecto`. Contratos IDU en alcance: 348, 351, 1383, 1384, 1385, 1443 (interventoría de 348), 1531, 1533, 1712 |
+| `contratos.csv` | Completo (2026-11-15) | `contrato, tipo, contrato_obra, proyecto`. Contratos IDU en alcance: 348, 351, 1383, 1384, 1385, 1443 (interventoría de 348), 1531, 1533, 1558 (interventoría de 1533), 1712 |
 | Alistamiento IDU 2020 | Copia verificada de `IDU-351-2020` | Paquete oficial entregado por el IDU para 348 y 351; sus documentos y plantillas se registran por ruta y SHA-256 |
 
 El ZIP recibido en meleys contiene 490 PDF y todos tienen SHA-256 en la hoja.

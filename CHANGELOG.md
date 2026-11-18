@@ -9,7 +9,7 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 - `rag-gdb matriz` genera `matriz-observaciones.md` (504 observaciones por tema, con fecha,
   contrato y referencia; el contrato sale de `config/contratos-documentos.csv`, revisado
-  por documento con evidencia: 469 de 504 observaciones tienen contrato) y
+  por documento con evidencia: 453 de 504 observaciones tienen contrato) y
   `rag-gdb informe` genera `informe-corpus.md` con el estado de cada PDF del manifiesto.
 
 ### Fixed

@@ -18,7 +18,8 @@
 | 2026-11-17 | El paquete `IDU-351-2020` es el alistamiento oficial de 2020 entregado por el IDU para los contratos 348 y 351; aplica a la entrega de construcción del 348 | Confirmación de Aramis; 649 archivos del origen y la copia coinciden por hash |
 | 2026-11-17 | La similitud de embeddings solo ordena candidatos de enlace normativo; cada enlace se confirma manualmente | La primera medición RF7 produjo falsos positivos incluso por encima de 0,70 |
 | 2026-11-17 | Código y entregables finales viajan por Git; los intermedios ignorados se trasladan en un paquete privado con SHA-256 | La siguiente sesión se ejecutará fuera de meraxes-f |
-| 2026-11-18 | El contrato de cada documento extraído se registra a mano en `config/contratos-documentos.csv` como contrato de obra, con su evidencia; C.1443 → 348, MAB-1/2-1463 → 1385, MV2 → 1384. Sin señal queda «sin determinar» (8 documentos) | Asuntos, citas y respuestas que citan el mismo radicado; pedido por Aramis. Los contratos 1309 y 1558 (interventoría de 1533) no figuran en `contratos.csv` |
+| 2026-11-18 | El contrato de cada documento extraído se registra a mano en `config/contratos-documentos.csv` como contrato de obra, con su evidencia; C.1443 → 348, MAB-1/2-1463 → 1385, MV2 → 1384. Sin señal queda «sin determinar» (9 documentos) | Asuntos, citas y respuestas que citan el mismo radicado; pedido por Aramis |
+| 2026-11-18 | 1558 es la interventoría del contrato 1533 y se añade a `contratos.csv`; 1309 no es un contrato del alcance (`BASE-IDU-1309-2018.dwg` se trata como archivo de ejemplo o referencia) | Confirmación de Aramis; el corpus escribe siempre 1558 (`Contrato No 1558`, `MAB-1-1558-…`) |
 
 ## Primer inventario en meraxes-f
 
