@@ -11,11 +11,14 @@ para añadir herramientas o capas.
 
 1. Revisa `git status --short --branch`, `VERSION`, `CHANGELOG.md` y
    `DECISIONES.md`. Preserva ediciones ajenas.
-2. Ejecuta `python3 tools/check_repo.py` y `PYTHONPATH=src python3 -m pytest -q`.
-   En meraxes-f, usa `.venv/bin/python -m pytest -q` si el entorno existe.
+2. Ejecuta `python3 tools/check_repo.py`, `PYTHONPATH=src python3 -m pytest -q`
+   y `ruff check --preview src tests tools`. En meraxes-f, usa
+   `.venv/bin/python -m pytest -q` si el entorno existe; en Windows, el
+   intérprete es `.venv\Scripts\python`.
 3. Al cerrar una sesión, informa las pruebas ejecutadas, los cambios pendientes
    en `Unreleased`, la versión actual y si hay razones para preparar una nueva.
-   Para retomar contexto puedes usar `lucia session-start --dir . --compact`.
+   Para retomar contexto puedes usar `lucia session-start --dir . --compact`
+   y, para el estado del trabajo, `INSTRUCCIONES_TRASPASO.md`.
 
 ## Versiones y cambios
 

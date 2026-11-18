@@ -20,6 +20,10 @@
 | 2026-11-17 | Código y entregables finales viajan por Git; los intermedios ignorados se trasladan en un paquete privado con SHA-256 | La siguiente sesión se ejecutará fuera de meraxes-f |
 | 2026-11-18 | El contrato de cada documento extraído se registra a mano en `config/contratos-documentos.csv` como contrato de obra, con su evidencia; C.1443 → 348, MAB-1/2-1463 → 1385, MV2 → 1384. Sin señal queda «sin determinar» (9 documentos) | Asuntos, citas y respuestas que citan el mismo radicado; pedido por Aramis |
 | 2026-11-18 | 1558 es la interventoría del contrato 1533 y se añade a `contratos.csv`; 1309 no es un contrato del alcance (`BASE-IDU-1309-2018.dwg` se trata como archivo de ejemplo o referencia) | Confirmación de Aramis; el corpus escribe siempre 1558 (`Contrato No 1558`, `MAB-1-1558-…`) |
+| 2026-11-18 | Las decisiones por grupo (enlaces normativos, redacción) se trasladan al grupo actual que reúne la mayoría de sus observaciones, mediante `config/grupos-registro.csv`; un grupo dividido vuelve a quedar pendiente | `clave_grupo` es un hash de los miembros y cambia al reconsolidar con más documentos |
+| 2026-11-18 | Propuesta editorial: 294 grupos redactados como 93 requisitos genéricos, con 7 reasignaciones de tema; pendiente de validación | `docs/revision-editorial.md` |
+| 2026-11-18 | Las prácticas observadas sin respaldo escrito van en una sección aparte del checklist | Criterio de aceptación 6 de la especificación |
+| 2026-11-18 | Completar todos los PDF pendientes, no solo el piloto | Pedido por Aramis; se ejecuta en meraxes-f, donde están los PDF y Ollama |
 
 ## Primer inventario en meraxes-f
 
@@ -168,9 +172,10 @@
   de intervenciones van a consistencia entre productos (T09). Caso para validar:
   el grupo que une el registro de intervenciones con los CIV y PK_ID de las
   tablas quedó en T07.
-- El checklist usa como requisito el resumen representativo de cada grupo. RF7
-  ya está revisado para los 294 grupos; faltan la redacción final y la validación
-  de los temas.
+- El checklist usaba como requisito el resumen representativo de cada grupo.
+  Desde el 2026-11-18 lo reemplaza la redacción propuesta en
+  `config/requisitos-redaccion.csv` (93 requisitos), pendiente de validación de
+  Aramis junto con los temas.
 
 ## Normativa (RF7), catálogo y revisión completa
 

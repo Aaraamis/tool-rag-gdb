@@ -90,7 +90,8 @@ En `datos/04_entregables/`:
   `Productos_DWG`; las demás guías y plantillas se registran aunque no todas generen
   requisitos. La propuesta automática y los enlaces dudosos requieren confirmación
   manual. En el piloto quedaron revisados los 294 grupos: 261 con respaldo
-  normativo y 33 como prácticas observadas sin regla escrita localizada.
+  normativo y 33 sin regla escrita localizada. Redactados como 93 requisitos,
+  80 tienen respaldo y 13 son prácticas observadas.
 - **RF7b. Emisor**: cada documento se marca como IDU, interventoría, obra o diseños.
   Solo IDU e interventoría generan observaciones. La primera página y señales como
   «Al responder cite este número» prevalecen sobre nombres ambiguos; traslados y
@@ -102,8 +103,11 @@ En `datos/04_entregables/`:
   de temas, Aramis la valida, y luego se asigna un tema a cada grupo y se generan los
   entregables.
   Implementado con `rag-gdb consolidar` (embeddings locales y revisión de pares
-  dudosos) y `rag-gdb checklist`. La taxonomía propuesta está en
-  `config/temas.csv`, pendiente de validación y redacción editorial.
+  dudosos), `rag-gdb checklist`, `rag-gdb matriz` y `rag-gdb informe`. La
+  taxonomía (`config/temas.csv`) y la redacción en 93 requisitos
+  (`config/requisitos-redaccion.csv`, `docs/revision-editorial.md`) esperan la
+  validación de Aramis. `config/grupos-registro.csv` traslada las decisiones por
+  grupo cuando una reconsolidación cambia las claves.
 - **RF9. Reanudable**: cada etapa registra su estado por documento. Si se agota el cupo de la suscripción, el proceso sigue después desde donde quedó, sin repetir trabajo.
 
 ## 6. Restricciones

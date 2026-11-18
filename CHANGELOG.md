@@ -32,6 +32,9 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ### Changed
 
+- README, especificación, AGENTS, DECISIONES e instrucciones de traspaso reflejan el
+  estado del 2026-11-18 y el plan para procesar los PDF pendientes en meraxes-f; `ruff` entra
+  en el extra `test`.
 - `pyproject.toml` fija la configuración de Ruff (líneas de 110, Python 3.11); el código pasa
   `ruff check --preview` sin avisos, que es lo que muestra Zed.
 - La especificación incorpora lo aprendido en el piloto: objetivo de construcción

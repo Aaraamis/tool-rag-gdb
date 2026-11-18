@@ -137,10 +137,17 @@ distintos: una copia o un traslado no suma. Cada grupo recibe el tema de
 por clave de observación.
 
 `checklist` ordena los requisitos por tema y frecuencia, con uno o dos ejemplos
-citados (radicado, archivo y página). Los 294 grupos ya tienen revisión normativa:
-261 cuentan con al menos un enlace confirmado y 33 se identifican como prácticas
-observadas sin respaldo escrito localizado. Sigue siendo un borrador hasta validar
-la taxonomía y editar la redacción representativa de cada grupo.
+citados (radicado, archivo y página). Los 294 grupos tienen revisión normativa
+(261 con enlace confirmado) y se redactan como 93 requisitos: 80 con respaldo
+normativo y 13 prácticas observadas sin respaldo escrito localizado, listadas en
+una sección aparte. Sigue siendo un borrador hasta que Aramis valide la taxonomía
+y la redacción.
+
+`matriz` lista las 504 observaciones por tema con fecha (prefijo del nombre del
+archivo), contrato de obra (`config/contratos-documentos.csv`, revisado por
+documento con su evidencia) y referencia. `informe` da cuenta de cada PDF del
+manifiesto: procesado, descartado con motivo o pendiente. El estado de los
+criterios de aceptación está en `docs/aceptacion-fase1.md`.
 
 ## Normativa vigente (RF7)
 
@@ -194,6 +201,17 @@ se asigna a un requisito (`R-Txx-nn`) con tema y texto. Los grupos que comparten
 requisito se presentan juntos, con frecuencia, enlaces y ejemplos sumados, y la
 matriz usa el mismo tema. Los grupos nuevos sin fila conservan su enunciado
 representativo. Criterios y decisiones pendientes: `docs/revision-editorial.md`.
+
+## Verificación
+
+```bash
+python3 tools/check_repo.py
+PYTHONPATH=src .venv/bin/python -m pytest -q
+.venv/bin/ruff check --preview src tests tools
+```
+
+Ruff usa la configuración de `pyproject.toml`, la misma que aplica Zed. En
+Windows el intérprete del entorno es `.venv\Scripts\python`.
 
 ## Revisión piloto
 
