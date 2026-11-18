@@ -1,0 +1,351 @@
+clave_grupo,grupo,requisito_id,decision,tipo,nota
+230ecb9f76130edc,G005,GU-IC-06 §8.4 ¶1,si,directo,Exige incorporar la totalidad de la información en la estructura oficial
+230ecb9f76130edc,G005,GU-IC-06 §7.1 ¶5,no,,Enumera carpetas pero no exige por sí solo entregar todos los productos
+e1d1a48298c82776,G006,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,directo,Prohíbe superposiciones
+e1d1a48298c82776,G006,VALIDACIONES_BDG 2.4. b. Huecos entre elementos,si,directo,Prohíbe vacíos entre elementos adyacentes
+ad6482620b48160a,G007,FO-IC-05 A.1,si,parcial,Exige reportar CIV en CAD pero no menciona PK_ID
+ad6482620b48160a,G007,Productos_DWG INSTRUCTIVO_LAYOUT_CIV C2,no,,Define CIV pero no exige identificar calzadas con CIV y PK_ID
+c7cdd99d88ea77e6,G008,FO-IC-05 A.3.n,no,,Coordenadas de placas de amarre no equivalen a coordenadas de deflectometría
+71a382546d1c4223,G009,FO-IC-05 A.3.n,no,,Redundante y no cubre el informe topográfico
+71a382546d1c4223,G009,FO-IC-05 A.2.j,si,parcial,Exige presentar placas de amarre pero no el informe topográfico
+05f569a3321b8676,G010,GU-IC-06 §8.2 ¶2,si,parcial,Define Productos_BDG como lista de chequeo diligenciada
+05f569a3321b8676,G010,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige correspondencia con el diccionario de atributos
+36e48435a15cb1f6,G021,Productos_DWG Récord F28,si,parcial,Exige espesores y materiales en sección típica pero no resuelve la discrepancia entre fuentes
+67c7722b589f28df,G026,FO-IC-05 A.5.f,si,directo,Fija el rango de escalas de detalle
+c8650ec16e08524c,G031,GU-IC-06 §8 ¶11,si,parcial,Exige referencias necesarias y rutas relativas pero no el conteo del campo REFERENCIA
+9be2a7a19166ef1b,G041,GU-IC-06 §8 ¶11,si,directo,Exige que las referencias externas carguen mediante rutas relativas
+63e07b168cb700d2,G050,FO-IC-05 B.5,si,directo,Exige codificación según la base o rangos suministrados por el IDU
+63e07b168cb700d2,G050,FO-IC-05 B.7.b,no,,Se limita a elementos nuevos y es redundante con B.5
+6161c4d4e0ccb9c0,G056,GU-IC-06 §9.5 ¶4,si,parcial,Permite justificar técnica o contractualmente información no incorporada
+ff70c8a923ac930a,G071,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,directo,Prohíbe superposiciones
+b6e75156d75d73f2,G076,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige correspondencia cuantitativa de FO-IC-09 con BDG y CAD
+70e98933f59241bf,G081,VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta,si,parcial,Respalda la verificación de cantidades contra el seguimiento oficial
+70e98933f59241bf,G081,GU-IC-06 §8.3 ¶3,no,,La modificación de geometrías no respalda la conciliación de conteos
+f50dc860508a25eb,G082,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige correspondencia entre BDG y diccionario
+f50dc860508a25eb,G082,GU-IC-06 §8.2 ¶3,si,parcial,Describe campos dominios y atributos mínimos de Productos_BDG
+81546643f2d74462,G083,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,parcial,Respalda la corrección del código pero no el error espacial
+81546643f2d74462,G083,GU-IC-06 §8.2 ¶3,no,,Describe el archivo pero no exige corregir código y localización
+060644e5b74b65db,G084,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,parcial,Exige validar atributos contra el diccionario
+060644e5b74b65db,G084,GU-IC-06 §8.2 ¶3,no,,Demasiado general para la altura del sardinel
+d4bfb6717f79feb1,G085,GU-IC-06 §8.1.3,si,parcial,Remite a las instrucciones oficiales del rótulo
+d4bfb6717f79feb1,G085,Productos_DWG Nomenclatura plano F34,no,,El código de plano DD no regula los atributos del rótulo
+5a560f90a4529020,G086,GU-IC-06 §8 ¶8,no,,La guía permite más de un archivo BASE y no exige un único DWG
+5ed72c5105e9e8d5,G091,GU-IC-06 §8 ¶13,no,,Regula layouts y nombres pero no el orden consecutivo de carpetas
+74ea2d05d1cf0398,G111,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,parcial,La regla sustenta el control topológico pero no la solución específica del pompeyano
+13f89fd2fb526eee,G116,VALIDACIONES_BDG 2.4. c. Contenencia elementos,si,directo,Exige contenencia entre elementos
+eb000faab6a1bc4a,G126,GU-IC-06 §8.2 ¶2,si,directo,Exige diligenciar Productos_BDG como lista de chequeo de la BDG
+6e4f3bb4049fcefe,G150,GU-IC-06 §8.2 ¶4,si,directo,Exige validación de interventoría y justificaciones técnicas o contractuales
+88313fcd848dcedb,G151,GU-IC-06 §8 ¶7,si,directo,Exige unidades DWG en metros
+40c349f91395b8be,G156,GU-IC-06 §8.4 ¶2,si,directo,Exige entregar formato de origen y PDF
+ab31e6ffe50c59e2,G166,GU-IC-06 §8 ¶9,si,directo,Exige usar el archivo BASE como XREF en todos los temas
+ab31e6ffe50c59e2,G166,GU-IC-06 §8 ¶10,no,,Se refiere específicamente a achurados y es redundante
+6037a4d5beff2eff,G190,GU-IC-06 §8.2 ¶2,si,parcial,Exige que Productos_BDG esté diligenciado por consultor e interventoría
+6037a4d5beff2eff,G190,GU-IC-06 §8.2 ¶3,si,directo,Define atributos mínimos y diligenciamiento de columnas de contratista e interventoría
+e715144ff6658fc5,G195,FO-IC-05 A.3.c,no,,Norte magnético no equivale al sistema de referencia
+c146f71633675ebf,G206,VALIDACIONES_BDG 2.4. a. Superposición elementos,no,,No superponer no demuestra correspondencia entre polígonos CAD y BDG
+b2c20f0b7a6367c2,G211,FO-IC-05 B.7.b,si,directo,Exige codificar elementos según rangos del IDU
+f0219633b1497db2,G216,Productos_DWG LAYERCAD regla,si,directo,Exige cada elemento en su layer definido
+d3afdf5107a862b7,G222,Productos_DWG LAYERCAD regla,no,,LAYERCAD no establece por sí solo filtros por esquema o temática
+96930e6ac27d24e7,G236,GU-IC-06 §8 ¶14,si,directo,Exige los productos DWG y sus PDF
+8da3bcd115475dbd,G238,Productos_DWG Récord F42,si,parcial,Exige escala numérica y gráfica pero no consigna el valor requerido
+dd70ca8834dcd294,G239,FO-IC-05 A.3.g,no,,Nomenclatura vial no respalda coherencia entre escalas
+3a9967d6c9ee6686,G240,GU-IC-06 §8.4 ¶2,si,directo,Exige el PDF junto al formato de origen
+727105aaf80757b9,G242,Productos_DWG LAYERCAD regla,no,,No identifica el grupo ROTULO para grilla coordenadas y textos
+e2ad09f51fe0ae38,G246,GU-IC-06 §10 ¶1,si,directo,Exige aprobación y evaluaciones de calidad antes de la entrega
+afa06b022d81b935,G251,GU-IC-06 §8.4 ¶1,si,directo,Exige usar la estructura suministrada sin modificar nombres
+58b3999fe245bf71,G260,GU-IC-06 §8.4 ¶1,si,directo,Exige estructura oficial y nombres sin modificar
+58b3999fe245bf71,G260,GU-IC-06 §8.4 ¶2,no,,Regula carpetas principales y tramos pero es redundante
+498dde2e23ffdaa3,G266,GU-IC-06 §8.4 ¶1,si,parcial,Exige cada producto en su carpeta y depuración sin modificar la estructura
+e3119cd4c0ac0d3e,G280,Productos_DWG LAYERCAD regla,no,,Usar layers definidos no equivale a registrar layers nuevos
+fd236c9a6ab9aef9,G281,GU-IC-06 §8.4 ¶1,si,directo,Prohíbe modificar el nombre de las carpetas restantes
+9756d4a0f8ec16f2,G290,FO-IC-05 A.3.c,no,,Norte magnético no equivale al cuadro de sistema de coordenadas
+fa5931623be244dc,G001,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige correspondencia entre FO-IC-09 BDG y planos pero no detalla tablas de intervención
+fa2388c2565b7444,G002,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige consistencia entre productos pero no menciona específicamente la fecha de registro
+90ab65abe691bd20,G003,GU-IC-06 §10 ¶1,si,parcial,Exige aprobación y evaluaciones de calidad aunque no describe el reproceso
+1e2232821c37060b,G004,GU-IC-06 §7.1.1 ¶3,si,directo,Exige correspondencia de FO-IC-09 con BDG y planos CAD
+1e2232821c37060b,G004,VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta,si,parcial,Respalda la verificación de la meta contra el seguimiento oficial
+db8c3c241ad3e5ff,G011,GU-IC-06 §8.2 ¶6,si,directo,Exige validar la meta física contra los demás productos y relacionar CIV con layouts
+713aaf3b96f80c09,G012,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,directo,Prohíbe superposición entre elementos
+3f9ece2d598a1a8c,G013,GU-IC-06 §8.2 ¶2,si,directo,Exige diligenciar Productos_BDG como lista de atributos obligatorios
+3f9ece2d598a1a8c,G013,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige correspondencia con el diccionario de atributos
+685665c1a6046617,G014,GU-IC-06 §8.2 ¶2,si,directo,Exige que Productos_BDG esté diligenciado con los atributos de la BDG
+dac4b885757b29e1,G015,GU-IC-06 §7.1.4 ¶2,si,parcial,Exige presentar EstructuraCarpetas por etapa pero no detalla el campo CONTRATISTAS
+8f988c284df1129b,G016,GU-IC-06 §8.2 ¶3,si,directo,Define diligenciamiento de contratista e interventoría y justificaciones
+7f219ba361e6cfb4,G017,GU-IC-06 §7.1.1 ¶3,si,directo,Exige igualdad cuantitativa entre FO-IC-09 BDG y planos CAD
+4ba9124d0df0173a,G018,GU-IC-06 §8 ¶5,si,directo,Ordena eliminar los layers que no se utilicen
+aaabe6a972250509,G019,FO-IC-05 A.2.h,si,directo,Exige cuadro de convenciones de los objetos representados
+ededcbef676f249f,G020,Productos_DWG Récord F26,si,directo,Define Planta Perfil entre los elementos mínimos de construcción récord
+ededcbef676f249f,G020,GU-IC-06 §9.4 ¶1,si,parcial,Remite los productos de construcción a ElementosConstruccion Récord
+383ee9539fe9ba60,G022,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige diligenciar FO-IC-09 y su correspondencia pero no menciona el campo ENTIDAD
+991aca4418956dd8,G023,GU-IC-06 §8.2 ¶2,si,directo,Exige diligenciar las hojas de Productos_BDG como lista de chequeo de atributos
+314eaf095c223a40,G024,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,directo,Prohíbe superposición entre elementos
+db57d088f15315bd,G025,Productos_DWG LAYERCAD 25,si,directo,Define Matera en el layer MATERA con geometría y estados oficiales
+3b51682d7209bad7,G027,REGLAS_TOPOLOGICAS 6,si,parcial,La conectividad de red se apoya en la regla que prohíbe líneas sueltas
+3cd128f2ca8c4427,G028,REGLAS_TOPOLOGICAS 14,si,parcial,Respalda coincidencia de límites pero no toda la segmentación por CIV
+25795a4e6e2149ed,G029,GU-IC-06 §8.2 ¶7,si,directo,Exige resultados y soportes de pruebas de las capas de pavimento
+7f1d06103f2dc4aa,G030,Productos_DWG LAYERCAD regla,si,parcial,Exige geometría layer y estado oficiales pero no cubre CIV y PK
+7f1d06103f2dc4aa,G030,FO-IC-05 B.5,si,parcial,Exige codificación oficial pero no define la nomenclatura geométrica
+373e85fb257c052f,G032,GU-IC-06 §8.1.3,si,parcial,Remite al formato oficial ROTULO pero no enumera los campos eliminados
+3321fd0f12db1b58,G033,FO-IC-05 A.2.o,si,directo,Exige nombre CAD según el instructivo vigente
+80783b0686a4ae21,G034,GU-IC-06 §8 ¶7,si,parcial,Exige unidades DWG en metros pero no toda la coherencia de escalas
+80783b0686a4ae21,G034,Productos_DWG Récord F42,si,parcial,Exige escala numérica y gráfica sin detallar rótulo y viewport
+1de017c0f0bd32b9,G035,FO-IC-05 A.2.h,si,directo,Exige cuadro de convenciones para los objetos representados
+abc14c6e1bc5a6b6,G036,GU-IC-06 §8.4 ¶1,si,directo,Exige incorporar información o borrar carpetas vacías sin modificar los nombres restantes
+99dbf8c74018082a,G037,GU-IC-06 §8.2 ¶4,si,directo,Exige justificar técnica y contractualmente estudios o información no incorporada
+337316771c43e7c7,G038,Productos_DWG Récord F26,si,directo,Exige cotas de rasante del eje y bordes en Planta Perfil
+2c0d0b9ea92de917,G039,Productos_DWG Récord F42,si,directo,Incluye escala numérica y gráfica entre los mínimos del plano
+0b571ce69c107d96,G040,GU-IC-06 §7.1.1 ¶4,si,directo,Prohíbe modificar la estructura de la BDG suministrada
+aeafce674ff06fb1,G042,GU-IC-06 §8 ¶8,si,directo,Define la nomenclatura BASE para contratos IDU
+63a3dacf1ba80990,G043,Productos_DWG Récord F26,no,,El contenido de Planta Perfil no regula la rotación de textos
+39bbf5db17b0b5ab,G044,GU-IC-06 §8.4 ¶1,si,directo,Exige incorporar toda la información y soportes en sus carpetas oficiales
+5ffcd48758263925,G045,REGLAS_TOPOLOGICAS 3,si,parcial,La coincidencia de límites respalda segmentar polígonos que cruzan elementos
+ef6c0af16d4c2851,G046,GU-IC-06 §7.1.1 ¶3,si,directo,Exige correspondencia entre meta física BDG y planos CAD
+dc16aff2134abebf,G047,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,directo,Prohíbe superposición entre elementos
+dc16aff2134abebf,G047,VALIDACIONES_BDG 2.4. c. Contenencia elementos,si,directo,Exige contenencia espacial entre elementos
+6d2f6778afe1a1bc,G089,GU-IC-06 §8.1.3,si,directo,Remite al archivo ROTULO oficial para diligenciar los rótulos
+ea2cfb2621f9c3d7,G115,GU-IC-06 §8 ¶4,si,directo,Exige respetar geometría grosor color filtro y nombre de layers
+23af149509a96e61,G093,GU-IC-06 §8 ¶13,si,directo,Exige que el layout tenga el mismo nombre empleado en PLANCHA No.
+e35790ac07e1ad50,G135,FO-IC-05 A.2.m,si,directo,Exige numeración de planos según el instructivo vigente
+307193f916b55049,G100,GU-IC-06 §8.2 ¶1,si,parcial,Exige entregar LAYOUT_CIV pero no ordena eliminar todas las demás hojas
+ae98db7f11e8f943,G063,Productos_DWG LAYERCAD 76,si,directo,Define Red de Ciclorruta como geometría línea en su layer oficial
+ceccbbc1332e28d5,G072,Productos_DWG LAYERCAD regla,si,directo,Exige nombre layer geometría y estado definidos en LAYERCAD
+6e7f3fb81be9bea6,G113,GU-IC-06 §7.1.2 ¶3,si,parcial,Describe archivos ConfiguracionCapaEstructura pero no fija toda su nomenclatura
+4dc1cb74330efdcf,G181,GU-IC-06 §8 ¶4,si,directo,Exige filtros nombres y geometrías oficiales
+4dc1cb74330efdcf,G181,GU-IC-06 §8 ¶5,si,directo,Exige sufijos de estado y organización por filtros
+c8529ed8faccb39b,G182,GU-IC-06 §8.1.3,si,parcial,Remite a ROTULO.xlsm aunque el catálogo no extrae el campo CONSECUTIVO
+1287f5ffdca8967d,G079,GU-IC-06 §8 ¶4,si,directo,Exige respetar capas y filtros del alistamiento
+15448e30ec5dc1d0,G136,GU-IC-06 §7.1.2 ¶3,no,,Describe configuraciones pero no establece el nombre de sus archivos
+1da43deaca3a081b,G099,GU-IC-06 §8.4 ¶1,si,parcial,Exige totalidad de información y soportes pero no enumera esos planos concretos
+c4fe3a0c4c3d42c4,G183,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige correspondencia de atributos con el diccionario
+c4fe3a0c4c3d42c4,G183,VALIDACIONES_BDG 4.2. Atributos cuantitativos,si,directo,Exige verificar valores cuantitativos
+b29bc51df7c40ed1,G132,FO-IC-05 A.2.n,si,directo,Exige nombres de layouts según el instructivo
+b29bc51df7c40ed1,G132,FO-IC-05 A.2.o,si,directo,Exige nombres de archivos CAD según el instructivo
+5660af2f1d8546dd,G160,GU-IC-06 §8.2 ¶2,si,directo,Exige entregar y diligenciar Productos_BDG como diccionario y lista de chequeo
+37973c4975553b8c,G167,GU-IC-06 §8.2 ¶2,si,parcial,Exige el diccionario diligenciado pero no describe toda discrepancia con el alistamiento
+c2877a4a95a2be98,G103,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige completitud conforme al diccionario de atributos
+5ae16513004faf94,G055,GU-IC-06 §8.2 ¶2,si,directo,Exige diligenciar los atributos de Productos_BDG
+1faa02a4ee1dc673,G176,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige coherencia y completitud de atributos
+86063b187981e643,G147,GU-IC-06 §8.4 ¶1,no,,El resumen remite a otro memorando y no contiene una exigencia verificable
+c63424a8678bc450,G188,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige correspondencia entre BDG y diccionario
+c63424a8678bc450,G188,GU-IC-06 §8.2 ¶2,si,parcial,Exige diligenciar Productos_BDG pero no detalla la depuración de elementos ausentes
+20e7f5cd5d753312,G109,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,parcial,Respalda los campos BDG pero no la representación CAD completa
+6af8ac0d451fc275,G139,FO-IC-05 A.2.n,si,directo,Exige nombres de layouts según el instructivo
+6af8ac0d451fc275,G139,GU-IC-06 §8.1.3,si,parcial,Remite a ROTULO.xlsm para consecutivos y campos de rótulo
+22e2b5974f424cff,G121,GU-IC-06 §8.4 ¶1,si,directo,Exige cada archivo en su carpeta de la estructura oficial
+bd3de95347a058b9,G161,GU-IC-06 §8.4 ¶1,si,directo,Exige incorporar la totalidad de información y soportes
+de600285063810ef,G184,GU-IC-06 §8 ¶8,si,directo,Limita BASE principal a elementos de competencia y define archivos BASE adicionales
+de600285063810ef,G184,GU-IC-06 §8 ¶11,si,directo,Exige enlazar referencias externas mediante rutas relativas
+a09eb2f65a45158b,G068,GU-IC-06 §8.2 ¶3,si,directo,Exige diligenciar atributos mínimos y columnas de Productos_BDG
+43d0725d9b8289e6,G105,Productos_DWG Récord F35,si,directo,Incluye nomenclatura vial y códigos CIV entre los mínimos del plano
+8732c8780068b47d,G174,VALIDACIONES_BDG 4.2. Atributos cuantitativos,si,directo,Exige verificar los valores cuantitativos de los atributos
+13c2d17d294da775,G101,GU-IC-06 §9.4 ¶1,si,parcial,Exige productos de construcción según la hoja Récord pero no identifica cuáles planos de localización
+87e98643cdd80bc4,G075,VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ,si,parcial,Prohíbe PK_ID duplicados aunque el resumen habla genéricamente de documentos
+dcd18e9b61e51f6d,G088,GU-IC-06 §8.2 ¶2,si,directo,Exige diligenciar atributos obligatorios de Productos_BDG
+f064398387742af0,G172,FO-IC-05 A.2.m,si,directo,Exige numeración de planos según el instructivo
+7236d0937f96b3b2,G090,GU-IC-06 §8.1.3,si,parcial,Remite a ROTULO.xlsm pero no extrae el campo CONSECTIVO
+473c22dc357b96c8,G098,GU-IC-06 §8.2 ¶6,si,directo,Exige relacionar códigos CIV con cada layout en Productos_DWG
+79ac47bd97c4367a,G065,GU-IC-06 §8 ¶11,si,parcial,Exige referencias externas enlazadas pero no regula el texto del campo REFERENCIA
+3023a78863c6bb7b,G122,FO-IC-05 A.2.m,si,directo,Exige numeración de planos conforme al instructivo
+d95b4c5bd4acdd42,G157,GU-IC-06 §8.4 ¶1,si,directo,Exige incorporar la totalidad de información estandarizada
+5ed947fb586e99f0,G148,VALIDACIONES_BDG 3.1. Proyectos que cuentan con topografía,si,parcial,Exige exactitud BDG frente a CAD pero no define la salvedad técnica del puente
+095936aaaac63221,G053,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige completar atributos solicitados en el diccionario
+7867dd81599c7348,G074,FO-IC-05 A.2.h,si,directo,Exige convenciones correspondientes a los objetos representados
+397cb77a33f0fe09,G106,Productos_DWG Récord F28,si,parcial,Exige indicar espesores y materiales pero no específicamente la mezcla en cuadros de intervención
+a3ab1a8a95b473b2,G120,Productos_DWG Nomenclatura plano F34,no,,La nomenclatura del plano no exige explicar el formato de fecha de las tablas
+49510afa3ebd9f00,G129,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige correspondencia FK_ID y PK_ID entre elementos y tablas
+2ceeed7588a73e7a,G108,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige incorporar los atributos solicitados para mobiliario
+c9ad79dfd257c94e,G143,Productos_DWG Récord F28,si,directo,Exige espesores y tipos de materiales en las secciones típicas
+25beb715ac4a7eb4,G117,REGLAS_TOPOLOGICAS 13,si,directo,Exige geometrías de una sola parte
+25beb715ac4a7eb4,G117,VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ,si,directo,Prohíbe duplicidad de PK_ID
+35d4bc7a2e67c8c0,G171,Productos_DWG Récord F42,si,directo,Exige escala numérica y gráfica en los planos viales
+239fd686dc7d5eba,G049,GU-IC-06 §8 ¶11,si,parcial,Regula rutas relativas de XREF pero no fija la subcarpeta D.2.BaseDWG
+8014458e5c469061,G052,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige diligenciar atributos obligatorios como Fecha Registro
+5203f23db0862e01,G142,FO-IC-05 A.2.m,no,,La numeración de planos no define el consecutivo del nombre de ese archivo AutoCAD
+10ba3e088c134255,G119,GU-IC-06 §8.2 ¶4,si,directo,Exige justificar información no incorporada y validarla por interventoría
+10ba3e088c134255,G119,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige diligenciar atributos y relaciones solicitados
+7edefaa4bb186c1a,G177,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige que FK_ID corresponda al PK_ID relacionado
+77a52d7516546b08,G061,GU-IC-06 §8.2 ¶7,si,directo,Exige reporte de estructura de pavimento con resultados y soportes
+7c5a894ffe02d544,G057,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,parcial,Exige coherencia de atributos pero no ordena borrar ese texto específico
+ce270c74b5edaa7f,G149,VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta,si,parcial,Respalda completitud de la meta pero no enumera todas las áreas faltantes
+988c2e7d0f436356,G114,GU-IC-06 §8 ¶11,si,directo,Exige que las XREF usen rutas relativas y carguen en otros equipos
+c2060bc1831f87ed,G080,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige relaciones correctas entre elemento andén y su tabla
+916f41f4ab8a45d6,G110,Productos_DWG LAYERCAD 59,si,directo,Define Calzada con estado existente entre las representaciones CAD
+b71350c20c83cf02,G187,GU-IC-06 §8.3 ¶1,si,directo,Exige representar en la BDG los elementos del proyecto en su geometría y Feature Class
+b71350c20c83cf02,G187,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,parcial,Exige atributos conforme al diccionario
+d04e5fa97a00aad4,G185,GU-IC-06 §8.3 ¶1,si,directo,Exige incorporar los elementos del proyecto en la BDG
+d04e5fa97a00aad4,G185,VALIDACIONES_BDG 3.1. Proyectos que cuentan con topografía,si,parcial,Exige exactitud entre BDG y CAD
+437a9d23de4bc5f1,G141,GU-IC-06 §9.8 ¶2,si,directo,Enumera los componentes estructurales de puente que deben representarse
+db34e6b111cda2ea,G179,GU-IC-06 §9.5 ¶4,no,,No establece si esos ensayos no solicitados pertenecen a la especificación contractual 510-11
+8554a57da0f945ee,G162,GU-IC-06 §8.3 ¶3,si,parcial,Exige que la geometría represente completamente la realidad
+f8d6936957eb3ba1,G048,GU-IC-06 §9.4 ¶1,si,parcial,Remite los mínimos de construcción a ElementosConstruccion Récord
+11e6faa0d0c9eecc,G077,Productos_DWG Récord F26,si,directo,Exige cotas de rasante del eje y bordes en Planta Perfil
+2f486ec77a0686cd,G152,Productos_DWG Récord F42,si,directo,Exige escala numérica y gráfica
+2f486ec77a0686cd,G152,Productos_DWG Récord F35,si,directo,Exige nomenclatura vial y códigos CIV
+028cdfdb7aa2c28a,G123,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige la relación FK_ID y PK_ID entre elementos y tablas
+26753ff88a24af65,G138,FO-IC-05 A.2.h,si,directo,Exige convenciones acordes con los objetos representados
+89c751cbf072d12c,G180,GU-IC-06 §7.1.2 ¶3,si,directo,Exige relacionar código de calzada CIV y archivo de configuración estructural
+89c751cbf072d12c,G180,FO-IC-05 B.5,si,parcial,Exige codificación oficial de los elementos
+4c60dcfcc40381f6,G073,FO-IC-05 A.2.k,si,parcial,Exige grilla de coordenadas pero no regula la superposición de sus textos
+c0281c37b73cc277,G094,FO-IC-05 A.2.m,si,parcial,Exige numeración conforme al instructivo pero no ordena borrar el archivo vacío
+cd51bcfa034a43ff,G107,GU-IC-06 §7.1.1 ¶3,si,directo,Exige correspondencia de cantidades entre FO-IC-09 BDG y planos CAD
+178bfbbb422293b6,G128,VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos,si,directo,Exige clasificación cualitativa conforme a la realidad
+2da33e57a33471de,G130,VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ,si,directo,Prohíbe duplicar el identificador del elemento calzada
+8b03f1c920627399,G158,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,directo,Prohíbe superposición de elementos
+8b03f1c920627399,G158,VALIDACIONES_BDG 2.4. b. Huecos entre elementos,si,directo,Prohíbe huecos entre elementos adyacentes
+e747970d4ca3f3d6,G054,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige diligenciar FO-IC-09 y su correspondencia con los productos
+f4ce37e77b72d8a7,G078,GU-IC-06 §8 ¶7,si,directo,Exige unidades de dibujo DWG en metros
+e6a190967f8a3c6a,G165,VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos,si,directo,Exige clasificar el elemento conforme a su realidad
+cbaf94918e06ca74,G127,GU-IC-06 §7.1.1 ¶3,si,directo,Exige igualdad cuantitativa entre FO-IC-09 BDG y CAD
+d52b7482af7eda7f,G169,VALIDACIONES_BDG 2.4. c. Contenencia elementos,si,directo,Exige que el elemento esté contenido dentro del polígono correspondiente
+8e4ca681bdd38d38,G155,VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos,si,directo,Exige clasificación del elemento conforme a la realidad
+f690f2c172502b32,G059,GU-IC-06 §7.1.1 ¶3,si,directo,Exige correspondencia entre FO-IC-09 y elementos de la BDG
+c1d497c7dcdda93a,G186,GU-IC-06 §8.3 ¶1,si,directo,Exige reportar en la BDG todos los elementos intervenidos
+86f19f13c096bd0f,G064,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige coherencia de FO-IC-09 con BDG pero no fija el nombre exacto del tipo
+5cd5b99882693713,G133,FO-IC-05 A.5.e,si,directo,Exige escalas de planta según el instructivo
+2dfe75f5facd0e42,G104,FO-IC-05 B.5,si,directo,Exige codificación oficial de todos los elementos
+2dfe75f5facd0e42,G104,GU-IC-06 §9.8 ¶2,si,directo,Enumera los componentes válidos del elemento puente
+460be4de0bc57d89,G067,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige consistencia del reporte con BDG y CAD pero no define el tipo de intervención
+921b3fd551032ac0,G069,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige atributos de mobiliario conforme al diccionario
+ce71533e2c6b6e32,G087,GU-IC-06 §8 ¶8,si,directo,La base CAD debe contener solo elementos de competencia del IDU y conservar la estructura oficial
+70d0037298ba6f57,G154,GU-IC-06 §8.2 ¶7,si,directo,Exige entregar la estructura junto con resultados de ensayos de laboratorio
+5a842b97882bb38d,G070,GU-IC-06 §8.3 ¶3,si,parcial,Exige que la geometría represente completamente la realidad pero no prescribe esta segmentación
+a2b361d62dd11c52,G168,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige que los atributos de la BDG correspondan con el diccionario oficial
+a2b361d62dd11c52,G168,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige correspondencia entre FO-IC-09 BDG y CAD aunque no regula el valor exacto de la mezcla
+48e6814072ae2626,G145,FO-IC-05 B.6.a,si,directo,Exige presentar todos los elementos del contrato en la geodatabase
+48e6814072ae2626,G145,GU-IC-06 §8.3 ¶1,si,directo,Exige representar en la BDG los elementos de la etapa del contrato
+76c94cc1d1aa9678,G051,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige correspondencia entre elementos y tablas mediante sus identificadores
+3e5676150543f233,G112,GU-IC-06 §7.1.1 ¶3,si,directo,Exige correspondencia cuantitativa entre el reporte final la BDG y los planos CAD
+4c34c3350208f1d9,G097,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige diligenciar FO-IC-09 por etapa pero no define el texto exacto del tipo de intervención
+7ff2f0ccb15176a2,G173,Productos_DWG Récord F121,no,,El producto menciona cuadros de deflexiones pero no prohíbe valores repetidos
+0a206b058063ca13,G137,GU-IC-06 §8.2 ¶7,si,parcial,Exige resultados y soportes de laboratorio pero no fija los valores de la mezcla
+f937f9c725e09bfe,G153,GU-IC-06 §7.1.1 ¶3,si,directo,Exige correspondencia de la información entre el reporte final la BDG y los productos CAD
+77581e554061f467,G096,GU-IC-06 §8.3 ¶3,si,parcial,Exige representar la realidad pero la eliminación de esta rampa depende de la verificación del proyecto
+6e9fc00a54b8afe7,G092,GU-IC-06 §7.1.1 ¶3,si,directo,Exige igualdad cuantitativa entre FO-IC-09 BDG y planos CAD
+2493b8901743a2c0,G140,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige correspondencia entre los elementos y los registros de sus tablas relacionadas
+1488f127d3804271,G095,VALIDACIONES_BDG 4.1. Atributos cualitativos de los elementos,si,directo,Exige clasificar los elementos conforme a la realidad
+1488f127d3804271,G095,GU-IC-06 §8.3 ¶3,si,parcial,Exige que la geometría represente la realidad pero no prescribe los identificadores observados
+344929f6d647eed4,G118,VALIDACIONES_BDG 2.4. a. Superposición elementos,si,parcial,Prohíbe superposiciones de elementos aunque no define la cantidad de bloques norte
+238361711aa9c2ba,G178,GU-IC-06 §7.1.1 ¶3,si,directo,Exige que los identificadores y cantidades del reporte correspondan con BDG y CAD
+7999c92568ce08c2,G066,VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ,si,directo,Prohíbe duplicar el identificador PK_ID de los elementos
+5e461ec98f4c039a,G159,GU-IC-06 §8.3 ¶3,si,parcial,Exige geometrías acordes con la realidad pero no prescribe esta división de andenes
+7cdf7a428468604f,G144,GU-IC-06 §10 ¶1,si,directo,Exige completitud aprobación y cumplimiento de todas las evaluaciones de calidad
+7cdf7a428468604f,G144,GU-IC-06 §11.1 ¶1,si,parcial,Atribuye al actor de infraestructura la calidad y completitud de los archivos
+3900321798e9a80a,G163,GU-IC-06 §8.3 ¶3,si,parcial,Exige representar la realidad pero la unificación concreta requiere verificación del proyecto
+188d4f10d2e570ec,G124,GU-IC-06 §7.1.1 ¶3,si,directo,Exige reportar en FO-IC-09 los elementos intervenidos y hacerlos corresponder con la BDG
+8752efb3058518b2,G058,Productos_DWG LAYERCAD 8,si,directo,Define el layer EXPLORACION y su geometría de punto
+8752efb3058518b2,G058,Productos_DWG LAYERCAD 9,si,directo,Define el bloque de exploración en el layer EXPLORACION
+aa58b3ef8977dadf,G134,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige correspondencia entre los elementos y los registros de las tablas relacionadas
+51a8e82b12e3bae2,G170,VALIDACIONES_BDG 4.2. Atributos cuantitativos,si,directo,Exige verificar todos los atributos cuantitativos para certificar su veracidad
+47aaa76ab922f5cb,G102,GU-IC-06 §8.3 ¶3,si,parcial,Exige geometrías acordes con la realidad pero no prescribe la operación concreta sobre las cunetas
+6fbb5fda818e3450,G125,GU-IC-06 §10 ¶1,si,directo,La entrega debe estar completa y contener todos los archivos obligatorios para poder revisarse
+f77d4bcb557a2882,G131,VALIDACIONES_BDG 4.2. Atributos cuantitativos,si,directo,Exige revisar la totalidad de los atributos cuantitativos y certificar su veracidad
+37f824e4900efd31,G062,GU-IC-06 §8.2 ¶4,si,directo,Los estudios y ensayos no incorporados deben justificarse técnicamente y validarse
+37f824e4900efd31,G062,GU-IC-06 §7.1.1 ¶3,si,parcial,Exige correspondencia del FO-IC-09 con los productos pero no define estas variables concretas
+3503354b1e26f4e6,G164,GU-IC-06 §8.3 ¶3,si,parcial,Exige geometrías acordes con la realidad pero no prescribe la unificación concreta de andenes
+6228a819c642b92a,G146,GU-IC-06 §8.4 ¶4,no,,La estandarización con el alistamiento no establece la obligación de realizar una mesa de trabajo
+d64234caf38e9a83,G175,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige que las relaciones entre elementos y tablas apunten al identificador correspondiente
+e2fd3cf23f665901,G060,GU-IC-06 §8.2 ¶4,si,directo,Exige incorporar los estudios y ensayos o justificar técnicamente su ausencia
+1dd51426f5bfe611,G276,Productos_DWG LAYERCAD regla,si,parcial,Exige representar cada elemento en su layer oficial pero no ordena reportar el conteo
+f7974e3b558e0961,G223,Productos_DWG LAYERCAD regla,no,,La regla define layer geometría y estado pero no exige describir todos los niveles en un reporte
+61eb726d1ce37a2d,G237,GU-IC-06 §8.2 ¶6,si,directo,Exige diligenciar LAYOUT_CIV y NUEVOSLAYERS en Productos_DWG
+a9aa1017e9553c2e,G277,Productos_DWG LAYERCAD regla,si,directo,Exige representar cada elemento conforme al layer CAD oficial
+9a4508b426a7f90e,G282,Productos_DWG LAYERCAD regla,si,directo,Exige respetar el tipo de geometría definido para cada layer
+b172a3c6e7409e38,G275,GU-IC-06 §8 ¶5,si,directo,Exige organizar los layers en filtros con la misma estructura de la BDG
+917dae75e340d114,G247,GU-IC-06 §8.2 ¶6,si,directo,Exige reportar los nuevos layers y relaciona ConfiguracionCapaEstructura como producto
+b5f4cf61fa611584,G293,Productos_DWG LAYERCAD regla,si,directo,Cada layer oficial tiene definido un único tipo de geometría
+f17404099323c97b,G215,GU-IC-06 §8 ¶10,si,directo,Exige nombrar los layers y hatch según el material de superficie representado
+ba9c2ccd3c47bd5e,G233,GU-IC-06 §8.2 ¶6,si,directo,Exige diligenciar las hojas NUEVOSLAYERS y LAYOUT_CIV
+8a5cf4d3d629d38a,G234,GU-IC-06 §8.2 ¶6,si,directo,Exige relacionar cada código CIV con su layout
+0fe911c78d68874f,G217,GU-IC-06 §8.4 ¶1,si,directo,Exige presentar cada archivo y soporte en su carpeta de EstructuraCarpetas
+cefe1d32c762d3bf,G202,FO-IC-05 A.2.n,si,directo,Exige nombrar los layouts con la nomenclatura oficial del plano
+cd41a6f12a48f95d,G218,Productos_DWG LAYERCAD regla,si,directo,Cada layer oficial define un solo tipo de geometría para el elemento
+24b4d56b794f823c,G213,GU-IC-06 §8 ¶5,si,directo,Exige organizar los layers por filtros con la estructura de la BDG
+9c2d508cdfdd20a7,G191,FO-IC-05 A.2.l,si,directo,Exige completar en el rótulo la información solicitada del proyecto
+9c2d508cdfdd20a7,G191,GU-IC-06 §8.1.3,si,parcial,Remite a ROTULO.xlsm para el diligenciamiento detallado de modificaciones y fechas
+0659e90f121ff401,G209,GU-IC-06 §8 ¶5,si,directo,Exige aplicar a los layers el sufijo de estado de la etapa
+0db0c4ab253fca27,G226,GU-IC-06 §8.2 ¶6,si,directo,Exige diligenciar LAYOUT_CIV relacionando códigos CIV y layouts
+330251a63c766c7e,G212,GU-IC-06 §8.4 ¶1,no,,La entrega completa no respalda el acuerdo temporal de entregar primero DWG y luego PDF firmados
+2ed481f138eb609a,G269,Productos_DWG LAYERCAD regla,si,parcial,Exige separar elementos por layer y geometría aunque no regula la composición interna de cada bloque
+17fb435c1a9c2c33,G285,GU-IC-06 §10 ¶1,si,directo,Exige completitud y cumplimiento de todas las evaluaciones de VALIDACIONES_BDG
+17fb435c1a9c2c33,G285,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,parcial,Respalda la consistencia conceptual de los atributos con el diccionario
+8ee44fcf66e9d34b,G263,Productos_DWG LAYERCAD regla,si,directo,Exige representar cada elemento en su layer oficial y no en Layer 0
+179cd70bfb0f110b,G214,Productos_DWG LAYERCAD regla,si,directo,La estandarización de layer geometría y estado aplica a todos los elementos representados
+179cd70bfb0f110b,G214,GU-IC-06 §8 ¶5,si,directo,Exige nombres oficiales sufijos y filtros para los layers de los planos
+618bc989bf7ba3c1,G264,GU-IC-06 §8 ¶10,si,parcial,Exige nombrar los hatch según el material representado aunque no formula la prohibición literalmente
+e56cc5c1e5c36167,G274,GU-IC-06 §8 ¶10,si,directo,Exige separar y nombrar los achurados según los materiales representados
+e56cc5c1e5c36167,G274,GU-IC-06 §8 ¶5,si,parcial,Exige organizar los layers en filtros con la estructura de la BDG
+2d5c2bb2a8226ffe,G294,Productos_DWG LAYERCAD regla,si,directo,Exige usar para cada elemento el tipo de geometría oficial incluido el bloque cuando corresponda
+d6a5cd553d95c3e9,G235,GU-IC-06 §10 ¶1,si,directo,La información presentada debe tener aprobación de la interventoría o supervisión
+b0c7d22cd4811532,G291,GU-IC-06 §8.4 ¶1,si,directo,Exige respetar las carpetas y sus nombres conforme a EstructuraCarpetas
+21ca8ef5191bbef8,G204,GU-IC-06 §11.1 ¶1,si,directo,Exige una carpeta de archivos editables además de los PDF
+db9c6a84b1fe1f77,G268,GU-IC-06 §8.4 ¶1,si,parcial,Exige incorporar toda la información y depurar carpetas vacías pero no regula la marca Ok
+87a65cfa36062d92,G201,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige diligenciar los atributos solicitados en el diccionario oficial
+6340e392ca763412,G198,GU-IC-06 §8.1.3,si,parcial,ROTULO.xlsm define el diligenciamiento pero el extracto no explicita la coincidencia de nombres de referencias
+0f2479171a307db2,G241,GU-IC-06 §6 ¶2,si,directo,Exige aval profesional mediante firma digital y entrega en PDF
+2aa13d46890c72a0,G253,FO-IC-05 A.2.m,si,directo,Exige numerar los planos conforme al instructivo vigente
+369f70efefab0259,G255,FO-IC-05 A.2.n,si,directo,Exige que cada layout use la nomenclatura oficial del plano
+369f70efefab0259,G255,FO-IC-05 A.2.m,si,directo,Exige numeración de planos conforme al instructivo
+a37c4c5a187951b8,G259,FO-IC-05 A.2.f,si,directo,Exige el cuadro de coordenadas de placas o puntos de amarre topográfico
+f0f85a8f8b8cc610,G220,GU-IC-06 §6 ¶2,si,directo,Exige que los archivos sean avalados por los profesionales mediante firma digital
+16b682990ec964d5,G261,Productos_DWG Nomenclatura plano F7,no,,La nomenclatura de carátula no prohíbe nombres descriptivos extensos en informes
+d6eb326607da9287,G283,GU-IC-06 §8.4 ¶1,si,directo,Exige ubicar cada producto en la carpeta exacta definida por EstructuraCarpetas
+654ef2493eec1139,G205,GU-IC-06 §8.4 ¶1,si,parcial,Exige totalidad de productos y soportes pero no prescribe la recodificación concreta
+61567e8904dbd5cd,G225,GU-IC-06 §8.1.3,si,directo,Remite a ROTULO.xlsm para diligenciar el registro de modificaciones
+fb0d1246b3d1cf35,G243,GU-IC-06 §10 ¶1,si,directo,La información debe estar completa y contener todos los archivos obligatorios
+08c8eef320904ff1,G199,FO-IC-05 A.2.g,si,directo,Exige presentar la nomenclatura vial actual en los planos
+08c8eef320904ff1,G199,Productos_DWG INSTRUCTIVO_LAYOUT_CIV C2,si,parcial,Define el CIV que debe relacionarse para los tramos del contrato
+d705aae779216659,G256,Productos_DWG Récord F31,si,directo,Exige secciones transversales con la estructura y espesores construidos del pavimento
+2ca37f267502f037,G273,FO-IC-05 A.2.n,no,,La nomenclatura de layouts no regula los sufijos ni la longitud del nombre de los informes
+4fe28102cad27775,G197,Productos_DWG Récord F24,si,parcial,Exige escala numérica y gráfica en los planos aunque no enumera cada vista
+67277805b0063c6c,G272,GU-IC-06 §8.4 ¶1,si,directo,Prohíbe modificar los nombres de las carpetas de la estructura oficial
+0d8a0959c78bd601,G287,GU-IC-06 §7.1.4 ¶2,si,directo,EstructuraCarpetas define el lugar y orden exactos de los archivos estandarizados
+a800032f18130281,G196,Productos_DWG Récord F42,si,parcial,Exige escala numérica y gráfica aunque el producto concreto puede usar otra fila equivalente
+393e280fbbbbf508,G227,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige diligenciar los atributos de Calzada solicitados en el diccionario
+d6d8402b8f44a52d,G207,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige poblar y validar las relaciones entre elementos y tablas
+f726856ede54321f,G257,GU-IC-06 §8 ¶11,si,directo,Exige conservar las referencias externas enlazadas mediante rutas relativas
+f726856ede54321f,G257,GU-IC-06 §8 ¶7,si,parcial,Exige presentar la base como DWG georreferenciado usado como referencia externa
+1000cc06dba061f7,G193,GU-IC-06 §8 ¶7,si,directo,Exige UCS World unidades en metros y georreferenciación correcta
+1000cc06dba061f7,G193,Productos_DWG Récord F24,si,parcial,Exige escala numérica y gráfica pero no describe la inversión observada
+0ff8b07a72e9c328,G244,GU-IC-06 §8.4 ¶1,si,directo,Exige incorporar la totalidad de los productos digitales desarrollados
+6f6466afd9b2e5f3,G200,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige diligenciar los atributos obligatorios definidos en el diccionario
+ccc2f72419e2d366,G248,FO-IC-05 A.2.h,si,directo,Exige presentar las convenciones de los objetos representados
+ccc2f72419e2d366,G248,Productos_DWG Récord F31,si,parcial,Exige secciones transversales con niveles pendientes y espesores de pavimento
+9b589a6664960f03,G194,FO-IC-05 A.2.h,si,directo,Exige el cuadro de convenciones de todos los objetos representados
+872ceedaedff0278,G249,FO-IC-05 A.3.k,si,directo,Exige el cuadro de convenciones de los objetos de la planta
+009f084322774166,G250,GU-IC-06 §11.1 ¶1,no,,La guía atribuye responsabilidad a los actores de infraestructura y no exclusivamente al contratista
+3a1f5a50448a67bc,G254,GU-IC-06 §8 ¶11,si,directo,Exige que las referencias externas queden resueltas mediante rutas relativas
+8065a00af4e4673d,G267,GU-IC-06 §8.3 ¶3,si,parcial,Restringe modificar geometrías a cambios necesarios para representar la realidad pero no exige justificar cada registro retirado
+1ae0897ee861ab67,G288,FO-IC-05 A.2.k,si,directo,Exige representar la grilla de coordenadas según la escala del plano
+1ae0897ee861ab67,G288,FO-IC-05 A.3.o,si,directo,Exige la grilla de coordenadas en los planos planta perfil
+c39d8cacba8fdf2b,G221,Productos_DWG Escalas F21,si,directo,Define las escalas permitidas para secciones transversales y sección típica
+17af413f786fd7d7,G232,VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta,si,directo,Exige verificar el reporte final de seguimiento contra la meta incorporada
+17af413f786fd7d7,G232,GU-IC-06 §7.1.1 ¶3,si,directo,El FO-IC-09 debe corresponder al contrato y a sus productos BDG y CAD
+03d5b3141b30b555,G258,Productos_DWG Escalas F8,no,,La validación de la carátula no exige una nota que limite la aprobación de la interventoría
+b9330aa9d62b183b,G289,FO-IC-05 A.2.c,si,directo,Exige presentar el norte magnético según la grilla de coordenadas
+b9330aa9d62b183b,G289,FO-IC-05 A.3.c,si,directo,Exige norte magnético en los planos planta perfil
+1cc3d91b962133cb,G286,GU-IC-06 §7.1.1 ¶5,si,directo,Exige solicitar a la DTE los nuevos elementos atributos o dominios que no existan en el alistamiento
+1cc3d91b962133cb,G286,FO-IC-05 B.7.b,si,parcial,Exige codificar los elementos nuevos con rangos suministrados por el IDU
+771fc0915d7f80a0,G192,FO-IC-05 B.5,si,directo,Exige que todos los elementos usen la codificación suministrada por el IDU
+b1173d9d2142ffb5,G229,Productos_DWG Récord F26,no,,La planta perfil no exige explícitamente coordenadas para cada punto de perforación
+173d17f35cf0f659,G228,GU-IC-06 §7.1.1 ¶5,no,,Define el sistema de coordenadas pero el extracto oficial no exige reportar la época en cada plano
+7b6e9f3fa4ef161f,G210,GU-IC-06 §8.3 ¶3,si,parcial,Exige que la geometría de la BDG represente la realidad pero no formula toda correspondencia CAD BDG
+3edce8949bee1fe3,G208,VALIDACIONES_BDG 1. Verificación de las relación entre eleme,si,directo,Exige correspondencia entre identificadores de elementos y tablas relacionadas
+3edce8949bee1fe3,G208,FO-IC-05 B.5,si,parcial,Exige codificación completa de los elementos conforme a la base oficial
+e3f49e65238b386c,G278,GU-IC-06 §8 ¶11,si,directo,Exige corregir y conservar las XREF mediante rutas relativas resueltas
+eab4810e9c2d8dae,G189,GU-IC-06 §8 ¶11,no,,La regla exige rutas relativas para XREF pero no fija la capitalización del nombre de la carpeta
+f7a4c15f4603fba1,G230,FO-IC-05 A.2.m,si,directo,Exige numerar los planos de acuerdo con el instructivo vigente
+6bf154749ecae07a,G231,GU-IC-06 §7.1.1 ¶3,si,directo,Exige que FO-IC-09 corresponda con la etapa el contrato la BDG y los planos CAD
+6bf154749ecae07a,G231,VALIDACIONES_BDG 1. Verificación del cumplimiento de la meta,si,directo,Exige verificar el reporte final de meta física entregado e incorporado
+025f2f0948242a1e,G203,GU-IC-06 §8.3 ¶1,si,directo,Todo elemento de la BDG debe estar representado mediante una geometría de punto línea o polígono
+be0e7640b980e7a2,G224,VALIDACIONES_BDG 1. Verificación de los atributos incorporad,si,directo,Exige diligenciar Tipo de Puente y CIV cuando el diccionario los solicita
+be0e7640b980e7a2,G224,FO-IC-05 B.5,si,parcial,Exige codificación oficial completa de los elementos
+72140a08d738fc32,G271,GU-IC-06 §10 ¶1,no,,La evaluación de calidad permite devolver una entrega pero no prohíbe expresamente re-radicar archivos sin cambios
+c1d4d7d822b44727,G265,VALIDACIONES_BDG 2.1. Verificación de duplicidad del atributo ,si,directo,Prohíbe duplicar PK_ID en un elemento o tabla
+4d64f5ffe0a594cb,G262,FO-IC-05 B.5,si,directo,Exige conservar la codificación de los elementos conforme a la base suministrada por el IDU
+f18698f17163907b,G245,GU-IC-06 §10 ¶1,si,directo,Exige que los datos cumplan todas las evaluaciones de calidad antes de su aprobación y radicación
+8e9ded442054912e,G279,GU-IC-06 §10 ¶1,si,directo,Exige evaluar la calidad del conjunto de datos contra las especificaciones técnicas
+3f7e19b23deb2e02,G270,GU-IC-06 §10 ¶1,no,,La evaluación de calidad no formula una regla independiente sobre reincidencia entre versiones
+8478839581c90aa0,G219,GU-IC-06 §10 ¶1,no,,La completitud de la entrega no exige responder una a una las observaciones en cada remisión
+0ce507d390c200de,G284,GU-IC-06 §10 ¶1,no,,La norma exige calidad y completitud pero no una respuesta tabular individual a cada observación previa
+3a8474b0669741bc,G292,GU-IC-06 §10 ¶1,no,,La norma permite objetar por calidad pero no compara expresamente una segunda entrega con la primera
+4bf7487c11a60ef9,G252,GU-IC-06 §10 ¶1,no,,La norma no condiciona la solicitud de mesa de trabajo a cerrar previamente todas las observaciones

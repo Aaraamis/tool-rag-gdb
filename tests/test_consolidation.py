@@ -6,6 +6,7 @@ import pytest
 
 from rag_gdb.checklist import render
 from rag_gdb.consolidation import group, load_observations, read_decisions, read_overrides, summarize
+from rag_gdb.normative_links import group_key
 
 
 def _unit(*rows):
@@ -61,6 +62,11 @@ def test_frequency_counts_distinct_idu_radicados_not_copies():
     assert g["tema"] == "T02" and g["tema_manual"] and g["miembros"][0]["autor"] == "idu"
     md = render({"temas": themes, "grupos": [g]}, today="2026-11-17")
     assert "IDU ×2 · interventoría ×1" in md and md.count("  - «") == 2  # ejemplos de radicados distintos
+    key = group_key(g)
+    md = render({"temas": themes, "grupos": [g]}, today="2026-11-17",
+                normative_links={key: [{"id": "N1", "tipo": "directo", "texto": "Regla oficial"}]},
+                reviewed_links={key})
+    assert "Normativa directo: **N1**" in md and "los demás quedan marcados" not in md
 
 
 def test_load_observations_skips_state_and_gives_stable_keys(tmp_path):

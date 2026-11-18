@@ -11,6 +11,8 @@ from .consolidation import consolidate, ollama_embed
 from .classification import apply_manual_reviews, classify_manifest, write_classification
 from .extraction import page_texts, validate_dir
 from .inventory import build_manifest, write_json
+from .normative import write_normative
+from .normative_links import propose_links, review_links
 from .pipeline import convert_selected, profile_manifest
 from .proposal import ollama_ask, propose_selected
 
@@ -62,6 +64,43 @@ def main() -> int:
     check = sub.add_parser("checklist", help="Borrador de checklist-gdb.md desde los grupos consolidados")
     check.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
     check.add_argument("--salida", type=Path, default=Path("datos/04_entregables/checklist-gdb.md"))
+    check.add_argument("--enlaces", type=Path, default=Path("config/normativa-enlaces.csv"))
+    check.add_argument("--catalogo", type=Path,
+                       default=Path("datos/04_consolidado/catalogo-normativa.json"))
+    normative = sub.add_parser("normativa", help="Verifica el alistamiento y genera el catálogo normativo (RF7)")
+    normative.add_argument("--raiz", type=Path, required=True,
+                           help="Raíz del paquete de alistamiento IDU 2020")
+    normative.add_argument("--registro", type=Path, default=Path("config/normativa.csv"))
+    normative.add_argument("--catalogo", type=Path,
+                           default=Path("datos/04_consolidado/catalogo-normativa.json"))
+    normative.add_argument("--salida", type=Path,
+                           default=Path("datos/04_entregables/normativa-vigente.md"))
+    normative.add_argument("--proyecto", default="contrato IDU 348 — construcción (récord)")
+    links = sub.add_parser("enlazar-normativa",
+                           help="Propone enlaces entre grupos y requisitos normativos para revisión")
+    links.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
+    links.add_argument("--catalogo", type=Path,
+                       default=Path("datos/04_consolidado/catalogo-normativa.json"))
+    links.add_argument("--salida", type=Path,
+                       default=Path("datos/04_consolidado/normativa-enlaces-revisar.csv"))
+    links.add_argument("--cache", type=Path,
+                       default=Path("datos/04_consolidado/normativa-embeddings.json"))
+    links.add_argument("--modelo", default="bge-m3")
+    links.add_argument("--url", default="http://localhost:11434")
+    links.add_argument("--candidatos", type=int, default=5)
+    review_links_cmd = sub.add_parser("revisar-enlaces-normativa",
+                                      help="Pide una segunda opinión local sobre candidatos normativos")
+    review_links_cmd.add_argument("--candidatos", type=Path,
+                                  default=Path("datos/04_consolidado/normativa-enlaces-revisar.csv"))
+    review_links_cmd.add_argument("--salida", type=Path,
+                                  default=Path("datos/04_consolidado/normativa-enlaces-modelo.csv"))
+    review_links_cmd.add_argument("--estado", type=Path,
+                                  default=Path("datos/04_consolidado/normativa-enlaces-modelo.json"))
+    review_links_cmd.add_argument("--prompt", type=Path,
+                                  default=Path("prompts/revisar-enlaces-normativos.md"))
+    review_links_cmd.add_argument("--modelo", default="qwen3.5:9b-q4_K_M")
+    review_links_cmd.add_argument("--url", default="http://localhost:11434")
+    review_links_cmd.add_argument("--lote", type=int, default=5)
     args = parser.parse_args()
     if args.command == "inventariar":
         rules = json.loads(args.reglas.read_text()) if args.reglas else None
@@ -88,7 +127,19 @@ def main() -> int:
                                      ollama_embed(args.modelo, args.url), args.modelo,
                                      themes_path=args.temas, overrides_path=args.temas_manuales)))
     elif args.command == "checklist":
-        print(json.dumps(write_checklist(args.grupos, args.salida)))
+        print(json.dumps(write_checklist(args.grupos, args.salida, args.enlaces, args.catalogo)))
+    elif args.command == "normativa":
+        print(json.dumps(write_normative(args.registro, args.raiz, args.catalogo,
+                                         args.salida, args.proyecto), ensure_ascii=False))
+    elif args.command == "enlazar-normativa":
+        print(json.dumps(propose_links(args.grupos, args.catalogo, args.salida, args.cache,
+                                       ollama_embed(args.modelo, args.url), args.modelo,
+                                       args.candidatos), ensure_ascii=False))
+    elif args.command == "revisar-enlaces-normativa":
+        print(json.dumps(review_links(args.candidatos, args.salida, args.estado,
+                                      args.prompt.read_text(encoding="utf-8"),
+                                      ollama_ask(args.modelo, args.url), args.modelo, args.lote),
+                         ensure_ascii=False))
     elif args.command == "paginas":
         manifest = json.loads(args.manifiesto.read_text())
         if args.ruta not in {item["ruta"] for item in manifest["archivos"]}:
