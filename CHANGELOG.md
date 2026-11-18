@@ -5,9 +5,18 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ## [Unreleased]
 
+### Added
+
+- `rag-gdb matriz` genera `matriz-observaciones.md` (504 observaciones por tema, con fecha,
+  contrato y referencia; el contrato solo se toma del nombre del archivo) y
+  `rag-gdb informe` genera `informe-corpus.md` con el estado de cada PDF del manifiesto.
+
 ### Fixed
 
 - El perfil técnico retira rutas obsoletas cuando cambia la extracción de nombres del corpus.
+- Las rutas relativas del manifiesto, la validación de extracciones y el hash de
+  directorios normativos usan `/` también en Windows, de modo que los resultados
+  coinciden con los generados en Linux.
 
 ### Changed
 

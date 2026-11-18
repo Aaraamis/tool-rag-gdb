@@ -122,6 +122,8 @@ página, el error indica cuál.
 ```bash
 .venv/bin/rag-gdb consolidar   # agrupa observaciones repetidas con bge-m3 (Ollama)
 .venv/bin/rag-gdb checklist    # genera datos/04_entregables/checklist-gdb.md
+.venv/bin/rag-gdb matriz        # genera matriz-observaciones.md (por tema, con fecha y contrato)
+.venv/bin/rag-gdb informe      # genera informe-corpus.md (estado de cada PDF del manifiesto)
 ```
 
 `consolidar` calcula embeddings de cada observación (resumen + cita, con caché

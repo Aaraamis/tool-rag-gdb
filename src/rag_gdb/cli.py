@@ -15,6 +15,7 @@ from .normative import write_normative
 from .normative_links import propose_links, review_links
 from .pipeline import convert_selected, profile_manifest
 from .proposal import ollama_ask, propose_selected
+from .reports import write_informe, write_matriz
 
 
 def main() -> int:
@@ -67,6 +68,16 @@ def main() -> int:
     check.add_argument("--enlaces", type=Path, default=Path("config/normativa-enlaces.csv"))
     check.add_argument("--catalogo", type=Path,
                        default=Path("datos/04_consolidado/catalogo-normativa.json"))
+    matrix = sub.add_parser("matriz", help="matriz-observaciones.md desde los grupos consolidados")
+    matrix.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
+    matrix.add_argument("--salida", type=Path, default=Path("datos/04_entregables/matriz-observaciones.md"))
+    report = sub.add_parser("informe", help="informe-corpus.md: estado de cada archivo del manifiesto")
+    report.add_argument("--manifiesto", type=Path, default=Path("datos/01_inventario/manifiesto.json"))
+    report.add_argument("--perfiles", type=Path, default=Path("datos/01_inventario/perfiles.json"))
+    report.add_argument("--clasificacion", type=Path, default=Path("datos/01_inventario/clasificacion.csv"))
+    report.add_argument("--convertidos", type=Path, default=Path("datos/02_convertidos/estado.json"))
+    report.add_argument("--extraido-dir", type=Path, default=Path("datos/03_extraido"))
+    report.add_argument("--salida", type=Path, default=Path("datos/04_entregables/informe-corpus.md"))
     normative = sub.add_parser("normativa", help="Verifica el alistamiento y genera el catálogo normativo (RF7)")
     normative.add_argument("--raiz", type=Path, required=True,
                            help="Raíz del paquete de alistamiento IDU 2020")
@@ -128,6 +139,11 @@ def main() -> int:
                                      themes_path=args.temas, overrides_path=args.temas_manuales)))
     elif args.command == "checklist":
         print(json.dumps(write_checklist(args.grupos, args.salida, args.enlaces, args.catalogo)))
+    elif args.command == "matriz":
+        print(json.dumps(write_matriz(args.grupos, args.salida)))
+    elif args.command == "informe":
+        print(json.dumps(write_informe(args.manifiesto, args.perfiles, args.clasificacion,
+                                       args.convertidos, args.extraido_dir, args.salida)))
     elif args.command == "normativa":
         print(json.dumps(write_normative(args.registro, args.raiz, args.catalogo,
                                          args.salida, args.proyecto), ensure_ascii=False))
