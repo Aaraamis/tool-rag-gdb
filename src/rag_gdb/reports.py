@@ -11,21 +11,14 @@ from pathlib import Path
 
 SIN_CONTRATO = "sin determinar"
 QUOTE_CHARS = 200
-# El contrato solo se toma de señales explícitas en el nombre del archivo; si no hay, no se infiere.
-_CONTRACT_PATTERNS = (
-    re.compile(r"R-IDU(1383|1384|1385)"),
-    re.compile(r"(?<!\d)(1443|1533)(?!\d)"),
-)
 
 
-def contract_of(ruta: str) -> str:
-    """Contrato mencionado en el nombre del archivo, o `sin determinar`."""
-    name = ruta.rsplit("/", 1)[-1]
-    for pattern in _CONTRACT_PATTERNS:
-        found = pattern.search(name)
-        if found:
-            return found.group(1)
-    return SIN_CONTRATO
+def read_contracts(path: Path) -> dict[str, str]:
+    """Contrato de obra por ruta, según `config/contratos-documentos.csv` (revisión manual con evidencia)."""
+    if not path.exists():
+        return {}
+    with path.open(encoding="utf-8", newline="") as handle:
+        return {row["ruta"]: row["contrato"] for row in csv.DictReader(handle) if row["contrato"]}
 
 
 def date_of(ruta: str) -> str:
@@ -41,7 +34,8 @@ def _cell(text: str, limit: int | None = None) -> str:
     return text
 
 
-def render_matriz(grupos: dict, today: str | None = None) -> str:
+def render_matriz(grupos: dict, contracts: dict[str, str], today: str | None = None) -> str:
+    contract_of = lambda ruta: contracts.get(ruta, SIN_CONTRATO)  # noqa: E731
     themes = {t["tema"]: t["nombre"] for t in grupos["temas"]}
     rows: dict[str, list[tuple]] = {code: [] for code in themes}
     for group in grupos["grupos"]:
@@ -55,8 +49,9 @@ def render_matriz(grupos: dict, today: str | None = None) -> str:
         "",
         f"> Generado por `rag-gdb matriz` el {today or date.today().isoformat()}: {total} observaciones de "
         f"{docs} documentos, agrupadas por tema (`config/temas.csv`, pendiente de validación de Aramis).",
-        "> **Contrato:** se toma solo de señales explícitas en el nombre del archivo; "
-        f"{unknown} de {total} observaciones quedan «{SIN_CONTRATO}» porque el nombre no lo indica. "
+        "> **Contrato:** contrato de obra según `config/contratos-documentos.csv`, revisado por documento "
+        "con su evidencia (asunto, texto o respuesta que cita el mismo radicado); "
+        f"{unknown} de {total} observaciones quedan «{SIN_CONTRATO}» hasta revisar la primera página del PDF. "
         "**Fecha:** la del prefijo del nombre del archivo (fecha de envío), no la del oficio.",
         "",
         "## Resumen por tema",
@@ -76,12 +71,12 @@ def render_matriz(grupos: dict, today: str | None = None) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write_matriz(grupos_path: Path, output: Path) -> dict:
+def write_matriz(grupos_path: Path, output: Path, contracts_path: Path) -> dict:
     grupos = json.loads(grupos_path.read_text(encoding="utf-8"))
     if not grupos.get("temas"):
         raise ValueError("grupos.json no tiene temas: ejecuta `rag-gdb consolidar` con config/temas.csv")
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(render_matriz(grupos), encoding="utf-8")
+    output.write_text(render_matriz(grupos, read_contracts(contracts_path)), encoding="utf-8")
     return {"observaciones": sum(len(g["miembros"]) for g in grupos["grupos"]),
             "documentos": len({m["ruta"] for g in grupos["grupos"] for m in g["miembros"]})}
 

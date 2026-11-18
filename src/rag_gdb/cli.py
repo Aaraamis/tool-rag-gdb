@@ -71,6 +71,7 @@ def main() -> int:
     matrix = sub.add_parser("matriz", help="matriz-observaciones.md desde los grupos consolidados")
     matrix.add_argument("--grupos", type=Path, default=Path("datos/04_consolidado/grupos.json"))
     matrix.add_argument("--salida", type=Path, default=Path("datos/04_entregables/matriz-observaciones.md"))
+    matrix.add_argument("--contratos", type=Path, default=Path("config/contratos-documentos.csv"))
     report = sub.add_parser("informe", help="informe-corpus.md: estado de cada archivo del manifiesto")
     report.add_argument("--manifiesto", type=Path, default=Path("datos/01_inventario/manifiesto.json"))
     report.add_argument("--perfiles", type=Path, default=Path("datos/01_inventario/perfiles.json"))
@@ -140,7 +141,7 @@ def main() -> int:
     elif args.command == "checklist":
         print(json.dumps(write_checklist(args.grupos, args.salida, args.enlaces, args.catalogo)))
     elif args.command == "matriz":
-        print(json.dumps(write_matriz(args.grupos, args.salida)))
+        print(json.dumps(write_matriz(args.grupos, args.salida, args.contratos)))
     elif args.command == "informe":
         print(json.dumps(write_informe(args.manifiesto, args.perfiles, args.clasificacion,
                                        args.convertidos, args.extraido_dir, args.salida)))
