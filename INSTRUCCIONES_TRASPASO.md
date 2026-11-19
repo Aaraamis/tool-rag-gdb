@@ -1,10 +1,11 @@
 # Traspaso para la próxima sesión
 
-Última actualización: 2026-11-18. El código, la configuración revisada y los
+Última actualización: 2026-11-19. El código, la configuración revisada y los
 entregables viajan por Git. Los datos intermedios que `.gitignore` excluye
 (`datos/01_inventario` a `datos/04_consolidado`) están en meraxes-f o en el
-paquete privado del 2026-11-17. La sesión del 2026-11-18 no los modificó: todo
-lo que produjo está versionado.
+paquete privado del 2026-11-17. Las sesiones del 2026-11-18 y del 2026-11-19
+(en otro PC) no los modificaron: todo lo que produjeron está versionado. La
+próxima sesión continúa en meraxes-f: basta `git pull`.
 
 ## 1. Arranque
 
@@ -35,8 +36,8 @@ lo que produjo está versionado.
    PYTHONPATH=src .venv/bin/python -m rag_gdb.cli checklist
    ```
 
-4. Valores esperados: 51 pruebas aprobadas, Ruff sin avisos y el checklist con
-   `{"grupos": 294, "requisitos": 93, "requisitos_redactados": 93,
+4. Valores esperados: 52 pruebas aprobadas, Ruff sin avisos y el checklist con
+   `{"grupos": 294, "requisitos": 95, "requisitos_redactados": 95,
    "grupos_normativa_revisados": 294, "grupos_con_enlace": 261}`. El comando
    reescribe `datos/04_entregables/checklist-gdb.md`; si solo cambia la fecha,
    descartar el cambio con `git checkout`.
@@ -48,10 +49,12 @@ lo que produjo está versionado.
 | Corpus | 490 PDF: 45 procesados, 445 pendientes, 0 descartados; 18 necesitan OCR | `datos/04_entregables/informe-corpus.md` |
 | Observaciones | 504 en 41 documentos (otros 4 sin observaciones), validadas en meraxes-f el 2026-11-17 | `datos/03_extraido/` |
 | Grupos y normativa | 294 grupos, todos revisados; 307 relaciones aceptadas (216 directas, 91 parciales) | `config/normativa-enlaces.csv` |
-| Redacción | 93 requisitos (80 con respaldo, 13 prácticas en sección aparte), 7 reasignaciones de tema; **pendiente de validación de Aramis** | `config/requisitos-redaccion.csv`, `docs/revision-editorial.md` |
+| Redacción | 95 requisitos (82 con respaldo, 13 prácticas en sección aparte), 7 reasignaciones de tema; Aramis resolvió los 3 puntos del 2026-11-19; **taxonomía y textos aún por validar** | `config/requisitos-redaccion.csv`, `docs/revision-editorial.md` |
+| Alcance | Todo lo técnico de la entrega (GDB, CAD, planos, informes, estructura documental); el checklist sirve además de apoyo jurídico-contractual para redactar comunicados | `ESPECIFICACION.md`, `DECISIONES.md` |
+| Diccionario de atributos | `Productos_BDG` resumido por feature dataset: 43 clases, 110 tablas, 1066 campos (563 obligatorios y 172 según alcance en construcción) | `docs/diccionario-atributos.md` |
 | Contratos | Contrato de obra de los 45 documentos con su evidencia; 9 sin determinar (51 observaciones) | `config/contratos-documentos.csv` |
 | Aceptación | Criterios 5 y 6 cumplen; 1 en forma; 4 por repetir; 2 y 3 pendientes | `docs/aceptacion-fase1.md` |
-| Versión | `0.1.0`; `Unreleased` acumula la sesión del 2026-11-18 | `CHANGELOG.md` |
+| Versión | `0.1.0`; `Unreleased` acumula las sesiones del 2026-11-18 y 2026-11-19 | `CHANGELOG.md` |
 
 ## 3. Siguiente trabajo
 
@@ -96,8 +99,16 @@ en meraxes-f, que tiene los PDF, Poppler, Docling y Ollama con
    recuperado, con la página correcta).
 
 Independiente del punto anterior, Aramis debe validar la taxonomía y la
-redacción (las preguntas están en `docs/revision-editorial.md`). Sus
-correcciones se aplican editando `config/requisitos-redaccion.csv`.
+redacción (`docs/revision-editorial.md`; los tres puntos abiertos quedaron
+resueltos el 2026-11-19). Sus correcciones se aplican editando
+`config/requisitos-redaccion.csv`. El checklist abarca todo lo técnico de la
+entrega y sirve de apoyo jurídico-contractual para redactar comunicados.
+
+Para crear o revisar capas, `docs/diccionario-atributos.md` resume
+`Productos_BDG` por feature dataset; se regenera con `rag-gdb diccionario --ods`
+cuando cambie la exportación ODS. El ODS no está en Git: Aramis lo tiene junto al
+alistamiento (`PresentacionPlanos/1.Base de Datos Geografica/Productos_BDG_valores.ods`);
+si se regenera, comparar el SHA-256 que registra el documento.
 
 ## 4. Límites
 

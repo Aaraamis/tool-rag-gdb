@@ -1,7 +1,7 @@
 # Checklist GDB — borrador
 
-> Generado por `rag-gdb checklist` el 2026-11-18 a partir de 504 observaciones de 41 documentos, agrupadas en 294 grupos y 93 requisitos.
-> **Pendiente:** la taxonomía de temas (`config/temas.csv`) requiere validación de Aramis; la revisión normativa está confirmada para los 294 grupos; 13 requisitos quedan identificados como prácticas observadas sin respaldo escrito localizado. 93 requisitos tienen redacción propuesta en `config/requisitos-redaccion.csv`, pendiente de validación de Aramis.
+> Generado por `rag-gdb checklist` el 2026-11-19 a partir de 504 observaciones de 41 documentos, agrupadas en 294 grupos y 95 requisitos.
+> **Pendiente:** la taxonomía de temas (`config/temas.csv`) requiere validación de Aramis; la revisión normativa está confirmada para los 294 grupos; 13 requisitos quedan identificados como prácticas observadas sin respaldo escrito localizado. 95 requisitos tienen redacción propuesta en `config/requisitos-redaccion.csv`, pendiente de validación de Aramis.
 
 Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos que lo observaron (un traslado o una copia no suma); **interventoría ×m** es el número de documentos de la interventoría que lo plantean. Entre comillas invertidas van los grupos de observaciones que lo respaldan.
 
@@ -10,7 +10,7 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
 | Tema | Requisitos | Observados por el IDU | Radicados IDU (suma) |
 |---|---:|---:|---:|
 | T09. Consistencia entre CAD, GDB y meta física | 8 | 7 | 60 |
-| T06. Atributos de la GDB y diccionario de atributos | 8 | 7 | 43 |
+| T06. Atributos de la GDB y diccionario de atributos | 10 | 9 | 44 |
 | T08. Geometría y topología de la GDB | 8 | 6 | 32 |
 | T05. Contenido gráfico de los planos | 14 | 10 | 31 |
 | T01. Estructura de carpetas y completitud de la entrega | 10 | 5 | 25 |
@@ -65,7 +65,7 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
 
 ## T06. Atributos de la GDB y diccionario de atributos
 
-- [ ] **R-T06-01** Diligenciar todos los atributos obligatorios del DiccionarioAtributos en cada feature class y tabla de la etapa, incluida la fecha de registro. — IDU ×17 · interventoría ×2 `G010` `G013` `G014` `G052` `G053` `G055` `G088` `G103` `G200` `G201` `G227`
+- [ ] **R-T06-01** Diligenciar en cada feature class y tabla relacionada todos los atributos obligatorios del DiccionarioAtributos (Productos_BDG) para la etapa de construcción, incluida la fecha de registro; el detalle por clase está en `docs/diccionario-atributos.md`. — IDU ×14 · interventoría ×2 `G010` `G013` `G014` `G103` `G200`
   - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - «3. La información de la GDB se debe diligenciar de acuerdo al DiccionarioAtributos, de acuerdo a lo establecido en la GUIA 06; además si en algún momento un …» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 2)
@@ -93,6 +93,11 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
   - «En los casos donde un atributo no se encuentre totalmente diligenciado en la BDG o no aplique – N/A, debe existir la debida justificación de carácter técnico o …» (DTINI 20232350082573, `IDU/2023-04-24_20232350082573 (1).pdf`, p. 10)
   - «En los casos donde un atributo no se encuentre totalmente diligenciado en la BDG o no aplique – N/A, debe existir la debida justificación de carácter técnico o …» (DTINI 20222350336933, `IDU/2022-09-30_20222350336933 observaciones georref. (1).pdf`, p. 9)
+- [ ] **R-T06-09** InfraestructuraVial (Calzada y Losa): diligenciar los atributos obligatorios de cada calzada, como NumeroCarriles y FechaRegistroIDU, y todas las variables obligatorias de cada losa. — IDU ×3 · interventoría ×1 `G052` `G055` `G088` `G227`
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
+  - Normativa directo: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
+  - «5. En la tabla Calzada se debe complementar los atributos de reporte obligatorio como Fecha Registro.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 4)
+  - «22. Se solicita diligenciar todas las variables del elemento losa de acuerdo al archivo de Excel DiccionarioAtributos V7.2.» (DTE 20202150245873, `IDU/2020-11-25_R-IDU1384-0268-20 RTA MV2-365-20 REVISION ARCHIVOS FORMATO CAD Y BASE DATOS GEOGRAFICA ETAPA DIAGNOSTICOS.pdf`, p. 15)
 - [ ] **R-T06-04** Diligenciar Productos_BDG.xlsx en todas sus hojas, con la X de contratista e interventoría y N/A justificado en lo opcional. — IDU ×3 · interventoría ×3 `G016` `G190`
   - Normativa directo: **GU-IC-06 §8.2 ¶3** — Prefactibilidad y Factibilidad), junto con el archivo en formato Excel Productos_BDG.xlsx debidamente diligenciado en las hojas de cálculo color azul oscuro …
   - Normativa parcial: **GU-IC-06 §8.2 ¶2** —  Productos_DWG.xlsx hoja de cálculo NUEVOSLAYERS identificada con color . 8.2.1 Productos_BDG.xlsx Archivo que contiene el Diccionario de Atributos de los …
@@ -102,6 +107,10 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
   - Normativa directo: **GU-IC-06 §7.1.1 ¶4** —  FOIC01 REPORTE DE ELEMENTOS VIALES OBJETO DE LA CONTRATACION  FOIC02_REPORTE PARA LA ACTUALIZACIÓN DE LOS ESTUDIOS, DIAGNOSTICOS, DISEÑOS E INTERVENCIONES …
   - «7. La estructura de la GDB no se debe modificar, se debe utilizar la enviada en la etapa de alistamiento.» (DTE 20212150056813, `IDU/2021-03-10_177_20212150056813anexo.pdf`, p. 4)
   - «5. Se recomienda verificar la estructura de la GDB enviada en la etapa de alistamiento, ya que se debe utilizar esta, y no se le debe cambiar su formato.» (DTE 20212150063343, `IDU/2021-03-12_178_20212150063343anexo.pdf`, p. 3)
+- [ ] **R-T06-10** ExploracionEnsayos (Exploracion): diligenciar los campos obligatorios de cada exploración según su tipo (sondeo, apique, barreno o trinchera manual), incluido Costado. — IDU ×1 · interventoría ×2 `G053` `G201`
+  - Normativa directo: **VALIDACIONES_BDG 1. Verificación de los atributos incorporad** — Verificación de los atributos incorporados: Se verifica que los atributos incorporados en la base de datos geográfica, correspondan con los solicitados en el …
+  - «6. En la tabla Exploración se debe complementar los atributos de reporte obligatorio como costado.» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 5)
+  - «la tabla se encuentra parcialmente diligenciada, sin información en la mayoría de los campos obligatorios» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 15)
 - [ ] **R-T06-08** No eliminar registros de un feature class al corregirlo; justificar cualquier retiro. — interventoría ×1 `G267`
   - Normativa parcial: **GU-IC-06 §8.3 ¶3** — geometrías de los elementos suministrados en la BDG, no deberán ser modificadas a menos de que sea necesario, con el fin de que el elemento represente …
   - «en esta ocasión se han eliminado los registros del Feature Class» (sin radicado, `IDU/2023-07-27_1443_501423_070700_CON_REVISION_BDG_V2.pdf`, p. 16)
@@ -414,7 +423,7 @@ Cómo leer cada requisito: **IDU ×n** es el número de radicados IDU distintos 
 
 ## T11. Proceso de entrega y control de calidad
 
-- [ ] **R-T11-01** Revisar integralmente y aplicar control de calidad a cada producto digital antes de entregar, de forma que lo entregado sea la versión aprobada y firmada y que las correcciones no afecten otros elementos; es responsabilidad del contratista. — IDU ×11 · interventoría ×2 `G003` `G144` `G245` `G246` `G250` `G279`
+- [ ] **R-T11-01** Revisar integralmente cada producto digital antes de entregarlo (control de calidad): lo entregado corresponde a la versión aprobada y las correcciones no afectan otros elementos. Nota contractual: el contenido, la calidad y la completitud de los archivos son responsabilidad del contratista (GU-IC-06 §11.1). — IDU ×11 · interventoría ×2 `G003` `G144` `G245` `G246` `G250` `G279`
   - Normativa parcial: **GU-IC-06 §10 ¶1** — La información anexa a la radicación oficial deberá estar completa, en caso de que la información no cuente con alguno de los archivos obligatorios, no se …
   - Normativa parcial: **GU-IC-06 §11.1 ¶1** — El contenido de los archivos, su calidad, su completitud y autenticidad de la firma digital, es responsabilidad de los actores de infraestructura, por tanto, …
   - «Se recomienda revisar integralmente todos y cada uno de los productos a entregar, de manera que puedan garantizar, tras las actividades de ajuste o corrección, …» (DTE 20212150024523, `IDU/2021-02-12_DTE 20212150024523.pdf`, p. 6)

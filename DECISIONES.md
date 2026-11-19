@@ -24,6 +24,10 @@
 | 2026-11-18 | Propuesta editorial: 294 grupos redactados como 93 requisitos genéricos, con 7 reasignaciones de tema; pendiente de validación | `docs/revision-editorial.md` |
 | 2026-11-18 | Las prácticas observadas sin respaldo escrito van en una sección aparte del checklist | Criterio de aceptación 6 de la especificación |
 | 2026-11-18 | Completar todos los PDF pendientes, no solo el piloto | Pedido por Aramis; se ejecuta en meraxes-f, donde están los PDF y Ollama |
+| 2026-11-19 | El repositorio controla todo lo técnico de la entrega (GDB, CAD, planos, informes, estructura documental) y sirve de guía jurídico-contractual de apoyo para redactar comunicados, sabiendo que no todo el soporte está en el corpus. R-T01-10 (mesa del 8/6/2021 sobre PDF y firmas) se mantiene como requisito | Aramis corrigió una primera indicación de limitarse a lo GIS |
+| 2026-11-19 | R-T11-01 no se divide: es control de calidad antes de entregar, con una nota contractual sobre la responsabilidad del contratista (GU-IC-06 §11.1) como apoyo para comunicados. El repositorio es la fuente de verdad de la que se exporta lo que piden las demás etapas, documentos y CAD | Aramis |
+| 2026-11-19 | R-T06-01 se separa por feature dataset de la BDG: general (R-T06-01), InfraestructuraVial — Calzada y Losa (R-T06-09) y ExploracionEnsayos (R-T06-10) | Aramis; datasets según CATALOGO_BDG |
+| 2026-11-19 | El diccionario de atributos se documenta desde `Productos_BDG_valores.ods` (exportación de `Productos_BDG.xlsm`), sin versionar el ODS; X roja = obligatorio, X verde = según alcance | Aramis entregó el ODS; convención de la plantilla |
 
 ## Primer inventario en meraxes-f
 

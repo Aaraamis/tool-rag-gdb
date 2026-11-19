@@ -15,6 +15,12 @@ es el paquete de alistamiento de 2020 que el IDU entregó para los contratos 348
 351; el nombre de un archivo o plantilla con el número 351 no limita por sí solo su
 aplicación al 348.
 
+El checklist abarca todo lo técnico de la entrega: GDB, CAD, planos, informes y
+estructura documental. Además sirve de guía jurídico-contractual de apoyo para
+redactar comunicados: indica qué exigió el IDU, con qué norma y en qué radicados.
+No reemplaza el análisis contractual completo, porque no todo el soporte está en
+el corpus.
+
 Lucía apoya la gestión del repositorio; ninguna función del pipeline depende de ella.
 Citadel es una guía opcional para mantener calidad sin añadir capas innecesarias.
 
@@ -90,8 +96,9 @@ En `datos/04_entregables/`:
   `Productos_DWG`; las demás guías y plantillas se registran aunque no todas generen
   requisitos. La propuesta automática y los enlaces dudosos requieren confirmación
   manual. En el piloto quedaron revisados los 294 grupos: 261 con respaldo
-  normativo y 33 sin regla escrita localizada. Redactados como 93 requisitos,
-  80 tienen respaldo y 13 son prácticas observadas.
+  normativo y 33 sin regla escrita localizada. Redactados como 95 requisitos,
+  82 tienen respaldo y 13 son prácticas observadas. `rag-gdb diccionario` resume los atributos de
+  `Productos_BDG` por feature dataset (`docs/diccionario-atributos.md`).
 - **RF7b. Emisor**: cada documento se marca como IDU, interventoría, obra o diseños.
   Solo IDU e interventoría generan observaciones. La primera página y señales como
   «Al responder cite este número» prevalecen sobre nombres ambiguos; traslados y
@@ -104,7 +111,7 @@ En `datos/04_entregables/`:
   entregables.
   Implementado con `rag-gdb consolidar` (embeddings locales y revisión de pares
   dudosos), `rag-gdb checklist`, `rag-gdb matriz` y `rag-gdb informe`. La
-  taxonomía (`config/temas.csv`) y la redacción en 93 requisitos
+  taxonomía (`config/temas.csv`) y la redacción en 95 requisitos
   (`config/requisitos-redaccion.csv`, `docs/revision-editorial.md`) esperan la
   validación de Aramis. `config/grupos-registro.csv` traslada las decisiones por
   grupo cuando una reconsolidación cambia las claves.

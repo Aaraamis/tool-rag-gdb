@@ -138,9 +138,10 @@ por clave de observación.
 
 `checklist` ordena los requisitos por tema y frecuencia, con uno o dos ejemplos
 citados (radicado, archivo y página). Los 294 grupos tienen revisión normativa
-(261 con enlace confirmado) y se redactan como 93 requisitos: 80 con respaldo
+(261 con enlace confirmado) y se redactan como 95 requisitos: 82 con respaldo
 normativo y 13 prácticas observadas sin respaldo escrito localizado, listadas en
-una sección aparte. Sigue siendo un borrador hasta que Aramis valide la taxonomía
+una sección aparte. Cubre todo lo técnico de la entrega y sirve de apoyo
+jurídico-contractual para redactar comunicados. Sigue siendo un borrador hasta que Aramis valide la taxonomía
 y la redacción.
 
 `matriz` lista las 504 observaciones por tema con fecha (prefijo del nombre del
@@ -201,6 +202,21 @@ se asigna a un requisito (`R-Txx-nn`) con tema y texto. Los grupos que comparten
 requisito se presentan juntos, con frecuencia, enlaces y ejemplos sumados, y la
 matriz usa el mismo tema. Los grupos nuevos sin fila conservan su enunciado
 representativo. Criterios y decisiones pendientes: `docs/revision-editorial.md`.
+
+## Diccionario de atributos
+
+```bash
+.venv/bin/rag-gdb diccionario --ods RUTA/Productos_BDG_valores.ods
+```
+
+Resume en `docs/diccionario-atributos.md` la plantilla `Productos_BDG` del
+alistamiento (exportada a ODS) por feature dataset y clase de entidad:
+geometría, tablas relacionadas, campos, dominios, rangos y la marca de la etapa
+de construcción. En la plantilla la X roja es atributo obligatorio y la verde es
+según alcance; el comando lee ese color del ODS. Exploración marca por tipo de
+exploración en lugar de por etapa, y así se informa. El ODS no se versiona: el
+documento registra su nombre y su SHA-256. `--proyecto` elige otra columna
+(«Diseño», «Conservación»…).
 
 ## Verificación
 

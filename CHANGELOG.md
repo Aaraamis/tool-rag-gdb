@@ -22,6 +22,10 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
   escrito (criterio de aceptación 6); `docs/aceptacion-fase1.md` registra el estado de los
   seis criterios.
 - `contratos.csv` incluye 1558, interventoría del contrato 1533.
+- `rag-gdb diccionario` genera `docs/diccionario-atributos.md` desde la exportación ODS de
+  `Productos_BDG`: 43 clases de entidad por feature dataset, 110 tablas y 1066 campos con
+  dominio, rango y marca de la etapa de construcción (X roja obligatorio, X verde según
+  alcance, leído del color de la fuente).
 
 ### Fixed
 
@@ -32,6 +36,12 @@ La versión 0.1.0 es la versión inicial declarada y todavía no tiene una publi
 
 ### Changed
 
+- Decisiones editoriales de Aramis: R-T01-10 se mantiene, R-T11-01 se redacta como
+  control de calidad con nota contractual sobre la responsabilidad del contratista y R-T06-01 se separa por feature
+  dataset (R-T06-09 InfraestructuraVial, R-T06-10 ExploracionEnsayos). El
+  checklist pasa a 95 requisitos.
+- La especificación fija el alcance: todo lo técnico de la entrega, con el checklist como
+  apoyo jurídico-contractual para redactar comunicados.
 - README, especificación, AGENTS, DECISIONES e instrucciones de traspaso reflejan el
   estado del 2026-11-18 y el plan para procesar los PDF pendientes en meraxes-f; `ruff` entra
   en el extra `test`.

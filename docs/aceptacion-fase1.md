@@ -9,7 +9,7 @@ sin los PDF originales. Los criterios 2, 3 y 4 se cierran donde estén los PDF.
 | 2 | 20 PDF variados sin pérdida de observaciones en la conversión | **Pendiente** | `docs/revision-piloto.md`: 4 PDF del piloto, 78 páginas, más 8 del primer lote; 11 convertidos en total. Falta elegir y revisar 20 variados (escaneados, con tablas, guías largas) contra el PDF. Requiere los originales. |
 | 3 | 10 documentos de observaciones revisados a mano: ≥ 90 % recuperado y página correcta | **Pendiente** | La referencia del primer lote (8 documentos, 171 observaciones) mide la pasada local: 88 % de recuperación antes de depurar. Falta el cotejo manual de 10 documentos contra el PDF, con página. Requiere los originales. |
 | 4 | Todos los JSON de `03_extraido/` pasan `validar` | **Cumple al traspaso; repetir** | Los 45 JSON se validaron en meraxes-f el 2026-11-17. Aquí no puede repetirse: `validar` lee el texto del PDF. Repetir tras cada nueva extracción. |
-| 5 | Cada requisito del checklist cita al menos una observación real con referencia | **Cumple** | Comprobado sobre el borrador: los 93 requisitos tienen al menos un ejemplo con radicado o archivo y página. |
+| 5 | Cada requisito del checklist cita al menos una observación real con referencia | **Cumple** | Comprobado sobre el borrador: los 95 requisitos tienen al menos un ejemplo con radicado o archivo y página. |
 | 6 | Cada requisito enlaza fuente y sección, o aparece aparte como práctica observada | **Cumple** | 80 requisitos con enlace normativo confirmado (directo o parcial) y 13 en la sección separada de prácticas observadas. Corregido el 2026-11-18: antes las prácticas aparecían mezcladas dentro de cada tema. |
 
 ## Condiciones de cierre
