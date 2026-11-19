@@ -9,6 +9,7 @@ from pathlib import Path
 from .checklist import editorial_themes, write_checklist
 from .classification import apply_manual_reviews, classify_manifest, write_classification
 from .consolidation import consolidate, ollama_embed
+from .dictionary import write_dictionary
 from .extraction import page_texts, validate_dir
 from .inventory import build_manifest, write_json
 from .normative import write_normative
@@ -87,6 +88,12 @@ def main() -> int:
     report.add_argument("--convertidos", type=Path, default=Path("datos/02_convertidos/estado.json"))
     report.add_argument("--extraido-dir", type=Path, default=Path("datos/03_extraido"))
     report.add_argument("--salida", type=Path, default=Path("datos/04_entregables/informe-corpus.md"))
+    dictionary = sub.add_parser("diccionario",
+                                help="Resume los atributos de Productos_BDG (exportado a ODS) por clase de entidad")
+    dictionary.add_argument("--ods", type=Path, required=True, help="Productos_BDG_valores.ods")
+    dictionary.add_argument("--salida", type=Path, default=Path("docs/diccionario-atributos.md"))
+    dictionary.add_argument("--proyecto", default="Construcción",
+                            help="Columna «Proyecto: …» de la plantilla que define la marca")
     normative = sub.add_parser("normativa", help="Verifica el alistamiento y genera el catálogo normativo (RF7)")
     normative.add_argument("--raiz", type=Path, required=True,
                            help="Raíz del paquete de alistamiento IDU 2020")
@@ -157,6 +164,8 @@ def main() -> int:
     elif args.command == "informe":
         print(json.dumps(write_informe(args.manifiesto, args.perfiles, args.clasificacion,
                                        args.convertidos, args.extraido_dir, args.salida)))
+    elif args.command == "diccionario":
+        print(json.dumps(write_dictionary(args.ods, args.salida, args.proyecto), ensure_ascii=False))
     elif args.command == "normativa":
         print(json.dumps(write_normative(args.registro, args.raiz, args.catalogo,
                                          args.salida, args.proyecto), ensure_ascii=False))
